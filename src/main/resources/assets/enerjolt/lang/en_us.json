@@ -1,0 +1,1880 @@
+{
+  "item.enerjolt.energized_copper_ingot": "Energized Copper Ingot",
+  "item.enerjolt.energized_gold_ingot": "Energized Gold Ingot",
+
+  "item.enerjolt.energized_copper_plate": "Energized Copper Plate",
+  "item.enerjolt.energized_gold_plate": "Energized Gold Plate",
+
+  "item.enerjolt.energized_copper_wire": "Energized Copper Wire",
+  "item.enerjolt.energized_gold_wire": "Energized Gold Wire",
+
+  "item.enerjolt.silicon": "Silicon",
+
+  "item.enerjolt.stone_pebble": "Stone Pebble",
+
+  "item.enerjolt.raw_tin": "Raw Tin",
+
+  "item.enerjolt.tin_dust": "Tin Dust",
+  "item.enerjolt.copper_dust": "Copper Dust",
+  "item.enerjolt.iron_dust": "Iron Dust",
+  "item.enerjolt.gold_dust": "Gold Dust",
+
+  "item.enerjolt.tin_nugget": "Tin Nugget",
+
+  "item.enerjolt.tin_ingot": "Tin Ingot",
+
+  "item.enerjolt.tin_plate": "Tin Plate",
+  "item.enerjolt.copper_plate": "Copper Plate",
+  "item.enerjolt.iron_plate": "Iron Plate",
+  "item.enerjolt.gold_plate": "Gold Plate",
+
+  "item.enerjolt.steel_ingot": "Steel Ingot",
+
+  "item.enerjolt.redstone_alloy_ingot": "Redstone Alloy Ingot",
+  "item.enerjolt.advanced_alloy_ingot": "Advanced Alloy Ingot",
+
+  "item.enerjolt.advanced_alloy_plate": "Advanced Alloy Plate",
+
+  "item.enerjolt.iron_gear": "Iron Gear",
+
+  "item.enerjolt.iron_rod": "Iron Rod",
+
+  "item.enerjolt.tin_wire": "Tin Wire",
+  "item.enerjolt.copper_wire": "Copper Wire",
+  "item.enerjolt.gold_wire": "Gold Wire",
+
+  "item.enerjolt.sawdust": "Sawdust",
+
+  "item.enerjolt.charcoal_dust": "Charcoal Dust",
+
+  "item.enerjolt.basic_fertilizer": "Basic Fertilizer",
+  "item.enerjolt.good_fertilizer": "Good Fertilizer",
+  "item.enerjolt.advanced_fertilizer": "Advanced Fertilizer",
+
+  "item.enerjolt.raw_gear_press_mold": "Raw Gear Press Mold",
+
+  "item.enerjolt.raw_rod_press_mold": "Raw Rod Press Mold",
+
+  "item.enerjolt.raw_wire_press_mold": "Raw Wire Press Mold",
+
+  "item.enerjolt.gear_press_mold": "Gear Press Mold",
+
+  "item.enerjolt.rod_press_mold": "Rod Press Mold",
+
+  "item.enerjolt.wire_press_mold": "Wire Press Mold",
+
+  "item.enerjolt.basic_solar_cell": "Basic Solar Cell",
+  "item.enerjolt.advanced_solar_cell": "Advanced Solar Cell",
+  "item.enerjolt.reinforced_advanced_solar_cell": "Reinforced Advanced Solar Cell",
+
+  "item.enerjolt.basic_circuit": "Basic Circuit",
+  "item.enerjolt.advanced_circuit": "Advanced Circuit",
+  "item.enerjolt.processing_unit": "Processing Unit",
+
+  "item.enerjolt.energized_power_book": "Energized Power Book",
+  "tooltip.enerjolt.energized_power_book.txt.shift.1": "Left click a block to open the block's book page.",
+  "book.enerjolt.front.cover.text": "This is the guide book for this mod!",
+
+  "item.enerjolt.cable_insulator": "Cable Insulator",
+  "tooltip.enerjolt.cable_insulator.txt.shift.1": "This item can be crafted by clicking on a wool block with shears.",
+
+  "item.enerjolt.charcoal_filter": "Charcoal Filter",
+
+  "item.enerjolt.saw_blade": "Saw Blade",
+
+  "item.enerjolt.crystal_matrix": "Crystal Matrix",
+
+  "item.enerjolt.energized_crystal_matrix": "Energized Crystal Matrix",
+
+  "item.enerjolt.dirty_water_bucket": "Dirty Water Bucket",
+
+  "item.enerjolt.teleporter_matrix": "Teleporter Matrix",
+  "item.enerjolt.teleporter_matrix.linked": "Teleporter Matrix [Linked]",
+  "item.enerjolt.teleporter_matrix.unlinked": "Teleporter Matrix [Unlinked]",
+  "tooltip.enerjolt.teleporter_matrix.cleared": "Teleporter Matrix settings were successfully cleared.",
+  "tooltip.enerjolt.teleporter_matrix.set": "Teleporter Matrix settings were successfully set.",
+  "tooltip.enerjolt.teleporter_matrix.set.warning": "Teleporter Matrix settings were set but do not point to a Teleporter position.",
+  "tooltip.enerjolt.teleporter_matrix.status": "Status: ",
+  "tooltip.enerjolt.teleporter_matrix.status.linked": "Linked",
+  "tooltip.enerjolt.teleporter_matrix.status.unlinked": "Unlinked",
+  "tooltip.enerjolt.teleporter_matrix.location": "Location: ",
+  "tooltip.enerjolt.teleporter_matrix.dimension": "Dimension: ",
+  "tooltip.enerjolt.teleporter_matrix.txt.shift.1": "Link by shift + right-clicking a Teleporter.",
+  "tooltip.enerjolt.teleporter_matrix.txt.shift.2": "Unlink by right-clicking in the air.",
+
+  "item.enerjolt.teleporter_processing_unit": "Teleporter Processing Unit",
+
+  "item.enerjolt.basic_upgrade_module": "Basic Upgrade Module",
+  "item.enerjolt.advanced_upgrade_module": "Advanced Upgrade Module",
+  "item.enerjolt.reinforced_advanced_upgrade_module": "Reinforced Advanced Upgrade Module",
+
+  "item.enerjolt.speed_upgrade_module_1": "Speed Upgrade Module (Tier I)",
+  "item.enerjolt.speed_upgrade_module_2": "Speed Upgrade Module (Tier II)",
+  "item.enerjolt.speed_upgrade_module_3": "Speed Upgrade Module (Tier III)",
+  "item.enerjolt.speed_upgrade_module_4": "Speed Upgrade Module (Tier IV)",
+  "item.enerjolt.speed_upgrade_module_5": "Speed Upgrade Module (Tier V)",
+
+  "item.enerjolt.energy_efficiency_upgrade_module_1": "Energy Efficiency Upgrade Module (Tier I)",
+  "item.enerjolt.energy_efficiency_upgrade_module_2": "Energy Efficiency Upgrade Module (Tier II)",
+  "item.enerjolt.energy_efficiency_upgrade_module_3": "Energy Efficiency Upgrade Module (Tier III)",
+  "item.enerjolt.energy_efficiency_upgrade_module_4": "Energy Efficiency Upgrade Module (Tier IV)",
+  "item.enerjolt.energy_efficiency_upgrade_module_5": "Energy Efficiency Upgrade Module (Tier V)",
+
+  "item.enerjolt.energy_capacity_upgrade_module_1": "Energy Capacity Upgrade Module (Tier I)",
+  "item.enerjolt.energy_capacity_upgrade_module_2": "Energy Capacity Upgrade Module (Tier II)",
+  "item.enerjolt.energy_capacity_upgrade_module_3": "Energy Capacity Upgrade Module (Tier III)",
+  "item.enerjolt.energy_capacity_upgrade_module_4": "Energy Capacity Upgrade Module (Tier IV)",
+  "item.enerjolt.energy_capacity_upgrade_module_5": "Energy Capacity Upgrade Module (Tier V)",
+
+  "item.enerjolt.duration_upgrade_module_1": "Duration Upgrade Module (Tier I)",
+  "item.enerjolt.duration_upgrade_module_2": "Duration Upgrade Module (Tier II)",
+  "item.enerjolt.duration_upgrade_module_3": "Duration Upgrade Module (Tier III)",
+  "item.enerjolt.duration_upgrade_module_4": "Duration Upgrade Module (Tier IV)",
+  "item.enerjolt.duration_upgrade_module_5": "Duration Upgrade Module (Tier V)",
+  "item.enerjolt.duration_upgrade_module_6": "Duration Upgrade Module (Tier VI)",
+
+  "item.enerjolt.range_upgrade_module_1": "Range Upgrade Module (Tier I)",
+  "item.enerjolt.range_upgrade_module_2": "Range Upgrade Module (Tier II)",
+  "item.enerjolt.range_upgrade_module_3": "Range Upgrade Module (Tier III)",
+
+  "item.enerjolt.extraction_depth_upgrade_module_1": "Extraction Depth Upgrade Module (Tier I)",
+  "item.enerjolt.extraction_depth_upgrade_module_2": "Extraction Depth Upgrade Module (Tier II)",
+  "item.enerjolt.extraction_depth_upgrade_module_3": "Extraction Depth Upgrade Module (Tier III)",
+  "item.enerjolt.extraction_depth_upgrade_module_4": "Extraction Depth Upgrade Module (Tier IV)",
+  "item.enerjolt.extraction_depth_upgrade_module_5": "Extraction Depth Upgrade Module (Tier V)",
+
+  "item.enerjolt.extraction_range_upgrade_module_1": "Extraction Range Upgrade Module (Tier I)",
+  "item.enerjolt.extraction_range_upgrade_module_2": "Extraction Range Upgrade Module (Tier II)",
+  "item.enerjolt.extraction_range_upgrade_module_3": "Extraction Range Upgrade Module (Tier III)",
+  "item.enerjolt.extraction_range_upgrade_module_4": "Extraction Range Upgrade Module (Tier IV)",
+  "item.enerjolt.extraction_range_upgrade_module_5": "Extraction Range Upgrade Module (Tier V)",
+
+  "item.enerjolt.blast_furnace_upgrade_module": "Blast Furnace Upgrade Module",
+  "item.enerjolt.blast_furnace_upgrade_module.effect_text": "Blast Furnace",
+  "item.enerjolt.smoker_upgrade_module": "Smoker Upgrade Module",
+  "item.enerjolt.smoker_upgrade_module.effect_text": "Smoker",
+
+  "item.enerjolt.moon_light_upgrade_module_1": "Moon Light Upgrade Module (Tier I)",
+  "item.enerjolt.moon_light_upgrade_module_2": "Moon Light Upgrade Module (Tier II)",
+  "item.enerjolt.moon_light_upgrade_module_3": "Moon Light Upgrade Module (Tier III)",
+
+  "item.enerjolt.inventory_coal_engine": "Inventory Coal Engine",
+  "tooltip.enerjolt.inventory_coal_engine.status": "Status: ",
+  "tooltip.enerjolt.inventory_coal_engine.status.activated": "Activated",
+  "tooltip.enerjolt.inventory_coal_engine.status.deactivated": "Deactivated",
+  "tooltip.enerjolt.inventory_coal_engine.txt.shift.1": "Activation status can be changed by using this item on air",
+  "tooltip.enerjolt.inventory_coal_engine.txt.shift.2": "If active items will be taken from the inventory but not from the hotbar.",
+  "tooltip.enerjolt.inventory_coal_engine.txt.shift.currently_burning": "Currently burning: ",
+  "tooltip.enerjolt.inventory_coal_engine.txt.shift.energy_production_left": "Energy Production Left: %s",
+
+  "item.enerjolt.inventory_charger": "Inventory Charger",
+  "container.enerjolt.inventory_charger": "Inventory Charger",
+  "tooltip.enerjolt.inventory_charger.txt.shift.1": "Open the inventory of this item by using this item on air",
+
+  "item.enerjolt.inventory_teleporter": "Inventory Teleporter",
+  "container.enerjolt.inventory_teleporter": "Inventory Teleporter",
+
+  "tooltip.enerjolt.inventory_teleporter.txt.shift.1": "Open the inventory by shift + right-clicking in the air.",
+  "tooltip.enerjolt.inventory_teleporter.txt.shift.2": "Teleport by right-clicking in the air.",
+
+  "item.enerjolt.battery_1": "Battery (Tier I)",
+  "item.enerjolt.battery_2": "Battery (Tier II)",
+  "item.enerjolt.battery_3": "Battery (Tier III)",
+  "item.enerjolt.battery_4": "Battery (Tier IV)",
+  "item.enerjolt.battery_5": "Battery (Tier V)",
+  "item.enerjolt.battery_6": "Battery (Tier VI)",
+  "item.enerjolt.battery_7": "Battery (Tier VII)",
+  "item.enerjolt.battery_8": "Battery (Tier VIII)",
+  "tooltip.enerjolt.battery.txt.shift.1": "This battery can transfer %s/t.",
+
+  "item.enerjolt.creative_battery": "Creative Battery",
+
+  "item.enerjolt.energy_analyzer": "Energy Analyzer",
+  "tooltip.enerjolt.energy_analyzer.txt.shift.1": "Click on an energy block to retrieve information.",
+  "tooltip.enerjolt.energy_analyzer.txt.shift.2": "%s will be consumed per use",
+  "txt.enerjolt.energy_analyzer.output_side_information": "Information for the clicked block face:",
+  "txt.enerjolt.energy_analyzer.no_energy_left": "The Energy Analyzer has not enough power (%s are required).",
+  "txt.enerjolt.energy_analyzer.no_block_entity": "This block is no energy block.",
+  "txt.enerjolt.energy_analyzer.no_energy_block": "This block is no (FE) energy block.",
+  "txt.enerjolt.energy_analyzer.no_energy_block_side": "This block face is no (FE) energy block face.",
+  "txt.enerjolt.energy_analyzer.energy_output": "Energy: %s / %s.",
+  "txt.enerjolt.energy_analyzer.energy_can_receive": "This block consumes energy.",
+  "txt.enerjolt.energy_analyzer.energy_can_extract": "This block produces energy.",
+  "txt.enerjolt.energy_analyzer.energy_can_receive_side": "This block face consumes energy.",
+  "txt.enerjolt.energy_analyzer.energy_can_extract_side": "This block face produces energy.",
+
+  "item.enerjolt.fluid_analyzer": "Fluid Analyzer",
+  "tooltip.enerjolt.fluid_analyzer.txt.shift.1": "Click on a block which contains fluids to retrieve information.",
+  "tooltip.enerjolt.fluid_analyzer.txt.shift.2": "%s will be consumed per use",
+  "txt.enerjolt.fluid_analyzer.output_side_information": "Information for the clicked block face:",
+  "txt.enerjolt.fluid_analyzer.no_energy_left": "The Fluid Analyzer has not enough power (%s are required).",
+  "txt.enerjolt.fluid_analyzer.no_fluid_block": "This block contains no fluids.",
+  "txt.enerjolt.fluid_analyzer.no_fluid_block_side": "This block face contains no fluids.",
+  "txt.enerjolt.fluid_analyzer.fluid_output.tank_count": "Tank count: %d",
+  "txt.enerjolt.fluid_analyzer.fluid_output.tank_count_side": "Tank count of the clicked face: %d",
+  "txt.enerjolt.fluid_analyzer.fluid_output.tank_fluid_content": "Tank %d: %s%s / %s.",
+
+  "item.enerjolt.wooden_hammer": "Wooden Hammer",
+  "item.enerjolt.stone_hammer": "Stone Hammer",
+  "item.enerjolt.iron_hammer": "Iron Hammer",
+  "item.enerjolt.golden_hammer": "Golden Hammer",
+  "item.enerjolt.diamond_hammer": "Diamond Hammer",
+  "item.enerjolt.netherite_hammer": "Netherite Hammer",
+
+  "item.enerjolt.cutter": "Cutter",
+
+  "item.enerjolt.wrench": "Wrench",
+  "tooltip.enerjolt.wrench.txt.shift": "The Wrench can be used to configure blocks.",
+  "tooltip.enerjolt.wrench.select_face": "Selected face: %s",
+  "tooltip.enerjolt.wrench.not_configurable": "This block can not be configured.",
+
+  "tooltip.enerjolt.wrench_configurable": "This block can be configured with a Wrench.",
+
+  "item.enerjolt.battery_box_minecart": "Minecart with Battery Box",
+  "item.enerjolt.advanced_battery_box_minecart": "Minecart with Advanced Battery Box",
+
+  "block.enerjolt.silicon_block": "Block of Silicon",
+  "item.enerjolt.silicon_block": "Block of Silicon",
+
+  "block.enerjolt.tin_block": "Block of Tin",
+  "item.enerjolt.tin_block": "Block of Tin",
+
+  "block.enerjolt.sawdust_block": "Block of Sawdust",
+  "item.enerjolt.sawdust_block": "Block of Sawdust",
+
+  "block.enerjolt.tin_ore": "Tin Ore",
+  "item.enerjolt.tin_ore": "Tin Ore",
+
+  "block.enerjolt.deepslate_tin_ore": "Deepslate Tin Ore",
+  "item.enerjolt.deepslate_tin_ore": "Deepslate Tin Ore",
+
+  "block.enerjolt.raw_tin_block": "Block of Raw Tin",
+  "item.enerjolt.raw_tin_block": "Block of Raw Tin",
+
+  "block.enerjolt.item_conveyor_belt": "Basic Item Conveyor Belt",
+  "item.enerjolt.item_conveyor_belt": "Basic Item Conveyor Belt",
+
+  "block.enerjolt.fast_item_conveyor_belt": "Fast Item Conveyor Belt",
+  "item.enerjolt.fast_item_conveyor_belt": "Fast Item Conveyor Belt",
+
+  "block.enerjolt.express_item_conveyor_belt": "Express Item Conveyor Belt",
+  "item.enerjolt.express_item_conveyor_belt": "Express Item Conveyor Belt",
+
+  "tooltip.enerjolt.item_conveyor_belt.wrench_configuration.changed": "Slope was set to %s.",
+
+  "block.enerjolt.item_conveyor_belt_loader": "Basic Item Conveyor Belt Loader",
+  "item.enerjolt.item_conveyor_belt_loader": "Basic Item Conveyor Belt Loader",
+  "container.enerjolt.item_conveyor_belt_loader": "Basic Conveyor Belt Loader",
+
+  "block.enerjolt.fast_item_conveyor_belt_loader": "Fast Item Conveyor Belt Loader",
+  "item.enerjolt.fast_item_conveyor_belt_loader": "Fast Item Conveyor Belt Loader",
+  "container.enerjolt.fast_item_conveyor_belt_loader": "Fast Conveyor Belt Loader",
+
+  "block.enerjolt.express_item_conveyor_belt_loader": "Express Item Conveyor Belt Loader",
+  "item.enerjolt.express_item_conveyor_belt_loader": "Express Item Conveyor Belt Loader",
+  "container.enerjolt.express_item_conveyor_belt_loader": "Express Conveyor Belt Loader",
+
+  "block.enerjolt.item_conveyor_belt_sorter": "Basic Item Conveyor Belt Sorter",
+  "item.enerjolt.item_conveyor_belt_sorter": "Basic Item Conveyor Belt Sorter",
+  "container.enerjolt.item_conveyor_belt_sorter": "Basic Conveyor Belt Sorter",
+
+  "block.enerjolt.fast_item_conveyor_belt_sorter": "Fast Item Conveyor Belt Sorter",
+  "item.enerjolt.fast_item_conveyor_belt_sorter": "Fast Item Conveyor Belt Sorter",
+  "container.enerjolt.fast_item_conveyor_belt_sorter": "Fast Conveyor Belt Sorter",
+
+  "block.enerjolt.express_item_conveyor_belt_sorter": "Express Item Conveyor Belt Sorter",
+  "item.enerjolt.express_item_conveyor_belt_sorter": "Express Item Conveyor Belt Sorter",
+  "container.enerjolt.express_item_conveyor_belt_sorter": "Express Conveyor Belt Sorter",
+
+  "tooltip.enerjolt.item_conveyor_belt_sorter.label.output_connection.no_connection": "Output %d: No conveyor belt connected",
+  "tooltip.enerjolt.item_conveyor_belt_sorter.label.output_connection.connection": "Output %d: Belt connected",
+  "tooltip.enerjolt.item_conveyor_belt_sorter.cbx.ignore_nbt": "Ignore NBT",
+  "tooltip.enerjolt.item_conveyor_belt_sorter.cbx.whitelist": "Whitelist",
+  "tooltip.enerjolt.item_conveyor_belt_sorter.cbx.blacklist": "Blacklist",
+
+  "block.enerjolt.item_conveyor_belt_switch": "Basic Item Conveyor Belt Switch",
+  "item.enerjolt.item_conveyor_belt_switch": "Basic Item Conveyor Belt Switch",
+
+  "block.enerjolt.fast_item_conveyor_belt_switch": "Fast Item Conveyor Belt Switch",
+  "item.enerjolt.fast_item_conveyor_belt_switch": "Fast Item Conveyor Belt Switch",
+
+  "block.enerjolt.express_item_conveyor_belt_switch": "Express Item Conveyor Belt Switch",
+  "item.enerjolt.express_item_conveyor_belt_switch": "Express Item Conveyor Belt Switch",
+
+  "block.enerjolt.item_conveyor_belt_splitter": "Basic Item Conveyor Belt Splitter",
+  "item.enerjolt.item_conveyor_belt_splitter": "Basic Item Conveyor Belt Splitter",
+
+  "block.enerjolt.fast_item_conveyor_belt_splitter": "Fast Item Conveyor Belt Splitter",
+  "item.enerjolt.fast_item_conveyor_belt_splitter": "Fast Item Conveyor Belt Splitter",
+
+  "block.enerjolt.express_item_conveyor_belt_splitter": "Express Item Conveyor Belt Splitter",
+  "item.enerjolt.express_item_conveyor_belt_splitter": "Express Item Conveyor Belt Splitter",
+
+  "block.enerjolt.item_conveyor_belt_merger": "Basic Item Conveyor Belt Merger",
+  "item.enerjolt.item_conveyor_belt_merger": "Basic Item Conveyor Belt Merger",
+
+  "block.enerjolt.fast_item_conveyor_belt_merger": "Fast Item Conveyor Belt Merger",
+  "item.enerjolt.fast_item_conveyor_belt_merger": "Fast Item Conveyor Belt Merger",
+
+  "block.enerjolt.express_item_conveyor_belt_merger": "Express Item Conveyor Belt Merger",
+  "item.enerjolt.express_item_conveyor_belt_merger": "Express Item Conveyor Belt Merger",
+
+  "block.enerjolt.fluid_pipe": "Iron Fluid Pipe",
+  "item.enerjolt.fluid_pipe": "Iron Fluid Pipe",
+
+  "block.enerjolt.golden_fluid_pipe": "Golden Fluid Pipe",
+  "item.enerjolt.golden_fluid_pipe": "Golden Fluid Pipe",
+
+  "tooltip.enerjolt.fluid_pipe.max_extraction": "Max extraction per extractor face: %s/t",
+  "tooltip.enerjolt.fluid_pipe.wrench_configuration.face_changed": "Connection type of face (%s) was set to %s.",
+  "tooltip.enerjolt.fluid_pipe.wrench_configuration.face_change_not_possible": "Connection type of face (%s) could not be changed.",
+
+  "block.enerjolt.press_mold_maker": "Press Mold Maker",
+  "item.enerjolt.press_mold_maker": "Press Mold Maker",
+  "container.enerjolt.press_mold_maker": "Press Mold Maker",
+
+  "tooltip.enerjolt.press_mold_maker.btn.up": "Scroll up",
+  "tooltip.enerjolt.press_mold_maker.btn.down": "Scroll down",
+
+  "tooltip.enerjolt.press_mold_maker.btn.recipes": "Requires %dx %s",
+
+  "block.enerjolt.alloy_furnace": "Alloy Furnace",
+  "item.enerjolt.alloy_furnace": "Alloy Furnace",
+  "container.enerjolt.alloy_furnace": "Alloy Furnace",
+
+  "block.enerjolt.auto_crafter": "Auto Crafter",
+  "item.enerjolt.auto_crafter": "Auto Crafter",
+  "container.enerjolt.auto_crafter": "Auto Crafter",
+
+  "tooltip.enerjolt.auto_crafter.txt.shift.1": "This block uses %s/t per ingredient.",
+  "tooltip.enerjolt.auto_crafter.cbx.ignore_nbt": "Ignore NBT",
+  "tooltip.enerjolt.auto_crafter.cbx.extract_mode.1": "Extract Mode 1: Output and leftover items only",
+  "tooltip.enerjolt.auto_crafter.cbx.extract_mode.2": "Extract Mode 2: Everything except input items",
+  "tooltip.enerjolt.auto_crafter.cbx.allow_output_overflow": "Allow output overflow",
+  "tooltip.enerjolt.auto_crafter.cycle_through_recipes": "Cycle through recipes",
+  "tooltip.enerjolt.auto_crafter.recipe_index": "Recipe %d",
+
+  "block.enerjolt.advanced_auto_crafter": "Advanced Auto Crafter",
+  "item.enerjolt.advanced_auto_crafter": "Advanced Auto Crafter",
+  "container.enerjolt.advanced_auto_crafter": "Advanced Auto Crafter",
+
+  "block.enerjolt.charger": "Charger",
+  "item.enerjolt.charger": "Charger",
+  "container.enerjolt.charger": "Charger",
+
+  "tooltip.enerjolt.chargers.txt.shift.1": "Chargers can be used to craft Energized Copper Ingots.",
+  "tooltip.enerjolt.chargers.txt.shift.2.1": "But you should use the Energizer instead,",
+  "tooltip.enerjolt.chargers.txt.shift.2.2": "because chargers energize very inefficiently.",
+
+  "tooltip.enerjolt.charger.item_energy_left.txt": "This item needs %s to be fully charged.",
+
+  "block.enerjolt.advanced_charger": "Advanced Charger",
+  "item.enerjolt.advanced_charger": "Advanced Charger",
+  "container.enerjolt.advanced_charger": "Advanced Charger",
+
+  "tooltip.enerjolt.advanced_charger.items_energy_left.txt": "These items need %s to be fully charged.",
+
+  "block.enerjolt.uncharger": "Uncharger",
+  "item.enerjolt.uncharger": "Uncharger",
+  "container.enerjolt.uncharger": "Uncharger",
+
+  "tooltip.enerjolt.uncharger.item_energy_left.txt": "This item has %s left.",
+
+  "block.enerjolt.advanced_uncharger": "Advanced Uncharger",
+  "item.enerjolt.advanced_uncharger": "Advanced Uncharger",
+  "container.enerjolt.advanced_uncharger": "Advanced Uncharger",
+
+  "tooltip.enerjolt.advanced_uncharger.items_energy_left.txt": "These items have %s left.",
+
+  "block.enerjolt.minecart_charger": "Minecart Charger",
+  "item.enerjolt.minecart_charger": "Minecart Charger",
+  "container.enerjolt.minecart_charger": "Minecart Charger",
+
+  "block.enerjolt.advanced_minecart_charger": "Advanced Minecart Charger",
+  "item.enerjolt.advanced_minecart_charger": "Advanced Minecart Charger",
+  "container.enerjolt.advanced_minecart_charger": "Advanced Minecart Charger",
+
+  "block.enerjolt.minecart_uncharger": "Minecart Uncharger",
+  "item.enerjolt.minecart_uncharger": "Minecart Uncharger",
+  "container.enerjolt.minecart_uncharger": "Minecart Uncharger",
+
+  "block.enerjolt.advanced_minecart_uncharger": "Advanced Minecart Uncharger",
+  "item.enerjolt.advanced_minecart_uncharger": "Advanced Minecart Uncharger",
+  "container.enerjolt.advanced_minecart_uncharger": "Advanced Minecart Uncharger",
+
+  "block.enerjolt.tin_cable": "Tin Cable",
+  "item.enerjolt.tin_cable": "Tin Cable",
+
+  "block.enerjolt.copper_cable": "Copper Cable",
+  "item.enerjolt.copper_cable": "Copper Cable",
+
+  "block.enerjolt.gold_cable": "Golden Cable",
+  "item.enerjolt.gold_cable": "Golden Cable",
+
+  "block.enerjolt.energized_copper_cable": "Energized Copper Cable",
+  "item.enerjolt.energized_copper_cable": "Energized Copper Cable",
+
+  "block.enerjolt.energized_gold_cable": "Energized Golden Cable",
+  "item.enerjolt.energized_gold_cable": "Energized Golden Cable",
+
+  "block.enerjolt.energized_crystal_matrix_cable": "Energized Crystal Matrix Cable",
+  "item.enerjolt.energized_crystal_matrix_cable": "Energized Crystal Matrix Cable",
+
+  "tooltip.enerjolt.cable.txt.shift.1": "This cable can transfer %s/t.",
+  "tooltip.enerjolt.cable.txt.shift.2": "Cutters can be used to break cables faster.",
+
+
+  "block.enerjolt.lv_transformer_1_to_n": "LV Transformer (1 to n)",
+  "item.enerjolt.lv_transformer_1_to_n": "LV Transformer (1 to n)",
+  "container.enerjolt.lv_transformer_1_to_n": "LV Transformer (1 to n)",
+
+  "block.enerjolt.lv_transformer_3_to_3": "LV Transformer (3 to 3)",
+  "item.enerjolt.lv_transformer_3_to_3": "LV Transformer (3 to 3)",
+  "container.enerjolt.lv_transformer_3_to_3": "LV Transformer (3 to 3)",
+
+  "block.enerjolt.lv_transformer_n_to_1": "LV Transformer (n to 1)",
+  "item.enerjolt.lv_transformer_n_to_1": "LV Transformer (n to 1)",
+  "container.enerjolt.lv_transformer_n_to_1": "LV Transformer (n to 1)",
+
+  "block.enerjolt.transformer_1_to_n": "MV Transformer (1 to n)",
+  "item.enerjolt.transformer_1_to_n": "MV Transformer (1 to n)",
+  "container.enerjolt.transformer_1_to_n": "MV Transformer (1 to n)",
+
+  "block.enerjolt.transformer_3_to_3": "MV Transformer (3 to 3)",
+  "item.enerjolt.transformer_3_to_3": "MV Transformer (3 to 3)",
+  "container.enerjolt.transformer_3_to_3": "MV Transformer (3 to 3)",
+
+  "block.enerjolt.transformer_n_to_1": "MV Transformer (n to 1)",
+  "item.enerjolt.transformer_n_to_1": "MV Transformer (n to 1)",
+  "container.enerjolt.transformer_n_to_1": "MV Transformer (n to 1)",
+
+  "block.enerjolt.hv_transformer_1_to_n": "HV Transformer (1 to n)",
+  "item.enerjolt.hv_transformer_1_to_n": "HV Transformer (1 to n)",
+  "container.enerjolt.hv_transformer_1_to_n": "HV Transformer (1 to n)",
+
+  "block.enerjolt.hv_transformer_3_to_3": "HV Transformer (3 to 3)",
+  "item.enerjolt.hv_transformer_3_to_3": "HV Transformer (3 to 3)",
+  "container.enerjolt.hv_transformer_3_to_3": "HV Transformer (3 to 3)",
+
+  "block.enerjolt.hv_transformer_n_to_1": "HV Transformer (n to 1)",
+  "item.enerjolt.hv_transformer_n_to_1": "HV Transformer (n to 1)",
+  "container.enerjolt.hv_transformer_n_to_1": "HV Transformer (n to 1)",
+
+  "block.enerjolt.ehv_transformer_1_to_n": "EHV Transformer (1 to n)",
+  "item.enerjolt.ehv_transformer_1_to_n": "EHV Transformer (1 to n)",
+  "container.enerjolt.ehv_transformer_1_to_n": "EHV Transformer (1 to n)",
+
+  "block.enerjolt.ehv_transformer_3_to_3": "EHV Transformer (3 to 3)",
+  "item.enerjolt.ehv_transformer_3_to_3": "EHV Transformer (3 to 3)",
+  "container.enerjolt.ehv_transformer_3_to_3": "EHV Transformer (3 to 3)",
+
+  "block.enerjolt.ehv_transformer_n_to_1": "EHV Transformer (n to 1)",
+  "item.enerjolt.ehv_transformer_n_to_1": "EHV Transformer (n to 1)",
+  "container.enerjolt.ehv_transformer_n_to_1": "EHV Transformer (n to 1)",
+
+  "block.enerjolt.configurable_lv_transformer": "Configurable LV Transformer",
+  "item.enerjolt.configurable_lv_transformer": "Configurable LV Transformer",
+  "container.enerjolt.configurable_lv_transformer": "Configurable LV Transformer",
+
+  "block.enerjolt.configurable_mv_transformer": "Configurable MV Transformer",
+  "item.enerjolt.configurable_mv_transformer": "Configurable MV Transformer",
+  "container.enerjolt.configurable_mv_transformer": "Configurable MV Transformer",
+
+  "block.enerjolt.configurable_hv_transformer": "Configurable HV Transformer",
+  "item.enerjolt.configurable_hv_transformer": "Configurable HV Transformer",
+  "container.enerjolt.configurable_hv_transformer": "Configurable HV Transformer",
+
+  "block.enerjolt.configurable_ehv_transformer": "Configurable EHV Transformer",
+  "item.enerjolt.configurable_ehv_transformer": "Configurable EHV Transformer",
+  "container.enerjolt.configurable_ehv_transformer": "Configurable EHV Transformer",
+
+  "tooltip.enerjolt.configurable_transformer.wrench_configuration.face_changed": "Connection type of face (%s) was set to %s.",
+
+  "tooltip.enerjolt.transformer.txt.shift.1": "This block can be used to connect different tiers of cables.",
+  "tooltip.enerjolt.transformer.txt.shift.2": "The larger, darker, diamond shaped sides are inputs.",
+  "tooltip.enerjolt.transformer.txt.shift.3": "The smaller, brighter, square shaped sides are outputs.",
+
+  "block.enerjolt.battery_box": "Battery Box",
+  "item.enerjolt.battery_box": "Battery Box",
+  "container.enerjolt.battery_box": "Battery Box",
+
+  "block.enerjolt.advanced_battery_box": "Advanced Battery Box",
+  "item.enerjolt.advanced_battery_box": "Advanced Battery Box",
+  "container.enerjolt.advanced_battery_box": "Advanced Battery Box",
+
+  "block.enerjolt.creative_battery_box": "Creative Battery Box",
+  "item.enerjolt.creative_battery_box": "Creative Battery Box",
+  "container.enerjolt.creative_battery_box": "Creative Battery Box",
+
+  "tooltip.enerjolt.creative_battery_box.cbx.energy_production": "Energy Production",
+  "tooltip.enerjolt.creative_battery_box.cbx.energy_consumption": "Energy Consumption",
+
+
+  "block.enerjolt.solar_panel_1": "Solar Panel (Tier I)",
+  "item.enerjolt.solar_panel_1": "Solar Panel (Tier I)",
+  "container.enerjolt.solar_panel_1": "Solar Panel (Tier I)",
+  "block.enerjolt.solar_panel_2": "Solar Panel (Tier II)",
+  "item.enerjolt.solar_panel_2": "Solar Panel (Tier II)",
+  "container.enerjolt.solar_panel_2": "Solar Panel (Tier II)",
+  "block.enerjolt.solar_panel_3": "Solar Panel (Tier III)",
+  "item.enerjolt.solar_panel_3": "Solar Panel (Tier III)",
+  "container.enerjolt.solar_panel_3": "Solar Panel (Tier III)",
+  "block.enerjolt.solar_panel_4": "Solar Panel (Tier IV)",
+  "item.enerjolt.solar_panel_4": "Solar Panel (Tier IV)",
+  "container.enerjolt.solar_panel_4": "Solar Panel (Tier IV)",
+  "block.enerjolt.solar_panel_5": "Solar Panel (Tier V)",
+  "item.enerjolt.solar_panel_5": "Solar Panel (Tier V)",
+  "container.enerjolt.solar_panel_5": "Solar Panel (Tier V)",
+  "block.enerjolt.solar_panel_6": "Solar Panel (Tier VI)",
+  "item.enerjolt.solar_panel_6": "Solar Panel (Tier VI)",
+  "container.enerjolt.solar_panel_6": "Solar Panel (Tier VI)",
+
+  "tooltip.enerjolt.solar_panel.txt.shift.1": "This block produces up to %s/t.",
+  "tooltip.enerjolt.solar_panel.txt.shift.2": "The efficiency depends on the current time",
+
+  "block.enerjolt.coal_engine": "Coal Engine",
+  "item.enerjolt.coal_engine": "Coal Engine",
+  "container.enerjolt.coal_engine": "Coal Engine",
+
+  "tooltip.enerjolt.coal_engine.txt": "This items will produce %s until burned",
+
+  "block.enerjolt.heat_generator": "Heat Generator",
+  "item.enerjolt.heat_generator": "Heat Generator",
+  "container.enerjolt.heat_generator": "Heat Generator",
+
+  "block.enerjolt.thermal_generator": "Thermal Generator",
+  "item.enerjolt.thermal_generator": "Thermal Generator",
+  "container.enerjolt.thermal_generator": "Thermal Generator",
+
+  "tooltip.enerjolt.thermal_generator.txt": "This fluid will produce %s until completely used up",
+
+  "block.enerjolt.powered_lamp": "Powered Lamp",
+  "item.enerjolt.powered_lamp": "Powered Lamp",
+
+  "block.enerjolt.powered_furnace": "Powered Furnace",
+  "item.enerjolt.powered_furnace": "Powered Furnace",
+  "container.enerjolt.powered_furnace": "Powered Furnace",
+
+  "block.enerjolt.advanced_powered_furnace": "Advanced Powered Furnace",
+  "item.enerjolt.advanced_powered_furnace": "Advanced Powered Furnace",
+  "container.enerjolt.advanced_powered_furnace": "Advanced Powered Furnace",
+
+  "tooltip.enerjolt.advanced_powered_furnace.energy_required_to_finish.txt": "These recipes require %s to finish.",
+
+  "block.enerjolt.crusher": "Crusher",
+  "item.enerjolt.crusher": "Crusher",
+  "container.enerjolt.crusher": "Crusher",
+
+  "block.enerjolt.advanced_crusher": "Advanced Crusher",
+  "item.enerjolt.advanced_crusher": "Advanced Crusher",
+  "container.enerjolt.advanced_crusher": "Advanced Crusher",
+
+  "tooltip.enerjolt.advanced_crusher.txt.shift.1": "This machine consumes Water and produces Dirty Water.",
+
+  "block.enerjolt.pulverizer": "Pulverizer",
+  "item.enerjolt.pulverizer": "Pulverizer",
+  "container.enerjolt.pulverizer": "Pulverizer",
+
+  "block.enerjolt.advanced_pulverizer": "Advanced Pulverizer",
+  "item.enerjolt.advanced_pulverizer": "Advanced Pulverizer",
+  "container.enerjolt.advanced_pulverizer": "Advanced Pulverizer",
+
+  "tooltip.enerjolt.advanced_pulverizer.txt.shift.1": "This machine consumes Water and produces Dirty Water.",
+
+  "block.enerjolt.sawmill": "Sawmill",
+  "item.enerjolt.sawmill": "Sawmill",
+  "container.enerjolt.sawmill": "Sawmill",
+
+  "block.enerjolt.compressor": "Compressor",
+  "item.enerjolt.compressor": "Compressor",
+  "container.enerjolt.compressor": "Compressor",
+
+  "block.enerjolt.metal_press": "Metal Press",
+  "item.enerjolt.metal_press": "Metal Press",
+  "container.enerjolt.metal_press": "Metal Press",
+
+  "tooltip.enerjolt.metal_press.txt.shift.1": "Press Molds can be created in the Press Mold Maker.",
+
+  "block.enerjolt.auto_press_mold_maker": "Auto Press Mold Maker",
+  "item.enerjolt.auto_press_mold_maker": "Auto Press Mold Maker",
+  "container.enerjolt.auto_press_mold_maker": "Auto Press Mold Maker",
+
+  "tooltip.enerjolt.auto_press_mold_maker.shovel_missing": "Shovel is missing!",
+
+  "block.enerjolt.auto_stonecutter": "Auto Stonecutter",
+  "item.enerjolt.auto_stonecutter": "Auto Stonecutter",
+  "container.enerjolt.auto_stonecutter": "Auto Stonecutter",
+
+  "tooltip.enerjolt.auto_stonecutter.pickaxe_missing": "Pickaxe is missing!",
+
+  "block.enerjolt.assembling_machine": "Assembling Machine",
+  "item.enerjolt.assembling_machine": "Assembling Machine",
+  "container.enerjolt.assembling_machine": "Assembling Machine",
+
+  "block.enerjolt.induction_smelter": "Induction Smelter",
+  "item.enerjolt.induction_smelter": "Induction Smelter",
+  "container.enerjolt.induction_smelter": "Induction Smelter",
+
+  "block.enerjolt.plant_growth_chamber": "Plant Growth Chamber",
+  "item.enerjolt.plant_growth_chamber": "Plant Growth Chamber",
+  "container.enerjolt.plant_growth_chamber": "Plant Growth Chamber",
+
+  "block.enerjolt.stone_liquefier": "Stone Liquefier",
+  "item.enerjolt.stone_liquefier": "Stone Liquefier",
+  "container.enerjolt.stone_liquefier": "Stone Liquefier",
+
+  "block.enerjolt.stone_solidifier": "Stone Solidifier",
+  "item.enerjolt.stone_solidifier": "Stone Solidifier",
+  "container.enerjolt.stone_solidifier": "Stone Solidifier",
+
+  "block.enerjolt.filtration_plant": "Filtration Plant",
+  "item.enerjolt.filtration_plant": "Filtration Plant",
+  "container.enerjolt.filtration_plant": "Filtration Plant",
+
+  "tooltip.enerjolt.filtration_plant.txt.shift.1": "This block requires Charcoal Filters.",
+  "tooltip.enerjolt.filtration_plant.charcoal_filter_missing": "Charcoal Filter is missing!",
+
+  "block.enerjolt.fluid_transposer": "Fluid Transposer",
+  "item.enerjolt.fluid_transposer": "Fluid Transposer",
+  "container.enerjolt.fluid_transposer": "Fluid Transposer",
+
+  "tooltip.enerjolt.fluid_transposer.mode.emptying": "Mode: Emptying",
+  "tooltip.enerjolt.fluid_transposer.mode.filling": "Mode: Filling",
+
+  "block.enerjolt.block_placer": "Block Placer",
+  "item.enerjolt.block_placer": "Block Placer",
+  "container.enerjolt.block_placer": "Block Placer",
+
+  "tooltip.enerjolt.block_placer.block_energy_left.txt": "This block still needs %s to be placed.",
+  "tooltip.enerjolt.block_placer.cbx.inverse_rotation": "Inverse Rotation",
+
+  "block.enerjolt.fluid_tank_small": "Fluid Tank (Small)",
+  "item.enerjolt.fluid_tank_small": "Fluid Tank (Small)",
+  "container.enerjolt.fluid_tank_small": "Fluid Tank (Small)",
+
+  "block.enerjolt.fluid_tank_medium": "Fluid Tank (Medium)",
+  "item.enerjolt.fluid_tank_medium": "Fluid Tank (Medium)",
+  "container.enerjolt.fluid_tank_medium": "Fluid Tank (Medium)",
+
+  "block.enerjolt.fluid_tank_large": "Fluid Tank (Large)",
+  "item.enerjolt.fluid_tank_large": "Fluid Tank (Large)",
+  "container.enerjolt.fluid_tank_large": "Fluid Tank (Large)",
+
+  "tooltip.enerjolt.fluid_tanks.cbx.ignore_nbt": "Ignore NBT",
+  "tooltip.enerjolt.fluid_tanks.fluid_filter.no_filter_set": "No filter set",
+  "tooltip.enerjolt.fluid_tanks.fluid_filter.filter_set": "Filter: %s",
+  "tooltip.enerjolt.fluid_tanks.fluid_filter.txt.1": "Set the filter by left-clicking with an item which contains fluids.",
+  "tooltip.enerjolt.fluid_tanks.fluid_filter.txt.2": "Unset the filter by left-clicking without an item.",
+
+  "block.enerjolt.creative_fluid_tank": "Creative Fluid Tank",
+  "item.enerjolt.creative_fluid_tank": "Creative Fluid Tank",
+  "container.enerjolt.creative_fluid_tank": "Creative Fluid Tank",
+
+  "block.enerjolt.item_silo_tiny": "Item Silo (Tiny)",
+  "item.enerjolt.item_silo_tiny": "Item Silo (Tiny)",
+  "container.enerjolt.item_silo_tiny": "Item Silo (Tiny)",
+
+  "block.enerjolt.item_silo_small": "Item Silo (Small)",
+  "item.enerjolt.item_silo_small": "Item Silo (Small)",
+  "container.enerjolt.item_silo_small": "Item Silo (Small)",
+
+  "block.enerjolt.item_silo_medium": "Item Silo (Medium)",
+  "item.enerjolt.item_silo_medium": "Item Silo (Medium)",
+  "container.enerjolt.item_silo_medium": "Item Silo (Medium)",
+
+  "block.enerjolt.item_silo_large": "Item Silo (Large)",
+  "item.enerjolt.item_silo_large": "Item Silo (Large)",
+  "container.enerjolt.item_silo_large": "Item Silo (Large)",
+
+  "block.enerjolt.item_silo_giant": "Item Silo (Giant)",
+  "item.enerjolt.item_silo_giant": "Item Silo (Giant)",
+  "container.enerjolt.item_silo_giant": "Item Silo (Giant)",
+
+  "tooltip.enerjolt.item_silo.txt.shift": "Item silos can only be loaded and unloaded with hoppers, belts, and other means of automatic item transport.",
+  "tooltip.enerjolt.item_silo_capacity.txt": "Capacity: %d stacks",
+  "tooltip.enerjolt.item_silo.amount": "%d / %d items",
+
+  "block.enerjolt.creative_item_silo": "Creative Item Silo",
+  "item.enerjolt.creative_item_silo": "Creative Item Silo",
+  "container.enerjolt.creative_item_silo": "Creative Item Silo",
+
+  "block.enerjolt.fluid_filler": "Fluid Filler",
+  "item.enerjolt.fluid_filler": "Fluid Filler",
+  "container.enerjolt.fluid_filler": "Fluid Filler",
+
+  "block.enerjolt.fluid_drainer": "Fluid Drainer",
+  "item.enerjolt.fluid_drainer": "Fluid Drainer",
+  "container.enerjolt.fluid_drainer": "Fluid Drainer",
+
+  "block.enerjolt.fluid_pump": "Fluid Pump",
+  "item.enerjolt.fluid_pump": "Fluid Pump",
+  "container.enerjolt.fluid_pump": "Fluid Pump",
+
+  "block.enerjolt.advanced_fluid_pump": "Advanced Fluid Pump",
+  "item.enerjolt.advanced_fluid_pump": "Advanced Fluid Pump",
+  "container.enerjolt.advanced_fluid_pump": "Advanced Fluid Pump",
+
+  "tooltip.enerjolt.fluid_pump.process_energy_left.txt": "This process still needs %s to be finished.",
+  "tooltip.enerjolt.fluid_pump.target": "Target: %d, %d, %d",
+  "tooltip.enerjolt.fluid_pump.target_relative": "Target (Relative): %s, %s, %s",
+  "tooltip.enerjolt.fluid_pump.cobblestone_missing": "Cobblestone is missing!",
+  "tooltip.enerjolt.fluid_pump.extracting": "Extracting: %s",
+
+  "block.enerjolt.drain": "Drain",
+  "item.enerjolt.drain": "Drain",
+  "container.enerjolt.drain": "Drain",
+
+  "tooltip.enerjolt.drain.txt.shift": "The Drain drains fluid source blocks above the block.",
+
+  "block.enerjolt.lightning_generator": "Lightning Generator",
+  "item.enerjolt.lightning_generator": "Lightning Generator",
+  "container.enerjolt.lightning_generator": "Lightning Generator",
+
+  "tooltip.enerjolt.lightning_generator.txt.shift.1": "This block produces %s per lightning strike.",
+  "tooltip.enerjolt.lightning_generator.txt.shift.2": "A lightning rod block must be place above this block for it to function",
+
+  "block.enerjolt.energizer": "Energizer",
+  "item.enerjolt.energizer": "Energizer",
+  "container.enerjolt.energizer": "Energizer",
+
+  "block.enerjolt.charging_station": "Charging Station",
+  "item.enerjolt.charging_station": "Charging Station",
+  "container.enerjolt.charging_station": "Charging Station",
+
+  "tooltip.enerjolt.charging_station.txt.shift.1": "The charging station can be used to charge items inside a player inventory.",
+
+  "block.enerjolt.crystal_growth_chamber": "Crystal Growth Chamber",
+  "item.enerjolt.crystal_growth_chamber": "Crystal Growth Chamber",
+  "container.enerjolt.crystal_growth_chamber": "Crystal Growth Chamber",
+
+  "block.enerjolt.weather_controller": "Weather Controller",
+  "item.enerjolt.weather_controller": "Weather Controller",
+  "container.enerjolt.weather_controller": "Weather Controller",
+
+  "tooltip.enerjolt.weather_controller.btn.clear": "Set weather to clear",
+  "tooltip.enerjolt.weather_controller.btn.rain": "Set weather to rain",
+  "tooltip.enerjolt.weather_controller.btn.thunder": "Set weather to thunder",
+
+  "block.enerjolt.time_controller": "Time Controller",
+  "item.enerjolt.time_controller": "Time Controller",
+  "container.enerjolt.time_controller": "Time Controller",
+
+  "tooltip.enerjolt.time_controller.btn.day": "Set time to day",
+  "tooltip.enerjolt.time_controller.btn.noon": "Set time to noon",
+  "tooltip.enerjolt.time_controller.btn.night": "Set time to night",
+  "tooltip.enerjolt.time_controller.btn.midnight": "Set time to midnight",
+
+  "block.enerjolt.teleporter": "Teleporter",
+  "item.enerjolt.teleporter": "Teleporter",
+  "container.enerjolt.teleporter": "Teleporter",
+
+  "tooltip.enerjolt.teleporter.txt.shift.1": "Press [%s] while above the Teleporter to teleport.",
+  "tooltip.enerjolt.teleporter.txt.shift.2": "Teleporteration of players can also be triggered with redstone.",
+
+  "tooltip.enerjolt.teleporter.use.not_enough_energy": "Not enough energy!",
+  "tooltip.enerjolt.teleporter.use.no_teleporter_matrix": "No Teleporter Matrix present!",
+  "tooltip.enerjolt.teleporter.use.teleporter_matrix_not_bound": "Teleporter Matrix is not bound!",
+  "tooltip.enerjolt.teleporter.use.teleporter_matrix_invalid_position": "Teleporter Matrix contains an invalid position!",
+  "tooltip.enerjolt.teleporter.use.teleporter_matrix_invalid_dimension": "Teleporter Matrix contains an invalid dimension!",
+  "tooltip.enerjolt.teleporter.use.teleporter_self_position": "Teleporation to the Teleporter itself is not possible!",
+  "tooltip.enerjolt.teleporter.use.teleporter_matrix_no_teleporter": "No Teleporter found at Teleporter Matrix coordinates!",
+  "tooltip.enerjolt.teleporter.use.intra_dimensional_disabled": "Intra dimensional teleportation is disabled",
+  "tooltip.enerjolt.teleporter.use.inter_dimensional_disabled": "Inter dimensional teleportation is disabled",
+  "tooltip.enerjolt.teleporter.use.blacklist.dimension": "Teleportation for the dimension \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.intra_dimensional": "Teleportation within the dimension \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_from": "Teleportation from the dimension \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_to": "Teleportation to the dimension \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.dimension_type": "Teleportation for a dimension of dimension type \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.intra_dimensional_type": "Teleportation within a dimension of dimension type \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_from_type": "Teleportation from a dimension of dimension type \"%s\" is disabled!",
+  "tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_to_type": "Teleportation to a dimension of dimension type \"%s\" is disabled!",
+
+  "block.enerjolt.basic_machine_frame": "Basic Machine Frame",
+  "item.enerjolt.basic_machine_frame": "Basic Machine Frame",
+
+  "block.enerjolt.hardened_machine_frame": "Hardened Machine Frame",
+  "item.enerjolt.hardened_machine_frame": "Hardened Machine Frame",
+
+  "block.enerjolt.advanced_machine_frame": "Advanced Machine Frame",
+  "item.enerjolt.advanced_machine_frame": "Advanced Machine Frame",
+
+  "block.enerjolt.reinforced_advanced_machine_frame": "Reinforced Advanced Machine Frame",
+  "item.enerjolt.reinforced_advanced_machine_frame": "Reinforced Advanced Machine Frame",
+
+  "fluid_type.enerjolt.dirty_water": "Dirty Water",
+
+  "tooltip.enerjolt.count_with_item.txt": "%dx %s",
+
+  "tooltip.enerjolt.energy_meter.content.txt": "%s / %s",
+  "tooltip.enerjolt.fluid_meter.content_amount.txt": "%s / %s",
+  "tooltip.enerjolt.energy_consumption_per_tick.txt": "Energy consumption: %s",
+  "tooltip.enerjolt.energy_production_per_tick.txt": "Energy production: %s",
+  "tooltip.enerjolt.recipe.energy_required_to_finish.txt": "This recipe requires %s to finish.",
+  "tooltip.enerjolt.recipe.selector.next_recipe": "Next recipe",
+  "tooltip.enerjolt.recipe.selector.prev_recipe": "Previous recipe",
+  "tooltip.enerjolt.shift_details.txt": "Press [SHIFT] for details",
+  "tooltip.enerjolt.capacity.txt": "Capacity: %s",
+  "tooltip.enerjolt.transfer_rate.txt": "Transfer rate: %s/t",
+  "tooltip.enerjolt.tank_capacity.txt": "Tank Capacity: %s",
+  "tooltip.enerjolt.not_enough_energy.txt": "Not enough energy",
+  "tooltip.enerjolt.ready.txt": "Ready",
+  "tooltip.enerjolt.infinite.txt": "Infinite",
+
+  "tooltip.enerjolt.direction.down": "Down",
+  "tooltip.enerjolt.direction.up": "Up",
+  "tooltip.enerjolt.direction.north": "North",
+  "tooltip.enerjolt.direction.south": "South",
+  "tooltip.enerjolt.direction.west": "West",
+  "tooltip.enerjolt.direction.east": "East",
+
+  "block_state.enerjolt.pipe_connection.not_connected": "Not connected",
+  "block_state.enerjolt.pipe_connection.connected": "Connected/Insertion",
+  "block_state.enerjolt.pipe_connection.extract": "Extraction",
+
+  "block_state.enerjolt.transformer_connection.not_connected": "Not connected",
+  "block_state.enerjolt.transformer_connection.receive": "Insertion",
+  "block_state.enerjolt.transformer_connection.extract": "Extraction",
+
+  "tooltip.enerjolt.conveyor_belt_direction.slope.flat": "Flat",
+  "tooltip.enerjolt.conveyor_belt_direction.slope.ascending": "Ascending",
+  "tooltip.enerjolt.conveyor_belt_direction.slope.descending": "Descending",
+
+  "tooltip.enerjolt.machine_configuration.redstone_mode.ignore": "Redstone Mode: Ignore",
+  "tooltip.enerjolt.machine_configuration.redstone_mode.high": "Redstone Mode: High",
+  "tooltip.enerjolt.machine_configuration.redstone_mode.low": "Redstone Mode: Low",
+
+  "tooltip.enerjolt.machine_configuration.comparator_mode.item": "Comparator Mode: Item",
+  "tooltip.enerjolt.machine_configuration.comparator_mode.fluid": "Comparator Mode: Fluid",
+  "tooltip.enerjolt.machine_configuration.comparator_mode.energy": "Comparator Mode: Energy",
+
+  "tooltip.enerjolt.upgrade_module_modifier.speed": "Production Speed",
+  "tooltip.enerjolt.upgrade_module_modifier.energy_consumption": "Energy Consumption per tick",
+  "tooltip.enerjolt.upgrade_module_modifier.energy_capacity": "Energy Capacity",
+  "tooltip.enerjolt.upgrade_module_modifier.energy_transfer_rate": "Energy Transfer Rate",
+  "tooltip.enerjolt.upgrade_module_modifier.duration": "Duration",
+  "tooltip.enerjolt.upgrade_module_modifier.range": "Range",
+  "tooltip.enerjolt.upgrade_module_modifier.extraction_depth": "Extraction Depth",
+  "tooltip.enerjolt.upgrade_module_modifier.extraction_range": "Extraction Range",
+  "tooltip.enerjolt.upgrade_module_modifier.furnace_mode": "Furnace mode",
+  "tooltip.enerjolt.upgrade_module_modifier.moon_light": "Moon Light",
+
+  "tooltip.enerjolt.upgrade_module_modifier.extraction_depth.unit": "Blocks",
+
+  "tooltip.enerjolt.upgrade.values": "Upgrade Module Modifiers:",
+  "tooltip.enerjolt.upgrade.value": "• %s: %s",
+
+  "tooltip.enerjolt.upgrade_view.button.open": "Open Upgrade View",
+  "tooltip.enerjolt.upgrade_view.button.close": "Close Upgrade View",
+
+  "itemGroup.enerjolt.tab": "Energized Power",
+
+  "entity.minecraft.villager.enerjolt.electrician": "Electrician",
+
+  "entity.enerjolt.battery_box_minecart": "Battery Box Minecart",
+  "entity.enerjolt.advanced_battery_box_minecart": "Advanced Battery Box Minecart",
+
+  "recipes.enerjolt.in_world_crafting": "In-World Crafting",
+  "recipes.enerjolt.info.ticks": "Ticks: %d",
+  "recipes.enerjolt.plant_growth_chamber_fertilizer": "Growth Chamber (Fertilizer)",
+  "recipes.enerjolt.plant_growth_chamber_fertilizer.speed_multiplier": "%.2fx Speed",
+  "recipes.enerjolt.plant_growth_chamber_fertilizer.energy_consumption_multiplier": "%.2fx Energy Consumption",
+  "recipes.enerjolt.transfer.too_large": "This recipe is to large for this container!",
+  "recipes.enerjolt.transfer.output_percentages": "Percentage per item:",
+
+  "emi.category.enerjolt.charger": "Charger",
+  "emi.category.enerjolt.crusher": "Crusher",
+  "emi.category.enerjolt.pulverizer": "Pulverizer",
+  "emi.category.enerjolt.advanced_pulverizer": "Advanced Pulverizer",
+  "emi.category.enerjolt.sawmill": "Sawmill",
+  "emi.category.enerjolt.compressor": "Compressor",
+  "emi.category.enerjolt.metal_press": "Metal Press",
+  "emi.category.enerjolt.assembling_machine": "Assembling Machine",
+  "emi.category.enerjolt.plant_growth_chamber": "Plant Growth Chamber",
+  "emi.category.enerjolt.plant_growth_chamber_fertilizer": "Growth Chamber (Fertilizer)",
+  "emi.category.enerjolt.energizer": "Energizer",
+  "emi.category.enerjolt.crystal_growth_chamber": "Crystal Growth Chamber",
+  "emi.category.enerjolt.press_mold_maker": "Press Mold Maker",
+  "emi.category.enerjolt.alloy_furnace": "Alloy Furnace",
+  "emi.category.enerjolt.stone_liquefier": "Stone Liquefier",
+  "emi.category.enerjolt.stone_solidifier": "Stone Solidifier",
+  "emi.category.enerjolt.filtration_plant": "Filtration Plant",
+  "emi.category.enerjolt.fluid_transposer": "Fluid Transposer",
+  "emi.category.enerjolt.dispenser": "Dispenser",
+  "emi.category.enerjolt.in_world_crafting": "In-World Crafting",
+
+
+  "painting.enerjolt.gear.title": "Gear",
+  "painting.enerjolt.gear.author": "JDDev0",
+
+  "painting.enerjolt.factory.title": "Factory",
+  "painting.enerjolt.factory.author": "JDDev0",
+
+  "key.category.enerjolt": "Energized Power",
+  "key.enerjolt.teleporter.use": "Use Teleporter",
+
+
+  "advancements.enerjolt.hardened_machine_frame.title": "Hardened Machines",
+  "advancements.enerjolt.hardened_machine_frame.description": "Required for better machines.",
+
+  "advancements.enerjolt.advanced_machine_frame.title": "Advanced Machines",
+  "advancements.enerjolt.advanced_machine_frame.description": "More advanced machines need this base crafting item.",
+
+  "advancements.enerjolt.reinforced_advanced_machine_frame.title": "Even more advanced Machines",
+  "advancements.enerjolt.reinforced_advanced_machine_frame.description": "The most advanced machines need this base crafting item.",
+
+  "advancements.enerjolt.advanced_solar_cell.title": "Advanced Solar Power",
+  "advancements.enerjolt.advanced_solar_cell.description": "Required for advanced solar panels...",
+
+  "advancements.enerjolt.reinforced_advanced_solar_cell.title": "Even better solar energy",
+  "advancements.enerjolt.reinforced_advanced_solar_cell.description": "Required for the best solar panels...",
+
+  "advancements.enerjolt.basic_circuit.title": "Basic Circuit",
+  "advancements.enerjolt.basic_circuit.description": "Craft a Basic Circuit.",
+
+  "advancements.enerjolt.advanced_circuit.title": "Advanced Circuit",
+  "advancements.enerjolt.advanced_circuit.description": "Craft an Advanced Circuit.",
+
+  "advancements.enerjolt.processing_unit.title": "Processing Unit",
+  "advancements.enerjolt.processing_unit.description": "Craft a Processing Unit.",
+
+  "advancements.enerjolt.basic_upgrade_module.title": "Basic Upgrade Module",
+  "advancements.enerjolt.basic_upgrade_module.description": "Craft a Basic Upgrade Module.",
+
+  "advancements.enerjolt.advanced_upgrade_module.title": "Advanced Upgrade Module",
+  "advancements.enerjolt.advanced_upgrade_module.description": "Craft an Advanced Upgrade Module.",
+
+  "advancements.enerjolt.reinforced_advanced_upgrade_module.title": "Reinforced Advanced Upgrade Module",
+  "advancements.enerjolt.reinforced_advanced_upgrade_module.description": "Craft a Reinforced Advanced Upgrade Module.",
+
+  "advancements.enerjolt.speed_upgrade_module_1.title": "Speed I",
+  "advancements.enerjolt.speed_upgrade_module_1.description": "Craft a Speed Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.speed_upgrade_module_2.title": "Speed II",
+  "advancements.enerjolt.speed_upgrade_module_2.description": "Craft a Speed Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.speed_upgrade_module_3.title": "Speed III",
+  "advancements.enerjolt.speed_upgrade_module_3.description": "Craft a Speed Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.speed_upgrade_module_4.title": "Speed IV",
+  "advancements.enerjolt.speed_upgrade_module_4.description": "Craft a Speed Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.speed_upgrade_module_5.title": "Speed V",
+  "advancements.enerjolt.speed_upgrade_module_5.description": "Craft a Speed Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.energy_efficiency_upgrade_module_1.title": "Energy Efficiency I",
+  "advancements.enerjolt.energy_efficiency_upgrade_module_1.description": "Craft a Energy Efficiency Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.energy_efficiency_upgrade_module_2.title": "Energy Efficiency II",
+  "advancements.enerjolt.energy_efficiency_upgrade_module_2.description": "Craft a Energy Efficiency Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.energy_efficiency_upgrade_module_3.title": "Energy Efficiency III",
+  "advancements.enerjolt.energy_efficiency_upgrade_module_3.description": "Craft a Energy Efficiency Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.energy_efficiency_upgrade_module_4.title": "Energy Efficiency IV",
+  "advancements.enerjolt.energy_efficiency_upgrade_module_4.description": "Craft a Energy Efficiency Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.energy_efficiency_upgrade_module_5.title": "Energy Efficiency V",
+  "advancements.enerjolt.energy_efficiency_upgrade_module_5.description": "Craft a Energy Efficiency Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.energy_capacity_upgrade_module_1.title": "Energy Capacity I",
+  "advancements.enerjolt.energy_capacity_upgrade_module_1.description": "Craft a Energy Capacity Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.energy_capacity_upgrade_module_2.title": "Energy Capacity II",
+  "advancements.enerjolt.energy_capacity_upgrade_module_2.description": "Craft a Energy Capacity Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.energy_capacity_upgrade_module_3.title": "Energy Capacity III",
+  "advancements.enerjolt.energy_capacity_upgrade_module_3.description": "Craft a Energy Capacity Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.energy_capacity_upgrade_module_4.title": "Energy Capacity IV",
+  "advancements.enerjolt.energy_capacity_upgrade_module_4.description": "Craft a Energy Capacity Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.energy_capacity_upgrade_module_5.title": "Energy Capacity V",
+  "advancements.enerjolt.energy_capacity_upgrade_module_5.description": "Craft a Energy Capacity Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.duration_upgrade_module_1.title": "Duration I",
+  "advancements.enerjolt.duration_upgrade_module_1.description": "Craft a Duration Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.duration_upgrade_module_2.title": "Duration II",
+  "advancements.enerjolt.duration_upgrade_module_2.description": "Craft a Duration Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.duration_upgrade_module_3.title": "Duration III",
+  "advancements.enerjolt.duration_upgrade_module_3.description": "Craft a Duration Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.duration_upgrade_module_4.title": "Duration IV",
+  "advancements.enerjolt.duration_upgrade_module_4.description": "Craft a Duration Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.duration_upgrade_module_5.title": "Duration V",
+  "advancements.enerjolt.duration_upgrade_module_5.description": "Craft a Duration Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.duration_upgrade_module_6.title": "Duration VI",
+  "advancements.enerjolt.duration_upgrade_module_6.description": "Craft a Duration Upgrade Module (Tier VI).",
+
+  "advancements.enerjolt.range_upgrade_module_1.title": "Range I",
+  "advancements.enerjolt.range_upgrade_module_1.description": "Craft a Range Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.range_upgrade_module_2.title": "Range II",
+  "advancements.enerjolt.range_upgrade_module_2.description": "Craft a Range Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.range_upgrade_module_3.title": "Range III",
+  "advancements.enerjolt.range_upgrade_module_3.description": "Craft a Range Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.extraction_depth_upgrade_module_1.title": "Extraction Depth I",
+  "advancements.enerjolt.extraction_depth_upgrade_module_1.description": "Craft an Extraction Depth Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.extraction_depth_upgrade_module_2.title": "Extraction Depth II",
+  "advancements.enerjolt.extraction_depth_upgrade_module_2.description": "Craft an Extraction Depth Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.extraction_depth_upgrade_module_3.title": "Extraction Depth III",
+  "advancements.enerjolt.extraction_depth_upgrade_module_3.description": "Craft an Extraction Depth Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.extraction_depth_upgrade_module_4.title": "Extraction Depth IV",
+  "advancements.enerjolt.extraction_depth_upgrade_module_4.description": "Craft an Extraction Depth Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.extraction_depth_upgrade_module_5.title": "Extraction Depth V",
+  "advancements.enerjolt.extraction_depth_upgrade_module_5.description": "Craft an Extraction Depth Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.extraction_range_upgrade_module_1.title": "Extraction Range I",
+  "advancements.enerjolt.extraction_range_upgrade_module_1.description": "Craft an Extraction Range Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.extraction_range_upgrade_module_2.title": "Extraction Range II",
+  "advancements.enerjolt.extraction_range_upgrade_module_2.description": "Craft an Extraction Range Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.extraction_range_upgrade_module_3.title": "Extraction Range III",
+  "advancements.enerjolt.extraction_range_upgrade_module_3.description": "Craft an Extraction Range Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.extraction_range_upgrade_module_4.title": "Extraction Range IV",
+  "advancements.enerjolt.extraction_range_upgrade_module_4.description": "Craft an Extraction Range Upgrade Module (Tier IV).",
+
+  "advancements.enerjolt.extraction_range_upgrade_module_5.title": "Extraction Range V",
+  "advancements.enerjolt.extraction_range_upgrade_module_5.description": "Craft an Extraction Range Upgrade Module (Tier V).",
+
+  "advancements.enerjolt.blast_furnace_upgrade_module.title": "Furnace Mode: Blast Furnace",
+  "advancements.enerjolt.blast_furnace_upgrade_module.description": "Craft a Blast Upgrade Module.",
+
+  "advancements.enerjolt.smoker_upgrade_module.title": "Furnace Mode: Smoker",
+  "advancements.enerjolt.smoker_upgrade_module.description": "Craft a Smoker Upgrade Module.",
+
+  "advancements.enerjolt.moon_light_upgrade_module_1.title": "Moon Light I",
+  "advancements.enerjolt.moon_light_upgrade_module_1.description": "Craft a Moon Light Upgrade Module (Tier I).",
+
+  "advancements.enerjolt.moon_light_upgrade_module_2.title": "Moon Light II",
+  "advancements.enerjolt.moon_light_upgrade_module_2.description": "Craft a Moon Light Upgrade Module (Tier II).",
+
+  "advancements.enerjolt.moon_light_upgrade_module_3.title": "Moon Light III",
+  "advancements.enerjolt.moon_light_upgrade_module_3.description": "Craft a Moon Light Upgrade Module (Tier III).",
+
+  "advancements.enerjolt.press_mold_maker.title": "Press Mold Maker",
+  "advancements.enerjolt.press_mold_maker.description": "Use this block to make press molds for the Metal Press.",
+
+  "advancements.enerjolt.raw_press_molds.title": "Raw Press Mold",
+  "advancements.enerjolt.raw_press_molds.description": "Use Clay Balls to make a Raw Press Mold. (Don't forget to cook it...)",
+
+  "advancements.enerjolt.press_molds.title": "Press Mold",
+  "advancements.enerjolt.press_molds.description": "Cooked Press Molds can be used in the Metal Press.",
+
+  "advancements.enerjolt.alloy_furnace.title": "Alloy Furnace",
+  "advancements.enerjolt.alloy_furnace.description": "Create an Alloy Furnace.",
+
+  "advancements.enerjolt.steel_ingot.title": "Steel Ingot",
+  "advancements.enerjolt.steel_ingot.description": "Create a Steel Ingot.",
+
+  "advancements.enerjolt.redstone_alloy_ingot.title": "Redstone Alloy Ingot",
+  "advancements.enerjolt.redstone_alloy_ingot.description": "Create a Redstone Alloy Ingot.",
+
+  "advancements.enerjolt.advanced_alloy_ingot.title": "Advanced Alloy Ingot",
+  "advancements.enerjolt.advanced_alloy_ingot.description": "Create an Advanced Alloy Ingot.",
+
+  "advancements.enerjolt.advanced_alloy_plate.title": "Advanced Alloy Plate",
+  "advancements.enerjolt.advanced_alloy_plate.description": "Create an Advanced Alloy Plate.",
+
+  "advancements.enerjolt.auto_crafter.title": "Automation is the future",
+  "advancements.enerjolt.auto_crafter.description": "Who needs manual crafting tables when this block can do it automatically?",
+
+  "advancements.enerjolt.advanced_auto_crafter.title": "Power crafting",
+  "advancements.enerjolt.advanced_auto_crafter.description": "Craft multiple recipes with the same block.",
+
+  "advancements.enerjolt.crusher.title": "Crush it",
+  "advancements.enerjolt.crusher.description": "Crush Stone, Sandstone, Cobblestone, Gravel, or other blocks.",
+
+  "advancements.enerjolt.pulverizer.title": "Pulverization",
+  "advancements.enerjolt.pulverizer.description": "Pulverize ores to boost production.",
+
+  "advancements.enerjolt.charcoal_filter.title": "Charcoal Filter",
+  "advancements.enerjolt.charcoal_filter.description": "Craft a charcoal filter.",
+
+  "advancements.enerjolt.sawmill.title": "Sawing",
+  "advancements.enerjolt.sawmill.description": "Saws wood.",
+
+  "advancements.enerjolt.compressor.title": "Compressing",
+  "advancements.enerjolt.compressor.description": "Creates plates.",
+
+  "advancements.enerjolt.metal_press.title": "Metal Press",
+  "advancements.enerjolt.metal_press.description": "Form metals.",
+
+  "advancements.enerjolt.auto_press_mold_maker.title": "Auto Press Mold Maker",
+  "advancements.enerjolt.auto_press_mold_maker.description": "Craft an Auto Press Mold Maker.",
+
+  "advancements.enerjolt.auto_stonecutter.title": "Auto Stonecutter",
+  "advancements.enerjolt.auto_stonecutter.description": "Craft an Auto Stonecutter.",
+
+  "advancements.enerjolt.assembling_machine.title": "Assembling Machine",
+  "advancements.enerjolt.assembling_machine.description": "Craft electronic components in the Assembling Machine.",
+
+  "advancements.enerjolt.plant_growth_chamber.title": "Faster Plant Growth",
+  "advancements.enerjolt.plant_growth_chamber.description": "Improve the speed and the yields with the Plant Growth Chamber.",
+
+  "advancements.enerjolt.stone_liquefier.title": "Stone Liquefier",
+  "advancements.enerjolt.stone_liquefier.description": "Create lava from stone blocks.",
+
+  "advancements.enerjolt.stone_solidifier.title": "Stone Solidifier",
+  "advancements.enerjolt.stone_solidifier.description": "Create stone blocks from Water and Lava.",
+
+  "advancements.enerjolt.block_placer.title": "Place the block",
+  "advancements.enerjolt.block_placer.description": "Blocks are placed automatically in the world.",
+
+  "advancements.enerjolt.fluid_filler.title": "Fill the fluid item",
+  "advancements.enerjolt.fluid_filler.description": "Fill items with fluids.",
+
+  "advancements.enerjolt.fluid_drainer.title": "Drain the fluid item",
+  "advancements.enerjolt.fluid_drainer.description": "Drain fluids from items.",
+
+  "advancements.enerjolt.fluid_pump.title": "Fluid Pump",
+  "advancements.enerjolt.fluid_pump.description": "Craft a Fluid Pump.",
+
+  "advancements.enerjolt.advanced_fluid_pump.title": "Advanced Fluid Pump",
+  "advancements.enerjolt.advanced_fluid_pump.description": "Craft an Advanced Fluid Pump.",
+
+  "advancements.enerjolt.drain.title": "The Drain",
+  "advancements.enerjolt.drain.description": "Drain fluids source blocks.",
+
+  "advancements.enerjolt.basic_machine_frame.title": "The Foundation of Machines",
+  "advancements.enerjolt.basic_machine_frame.description": "This is the base crafting item for every basic machine.",
+
+  "advancements.enerjolt.basic_solar_cell.title": "Solar Power Basics",
+  "advancements.enerjolt.basic_solar_cell.description": "Your first solar cell of two required for your first solar panel.",
+
+  "advancements.enerjolt.battery_1.title": "Batteries",
+  "advancements.enerjolt.battery_1.description": "Stores energy in item form.",
+
+  "advancements.enerjolt.battery_2.title": "Energy x4",
+  "advancements.enerjolt.battery_2.description": "This battery can store as much energy as 4 Tier I batteries.",
+
+  "advancements.enerjolt.battery_3.title": "More Energy",
+  "advancements.enerjolt.battery_3.description": "Tier III: Twice the power of Tier II",
+
+  "advancements.enerjolt.battery_4.title": "You ask for even more Energy",
+  "advancements.enerjolt.battery_4.description": "Well this is Tier IV - only four to go",
+
+  "advancements.enerjolt.battery_5.title": "The best normal copper can do",
+  "advancements.enerjolt.battery_5.description": "Tier V: You will need to energize the next battery tier...",
+
+  "advancements.enerjolt.battery_6.title": "Energized Batteries",
+  "advancements.enerjolt.battery_6.description": "Tier VI: You have energized your battery for even more storage capacity.",
+
+  "advancements.enerjolt.battery_7.title": "You said you need more Power?",
+  "advancements.enerjolt.battery_7.description": "Tier VII: A quarter million FE of storage capacity! Can we do better?",
+
+  "advancements.enerjolt.battery_8.title": "I need more POWER",
+  "advancements.enerjolt.battery_8.description": "This is the best battery of this mod (It can store more than 1 million FE)",
+
+  "advancements.enerjolt.battery_8_fully_charged.title": "Master of Energy Storage",
+  "advancements.enerjolt.battery_8_fully_charged.description": "You have fully charged your 1 million FE battery!",
+
+  "advancements.enerjolt.cable_insulator.title": "The Jacket for your Cable",
+  "advancements.enerjolt.cable_insulator.description": "Cover your cables with this ingredient. (Can be crafted by clicking on wool with shears [Dispenser can be used too])",
+
+  "advancements.enerjolt.charger.title": "Charge it",
+  "advancements.enerjolt.charger.description": "Charge your energy items with this block.",
+
+  "advancements.enerjolt.inventory_charger.title": "Local charging",
+  "advancements.enerjolt.inventory_charger.description": "Charge energy items in your inventory with batteries.",
+
+  "advancements.enerjolt.inventory_teleporter.title": "Portable Teleporter",
+  "advancements.enerjolt.inventory_teleporter.description": "Craft an Inventory Teleporter.",
+
+  "advancements.enerjolt.advanced_charger.title": "Parallel charging",
+  "advancements.enerjolt.advanced_charger.description": "Charge energy items in parallel.",
+
+  "advancements.enerjolt.advanced_uncharger.title": "Parallel uncharging",
+  "advancements.enerjolt.advanced_uncharger.description": "Uncharge energy items in parallel.",
+
+  "advancements.enerjolt.charging_station.title": "Wireless charging",
+  "advancements.enerjolt.charging_station.description": "Charge energy items wirelessly.",
+
+  "advancements.enerjolt.crystal_growth_chamber.title": "Crystal growth",
+  "advancements.enerjolt.crystal_growth_chamber.description": "Grow crystals in the Crystal Growth Chamber.",
+
+  "advancements.enerjolt.energized_crystal_matrix.title": "Energized Crystal Matrix",
+  "advancements.enerjolt.energized_crystal_matrix.description": "Used as a stabilizer in some advanced machines.",
+
+  "advancements.enerjolt.teleporter_matrix.title": "Teleporter Matrix",
+  "advancements.enerjolt.teleporter_matrix.description": "The first step to achieve teleportation.",
+
+  "advancements.enerjolt.teleporter_processing_unit.title": "Teleporter Processing Unit",
+  "advancements.enerjolt.teleporter_processing_unit.description": "The brain of Teleporters.",
+
+  "advancements.enerjolt.teleporter.title": "Faster than light",
+  "advancements.enerjolt.teleporter.description": "Craft a Teleporter.",
+
+  "advancements.enerjolt.weather_controller.title": "Control the weather",
+  "advancements.enerjolt.weather_controller.description": "Change the weather with the Weather Controller.",
+
+  "advancements.enerjolt.time_controller.title": "Control the time",
+  "advancements.enerjolt.time_controller.description": "Change the time with the Time Controller.",
+
+  "advancements.enerjolt.coal_engine.title": "Powered by Coal",
+  "advancements.enerjolt.coal_engine.description": "Producing energy by burning stuff might not be the most efficient but good enough for the moment.",
+
+  "advancements.enerjolt.heat_generator.title": "Powered by Heat",
+  "advancements.enerjolt.heat_generator.description": "Convert heat to energy.",
+
+  "advancements.enerjolt.thermal_generator.title": "Powered by hot liquids",
+  "advancements.enerjolt.thermal_generator.description": "Consume hot liquids to generate energy.",
+
+  "advancements.enerjolt.filtration_plant.title": "Fluid filtration",
+  "advancements.enerjolt.filtration_plant.description": "Craft a Filtration Plant.",
+
+  "advancements.enerjolt.fluid_transposer.title": "Fluid Transposer",
+  "advancements.enerjolt.fluid_transposer.description": "Craft a Fluid Transposer.",
+
+  "advancements.enerjolt.induction_smelter.title": "Induction Smelter",
+  "advancements.enerjolt.induction_smelter.description": "Craft an Induction Smelter.",
+
+  "advancements.enerjolt.powered_lamp.title": "Electric lights",
+  "advancements.enerjolt.powered_lamp.description": "Convert power to light.",
+
+  "advancements.enerjolt.powered_furnace.title": "Powered Furnace",
+  "advancements.enerjolt.powered_furnace.description": "Furnace with power.",
+
+  "advancements.enerjolt.advanced_powered_furnace.title": "Fast smelting",
+  "advancements.enerjolt.advanced_powered_furnace.description": "Smelt multiple items at once with power.",
+
+  "advancements.enerjolt.item_conveyor_belt.title": "Item Transport",
+  "advancements.enerjolt.item_conveyor_belt.description": "Transport items with item conveyor belts.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt.title": "Fast Item Transport",
+  "advancements.enerjolt.fast_item_conveyor_belt.description": "Craft a Fast Item Conveyor Belt.",
+
+  "advancements.enerjolt.express_item_conveyor_belt.title": "Express Item Transport",
+  "advancements.enerjolt.express_item_conveyor_belt.description": "Craft an Express Item Conveyor Belt.",
+
+  "advancements.enerjolt.item_conveyor_belt_loader.title": "Item Loader",
+  "advancements.enerjolt.item_conveyor_belt_loader.description": "Load Items on an item conveyor belt.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt_loader.title": "Fast Item Conveyor Belt Loader",
+  "advancements.enerjolt.fast_item_conveyor_belt_loader.description": "Craft a Fast Item Conveyor Belt Loader.",
+
+  "advancements.enerjolt.express_item_conveyor_belt_loader.title": "Express Item Conveyor Belt Loader",
+  "advancements.enerjolt.express_item_conveyor_belt_loader.description": "Craft an Express Item Conveyor Belt Loader.",
+
+  "advancements.enerjolt.item_conveyor_belt_sorter.title": "Automatic Sorting",
+  "advancements.enerjolt.item_conveyor_belt_sorter.description": "Sort Items with the Item Conveyor Belt Sorter.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt_sorter.title": "Fast Item Conveyor Belt Sorter",
+  "advancements.enerjolt.fast_item_conveyor_belt_sorter.description": "Craft a Fast Item Conveyor Belt Sorter.",
+
+  "advancements.enerjolt.express_item_conveyor_belt_sorter.title": "Express Item Conveyor Belt Sorter",
+  "advancements.enerjolt.express_item_conveyor_belt_sorter.description": "Craft an Express Item Conveyor Belt Sorter.",
+
+  "advancements.enerjolt.item_conveyor_belt_switch.title": "Conveyor Belt Switch",
+  "advancements.enerjolt.item_conveyor_belt_switch.description": "Select a direction.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt_switch.title": "Fast Item Conveyor Belt Switch",
+  "advancements.enerjolt.fast_item_conveyor_belt_switch.description": "Craft a Fast Item Conveyor Belt Switch.",
+
+  "advancements.enerjolt.express_item_conveyor_belt_switch.title": "Express Item Conveyor Belt Switch",
+  "advancements.enerjolt.express_item_conveyor_belt_switch.description": "Craft an Express Item Conveyor Belt Switch.",
+
+  "advancements.enerjolt.item_conveyor_belt_splitter.title": "Conveyor Belt Splitter",
+  "advancements.enerjolt.item_conveyor_belt_splitter.description": "Distribute items evenly to multiple outputs.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt_splitter.title": "Fast Item Conveyor Belt Splitter",
+  "advancements.enerjolt.fast_item_conveyor_belt_splitter.description": "Craft a Fast Item Conveyor Belt Splitter.",
+
+  "advancements.enerjolt.express_item_conveyor_belt_splitter.title": "Express Item Conveyor Belt Splitter",
+  "advancements.enerjolt.express_item_conveyor_belt_splitter.description": "Craft an Express Item Conveyor Belt Splitter.",
+
+  "advancements.enerjolt.item_conveyor_belt_merger.title": "Conveyor Belt Merger",
+  "advancements.enerjolt.item_conveyor_belt_merger.description": "Merge items evenly from multiple inputs.",
+
+  "advancements.enerjolt.fast_item_conveyor_belt_merger.title": "Fast Item Conveyor Belt Merger",
+  "advancements.enerjolt.fast_item_conveyor_belt_merger.description": "Craft a Fast Item Conveyor Belt Merger.",
+
+  "advancements.enerjolt.express_item_conveyor_belt_merger.title": "Express Item Conveyor Belt Merger",
+  "advancements.enerjolt.express_item_conveyor_belt_merger.description": "Craft an Express Item Conveyor Belt Merger.",
+
+  "advancements.enerjolt.item_silo_tiny.title": "Item Silo (Tiny)",
+  "advancements.enerjolt.item_silo_tiny.description": "Craft a tiny Item Silo.",
+
+  "advancements.enerjolt.item_silo_small.title": "Item Silo (Small)",
+  "advancements.enerjolt.item_silo_small.description": "Craft a small Item Silo.",
+
+  "advancements.enerjolt.item_silo_medium.title": "Item Silo (Medium)",
+  "advancements.enerjolt.item_silo_medium.description": "Craft a medium Item Silo.",
+
+  "advancements.enerjolt.item_silo_large.title": "Item Silo (Large)",
+  "advancements.enerjolt.item_silo_large.description": "Craft a large Item Silo.",
+
+  "advancements.enerjolt.item_silo_giant.title": "Item Silo (Giant)",
+  "advancements.enerjolt.item_silo_giant.description": "Craft a giant Item Silo.",
+
+  "advancements.enerjolt.iron_fluid_pipe.title": "Fluid Transport",
+  "advancements.enerjolt.iron_fluid_pipe.description": "Transport fluids with iron fluid pipes.",
+
+  "advancements.enerjolt.golden_fluid_pipe.title": "Fast Fluid Transport",
+  "advancements.enerjolt.golden_fluid_pipe.description": "Transport fluids faster with golden fluid pipes.",
+
+  "advancements.enerjolt.fluid_tank_small.title": "Simple Fluid Storage",
+  "advancements.enerjolt.fluid_tank_small.description": "Store fluids in a small Fluid Tank.",
+
+  "advancements.enerjolt.fluid_tank_medium.title": "Better Fluid Storage",
+  "advancements.enerjolt.fluid_tank_medium.description": "Store fluids in a medium Fluid Tank.",
+
+  "advancements.enerjolt.fluid_tank_large.title": "Large Fluid Storage",
+  "advancements.enerjolt.fluid_tank_large.description": "Store fluids in a large Fluid Tank.",
+
+  "advancements.enerjolt.tin_cable.title": "Basic Energy Transport",
+  "advancements.enerjolt.tin_cable.description": "Transport low amounts of energy with a Tin Cable.",
+
+  "advancements.enerjolt.copper_cable.title": "Energy Transport",
+  "advancements.enerjolt.copper_cable.description": "Transport energy with cables.",
+
+  "advancements.enerjolt.gold_cable.title": "The more power, the better",
+  "advancements.enerjolt.gold_cable.description": "More power with a better cable.",
+
+  "advancements.enerjolt.energized_copper_cable.title": "Too much Power to handle",
+  "advancements.enerjolt.energized_copper_cable.description": "Cable with very high Power throughput!",
+
+  "advancements.enerjolt.energized_gold_cable.title": "Power, power, power",
+  "advancements.enerjolt.energized_gold_cable.description": "This cable is the best of the best.",
+
+  "advancements.enerjolt.energized_crystal_matrix_cable.title": "Too much power",
+  "advancements.enerjolt.energized_crystal_matrix_cable.description": "When do I even need to transport that much energy?",
+
+  "advancements.enerjolt.lv_transformers.title": "LV Transformers",
+  "advancements.enerjolt.lv_transformers.description": "Can connect different tiers of cables.",
+
+  "advancements.enerjolt.mv_transformers.title": "MV Transformers",
+  "advancements.enerjolt.mv_transformers.description": "Can transfer more power.",
+
+  "advancements.enerjolt.hv_transformers.title": "HV Transformers",
+  "advancements.enerjolt.hv_transformers.description": "Can transfer even more power.",
+
+  "advancements.enerjolt.ehv_transformers.title": "EHV Transformers",
+  "advancements.enerjolt.ehv_transformers.description": "Can transfer more than 2 million FE per tick.",
+
+  "advancements.enerjolt.battery_box.title": "Battery Box",
+  "advancements.enerjolt.battery_box.description": "Store energy with the Battery Box block.",
+
+  "advancements.enerjolt.advanced_battery_box.title": "Better Battery Box",
+  "advancements.enerjolt.advanced_battery_box.description": "Store even more energy than the best battery item.",
+
+  "advancements.enerjolt.enerjolt_advanced.title": "Energized Power (Advanced)",
+  "advancements.enerjolt.enerjolt_advanced.description": "Energized Copper is better Copper.",
+
+  "advancements.enerjolt.energized_gold_ingot.title": "Shiny Ingot",
+  "advancements.enerjolt.energized_gold_ingot.description": "This Energized Gold Ingot is very shiny.",
+
+  "advancements.enerjolt.energized_power_book.title": "Endless Knowledge",
+  "advancements.enerjolt.energized_power_book.description": "A guide book for this mod.",
+
+  "advancements.enerjolt.hammer.title": "A good tool",
+  "advancements.enerjolt.hammer.description": "Hammers can be used to craft plates.",
+
+  "advancements.enerjolt.cutter.title": "Cut, cut, cut",
+  "advancements.enerjolt.cutter.description": "Cutters can be used to craft wires.",
+
+  "advancements.enerjolt.wrench.title": "Wrench configuration",
+  "advancements.enerjolt.wrench.description": "Configure blocks with a wrench.",
+
+  "advancements.enerjolt.battery_box_minecart.title": "Power on Rails",
+  "advancements.enerjolt.battery_box_minecart.description": "Transport energy on rails.",
+
+  "advancements.enerjolt.advanced_battery_box_minecart.title": "Even more power on Rails",
+  "advancements.enerjolt.advanced_battery_box_minecart.description": "Transport even more energy on rails.",
+
+  "advancements.enerjolt.tin_plate.title": "Tin Plate",
+  "advancements.enerjolt.tin_plate.description": "Create a tin plate.",
+
+  "advancements.enerjolt.copper_plate.title": "Copper Plate",
+  "advancements.enerjolt.copper_plate.description": "Create a copper plate.",
+
+  "advancements.enerjolt.iron_plate.title": "Hit it",
+  "advancements.enerjolt.iron_plate.description": "Create an iron plate.",
+
+  "advancements.enerjolt.gold_plate.title": "Gold Plate",
+  "advancements.enerjolt.gold_plate.description": "Create a gold plate.",
+
+  "advancements.enerjolt.tin_wire.title": "Tin Wire",
+  "advancements.enerjolt.tin_wire.description": "Create a tin wire.",
+
+  "advancements.enerjolt.copper_wire.title": "Copper Wire",
+  "advancements.enerjolt.copper_wire.description": "Create a copper wire.",
+
+  "advancements.enerjolt.gold_wire.title": "Gold Wire",
+  "advancements.enerjolt.gold_wire.description": "Create a gold wire.",
+
+  "advancements.enerjolt.energized_copper_plate.title": "Energized Copper Plate",
+  "advancements.enerjolt.energized_copper_plate.description": "Create an energized copper plate.",
+
+  "advancements.enerjolt.energized_gold_plate.title": "Energized Gold Plate",
+  "advancements.enerjolt.energized_gold_plate.description": "Create an energized gold plate.",
+
+  "advancements.enerjolt.energized_copper_wire.title": "Energized Copper Wire",
+  "advancements.enerjolt.energized_copper_wire.description": "Create an energized copper wire.",
+
+  "advancements.enerjolt.energized_gold_wire.title": "Energized Gold Wire",
+  "advancements.enerjolt.energized_gold_wire.description": "Create an energized gold wire.",
+
+  "advancements.enerjolt.enerjolt_basics.title": "Energized Power (Basics)",
+  "advancements.enerjolt.enerjolt_basics.description": "This is the start of your energized power journey.",
+
+  "advancements.enerjolt.energizer.title": "More efficient energizing",
+  "advancements.enerjolt.energizer.description": "This machine can energize your copper ingots much faster and more efficient than the charger.",
+
+  "advancements.enerjolt.advanced_crusher.title": "Faster crusher",
+  "advancements.enerjolt.advanced_crusher.description": "Craft an Advanced Crusher.",
+
+  "advancements.enerjolt.advanced_pulverizer.title": "Faster pulverizer",
+  "advancements.enerjolt.advanced_pulverizer.description": "Craft an Advanced Pulverizer.",
+
+  "advancements.enerjolt.lightning_generator.title": "Cloud power",
+  "advancements.enerjolt.lightning_generator.description": "Enables you to extract energy from lightning bolts.",
+
+  "advancements.enerjolt.energy_analyzer.title": "Master of Analysis",
+  "advancements.enerjolt.energy_analyzer.description": "Analyze every energy block - even if they have no GUI interface!",
+
+  "advancements.enerjolt.fluid_analyzer.title": "Fluid Analysis",
+  "advancements.enerjolt.fluid_analyzer.description": "Analyze blocks which contain fluids!",
+
+  "advancements.enerjolt.inventory_coal_engine.title": "Inventory Power",
+  "advancements.enerjolt.inventory_coal_engine.description": "Produce and distribute energy in your inventory.",
+
+  "advancements.enerjolt.silicon.title": "Silicon",
+  "advancements.enerjolt.silicon.description": "Now you can power-up your factory!",
+
+  "advancements.enerjolt.solar_panel_1.title": "Solar Power Student",
+  "advancements.enerjolt.solar_panel_1.description": "The Tier I solar panel...",
+
+  "advancements.enerjolt.solar_panel_2.title": "Solar Power Intern",
+  "advancements.enerjolt.solar_panel_2.description": "Tier II is better than Tier I",
+
+  "advancements.enerjolt.solar_panel_3.title": "Solar Power Employee",
+  "advancements.enerjolt.solar_panel_3.description": "Tier III - The best of the basic solar panels",
+
+  "advancements.enerjolt.solar_panel_4.title": "Solar Power Manager",
+  "advancements.enerjolt.solar_panel_4.description": "Tier IV: More than basic!",
+
+  "advancements.enerjolt.solar_panel_5.title": "Solar Power Director",
+  "advancements.enerjolt.solar_panel_5.description": "Tier V - Only one tier left!",
+
+  "advancements.enerjolt.solar_panel_6.title": "Solar Power Employer",
+  "advancements.enerjolt.solar_panel_6.description": "Tier VI - You have got the best solar panel!",
+
+  "advancements.enerjolt.uncharger.title": "Give it back!",
+  "advancements.enerjolt.uncharger.description": "Uncharges your energy items.",
+
+  "advancements.enerjolt.minecart_charger.title": "Charge the minecart!",
+  "advancements.enerjolt.minecart_charger.description": "Charges minecarts.",
+
+  "advancements.enerjolt.advanced_minecart_charger.title": "Advanced minecart charging",
+  "advancements.enerjolt.advanced_minecart_charger.description": "Charges minecarts quicker.",
+
+  "advancements.enerjolt.minecart_uncharger.title": "Uncharge the minecart!",
+  "advancements.enerjolt.minecart_uncharger.description": "Uncharges minecarts.",
+
+  "advancements.enerjolt.advanced_minecart_uncharger.title": "Advanced minecart uncharging",
+  "advancements.enerjolt.advanced_minecart_uncharger.description": "Uncharges minecarts quicker.",
+
+
+  "book.enerjolt.tooltip.link": "Open link",
+  "book.enerjolt.tooltip.page": "Go to page",
+
+
+  "book.enerjolt.page.welcome.title": "Welcome to Energized Power!",
+  "book.enerjolt.page.welcome.1": "This mod adds many items and machines related to energy.",
+  "book.enerjolt.page.welcome.2": "Official Energized Power wiki",
+  "book.enerjolt.page.welcome.3": "You have found a bug or want to suggest a feature? Do it here",
+  "book.enerjolt.page.welcome.3.link": "Issues",
+  "book.enerjolt.page.welcome.4": "Discord server",
+  "book.enerjolt.page.welcome.4.link": "Discord",
+  "book.enerjolt.page.welcome.5": "Subreddit",
+  "book.enerjolt.page.welcome.5.link": "Reddit",
+
+  "book.enerjolt.page.credits.title": "Credits",
+  "book.enerjolt.page.credits.subtitle": "Thank you for contributing to Energized Power!",
+
+  "book.enerjolt.page.credits.1": "Energized Copper/Gold Ingot textures",
+  "book.enerjolt.page.credits.2": "Battery textures",
+  "book.enerjolt.page.credits.3": "Silicon texture",
+  "book.enerjolt.page.credits.4": "Energy Analyzer texture",
+  "book.enerjolt.page.credits.5": "Chinese (Simplified) translation",
+  "book.enerjolt.page.credits.6": "Italian translation",
+  "book.enerjolt.page.credits.7": "Turkish translation",
+  "book.enerjolt.page.credits.8": "Russian translation",
+  "book.enerjolt.page.credits.9": "German translation",
+
+  "book.enerjolt.page.table_of_contents.title": "Table of Contents",
+
+
+  "book.enerjolt.page.chapter.resources.title": "Resources",
+  "book.enerjolt.page.chapter.resources.1": "Resources are required for crafting items.",
+
+  "book.enerjolt.page.cable_insulator.1": "The cable insulator is required for cable crafting recipes.",
+  "book.enerjolt.page.cable_insulator.2": "It can be crafted by clicking on a wool block with shears.",
+  "book.enerjolt.page.cable_insulator.3": "It can also be crafted with a dispenser.",
+
+  "book.enerjolt.page.saw_blade": "The saw blade is an ingredient which is used to craft the sawmill.",
+
+  "book.enerjolt.page.silicon.1": "Silicon is an ingredient used in many crafting recipes of this mod.",
+  "book.enerjolt.page.silicon.2": "It can be crafted by smelting or blasting nether quartz.",
+
+  "book.enerjolt.page.sawdust.1": "Sawdust is a by-product produced by the sawmill and can be crafted to sawdust blocks.",
+  "book.enerjolt.page.sawdust.2": "Sawdust blocks can be burned to charcoal.",
+
+  "book.enerjolt.page.fertilizers": "Fertilizers can be used to make the Plant Growth Chamber faster.",
+
+  "book.enerjolt.page.ore_dusts": "Ore dusts can be smelted to ingots.",
+
+  "book.enerjolt.page.charcoal_dust": "Charcoal Dust can be used to craft Charcoal Filters.",
+
+  "book.enerjolt.page.charcoal_filter": "Charcoal Filters are used to filter Dirty Water in the Filtration Plant.",
+
+  "book.enerjolt.page.alloys": "Alloys are used in many recipes and can be produced in the Alloy Furnace and the Induction Smelter.",
+
+  "book.enerjolt.page.plates.1": "Plates are used as a crafting ingredient in most machines. Plates can be crafted with hammers or by using the compressor.",
+  "book.enerjolt.page.plates.2": "Advanced Alloy and energized plates can be created in the compressor only.",
+
+  "book.enerjolt.page.metal_products.1": "Metal products (gears, rods, and wires) are used in many recipes.",
+  "book.enerjolt.page.metal_products.2": "Metal products can be created in the Metal Press.",
+
+  "book.enerjolt.page.circuits": "Circuits are used in some recipes.",
+
+  "book.enerjolt.page.energized_copper_ingot.1": "Energized Copper Ingots are required for advanced machines like the energizer.",
+  "book.enerjolt.page.energized_copper_ingot.2": "The energizer is crafted with this ingot, isn't it?",
+  "book.enerjolt.page.energized_copper_ingot.3": "The charger can be used to craft this ingot.",
+  "book.enerjolt.page.energized_copper_ingot.4": " [But it's expensive]",
+
+  "book.enerjolt.page.energized_gold_ingot": "Energized Gold Ingots are used for some advanced machines (e.g. Charging Station).",
+
+  "book.enerjolt.page.energized_crystal_matrix": "The Energized Crystal Matrix is used as a stabilizer in some advanced machines.",
+
+
+  "book.enerjolt.page.chapter.upgrades.title": "Upgrades",
+  "book.enerjolt.page.chapter.upgrades": "Upgrade Modules can improve machines",
+
+  "book.enerjolt.page.speed_upgrades": "Speed upgrades make machines faster and increase the energy consumption.",
+
+  "book.enerjolt.page.energy_efficiency_upgrades": "Energy Efficiency Upgrades reduce the energy consumption.",
+
+  "book.enerjolt.page.energy_capacity_upgrades": "Energy Capacity Upgrades increase the energy storage capacity and the energy transfer rate.",
+
+  "book.enerjolt.page.duration_upgrades.1": "Duration Upgrades increase the duration of the weather set by the Weather Controller.",
+  "book.enerjolt.page.duration_upgrades.2": "The Duration Upgrade (Tier VI) will allow the Weather Controller to maintain the current Weather but requires constant supply of energy.",
+
+  "book.enerjolt.page.range_upgrades": "Range Upgrades increase the range a machine can send and receive electromagnetic waves in.",
+
+  "book.enerjolt.page.extraction_depth_upgrades": "Extraction Depth Upgrades increase the depth a machine can operate in.",
+
+  "book.enerjolt.page.extraction_range_upgrades": "Extraction Range Upgrades increase the range a machine can operate in.",
+
+  "book.enerjolt.page.furnace_mode_upgrades": "Furnace Mode Upgrades change the recipes a Powered Furnace can produce.",
+
+  "book.enerjolt.page.moon_light_upgrades": "Moon Light Upgrades allow Solar Panels to produce energy during the night.",
+
+
+  "book.enerjolt.page.chapter.tools.title": "Tools",
+  "book.enerjolt.page.chapter.tools": "Can be helpful",
+
+  "book.enerjolt.page.hammers": "Hammers can be used to craft plates.",
+
+  "book.enerjolt.page.cutters.1": "Cutters can be used to craft wires.",
+  "book.enerjolt.page.cutters.2": "Cutters can be used to break cables faster.",
+
+  "book.enerjolt.page.wrench": "The Wrench can be used to configure blocks.",
+
+
+  "book.enerjolt.page.chapter.workbenches.title": "Workbenches",
+  "book.enerjolt.page.chapter.workbenches": "Machines which must be operated manually.",
+
+  "book.enerjolt.page.press_mold_maker": "The Press Mold Maker can be used to create Press Molds for the Metal Press.",
+
+  "book.enerjolt.page.alloy_furnace.1": "The Alloy Furnace can be used to produce alloys.",
+  "book.enerjolt.page.alloy_furnace.2": "Outputs and consumed fuels can be extracted from all sides.",
+  "book.enerjolt.page.alloy_furnace.3": "Fuel can be inserted from the top and the bottom. Inputs can be inserted from all other sides (Front: All inputs slots, Left: Left input slot, Back: Middle input slot, Right: Right input slot).",
+
+
+  "book.enerjolt.page.chapter.energy_items.title": "Energy Items",
+  "book.enerjolt.page.chapter.energy_items": "Items which can produce, consume, or store energy.",
+
+  "book.enerjolt.page.inventory_coal_engine.1": "This item can produce and distribute energy in your inventory.",
+  "book.enerjolt.page.inventory_coal_engine.2": "It can be activated by clicking in the air.",
+  "book.enerjolt.page.inventory_coal_engine.3": "Fuel will then automatically be taken from the inventory.",
+  "book.enerjolt.page.inventory_coal_engine.4": " [The hotbar is excluded]",
+
+  "book.enerjolt.page.inventory_charger.1": "This item distributes energy in your inventory.",
+  "book.enerjolt.page.inventory_charger.2": "Charged batteries must be inserted.",
+
+  "book.enerjolt.page.inventory_teleporter": "The Inventory Teleporter can teleport players. It requires energy and a linked Teleporter Matrix to do so.",
+
+  "book.enerjolt.page.energy_analyzer.1": "The Energy Analyzer can be used to get energy statics. Mainly used for energy blocks without a GUI.",
+  "book.enerjolt.page.energy_analyzer.2": "It can be used by clicking on energy blocks.",
+
+  "book.enerjolt.page.fluid_analyzer.1": "The Fluid Analyzer can be used to get fluid statics.",
+  "book.enerjolt.page.fluid_analyzer.2": "It can be used by clicking on blocks which contain fluids.",
+
+  "book.enerjolt.page.batteries.1": "Batteries can store energy.",
+  "book.enerjolt.page.batteries.2": "They can be charged by the charger or with inventory generators and they can be uncharged by the uncharger.",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.title": "Energy Blocks",
+  "book.enerjolt.page.chapter.energy_blocks": "Blocks producing, powered by, or transporting energy.",
+
+  "book.enerjolt.page.energy_blocks.table_of_contents.title": "Table of Contents\n(Energy Blocks)",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.general.title": "General",
+  "book.enerjolt.page.chapter.energy_blocks.general": "General information for energy blocks",
+
+  "book.enerjolt.page.machine_frames.1": "Machine Frames are the base crafting block for every machine.",
+  "book.enerjolt.page.machine_frames.2": "There are four machine frames: Basic, Hardened, Advanced, and Reinforced Advanced",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.energy_transportation.title": "Transportation",
+  "book.enerjolt.page.chapter.energy_blocks.energy_transportation": "Blocks for energy transportation",
+
+  "book.enerjolt.page.cables.1": "Cables are used to transport energy from producer blocks to consumer blocks.",
+  "book.enerjolt.page.cables.2": "There are six cable tiers.",
+  "book.enerjolt.page.cables.3": "A transformer is required to connect cables of different tiers.",
+
+  "book.enerjolt.page.transformers.1": "Transformers can be used to connect different tiers of cables.",
+  "book.enerjolt.page.transformers.2": "The larger, darker, diamond shaped sides are inputs.",
+  "book.enerjolt.page.transformers.3": "The smaller, brighter, square shaped sides are outputs.",
+  "book.enerjolt.page.transformers.4": "There are four tiers of transformers: LV, MV, HV, and EHV.",
+  "book.enerjolt.page.transformers.5": "For each tier there are four types of transformers: 1 to n, 3 to 3, n to 1, and configurable.",
+  "book.enerjolt.page.transformers.6": "Transformers can be used to reduce lag of cable networks by using them periodically instead of a cable block.",
+  "book.enerjolt.page.transformers.7": "Transformers can also be used to connect energized power cables to other mods' cables.",
+  "book.enerjolt.page.transformers.8": "Transformers can be used as battery blocks.",
+  "book.enerjolt.page.transformers.9": "Transformers can be used to extract energy from AE2 energy tunnels.",
+
+  "book.enerjolt.page.minecart_charger_uncharger.1": "The Minecart Charger can charge the Minecart with Battery Box and the Uncharger can uncharge it.",
+  "book.enerjolt.page.minecart_charger_uncharger.2": "A Redstone Comparator can be used to get the current power level of a Minecart which is being charged or uncharged.",
+  "book.enerjolt.page.minecart_charger_uncharger.3": "The Advanced versions have a higher transfer rate.",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.energy_storage.title": "Storage",
+  "book.enerjolt.page.chapter.energy_blocks.energy_storage": "Blocks for energy storage",
+
+  "book.enerjolt.page.battery_box": "Battery boxes can store energy. All block faces support insertion and extraction of energy.",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.energy_production.title": "Production",
+  "book.enerjolt.page.chapter.energy_blocks.energy_production": "Blocks for energy production",
+
+  "book.enerjolt.page.solar_cells.1": "Solar Cells are the base crafting item for every solar panel.",
+  "book.enerjolt.page.solar_cells.2": "There are three solar cells: Basic, Advanced, and Reinforced Advanced",
+
+  "book.enerjolt.page.solar_panels.1": "Solar Panels produce energy during the day. The efficiency depends on the time and on the weather.",
+  "book.enerjolt.page.solar_panels.2": "There are 6 Solar Panel Tiers.",
+
+  "book.enerjolt.page.coal_engine.1": "The Coal Engine produces energy by burning items.",
+  "book.enerjolt.page.coal_engine.2": "Remainder items can be extracted automatically.",
+
+  "book.enerjolt.page.heat_generator.1": "The Heat Generator produces energy if flowing or still lava touches the block.",
+  "book.enerjolt.page.heat_generator.2": "If the Heat Generator touches still lava, it will produce more energy than if it would touch flowing lava.",
+  "book.enerjolt.page.heat_generator.3": "The more lava blocks are touching, the more energy per tick will be produced.",
+  "book.enerjolt.page.heat_generator.4": "If you are playing a modpack, other hot fluids might be supported too.",
+
+  "book.enerjolt.page.thermal_generator.1": "The Thermal Generator produces energy by consuming hot fluids.",
+  "book.enerjolt.page.thermal_generator.2": "If you are playing a modpack, other hot fluids might be supported too.",
+
+  "book.enerjolt.page.lightning_generator.1": "The lightning generator produces high amounts of energy per lightning strike.",
+  "book.enerjolt.page.lightning_generator.2": "A lightning rod block must be place above this block for it to function.",
+
+
+  "book.enerjolt.page.chapter.energy_blocks.energy_consumption.title": "Consumption",
+  "book.enerjolt.page.chapter.energy_blocks.energy_consumption": "Blocks for energy consumption",
+
+  "book.enerjolt.page.powered_lamp": "The Powered Lamp is like a Redstone Lamp but requires energy instead of an active redstone signal.",
+
+  "book.enerjolt.page.powered_furnaces.1": "Powered Furnaces works like the Furnace. Instead of coal they use power and they are faster than the normal furnace.",
+  "book.enerjolt.page.powered_furnaces.2": "The advanced version of the Powered Furnace has 3 input/output slot pairs.",
+
+  "book.enerjolt.page.auto_crafters.1": "The Auto Crafter crafts items automatically.",
+  "book.enerjolt.page.auto_crafters.2": "The recipe can be set by using the pattern slots.",
+  "book.enerjolt.page.auto_crafters.3": "The Auto Crafter can handle recipe conflicts, that is recipes with the same inputs. To do this, use the \"Cycle through recipes\" button or set the pattern via a recipe viewer mod (like REI).",
+  "book.enerjolt.page.auto_crafters.4": "The advanced version of the Auto Crafter supports multiple recipes at once.",
+
+  "book.enerjolt.page.crushers.1": "The Crusher can crush blocks like Stone, Sandstone, Cobblestone, and Gravel.",
+  "book.enerjolt.page.crushers.2": "The advanced version of the Crusher consumes Water and produces Dirty Water.",
+
+  "book.enerjolt.page.pulverizers.1": "The Pulverizer produces ore dusts which can be smelted to ingots.",
+  "book.enerjolt.page.pulverizers.2": "The advanced version of the Pulverizer consumes Water and produces Dirty Water.",
+
+  "book.enerjolt.page.sawmill.1": "The Sawmill can saw wood blocks and items.",
+  "book.enerjolt.page.sawmill.2": "Sawdust will be produced which can be crafted to sawdust blocks which can be used as fuel.",
+
+  "book.enerjolt.page.compressor": "The Compressor compresses ingots into plates.",
+
+  "book.enerjolt.page.metal_press.1": "The Metal Press creates metal products (e.g. wires) from metals.",
+  "book.enerjolt.page.metal_press.2": "Press Molds can be created in the Press Mold Maker.",
+  "book.enerjolt.page.metal_press.3": "Press Molds can be inserted to and extracted from the top.",
+  "book.enerjolt.page.metal_press.4": "Inputs can be inserted to and outputs can be extracted from all other sides.",
+
+  "book.enerjolt.page.auto_press_mold_maker": "The Auto Press Mold Maker is an automated version of the Press Mold Maker but requires a Shovel to craft recipes.",
+
+  "book.enerjolt.page.auto_stonecutter": "The Auto Stonecutter is an automated version of the Stonecutter but requires a Pickaxe to craft recipes.",
+
+  "book.enerjolt.page.assembling_machine.1": "The Assembling Machine creates electronic components (e.g. circuits).",
+  "book.enerjolt.page.assembling_machine.2": "Outputs can be extracted from all sides.",
+  "book.enerjolt.page.assembling_machine.3": "Inputs can be inserted from all sides (Top/Bottom: All inputs slots, Front: Bottom slot, Back: Top slot, Left: Left slot, Right: Right slot).",
+
+  "book.enerjolt.page.plant_growth_chamber.1": "The Plant Growth Chamber can boost plant growth and yield.",
+  "book.enerjolt.page.plant_growth_chamber.2": "The right input slot is the seed slot.",
+  "book.enerjolt.page.plant_growth_chamber.3": "The left, optionally usable input slot is the fertilizer slot.",
+  "book.enerjolt.page.plant_growth_chamber.4": "When the fertilizer slot is used, energy and speed multipliers are applied.",
+  "book.enerjolt.page.plant_growth_chamber.5": "Seeds can be inserted from the north, east, south, and west. Fertilizers can be inserted from the top and bottom. Outputs can be extracted from all block faces.",
+  "book.enerjolt.page.plant_growth_chamber.6": "If you'd like to use a fertilizer, the fertilizer must be inserted first.",
+  "book.enerjolt.page.plant_growth_chamber.7": "If you'd like to automate this blocks, you need to keep in mind that yields are randomized.",
+
+  "book.enerjolt.page.stone_liquefier.1": "The Stone Liquefier produces Lava from Stone blocks.",
+  "book.enerjolt.page.stone_liquefier.2": "Fluids must be extracted with a pipe.",
+
+  "book.enerjolt.page.stone_solidifier.1": "The Stone Solidifier produces Stone blocks from Water and Lava.",
+  "book.enerjolt.page.stone_solidifier.2": "Fluids must be inserted with a pipe.",
+
+  "book.enerjolt.page.filtration_plant.1": "The Filtration Plant can filter raw ores from Dirty Water.",
+  "book.enerjolt.page.filtration_plant.2": "Charcoal Filters can be inserted from every block face. Outputs can be extracted from block face.",
+
+  "book.enerjolt.page.fluid_transposer": "The Fluid Transposer can extract fluids from items (Mode: Emptying) and can inject fluids into items (Mode: Filling).",
+
+  "book.enerjolt.page.induction_smelter.1": "The Induction Smelter can be used to produce alloys.",
+  "book.enerjolt.page.induction_smelter.2": "Outputs can be extracted from all sides.",
+  "book.enerjolt.page.induction_smelter.3": "Inputs can be inserted from all sides (Front/Top/Bottom: All inputs slots, Left: Left input slot, Back: Middle input slot, Right: Right input slot).",
+
+  "book.enerjolt.page.block_placer.1": "The Block Placer can place all blocks (Even doors and seeds).",
+  "book.enerjolt.page.block_placer.2": "Blocks will only be placed if possible.",
+
+  "book.enerjolt.page.fluid_filler_fluid_drainer": "The Fluid Filler can fill fluids into items and the Fluid Drainer can drain fluids from items.",
+
+  "book.enerjolt.page.fluid_pumps": "The Fluid Pump can pump fluids from the world and requires Cobblestone to do so.",
+
+  "book.enerjolt.page.charger_uncharger.1": "The Charger can charge items and the Uncharger can uncharge items.",
+  "book.enerjolt.page.charger_uncharger.2": "The advanced version of the Charger and the Uncharger have 3 slots.",
+
+  "book.enerjolt.page.charging_station": "The Charging Station can charge items wirelessly.",
+
+  "book.enerjolt.page.crystal_growth_chamber": "The Crystal Growth Chamber can be used to grow crystals like amethysts.",
+
+  "book.enerjolt.page.energizer": "The Energizer can energize items very efficiently.",
+
+  "book.enerjolt.page.weather_controller": "The Weather Controller can change the weather temporarily. It requires energy to do so.",
+
+  "book.enerjolt.page.time_controller.1": "The Time Controller can change the time of the day. It requires energy to do so.",
+  "book.enerjolt.page.time_controller.2": "It can not go back in time, the time value will always be incremented.",
+
+  "book.enerjolt.page.teleporter_matrix.1": "Teleporter Matrices are used for linking Teleporters.",
+  "book.enerjolt.page.teleporter_matrix.2": "The settings of a Teleporter Matrix can be copied by putting a linkend and one or more unlinked Teleporter Matricies into a Crafting Table.",
+
+  "book.enerjolt.page.teleporter.1": "The Teleporter can teleport players. It requires energy and a linked Teleporter Matrix to do so.",
+  "book.enerjolt.page.teleporter.2": "It outputs a redstone signal if the Teleporter is ready for teleportation.",
+  "book.enerjolt.page.teleporter.3.1": "The Teleporter can be triggered manually by pressing",
+  "book.enerjolt.page.teleporter.3.2": "while above the Teleporter.",
+
+
+  "book.enerjolt.page.chapter.fluid_blocks.title": "Fluid Blocks",
+  "book.enerjolt.page.chapter.fluid_blocks": "Blocks that can store and transfer fluids.",
+
+  "book.enerjolt.page.fluid_pipes.1": "Fluid pipes can transfer fluids.",
+  "book.enerjolt.page.fluid_pipes.2": "The mode of every pipe side can be configured with a Wrench.",
+  "book.enerjolt.page.fluid_pipes.3": "A single fluid pipe block can only extract one fluid type at once even when multiple sides are configured as extraction.",
+  "book.enerjolt.page.fluid_pipes.4": "There are two tiers of fluid pipes: Iron and Golden.",
+
+  "book.enerjolt.page.fluid_tanks.1": "Fluid tanks can store fluids.",
+  "book.enerjolt.page.fluid_tanks.2": "There are three tiers of fluid tanks: Small, Medium, and Large.",
+
+  "book.enerjolt.page.drain.1": "The Drain drains fluid source blocks above the block.",
+  "book.enerjolt.page.drain.2": "On the Fabric version the Drain can extract fluids from Cauldrons.",
+
+
+  "book.enerjolt.page.chapter.item_transportation.title": "Item Transportation",
+  "book.enerjolt.page.chapter.item_transportation": "Blocks that can transport Items.",
+
+  "book.enerjolt.page.item_conveyor_belt.1": "Item Conveyor belts can transport items.",
+  "book.enerjolt.page.item_conveyor_belt.2": "The slope of conveyor belts can be configured with a Wrench.",
+  "book.enerjolt.page.item_conveyor_belt.3": "Conveyor belts can be loaded with hoppers and any block which can insert items into blocks.",
+  "book.enerjolt.page.item_conveyor_belt.4": "Conveyor belts can insert items into blocks in front of the conveyor belt.",
+  "book.enerjolt.page.item_conveyor_belt.5": "Alternatively they can be unloaded with hoppers and other blocks which can extract items from blocks.",
+  "book.enerjolt.page.item_conveyor_belt.6": "Conveyor belts are compatible with the AE2 item tunnel.",
+
+  "book.enerjolt.page.item_conveyor_belt_loader.1": "The Item Conveyor Belt Loader can extract items from any storage blocks (even other conveyor belts) and load them onto a conveyor belt.",
+  "book.enerjolt.page.item_conveyor_belt_loader.2": "The larger square must face the block where items are extracted from and the smaller square must face a conveyor belt.",
+  "book.enerjolt.page.item_conveyor_belt_loader.3": "Alternatively items can be extracted from the loader with hoppers and other blocks which can extract items from blocks.",
+  "book.enerjolt.page.item_conveyor_belt_loader.4": "It can be stacked vertically and horizontally.",
+  "book.enerjolt.page.item_conveyor_belt_loader.5": "It can be disabled with a redstone signal.",
+
+  "book.enerjolt.page.item_conveyor_belt_sorter.1": "The Item Conveyor Belt Sorter takes items from an input conveyor belt and routes them to certain output conveyor belt.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.2": "The input conveyor belt must face the large square and must not be ascending.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.3": "There are no restrictions for the output conveyor belts.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.4": "The outputs are color coded (red: first output and always on the left side relative to the input, yellow: second output and on the opposite side relative to the input, green: third output and on the right side relative to the input).",
+  "book.enerjolt.page.item_conveyor_belt_sorter.5": "The item will be routed to the first output where the filter matched (Priority: OUT 1, OUT 2, OUT 3).",
+  "book.enerjolt.page.item_conveyor_belt_sorter.6": "The filter matches if at least one pattern item of the output filter row matches the input item.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.7": "Pattern items can be placed by taking the item from the inventory and left-clicking a pattern slot. The filter can be reset by left-clicking without an item.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.8": "To allow any items select blacklist without any pattern items. If an output is not connected the filter should be set to whitelist without any pattern items.",
+  "book.enerjolt.page.item_conveyor_belt_sorter.9": "A redstone signal of strength 15 will be emitted if no filter matches (If no output is connected or if it is full no redstone signal will be emitted).",
+
+  "book.enerjolt.page.item_conveyor_belt_switch.1": "The Item Conveyor Belt Switch takes items from the input conveyor belt (Must face the large square and must not be ascending) and puts them onto the output conveyor belt on the side with the green indicator.",
+  "book.enerjolt.page.item_conveyor_belt_switch.2": "As long as a redstone signal is applied, the other output will be selected.",
+
+  "book.enerjolt.page.item_conveyor_belt_splitter": "The Item Conveyor Belt Splitter takes items from the input conveyor belt (Must face the large square and must not be ascending) and puts them evenly on the connected output conveyor belts.",
+
+  "book.enerjolt.page.item_conveyor_belt_merger": "The Item Conveyor Belt Merger takes items evenly from the connected input conveyor belts (They must face a large square and must not be ascending) and puts them on the output conveyor belt.",
+
+  "book.enerjolt.page.item_silos.1": "Item silos can only hold a single item type but can hold up to 1000 stacks of the item.",
+  "book.enerjolt.page.item_silos.2": "Item silos can only be loaded and unloaded with hoppers, belts, and other means of automatic item transport.",
+  "book.enerjolt.page.item_silos.3": "There are five tiers of item silos: Tiny, Small, Medium, Large, and Giant",
+
+
+  "book.enerjolt.page.chapter.fluids.title": "Fluids",
+  "book.enerjolt.page.chapter.fluids": "Fluids added in Energized Power",
+
+  "book.enerjolt.page.dirty_water.1": "Dirty Water is produced as a by-product in some machines which consume Water.",
+  "book.enerjolt.page.dirty_water.2": "Dirty Water can be cleaned in the Filtration Plant.",
+
+
+  "book.enerjolt.page.chapter.machine_configuration.title": "Configuration",
+  "book.enerjolt.page.chapter.machine_configuration": "Configuration of machines",
+
+  "book.enerjolt.page.upgrade_configuration": "Most machines support Upgrade Modules. Upgrades can not be inserted automatically.",
+
+  "book.enerjolt.page.redstone_mode_configuration.1": "There are 3 redstone modes:",
+  "book.enerjolt.page.redstone_mode_configuration.2": "Ignore: The machine is always active",
+  "book.enerjolt.page.redstone_mode_configuration.3": "High: The machine is only active if a redstone signal of strength 1 or higher is present",
+  "book.enerjolt.page.redstone_mode_configuration.4": "Low: The machine is only active if no redstone signal is present",
+
+  "book.enerjolt.page.comparator_mode_configuration.1": "There are 3 comparator modes:",
+  "book.enerjolt.page.comparator_mode_configuration.2": "Item: The comparator output is calculated based on how full the inventory of the machine is",
+  "book.enerjolt.page.comparator_mode_configuration.3": "Fluid: The comparator output is calculated based on how full the tank(s) of the machine is/are",
+  "book.enerjolt.page.comparator_mode_configuration.4": "Energy: The comparator output is calculated based on how much energy is stored in the machine",
+
+
+  "book.enerjolt.page.chapter.entities.title": "Entities",
+  "book.enerjolt.page.chapter.entities": "Things that can move.",
+
+  "book.enerjolt.page.battery_box_minecarts": "Battery Box Minecarts can transport energy on rails. It can be charged with Minecart Chargers and can be uncharged with Minecart Unchargers.",
+
+
+  "book.enerjolt.page.chapter.structures.title": "Structures",
+  "book.enerjolt.page.chapter.structures": "Structures which are being generated in your world.",
+
+  "book.enerjolt.page.electrician.title": "Electrician Villager",
+  "book.enerjolt.page.electrician.1": "The electrician villager can be found in the electrician house.",
+  "book.enerjolt.page.electrician.2": "The electrician house can be found in every vanilla village type.",
+  "book.enerjolt.page.electrician.3": "The Basic Machine Frame can be used to get an electrician villager.",
+
+  "book.enerjolt.page.factory.title": "Factory Building",
+  "book.enerjolt.page.factory.1": "The factory building contains some machines and something interesting in the center of the building. It can be found in Forest and Flower Forest biomes.",
+
+  "book.enerjolt.page.small_solar_farm.title": "Small Solar Farm",
+  "book.enerjolt.page.small_solar_farm.1": "The small solar farm is a structure with some Solar Panels producing energy. It can be found in Desert, Badlands, and Savanna biomes."
+}

@@ -1,0 +1,276 @@
+package me.twheatking.enerjolt.item;
+
+import me.twheatking.enerjolt.component.CurrentItemStackComponent;
+import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
+import me.twheatking.enerjolt.config.ModConfigs;
+import me.twheatking.enerjolt.energy.ExtractOnlyEnergyStorage;
+import me.twheatking.enerjolt.integration.curios.CuriosCompatUtils;
+import me.twheatking.enerjolt.item.energy.EnerjoltEnergyItem;
+import me.twheatking.enerjolt.util.EnergyUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.energy.IEnergyStorage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class InventoryCoalEngineItem extends EnerjoltEnergyItem implements ActivatableItem, WorkingItem {
+    public static final int CAPACITY = ModConfigs.COMMON_INVENTORY_COAL_ENGINE_CAPACITY.getValue();
+    public static final int MAX_EXTRACT = ModConfigs.COMMON_INVENTORY_COAL_ENGINE_TRANSFER_RATE.getValue();
+
+    public static final float ENERGY_PRODUCTION_MULTIPLIER = ModConfigs.COMMON_INVENTORY_COAL_ENGINE_ENERGY_PRODUCTION_MULTIPLIER.getValue();
+
+    public InventoryCoalEngineItem(Properties props) {
+        super(props, () -> new ExtractOnlyEnergyStorage(0, CAPACITY, MAX_EXTRACT));
+    }
+
+    @Override
+    public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
+        super.appendHoverText(itemStack, context, components, tooltipFlag);
+
+        boolean active = isActive(itemStack);
+
+        components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.status").withStyle(ChatFormatting.GRAY).
+                append(Component.translatable("tooltip.energizedpower.inventory_coal_engine.status." +
+                        (active?"activated":"deactivated")).withStyle(active?ChatFormatting.GREEN:ChatFormatting.RED)));
+
+        if(Screen.hasShiftDown()) {
+            int energyProductionLeft = getEnergyProductionLeft(itemStack);
+            ItemStack item = getCurrentBurningItem(itemStack);
+            if(energyProductionLeft > 0 && item != null) {
+                components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.currently_burning").
+                        withStyle(ChatFormatting.GRAY).
+                        append(item.getDisplayName()));
+
+                components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.energy_production_left",
+                                EnergyUtils.getEnergyWithPrefix(energyProductionLeft)).
+                        withStyle(ChatFormatting.GRAY));
+            }
+
+            components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.1").
+                    withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+            components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.2").
+                    withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+        }else {
+            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+        }
+    }
+
+    private int addConsumerEnergyItem(List<IEnergyStorage> consumerItems, List<Integer> consumerEnergyValues,
+                                      ItemStack itemStack, ItemStack testItemStack) {
+        IEnergyStorage energyStorage = testItemStack.getCapability(Capabilities.EnergyStorage.ITEM);
+        if(energyStorage == null || !energyStorage.canReceive())
+            return 0;
+
+        int received = energyStorage.receiveEnergy(Math.min(MAX_EXTRACT, getEnergy(itemStack)), true);
+        if(received <= 0)
+            return 0;
+
+        consumerItems.add(energyStorage);
+        consumerEnergyValues.add(received);
+
+        return received;
+    }
+
+    private void distributeEnergy(ItemStack itemStack, Level level, Inventory inventory, int slot, boolean selected) {
+        List<IEnergyStorage> consumerItems = new ArrayList<>();
+        List<Integer> consumerEnergyValues = new ArrayList<>();
+        int consumptionSum = 0;
+        for(int i = 0;i < inventory.getContainerSize();i++) {
+            if(i == slot)
+                continue;
+
+            ItemStack testItemStack = inventory.getItem(i);
+
+            consumptionSum += addConsumerEnergyItem(consumerItems, consumerEnergyValues, itemStack, testItemStack);
+        }
+
+        List<ItemStack> curiosItemStacks = CuriosCompatUtils.getCuriosItemStacks(inventory);
+        for(ItemStack testItemStack:curiosItemStacks)
+            consumptionSum += addConsumerEnergyItem(consumerItems, consumerEnergyValues, itemStack, testItemStack);
+
+        List<Integer> consumerEnergyDistributed = new ArrayList<>();
+        for(int i = 0;i < consumerItems.size();i++)
+            consumerEnergyDistributed.add(0);
+
+        int consumptionLeft = Math.min(MAX_EXTRACT, Math.min(getEnergy(itemStack), consumptionSum));
+        setEnergy(itemStack, getEnergy(itemStack) - consumptionLeft);
+
+        int divisor = consumerItems.size();
+        outer:
+        while(consumptionLeft > 0) {
+            int consumptionPerConsumer = consumptionLeft / divisor;
+            if(consumptionPerConsumer == 0) {
+                divisor = Math.max(1, divisor - 1);
+                consumptionPerConsumer = consumptionLeft / divisor;
+            }
+
+            for(int i = 0;i < consumerEnergyValues.size();i++) {
+                int consumptionDistributed = consumerEnergyDistributed.get(i);
+                int consumptionOfConsumerLeft = consumerEnergyValues.get(i) - consumptionDistributed;
+
+                int consumptionDistributedNew = Math.min(consumptionOfConsumerLeft, Math.min(consumptionPerConsumer, consumptionLeft));
+                consumerEnergyDistributed.set(i, consumptionDistributed + consumptionDistributedNew);
+                consumptionLeft -= consumptionDistributedNew;
+                if(consumptionLeft == 0)
+                    break outer;
+            }
+        }
+
+        for(int i = 0;i < consumerItems.size();i++) {
+            int energy = consumerEnergyDistributed.get(i);
+            if(energy > 0)
+                consumerItems.get(i).receiveEnergy(energy, false);
+        }
+    }
+
+    @Override
+    public void inventoryTick(ItemStack itemStack, Level level, Entity entity, int slot, boolean selected) {
+        super.inventoryTick(itemStack, level, entity, slot, selected);
+
+        if(level.isClientSide)
+            return;
+
+        if(!(entity instanceof Player))
+            return;
+
+        if(!isActive(itemStack))
+            return;
+
+        Player player = (Player)entity;
+        Inventory inventory = player.getInventory();
+
+        distributeEnergy(itemStack, level, inventory, slot, selected);
+
+        int energyProductionLeft = getEnergyProductionLeft(itemStack);
+        if(energyProductionLeft > 0) {
+            int progress = getProgress(itemStack);
+            int maxProgress = getMaxProgress(itemStack);
+            ItemStack currentBurningItem = getCurrentBurningItem(itemStack);
+            if(progress >= 0 && maxProgress > 0 && progress < maxProgress && currentBurningItem != null) {
+                int energyProductionPerTick = energyProductionLeft / (maxProgress - progress);
+                if(getCapacity(itemStack) - getEnergy(itemStack) < energyProductionPerTick) {
+                    //Not enough energy storage for production
+                    if(isWorking(itemStack))
+                        itemStack.set(EnerjoltDataComponentTypes.WORKING, false);
+
+                    return;
+                }
+
+                if(!isWorking(itemStack))
+                    itemStack.set(EnerjoltDataComponentTypes.WORKING, true);
+
+                setEnergy(itemStack, getEnergy(itemStack) + energyProductionPerTick);
+
+                itemStack.set(EnerjoltDataComponentTypes.ENERGY_PRODUCTION_LEFT, energyProductionLeft - energyProductionPerTick);
+
+                progress++;
+                if(progress == maxProgress) {
+                    resetProgress(itemStack);
+                }else {
+                    itemStack.set(EnerjoltDataComponentTypes.PROGRESS, progress);
+
+                    return;
+                }
+            }else {
+                resetProgress(itemStack);
+            }
+        }
+
+        //Find and burn new fuel item
+
+        //i: 0 - 8 -> Hotbar (Ignore)
+        //"< items.size()": Ignore armor and offhand slots
+        for(int i = 9;i < inventory.items.size();i++) {
+            if(i == slot)
+                continue;
+
+            ItemStack testItemStack = inventory.getItem(i);
+            int energyProduction = testItemStack.getBurnTime(null);
+            if(energyProduction <= 0)
+                continue;
+
+            energyProduction = (int)(energyProduction * ENERGY_PRODUCTION_MULTIPLIER);
+
+            itemStack.set(EnerjoltDataComponentTypes.ENERGY_PRODUCTION_LEFT, energyProduction);
+            itemStack.set(EnerjoltDataComponentTypes.CURRENT_ITEM, new CurrentItemStackComponent(testItemStack));
+            itemStack.set(EnerjoltDataComponentTypes.PROGRESS, 0);
+
+            //Change max progress if item would output more than max extract
+            if(energyProduction / 100 <= MAX_EXTRACT)
+                itemStack.set(EnerjoltDataComponentTypes.MAX_PROGRESS, 100);
+            else
+                itemStack.set(EnerjoltDataComponentTypes.MAX_PROGRESS, (int)Math.ceil((double)energyProduction / MAX_EXTRACT));
+
+            ItemStack newItemStack = testItemStack.copy();
+            newItemStack.shrink(1);
+            inventory.setItem(i, newItemStack);
+
+            if(testItemStack.hasCraftingRemainingItem()) {
+                ItemStack craftingRemainingItem = testItemStack.getCraftingRemainingItem();
+
+                if(inventory.add(craftingRemainingItem))
+                    player.drop(craftingRemainingItem, false);
+            }
+
+            break;
+        }
+    }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+
+        if(level.isClientSide)
+            return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+
+        itemStack.set(EnerjoltDataComponentTypes.ACTIVE, !isActive(itemStack));
+
+        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+    }
+
+    private void resetProgress(ItemStack itemStack) {
+        itemStack.remove(EnerjoltDataComponentTypes.ENERGY_PRODUCTION_LEFT);
+        itemStack.remove(EnerjoltDataComponentTypes.PROGRESS);
+        itemStack.remove(EnerjoltDataComponentTypes.MAX_PROGRESS);
+        itemStack.remove(EnerjoltDataComponentTypes.CURRENT_ITEM);
+        itemStack.remove(EnerjoltDataComponentTypes.WORKING);
+    }
+
+    private int getProgress(ItemStack itemStack) {
+        return itemStack.getOrDefault(EnerjoltDataComponentTypes.PROGRESS, -1);
+    }
+
+    private int getMaxProgress(ItemStack itemStack) {
+        return itemStack.getOrDefault(EnerjoltDataComponentTypes.MAX_PROGRESS, -1);
+    }
+
+    private ItemStack getCurrentBurningItem(ItemStack itemStack) {
+        CurrentItemStackComponent currentItem = itemStack.get(EnerjoltDataComponentTypes.CURRENT_ITEM);
+        return currentItem == null?null:currentItem.getCurrentItem();
+    }
+
+    private int getEnergyProductionLeft(ItemStack itemStack) {
+        return itemStack.getOrDefault(EnerjoltDataComponentTypes.ENERGY_PRODUCTION_LEFT, -1);
+    }
+
+    @Override
+    public boolean isActive(ItemStack itemStack) {
+        return itemStack.getOrDefault(EnerjoltDataComponentTypes.ACTIVE, false);
+    }
+
+    @Override
+    public boolean isWorking(ItemStack itemStack) {
+        return itemStack.getOrDefault(EnerjoltDataComponentTypes.WORKING, false);
+    }
+}

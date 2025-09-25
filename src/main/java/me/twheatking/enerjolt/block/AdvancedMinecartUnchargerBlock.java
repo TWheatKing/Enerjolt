@@ -1,0 +1,129 @@
+package me.twheatking.enerjolt.block;
+
+import com.mojang.serialization.MapCodec;
+import me.twheatking.enerjolt.block.entity.AdvancedMinecartUnchargerBlockEntity;
+import me.twheatking.enerjolt.block.entity.EnerjoltBlockEntities;
+import me.twheatking.enerjolt.util.EnergyUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+
+public class AdvancedMinecartUnchargerBlock extends BaseEntityBlock {
+    public static final MapCodec<AdvancedMinecartUnchargerBlock> CODEC = simpleCodec(AdvancedMinecartUnchargerBlock::new);
+
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+
+    protected AdvancedMinecartUnchargerBlock(Properties props) {
+        super(props);
+
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState state) {
+        return new AdvancedMinecartUnchargerBlockEntity(blockPos, state);
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState state) {
+        return RenderShape.MODEL;
+    }
+
+    @Override
+    public boolean hasAnalogOutputSignal(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getAnalogOutputSignal(BlockState state, Level level, BlockPos blockPos) {
+        BlockEntity blockEntity = level.getBlockEntity(blockPos);
+        if(!(blockEntity instanceof AdvancedMinecartUnchargerBlockEntity advancedMinecartUnchargerBlockEntity))
+            return super.getAnalogOutputSignal(state, level, blockPos);
+
+        return advancedMinecartUnchargerBlockEntity.getRedstoneOutput();
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos blockPos, Player player, BlockHitResult hit) {
+        if(level.isClientSide())
+            return InteractionResult.sidedSuccess(level.isClientSide());
+
+        BlockEntity blockEntity = level.getBlockEntity(blockPos);
+        if(!(blockEntity instanceof AdvancedMinecartUnchargerBlockEntity))
+            throw new IllegalStateException("Container is invalid");
+
+        player.openMenu((AdvancedMinecartUnchargerBlockEntity)blockEntity, blockPos);
+
+        return InteractionResult.sidedSuccess(level.isClientSide());
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(FACING, context.getNearestLookingDirection().getOpposite());
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> stateBuilder) {
+        stateBuilder.add(FACING);
+    }
+
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return createTickerHelper(type, EnerjoltBlockEntities.ADVANCED_MINECART_UNCHARGER_ENTITY.get(), AdvancedMinecartUnchargerBlockEntity::tick);
+    }
+
+    public static final class Item extends BlockItem {
+        public Item(Block block, Properties props) {
+            super(block, props);
+        }
+
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
+            if(Screen.hasShiftDown()) {
+                components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
+                                EnergyUtils.getEnergyWithPrefix(AdvancedMinecartUnchargerBlockEntity.MAX_TRANSFER)).
+                        withStyle(ChatFormatting.GRAY));
+            }else {
+                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            }
+        }
+    }
+}

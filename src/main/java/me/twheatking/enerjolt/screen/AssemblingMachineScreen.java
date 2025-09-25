@@ -1,0 +1,40 @@
+package me.twheatking.enerjolt.screen;
+
+import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.screen.base.ConfigurableUpgradableEnergyStorageContainerScreen;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Inventory;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+
+@OnlyIn(Dist.CLIENT)
+public class AssemblingMachineScreen
+        extends ConfigurableUpgradableEnergyStorageContainerScreen<AssemblingMachineMenu> {
+    public AssemblingMachineScreen(AssemblingMachineMenu menu, Inventory inventory, Component component) {
+        super(menu, inventory, component,
+                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                EJOLTAPI.id("textures/gui/container/assembling_machine.png"),
+                EJOLTAPI.id("textures/gui/container/upgrade_view/assembling_machine.png"));
+
+        imageHeight = 170;
+        inventoryLabelY = imageHeight - 94;
+
+        energyMeterY = 19;
+    }
+
+    @Override
+    protected void renderBgNormalView(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
+        super.renderBgNormalView(guiGraphics, partialTick, mouseX, mouseY);
+
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+
+        renderProgressArrow(guiGraphics, x, y);
+    }
+
+    private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
+        if(menu.isCraftingActive())
+            guiGraphics.blit(MACHINE_SPRITES_TEXTURE, x + 100, y + 36, 24, 58, menu.getScaledProgressArrowSize(), 17);
+    }
+}

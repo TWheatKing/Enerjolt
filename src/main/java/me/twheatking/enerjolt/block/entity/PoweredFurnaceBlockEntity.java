@@ -1,0 +1,250 @@
+package me.twheatking.enerjolt.block.entity;
+
+import me.twheatking.enerjolt.block.entity.base.WorkerMachineBlockEntity;
+import me.twheatking.enerjolt.config.ModConfigs;
+import me.twheatking.enerjolt.inventory.CombinedContainerData;
+import me.twheatking.enerjolt.inventory.InputOutputItemHandler;
+import me.twheatking.enerjolt.inventory.data.*;
+import me.twheatking.enerjolt.machine.upgrade.UpgradeModuleModifier;
+import me.twheatking.enerjolt.networking.ModMessages;
+import me.twheatking.enerjolt.networking.packet.SyncFurnaceRecipeTypeS2CPacket;
+import me.twheatking.enerjolt.recipe.FurnaceRecipeTypePacketUpdate;
+import me.twheatking.enerjolt.screen.PoweredFurnaceMenu;
+import me.twheatking.enerjolt.util.InventoryUtils;
+import me.twheatking.enerjolt.util.RecipeUtils;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.energy.IEnergyStorage;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+import java.util.Optional;
+
+public class PoweredFurnaceBlockEntity
+        extends WorkerMachineBlockEntity<RecipeHolder<? extends AbstractCookingRecipe>>
+        implements FurnaceRecipeTypePacketUpdate {
+    private static final List<@NotNull ResourceLocation> RECIPE_BLACKLIST = ModConfigs.COMMON_POWERED_FURNACE_RECIPE_BLACKLIST.getValue();
+
+    public static final float RECIPE_DURATION_MULTIPLIER = ModConfigs.COMMON_POWERED_FURNACE_RECIPE_DURATION_MULTIPLIER.getValue();
+
+    private final IItemHandler itemHandlerSided = new InputOutputItemHandler(itemHandler, (i, stack) -> i == 0, i -> i == 1);
+
+    private @NotNull RecipeType<? extends AbstractCookingRecipe> recipeType = RecipeType.SMELTING;
+
+    public PoweredFurnaceBlockEntity(BlockPos blockPos, BlockState blockState) {
+        super(
+                EnerjoltBlockEntities.POWERED_FURNACE_ENTITY.get(), blockPos, blockState,
+
+                "powered_furnace",
+
+                2, 1,
+
+                ModConfigs.COMMON_POWERED_FURNACE_CAPACITY.getValue(),
+                ModConfigs.COMMON_POWERED_FURNACE_TRANSFER_RATE.getValue(),
+                ModConfigs.COMMON_POWERED_FURNACE_ENERGY_CONSUMPTION_PER_TICK.getValue(),
+
+                UpgradeModuleModifier.SPEED,
+                UpgradeModuleModifier.ENERGY_CONSUMPTION,
+                UpgradeModuleModifier.ENERGY_CAPACITY,
+                UpgradeModuleModifier.FURNACE_MODE
+        );
+    }
+
+    @Override
+    protected ItemStackHandler initInventoryStorage() {
+        return new ItemStackHandler(slotCount) {
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
+
+            @Override
+            public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+                return switch(slot) {
+                    case 0 -> level == null || RecipeUtils.isIngredientOfAny(level, getRecipeForFurnaceModeUpgrade(), stack);
+                    case 1 -> false;
+                    default -> super.isItemValid(slot, stack);
+                };
+            }
+
+            @Override
+            public void setStackInSlot(int slot, @NotNull ItemStack stack) {
+                if(slot == 0) {
+                    ItemStack itemStack = getStackInSlot(slot);
+                    if(level != null && !stack.isEmpty() && !itemStack.isEmpty() && !ItemStack.isSameItemSameComponents(stack, itemStack))
+                        resetProgress();
+                }
+
+                super.setStackInSlot(slot, stack);
+            }
+        };
+    }
+
+    @Override
+    protected ContainerData initContainerData() {
+        return new CombinedContainerData(
+                new ProgressValueContainerData(() -> progress, value -> progress = value),
+                new ProgressValueContainerData(() -> maxProgress, value -> maxProgress = value),
+                new EnergyValueContainerData(() -> hasWork()?getCurrentWorkData().map(this::getEnergyConsumptionFor).orElse(-1):-1, value -> {}),
+                new EnergyValueContainerData(() -> energyConsumptionLeft, value -> {}),
+                new BooleanValueContainerData(() -> hasEnoughEnergy, value -> {}),
+                new RedstoneModeValueContainerData(() -> redstoneMode, value -> redstoneMode = value),
+                new ComparatorModeValueContainerData(() -> comparatorMode, value -> comparatorMode = value)
+        );
+    }
+
+    @Nullable
+    @Override
+    public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+        syncEnergyToPlayer(player);
+        ModMessages.sendToPlayer(new SyncFurnaceRecipeTypeS2CPacket(getRecipeForFurnaceModeUpgrade(), getBlockPos()),
+                (ServerPlayer)player);
+
+        return new PoweredFurnaceMenu(id, inventory, this, upgradeModuleInventory, this.data);
+    }
+
+    public @Nullable IItemHandler getItemHandlerCapability(@Nullable Direction side) {
+        if(side == null)
+            return itemHandler;
+
+        return itemHandlerSided;
+    }
+
+    public @Nullable IEnergyStorage getEnergyStorageCapability(@Nullable Direction side) {
+        return energyStorage;
+    }
+
+    @Override
+    protected void onHasEnoughEnergy() {
+        if(level.getBlockState(getBlockPos()).hasProperty(BlockStateProperties.LIT) &&
+                !level.getBlockState(getBlockPos()).getValue(BlockStateProperties.LIT)) {
+            level.setBlock(getBlockPos(), getBlockState().setValue(BlockStateProperties.LIT, true), 3);
+        }
+    }
+
+    @Override
+    protected void onHasNotEnoughEnergyWithOffTimeout() {
+        if(level.getBlockState(getBlockPos()).hasProperty(BlockStateProperties.LIT) &&
+                level.getBlockState(getBlockPos()).getValue(BlockStateProperties.LIT)) {
+            level.setBlock(getBlockPos(), getBlockState().setValue(BlockStateProperties.LIT, false), 3);
+        }
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    protected Optional<RecipeHolder<? extends AbstractCookingRecipe>> getCurrentWorkData() {
+
+        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
+        for(int i = 0;i < itemHandler.getSlots();i++)
+            inventory.setItem(i, itemHandler.getStackInSlot(i));
+
+        return (Optional<RecipeHolder<? extends AbstractCookingRecipe>>)getRecipeFor(inventory, level);
+    }
+
+    @Override
+    protected boolean hasWork() {
+        return hasRecipe(this);
+    }
+
+    @Override
+    protected void onWorkStarted(RecipeHolder<? extends AbstractCookingRecipe> recipe) {}
+
+    @Override
+    protected void onWorkCompleted(RecipeHolder<? extends AbstractCookingRecipe> workData) {
+        craftItem(getBlockPos(), getBlockState(), this);
+    }
+
+    @Override
+    protected double getWorkDataDependentWorkDuration(RecipeHolder<? extends AbstractCookingRecipe> recipe) {
+        //Default Cooking Time = 200 -> maxProgress = 100 (= 200 / 2)
+        return recipe.value().getCookingTime() * RECIPE_DURATION_MULTIPLIER / 2.f;
+    }
+
+    private static void craftItem(BlockPos blockPos, BlockState state, PoweredFurnaceBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for(int i = 0;i < blockEntity.itemHandler.getSlots();i++)
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+
+        Optional<? extends RecipeHolder<? extends AbstractCookingRecipe>> recipe = blockEntity.getRecipeFor(inventory, level);
+
+        if(!hasRecipe(blockEntity) || recipe.isEmpty())
+            return;
+
+        blockEntity.itemHandler.extractItem(0, 1, false);
+        blockEntity.itemHandler.setStackInSlot(1, recipe.get().value().getResultItem(level.registryAccess()).copyWithCount(
+                blockEntity.itemHandler.getStackInSlot(1).getCount() + recipe.get().value().getResultItem(level.registryAccess()).getCount()));
+
+        blockEntity.resetProgress();
+    }
+
+    private static boolean hasRecipe(PoweredFurnaceBlockEntity blockEntity) {
+        Level level = blockEntity.level;
+
+        SimpleContainer inventory = new SimpleContainer(blockEntity.itemHandler.getSlots());
+        for(int i = 0;i < blockEntity.itemHandler.getSlots();i++)
+            inventory.setItem(i, blockEntity.itemHandler.getStackInSlot(i));
+
+        Optional<? extends RecipeHolder<? extends AbstractCookingRecipe>> recipe = blockEntity.getRecipeFor(inventory, level);
+
+        return recipe.isPresent() &&
+                InventoryUtils.canInsertItemIntoSlot(inventory, 1, recipe.get().value().getResultItem(level.registryAccess()));
+    }
+
+    private Optional<? extends RecipeHolder<? extends AbstractCookingRecipe>> getRecipeFor(Container container, Level level) {
+        return level.getRecipeManager().getAllRecipesFor(getRecipeForFurnaceModeUpgrade()).
+                stream().filter(recipe -> !RECIPE_BLACKLIST.contains(recipe.id())).
+                filter(recipe -> recipe.value().matches(new SingleRecipeInput(container.getItem(0)), level)).
+                findFirst();
+    }
+
+    public RecipeType<? extends AbstractCookingRecipe> getRecipeForFurnaceModeUpgrade() {
+        if(level != null && level.isClientSide())
+            return recipeType;
+
+        double value = upgradeModuleInventory.getUpgradeModuleModifierEffect(3, UpgradeModuleModifier.FURNACE_MODE);
+        if(value == 1)
+            return RecipeType.BLASTING;
+        else if(value == 2)
+            return RecipeType.SMOKING;
+
+        return RecipeType.SMELTING;
+    }
+
+    @Override
+    public void setRecipeType(@NotNull RecipeType<? extends AbstractCookingRecipe> recipeType) {
+        this.recipeType = recipeType;
+    }
+
+    @Override
+    protected void updateUpgradeModules() {
+        super.updateUpgradeModules();
+
+        if(level != null && !level.isClientSide())
+            ModMessages.sendToPlayersWithinXBlocks(
+                    new SyncFurnaceRecipeTypeS2CPacket(getRecipeForFurnaceModeUpgrade(), getBlockPos()),
+                    getBlockPos(), (ServerLevel)level, 32
+            );
+    }
+}

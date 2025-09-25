@@ -1,0 +1,113 @@
+package me.twheatking.enerjolt.item;
+
+import me.twheatking.enerjolt.config.ModConfigs;
+import me.twheatking.enerjolt.energy.ReceiveOnlyEnergyStorage;
+import me.twheatking.enerjolt.item.energy.EnerjoltEnergyItem;
+import me.twheatking.enerjolt.util.EnergyUtils;
+import me.twheatking.enerjolt.util.FluidUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FluidAnalyzerItem extends EnerjoltEnergyItem {
+    public static final int ENERGY_CONSUMPTION_PER_USE = ModConfigs.COMMON_FLUID_ANALYZER_ENERGY_CONSUMPTION_PER_USE.getValue();
+    public static final int ENERGY_CAPACITY = ModConfigs.COMMON_FLUID_ANALYZER_CAPACITY.getValue();
+
+    public FluidAnalyzerItem(Properties props) {
+        super(props, () -> new ReceiveOnlyEnergyStorage(0, ENERGY_CAPACITY, ModConfigs.COMMON_FLUID_ANALYZER_TRANSFER_RATE.getValue()));
+    }
+
+    @Override
+    public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
+        super.appendHoverText(itemStack, context, components, tooltipFlag);
+
+        if(Screen.hasShiftDown()) {
+            components.add(Component.translatable("tooltip.energizedpower.fluid_analyzer.txt.shift.1").withStyle(ChatFormatting.GRAY));
+            components.add(Component.translatable("tooltip.energizedpower.fluid_analyzer.txt.shift.2",
+                    EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.GRAY));
+        }else {
+            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+        }
+    }
+
+    private void useItem(ItemStack itemStack, Player player, List<Component> lines) {
+        if(getEnergy(itemStack) >= ENERGY_CONSUMPTION_PER_USE)
+            setEnergy(itemStack, getEnergy(itemStack) - ENERGY_CONSUMPTION_PER_USE);
+
+        for(Component component:lines)
+            player.sendSystemMessage(component);
+        player.sendSystemMessage(Component.empty());
+    }
+
+    private void addOutputTextForFluidStorage(List<Component> components, @Nullable IFluidHandler fluidStorage, boolean blockFaceSpecificInformation) {
+        if(fluidStorage == null) {
+            components.add(Component.translatable("txt.energizedpower.fluid_analyzer.no_fluid_block" + (blockFaceSpecificInformation?"_side":"")).
+                    withStyle(ChatFormatting.RED));
+
+            return;
+        }
+
+        components.add(Component.translatable("txt.energizedpower.fluid_analyzer.fluid_output.tank_count" + (blockFaceSpecificInformation?"_side":""),
+                fluidStorage.getTanks()).withStyle(ChatFormatting.BLUE));
+
+        for(int i = 0;i < fluidStorage.getTanks();i++) {
+            boolean fluidEmpty = fluidStorage.getFluidInTank(i).isEmpty();
+
+            int fluidAmount = fluidEmpty?0:fluidStorage.getFluidInTank(i).getAmount();
+
+            components.add(Component.literal("• ").append(
+                    Component.translatable("txt.energizedpower.fluid_analyzer.fluid_output.tank_fluid_content",
+                    i + 1, fluidEmpty?"":Component.translatable(fluidStorage.getFluidInTank(i).getDescriptionId()).append(" "),
+                    FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(fluidStorage.getTankCapacity(i)))
+            ).withStyle(ChatFormatting.BLUE));
+        }
+    }
+
+    @Override
+    public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext useOnContext) {
+        Level level = useOnContext.getLevel();
+        if(level.isClientSide)
+            return InteractionResult.SUCCESS;
+
+        if(getEnergy(stack) < ENERGY_CONSUMPTION_PER_USE) {
+            useItem(stack, useOnContext.getPlayer(), List.of(
+                    Component.translatable("txt.energizedpower.fluid_analyzer.no_energy_left",
+                            EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.RED)
+            ));
+
+            return InteractionResult.SUCCESS;
+        }
+
+        BlockPos blockPos = useOnContext.getClickedPos();
+
+        List<Component> components = new ArrayList<>();
+        components.add(level.getBlockState(blockPos).getBlock().getName().withStyle(ChatFormatting.UNDERLINE, ChatFormatting.AQUA));
+
+        BlockEntity blockEntity = level.getBlockEntity(blockPos);
+
+        IFluidHandler fluidStorage = level.getCapability(Capabilities.FluidHandler.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, null);
+        addOutputTextForFluidStorage(components, fluidStorage, false);
+
+        components.add(Component.translatable("txt.energizedpower.fluid_analyzer.output_side_information").withStyle(ChatFormatting.GOLD));
+        IFluidHandler fluidStorageSided = level.getCapability(Capabilities.FluidHandler.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, useOnContext.getClickedFace());
+        addOutputTextForFluidStorage(components, fluidStorageSided, true);
+
+        useItem(stack, useOnContext.getPlayer(), components);
+
+        return InteractionResult.SUCCESS;
+    }
+}

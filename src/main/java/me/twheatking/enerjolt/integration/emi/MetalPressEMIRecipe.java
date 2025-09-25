@@ -1,0 +1,80 @@
+package me.twheatking.enerjolt.integration.emi;
+
+import dev.emi.emi.api.recipe.EmiRecipe;
+import dev.emi.emi.api.recipe.EmiRecipeCategory;
+import dev.emi.emi.api.render.EmiTexture;
+import dev.emi.emi.api.stack.EmiIngredient;
+import dev.emi.emi.api.stack.EmiStack;
+import dev.emi.emi.api.widget.WidgetHolder;
+import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.block.EnerjoltBlocks;
+import me.twheatking.enerjolt.recipe.MetalPressRecipe;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
+
+import java.util.List;
+
+public class MetalPressEMIRecipe implements EmiRecipe {
+    public static final ResourceLocation SIMPLIFIED_TEXTURE = EJOLTAPI.id("textures/block/metal_press_side.png");
+    public static final EmiStack ITEM = EmiStack.of(EnerjoltBlocks.METAL_PRESS_ITEM.get());
+    public static final EmiRecipeCategory CATEGORY = new EmiRecipeCategory(EJOLTAPI.id("metal_press"),
+            ITEM, new EmiTexture(SIMPLIFIED_TEXTURE, 0, 0, 16, 16, 16, 16, 16, 16));
+
+    private final ResourceLocation id;
+    private final List<EmiIngredient> catalysts;
+    private final List<EmiIngredient> input;
+    private final List<EmiStack> output;
+
+    public MetalPressEMIRecipe(RecipeHolder<MetalPressRecipe> recipe) {
+        this.id = recipe.id();
+        this.catalysts = List.of(EmiIngredient.of(Ingredient.of(recipe.value().getPressMold())));
+        this.input = List.of(EmiIngredient.of(recipe.value().getInput(), recipe.value().getInputCount()));
+        this.output = List.of(EmiStack.of(recipe.value().getOutput()));
+    }
+
+    @Override
+    public EmiRecipeCategory getCategory() {
+        return CATEGORY;
+    }
+
+    @Override
+    public ResourceLocation getId() {
+        return id;
+    }
+
+    @Override
+    public List<EmiIngredient> getCatalysts() {
+        return catalysts;
+    }
+
+    @Override
+    public List<EmiIngredient> getInputs() {
+        return input;
+    }
+
+    @Override
+    public List<EmiStack> getOutputs() {
+        return output;
+    }
+
+    @Override
+    public int getDisplayWidth() {
+        return 98;
+    }
+
+    @Override
+    public int getDisplayHeight() {
+        return 34;
+    }
+
+    @Override
+    public void addWidgets(WidgetHolder widgets) {
+        ResourceLocation texture = EJOLTAPI.id("textures/gui/container/metal_press.png");
+        widgets.addTexture(texture, 0, 0, 98, 34, 47, 22);
+
+        widgets.addSlot(input.get(0), 0, 12).drawBack(false);
+        widgets.addSlot(catalysts.get(0), 36, 0).drawBack(false);
+        widgets.addSlot(output.get(0), 76, 12).drawBack(false).recipeContext(this);
+    }
+}

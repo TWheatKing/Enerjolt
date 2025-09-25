@@ -14,10 +14,10 @@ public final class EnerjoltCreativeModeTab {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EJOLTAPI.MOD_ID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ENERGIZED_POWER_TAB = CREATIVE_MODE_TABS.register("main",
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ENERJOLT_TAB = CREATIVE_MODE_TABS.register("main",
             () -> CreativeModeTab.builder().
-                    title(Component.translatable("itemGroup.energizedpower.tab")).
-                    icon(() -> new ItemStack(EnerjoltItems.ENERGIZED_COPPER_INGOT.get())).
+                    title(Component.translatable("itemGroup.enerjolt.tab")).
+                    icon(() -> new ItemStack(EnerjoltItems.ADVANCED_CIRCUIT.get())).
                     build());
 
     public static void register(IEventBus modEventBus) {

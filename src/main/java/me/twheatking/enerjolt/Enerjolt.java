@@ -117,8 +117,8 @@ public class Enerjolt {
     }
 
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == EnerjoltCreativeModeTab.ENERGIZED_POWER_TAB.get()) {
-            event.accept(EnerjoltItems.ENERGIZED_POWER_BOOK);
+        if(event.getTab() == EnerjoltCreativeModeTab.ENERJOLT_TAB.get()) {
+            event.accept(EnerjoltItems.ENERJOLT_BOOK);
             addEmptyAndFullyChargedItem(event, EnerjoltItems.ENERGY_ANALYZER, EnergyAnalyzerItem.ENERGY_CAPACITY);
             addEmptyAndFullyChargedItem(event, EnerjoltItems.FLUID_ANALYZER, FluidAnalyzerItem.ENERGY_CAPACITY);
 

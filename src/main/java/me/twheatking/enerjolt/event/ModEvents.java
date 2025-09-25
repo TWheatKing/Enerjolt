@@ -48,7 +48,7 @@ public class ModEvents {
             addOffer(trades, 1,
                     new ItemCost(Items.EMERALD, 6),
                     new ItemCost(Items.BOOK),
-                    new ItemStack(EnerjoltItems.ENERGIZED_POWER_BOOK.get()),
+                    new ItemStack(EnerjoltItems.ENERJOLT_BOOK.get()),
                     3, 3, .02f);
             addOffer(trades, 1,
                     new ItemCost(Items.COPPER_INGOT, 2),
@@ -209,7 +209,7 @@ public class ModEvents {
             return;
 
         ItemStack bookItemStack = lecternBlockEntity.getBook();
-        if(!bookItemStack.is(EnerjoltItems.ENERGIZED_POWER_BOOK.get()))
+        if(!bookItemStack.is(EnerjoltItems.ENERJOLT_BOOK.get()))
             return;
 
         Item bookItem = bookItemStack.getItem();

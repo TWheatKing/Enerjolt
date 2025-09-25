@@ -27,10 +27,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
         tag(ItemTags.BOOKSHELF_BOOKS).
-                add(EnerjoltItems.ENERGIZED_POWER_BOOK.get());
+                add(EnerjoltItems.ENERJOLT_BOOK.get());
 
         tag(ItemTags.LECTERN_BOOKS).
-                add(EnerjoltItems.ENERGIZED_POWER_BOOK.get());
+                add(EnerjoltItems.ENERJOLT_BOOK.get());
 
         tag(ItemTags.PIGLIN_LOVED).
                 add(EnerjoltItems.GOLD_DUST.get(),

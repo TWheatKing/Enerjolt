@@ -49,7 +49,7 @@ public class ModBasicsAdvancements implements AdvancementProvider.AdvancementGen
 
         AdvancementHolder energizedPowerBook = addAdvancement(
                 advancementOutput, existingFileHelper, energizedPowerBasics,
-                EnerjoltItems.ENERGIZED_POWER_BOOK, "energized_power_book", AdvancementType.TASK
+                EnerjoltItems.ENERJOLT_BOOK, "energized_power_book", AdvancementType.TASK
         );
 
         AdvancementHolder pressMoldMaker = addAdvancement(

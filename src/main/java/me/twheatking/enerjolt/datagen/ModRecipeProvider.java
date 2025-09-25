@@ -2114,7 +2114,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ), List.of(
                 Ingredient.of(Items.BOOK),
                 Ingredient.of(EnerjoltBlocks.BASIC_MACHINE_FRAME_ITEM)
-        ), new ItemStack(EnerjoltItems.ENERGIZED_POWER_BOOK.get()), CraftingBookCategory.MISC);
+        ), new ItemStack(EnerjoltItems.ENERJOLT_BOOK.get()), CraftingBookCategory.MISC);
 
         addShapedCraftingRecipe(output, has(CommonItemTags.DUSTS_CHARCOAL), Map.of(
                 'P', Ingredient.of(Items.PAPER),

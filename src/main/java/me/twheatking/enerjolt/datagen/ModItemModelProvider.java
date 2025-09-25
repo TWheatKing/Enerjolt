@@ -150,7 +150,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_2);
         basicItem(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_3);
 
-        basicItem(EnerjoltItems.ENERGIZED_POWER_BOOK);
+        basicItem(EnerjoltItems.ENERJOLT_BOOK);
 
         basicItem(EnerjoltItems.CABLE_INSULATOR);
 

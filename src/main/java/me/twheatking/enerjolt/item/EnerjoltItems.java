@@ -226,7 +226,7 @@ public final class EnerjoltItems {
     public static final DeferredItem<Item> MOON_LIGHT_UPGRADE_MODULE_3 = ITEMS.register("moon_light_upgrade_module_3",
             () -> new MoonLightUpgradeModuleItem(new Item.Properties(), 3));
 
-    public static final DeferredItem<Item> ENERGIZED_POWER_BOOK = ITEMS.register("energized_power_book",
+    public static final DeferredItem<Item> ENERJOLT_BOOK = ITEMS.register("enerjolt_book",
             () -> new EnerjoltBookItem(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> CABLE_INSULATOR = ITEMS.register("cable_insulator",

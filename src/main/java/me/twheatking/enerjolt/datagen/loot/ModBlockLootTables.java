@@ -30,18 +30,40 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(EnerjoltBlocks.SILICON_BLOCK);
-
-        dropSelf(EnerjoltBlocks.TIN_BLOCK);
-        dropSelf(EnerjoltBlocks.RAW_TIN_BLOCK);
-
-        dropSelf(EnerjoltBlocks.SAWDUST_BLOCK);
+        // Ore Blocks - These need special loot tables to drop raw materials
+        add(EnerjoltBlocks.ZINC_ORE, this::createZincOreDrops);
+        add(EnerjoltBlocks.ZINC_DEEPSLATE_ORE, this::createZincOreDrops);
+        add(EnerjoltBlocks.ZINC_END_ORE, this::createZincOreDrops);
+        add(EnerjoltBlocks.ZINC_NETHER_ORE, this::createZincOreDrops);
 
         add(EnerjoltBlocks.TIN_ORE, this::createTinOreDrops);
         add(EnerjoltBlocks.DEEPSLATE_TIN_ORE, this::createTinOreDrops);
 
-        dropSelf(EnerjoltBlocks.RAW_TIN_BLOCK);
+        // Mineral/Storage Blocks
+        dropSelf(EnerjoltBlocks.ZINC_BLOCK);
+        dropSelf(EnerjoltBlocks.WHEAT_INGOT_BLOCK);
 
+        dropSelf(EnerjoltBlocks.SILICON_BLOCK);
+        dropSelf(EnerjoltBlocks.TIN_BLOCK);
+        dropSelf(EnerjoltBlocks.RAW_TIN_BLOCK);
+        dropSelf(EnerjoltBlocks.SAWDUST_BLOCK);
+
+        // Zinc Decorative Blocks
+        dropSelf(EnerjoltBlocks.ZINC_STAIRS);
+        dropSelf(EnerjoltBlocks.ZINC_SLAB);
+        dropSelf(EnerjoltBlocks.ZINC_PRESSURE_PLATE);
+        dropSelf(EnerjoltBlocks.ZINC_BUTTON);
+        dropSelf(EnerjoltBlocks.ZINC_FENCE);
+        dropSelf(EnerjoltBlocks.ZINC_FENCE_GATE);
+        dropSelf(EnerjoltBlocks.ZINC_WALL);
+        dropSelf(EnerjoltBlocks.ZINC_DOOR);
+        dropSelf(EnerjoltBlocks.ZINC_TRAPDOOR);
+
+        // Casing Blocks
+        dropSelf(EnerjoltBlocks.ZINC_CASING);
+        dropSelf(EnerjoltBlocks.ANDESITE_CASING);
+
+        // Conveyor Belt System
         dropSelf(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT);
         dropSelf(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT);
         dropSelf(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT);
@@ -66,19 +88,24 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_MERGER);
         dropSelf(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_MERGER);
 
+        // Fluid System
         dropSelf(EnerjoltBlocks.IRON_FLUID_PIPE);
         dropSelf(EnerjoltBlocks.GOLDEN_FLUID_PIPE);
 
         dropSelf(EnerjoltBlocks.FLUID_TANK_SMALL);
         dropSelf(EnerjoltBlocks.FLUID_TANK_MEDIUM);
         dropSelf(EnerjoltBlocks.FLUID_TANK_LARGE);
+        // Note: CREATIVE_FLUID_TANK has .noLootTable() in its properties, so no entry needed
 
+        // Storage System
         dropSelf(EnerjoltBlocks.ITEM_SILO_TINY);
         dropSelf(EnerjoltBlocks.ITEM_SILO_SMALL);
         dropSelf(EnerjoltBlocks.ITEM_SILO_MEDIUM);
         dropSelf(EnerjoltBlocks.ITEM_SILO_LARGE);
         dropSelf(EnerjoltBlocks.ITEM_SILO_GIANT);
+        // Note: CREATIVE_ITEM_SILO has .noLootTable() in its properties, so no entry needed
 
+        // Energy System - Cables
         dropSelf(EnerjoltBlocks.TIN_CABLE);
         dropSelf(EnerjoltBlocks.COPPER_CABLE);
         dropSelf(EnerjoltBlocks.GOLD_CABLE);
@@ -86,6 +113,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.ENERGIZED_GOLD_CABLE);
         dropSelf(EnerjoltBlocks.ENERGIZED_CRYSTAL_MATRIX_CABLE);
 
+        // Energy System - Transformers
         dropSelf(EnerjoltBlocks.LV_TRANSFORMER_1_TO_N);
         dropSelf(EnerjoltBlocks.LV_TRANSFORMER_3_TO_3);
         dropSelf(EnerjoltBlocks.LV_TRANSFORMER_N_TO_1);
@@ -104,100 +132,75 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.CONFIGURABLE_HV_TRANSFORMER);
         dropSelf(EnerjoltBlocks.CONFIGURABLE_EHV_TRANSFORMER);
 
+        // Energy System - Storage
         dropSelf(EnerjoltBlocks.BATTERY_BOX);
         dropSelf(EnerjoltBlocks.ADVANCED_BATTERY_BOX);
+        // Note: CREATIVE_BATTERY_BOX has .noLootTable() in its properties, so no entry needed
 
+        // Processing Machines
         dropSelf(EnerjoltBlocks.PRESS_MOLD_MAKER);
-
         dropSelf(EnerjoltBlocks.ALLOY_FURNACE);
-
         dropSelf(EnerjoltBlocks.AUTO_CRAFTER);
         dropSelf(EnerjoltBlocks.ADVANCED_AUTO_CRAFTER);
-
         dropSelf(EnerjoltBlocks.CRUSHER);
         dropSelf(EnerjoltBlocks.ADVANCED_CRUSHER);
-
         dropSelf(EnerjoltBlocks.PULVERIZER);
         dropSelf(EnerjoltBlocks.ADVANCED_PULVERIZER);
-
         dropSelf(EnerjoltBlocks.SAWMILL);
-
         dropSelf(EnerjoltBlocks.COMPRESSOR);
-
         dropSelf(EnerjoltBlocks.METAL_PRESS);
-
         dropSelf(EnerjoltBlocks.AUTO_PRESS_MOLD_MAKER);
-
         dropSelf(EnerjoltBlocks.AUTO_STONECUTTER);
-
         dropSelf(EnerjoltBlocks.PLANT_GROWTH_CHAMBER);
-
         dropSelf(EnerjoltBlocks.BLOCK_PLACER);
-
         dropSelf(EnerjoltBlocks.ASSEMBLING_MACHINE);
-
         dropSelf(EnerjoltBlocks.INDUCTION_SMELTER);
 
+        // Fluid Processing
         dropSelf(EnerjoltBlocks.FLUID_FILLER);
-
         dropSelf(EnerjoltBlocks.STONE_LIQUEFIER);
         dropSelf(EnerjoltBlocks.STONE_SOLIDIFIER);
-
         dropSelf(EnerjoltBlocks.FLUID_TRANSPOSER);
-
         dropSelf(EnerjoltBlocks.FILTRATION_PLANT);
-
         dropSelf(EnerjoltBlocks.FLUID_DRAINER);
-
         dropSelf(EnerjoltBlocks.FLUID_PUMP);
         dropSelf(EnerjoltBlocks.ADVANCED_FLUID_PUMP);
-
         dropSelf(EnerjoltBlocks.DRAIN);
 
+        // Energy Processing/Charging
         dropSelf(EnerjoltBlocks.CHARGER);
         dropSelf(EnerjoltBlocks.ADVANCED_CHARGER);
-
         dropSelf(EnerjoltBlocks.UNCHARGER);
         dropSelf(EnerjoltBlocks.ADVANCED_UNCHARGER);
-
         dropSelf(EnerjoltBlocks.MINECART_CHARGER);
         dropSelf(EnerjoltBlocks.ADVANCED_MINECART_CHARGER);
-
         dropSelf(EnerjoltBlocks.MINECART_UNCHARGER);
         dropSelf(EnerjoltBlocks.ADVANCED_MINECART_UNCHARGER);
 
+        // Energy Generation
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_1);
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_2);
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_3);
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_4);
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_5);
         dropSelf(EnerjoltBlocks.SOLAR_PANEL_6);
-
         dropSelf(EnerjoltBlocks.COAL_ENGINE);
-
-        dropSelf(EnerjoltBlocks.POWERED_LAMP);
-
-        dropSelf(EnerjoltBlocks.POWERED_FURNACE);
-        dropSelf(EnerjoltBlocks.ADVANCED_POWERED_FURNACE);
-
         dropSelf(EnerjoltBlocks.LIGHTNING_GENERATOR);
-
-        dropSelf(EnerjoltBlocks.ENERGIZER);
-
-        dropSelf(EnerjoltBlocks.CHARGING_STATION);
-
         dropSelf(EnerjoltBlocks.HEAT_GENERATOR);
-
         dropSelf(EnerjoltBlocks.THERMAL_GENERATOR);
 
+        // Utility Blocks
+        dropSelf(EnerjoltBlocks.POWERED_LAMP);
+        dropSelf(EnerjoltBlocks.POWERED_FURNACE);
+        dropSelf(EnerjoltBlocks.ADVANCED_POWERED_FURNACE);
+        dropSelf(EnerjoltBlocks.ENERGIZER);
+        dropSelf(EnerjoltBlocks.CHARGING_STATION);
         dropSelf(EnerjoltBlocks.CRYSTAL_GROWTH_CHAMBER);
-
         dropSelf(EnerjoltBlocks.WEATHER_CONTROLLER);
-
         dropSelf(EnerjoltBlocks.TIME_CONTROLLER);
-
         dropSelf(EnerjoltBlocks.TELEPORTER);
 
+        // Machine Frames
         dropSelf(EnerjoltBlocks.BASIC_MACHINE_FRAME);
         dropSelf(EnerjoltBlocks.HARDENED_MACHINE_FRAME);
         dropSelf(EnerjoltBlocks.ADVANCED_MACHINE_FRAME);
@@ -219,6 +222,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 applyExplosionDecay(
                         block,
                         LootItem.lootTableItem(EnerjoltItems.RAW_TIN)
+                                .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )
+        );
+    }
+
+    private LootTable.Builder createZincOreDrops(Block block) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = registries.lookupOrThrow(Registries.ENCHANTMENT);
+
+        return createSilkTouchDispatchTable(block,
+                applyExplosionDecay(
+                        block,
+                        LootItem.lootTableItem(EnerjoltItems.RAW_ZINC)
                                 .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )
         );

@@ -21,6 +21,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
+        // Tool requirements
         tag(BlockTags.MINEABLE_WITH_AXE).
                 add(EnerjoltBlocks.SAWDUST_BLOCK.get());
 
@@ -33,6 +34,26 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE).
                 add(
+                        // Zinc blocks
+                        EnerjoltBlocks.ZINC_ORE.get(),
+                        EnerjoltBlocks.ZINC_DEEPSLATE_ORE.get(),
+                        EnerjoltBlocks.ZINC_END_ORE.get(),
+                        EnerjoltBlocks.ZINC_NETHER_ORE.get(),
+                        EnerjoltBlocks.WHEAT_INGOT_BLOCK.get(),
+                        EnerjoltBlocks.ZINC_BLOCK.get(),
+                        EnerjoltBlocks.ZINC_STAIRS.get(),
+                        EnerjoltBlocks.ZINC_SLAB.get(),
+                        EnerjoltBlocks.ZINC_PRESSURE_PLATE.get(),
+                        EnerjoltBlocks.ZINC_BUTTON.get(),
+                        EnerjoltBlocks.ZINC_FENCE.get(),
+                        EnerjoltBlocks.ZINC_FENCE_GATE.get(),
+                        EnerjoltBlocks.ZINC_WALL.get(),
+                        EnerjoltBlocks.ZINC_DOOR.get(),
+                        EnerjoltBlocks.ZINC_TRAPDOOR.get(),
+                        EnerjoltBlocks.ZINC_CASING.get(),
+                        EnerjoltBlocks.ANDESITE_CASING.get(),
+
+                        // Existing blocks
                         EnerjoltBlocks.SILICON_BLOCK.get(),
                         EnerjoltBlocks.TIN_BLOCK.get(),
 
@@ -189,8 +210,29 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME.get()
                 );
 
+        // Tool level requirements
         tag(BlockTags.NEEDS_STONE_TOOL).
                 add(
+                        // Zinc blocks require stone tools
+                        EnerjoltBlocks.ZINC_ORE.get(),
+                        EnerjoltBlocks.ZINC_DEEPSLATE_ORE.get(),
+                        EnerjoltBlocks.ZINC_END_ORE.get(),
+                        EnerjoltBlocks.ZINC_NETHER_ORE.get(),
+                        EnerjoltBlocks.WHEAT_INGOT_BLOCK.get(),
+                        EnerjoltBlocks.ZINC_BLOCK.get(),
+                        EnerjoltBlocks.ZINC_STAIRS.get(),
+                        EnerjoltBlocks.ZINC_SLAB.get(),
+                        EnerjoltBlocks.ZINC_PRESSURE_PLATE.get(),
+                        EnerjoltBlocks.ZINC_BUTTON.get(),
+                        EnerjoltBlocks.ZINC_FENCE.get(),
+                        EnerjoltBlocks.ZINC_FENCE_GATE.get(),
+                        EnerjoltBlocks.ZINC_WALL.get(),
+                        EnerjoltBlocks.ZINC_DOOR.get(),
+                        EnerjoltBlocks.ZINC_TRAPDOOR.get(),
+                        EnerjoltBlocks.ZINC_CASING.get(),
+                        EnerjoltBlocks.ANDESITE_CASING.get(),
+
+                        // Existing blocks
                         EnerjoltBlocks.SILICON_BLOCK.get(),
                         EnerjoltBlocks.TIN_BLOCK.get(),
 
@@ -338,6 +380,35 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME.get()
                 );
 
+        // Minecraft block categories
+        tag(BlockTags.STAIRS).
+                add(EnerjoltBlocks.ZINC_STAIRS.get());
+
+        tag(BlockTags.SLABS).
+                add(EnerjoltBlocks.ZINC_SLAB.get());
+
+        tag(BlockTags.PRESSURE_PLATES).
+                add(EnerjoltBlocks.ZINC_PRESSURE_PLATE.get());
+
+        tag(BlockTags.BUTTONS).
+                add(EnerjoltBlocks.ZINC_BUTTON.get());
+
+        tag(BlockTags.FENCES).
+                add(EnerjoltBlocks.ZINC_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES).
+                add(EnerjoltBlocks.ZINC_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS).
+                add(EnerjoltBlocks.ZINC_WALL.get());
+
+        tag(BlockTags.DOORS).
+                add(EnerjoltBlocks.ZINC_DOOR.get());
+
+        tag(BlockTags.TRAPDOORS).
+                add(EnerjoltBlocks.ZINC_TRAPDOOR.get());
+
+        // Common tags - Ores
         tag(Tags.Blocks.ORES).
                 addTag(CommonBlockTags.ORES_TIN);
         tag(CommonBlockTags.ORES_TIN).
@@ -345,10 +416,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         EnerjoltBlocks.DEEPSLATE_TIN_ORE.get());
 
         tag(Tags.Blocks.ORES_IN_GROUND_STONE).
-                add(EnerjoltBlocks.TIN_ORE.get());
+                add(EnerjoltBlocks.TIN_ORE.get(),
+                        EnerjoltBlocks.ZINC_ORE.get());
         tag(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE).
-                add(EnerjoltBlocks.DEEPSLATE_TIN_ORE.get());
+                add(EnerjoltBlocks.DEEPSLATE_TIN_ORE.get(),
+                        EnerjoltBlocks.ZINC_DEEPSLATE_ORE.get());
+        tag(Tags.Blocks.ORES_IN_GROUND_NETHERRACK).
+                add(EnerjoltBlocks.ZINC_NETHER_ORE.get());
 
+        // Storage blocks
         tag(Tags.Blocks.STORAGE_BLOCKS).
                 addTag(CommonBlockTags.STORAGE_BLOCKS_SILICON).
                 addTag(CommonBlockTags.STORAGE_BLOCKS_TIN).

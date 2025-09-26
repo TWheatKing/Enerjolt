@@ -1,9 +1,14 @@
 package me.twheatking.enerjolt.item;
 
+import me.twheatking.enerjolt.Enerjolt;
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.item.custom.AndesiteAlloyItem;
+import me.twheatking.enerjolt.item.custom.ChiselItem;
+import me.twheatking.enerjolt.item.custom.ModArmorItem;
+import me.twheatking.enerjolt.item.custom.ZincAlloyItem;
 import me.twheatking.enerjolt.machine.tier.BatteryTier;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,6 +17,69 @@ public final class EnerjoltItems {
     private EnerjoltItems() {}
     
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(EJOLTAPI.MOD_ID);
+
+    public static final DeferredItem<Item> WHEAT_INGOT = ITEMS.register("wheat_ingot",
+            () -> new Item(new Item.Properties()));
+    //items from ore or from the ore output refined
+    public static final DeferredItem<Item> ZINC_INGOT = ITEMS.register("zinc_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_ZINC = ITEMS.register("raw_zinc",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COBALT = ITEMS.register("cobalt",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_COBALT = ITEMS.register("raw_cobalt",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BRASS = ITEMS.register("brass",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SULFUR = ITEMS.register("sulfur",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GRAPHITE = ITEMS.register("graphite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BAUXITE = ITEMS.register("bauxite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SALTPETER = ITEMS.register("saltpeter",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> LITHIUM = ITEMS.register("lithium",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NICKEL = ITEMS.register("nickel",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SILICON = ITEMS.register("silicon",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COPPER_SULFIDE = ITEMS.register("copper_sulfide",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> MANGANESE = ITEMS.register("manganese",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> URANINITE = ITEMS.register("uraninite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> THORIUM = ITEMS.register("thorium",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> TUNGSTEN = ITEMS.register("tungsten",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PLATINUM = ITEMS.register("platinum",
+            () -> new Item(new Item.Properties()));
+    //rare earth ore
+    public static final DeferredItem<Item> NEODYMIUM = ITEMS.register("neodymium",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> YTTRIUM = ITEMS.register("yttrium",
+            () -> new Item(new Item.Properties()));
+    //endgame
+    public static final DeferredItem<Item> ENERJOLT = ITEMS.register("enerjolt",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CRYONITE = ITEMS.register("cryonite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> VOIDSTONE = ITEMS.register("voidstone",
+            () -> new Item(new Item.Properties()));
+    //Bits
+    public static final DeferredItem<Item> IRON_BIT = ITEMS.register("iron_bit",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GOLD_BIT = ITEMS.register("gold_bit",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COPPER_BIT = ITEMS.register("copper_bit",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DIAMOND_BIT = ITEMS.register("diamond_bit",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NETHERITE_BIT = ITEMS.register("netherite_bit",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> ENERGIZED_COPPER_INGOT = ITEMS.register("energized_copper_ingot",
             () -> new Item(new Item.Properties()));
@@ -26,9 +94,6 @@ public final class EnerjoltItems {
     public static final DeferredItem<Item> ENERGIZED_COPPER_WIRE = ITEMS.register("energized_copper_wire",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ENERGIZED_GOLD_WIRE = ITEMS.register("energized_gold_wire",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> SILICON = ITEMS.register("silicon",
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> STONE_PEBBLE = ITEMS.register("stone_pebble",
@@ -60,9 +125,20 @@ public final class EnerjoltItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> GOLD_PLATE = ITEMS.register("gold_plate",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> BRASS_PLATE = ITEMS.register("brass_plate",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DIAMOND_PLATE = ITEMS.register("diamond_plate",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NETHERITE_PLATE = ITEMS.register("netherite_plate",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ZINC_ALLOY = ITEMS.register("zinc_alloy",
+            () -> new ZincAlloyItem(new Item.Properties()));
+    public static final DeferredItem<Item> ANDESITE_ALLOY = ITEMS.register("andesite_alloy",
+            () -> new AndesiteAlloyItem(new Item.Properties()));
 
     public static final DeferredItem<Item> REDSTONE_ALLOY_INGOT = ITEMS.register("redstone_alloy_ingot",
             () -> new Item(new Item.Properties()));
@@ -71,6 +147,28 @@ public final class EnerjoltItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> ADVANCED_ALLOY_PLATE = ITEMS.register("advanced_alloy_plate",
+            () -> new Item(new Item.Properties()));
+
+    //fan blades
+    public static final DeferredItem<Item> BASIC_BLADE = ITEMS.register("basic_blade",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ADVANCED_BLADE = ITEMS.register("advanced_blade",
+            () -> new Item(new Item.Properties()));
+
+    //machine parts
+    public static final DeferredItem<Item> GRATE = ITEMS.register("grate",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> WISK = ITEMS.register("wisk",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAM = ITEMS.register("ram",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> EMPTY_COIL = ITEMS.register("empty_coil",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COPPER_COIL = ITEMS.register("copper_coil",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> GOLD_COIL = ITEMS.register("gold_coil",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DIAMOND_COIL = ITEMS.register("diamond_coil",
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> IRON_GEAR = ITEMS.register("iron_gear",
@@ -301,6 +399,49 @@ public final class EnerjoltItems {
             () -> new BatteryBoxMinecartItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ADVANCED_BATTERY_BOX_MINECART = ITEMS.register("advanced_battery_box_minecart",
             () -> new AdvancedBatteryBoxMinecartItem(new Item.Properties().stacksTo(1)));
+
+
+    //armor items
+    public static final DeferredItem<ArmorItem> ZINC_HELMET = ITEMS.register("zinc_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZINC_CHESTPLATE = ITEMS.register("zinc_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZINC_LEGGINGS = ITEMS.register("zinc_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(19))));
+    public static final DeferredItem<ArmorItem> ZINC_BOOTS = ITEMS.register("zinc_boots",
+            () -> new ArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<Item> ZINC_HORSE_ARMOR = ITEMS.register("zinc_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> ZINC_SMITHING_TEMPLATE = ITEMS.register("zinc_armor_trim_smithing_template",
+            () -> SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(Enerjolt.MOD_ID, "zinc")));
+
+    public static final DeferredItem<Item> ZINC_BOW = ITEMS.register("zinc_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
+    public static final DeferredItem<SwordItem> ZINC_SWORD = ITEMS.register("zinc_sword",
+            () -> new SwordItem(ModToolTiers.ZINC, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.ZINC, 5, -2.4f))));
+    public static final DeferredItem<PickaxeItem> ZINC_PICKAXE = ITEMS.register("zinc_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ZINC, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ZINC, 1.0F, -2.8f))));
+    public static final DeferredItem<ShovelItem> ZINC_SHOVEL = ITEMS.register("zinc_shovel",
+            () -> new ShovelItem(ModToolTiers.ZINC, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.ZINC, 1.5F, -3.0f))));
+    public static final DeferredItem<AxeItem> ZINC_AXE = ITEMS.register("zinc_axe",
+            () -> new AxeItem(ModToolTiers.ZINC, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.ZINC, 6.0F, -3.2f))));
+    public static final DeferredItem<HoeItem> ZINC_HOE = ITEMS.register("zinc_hoe",
+            () -> new HoeItem(ModToolTiers.ZINC, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.ZINC, 0F, -3.0f))));
+
+    public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(32)));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

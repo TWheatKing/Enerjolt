@@ -2,6 +2,7 @@ package me.twheatking.enerjolt.component;
 
 import com.mojang.serialization.Codec;
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.Registries;
@@ -17,12 +18,18 @@ import java.util.function.UnaryOperator;
 public final class EnerjoltDataComponentTypes {
     private EnerjoltDataComponentTypes() {}
 
-    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES = DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, EJOLTAPI.MOD_ID);
+    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENT_TYPES =
+            DeferredRegister.create(Registries.DATA_COMPONENT_TYPE, EJOLTAPI.MOD_ID);
 
     public static <T> DeferredHolder<DataComponentType<?>, DataComponentType<T>> registerDataComponentType(
             String name, Supplier<UnaryOperator<DataComponentType.Builder<T>>> builderOperator) {
         return DATA_COMPONENT_TYPES.register(name, () -> builderOperator.get().apply(DataComponentType.builder()).build());
     }
+
+    // Fix: Change register to registerDataComponentType and add supplier wrapper
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<BlockPos>> COORDINATES =
+            registerDataComponentType("coordinates", () -> builder ->
+                    builder.persistent(BlockPos.CODEC).networkSynchronized(BlockPos.STREAM_CODEC));
 
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> ENERGY =
             registerDataComponentType("energy", () -> builder ->

@@ -43,7 +43,7 @@ import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
 public class EnergizedPowerBookScreen extends Screen {
-    public static final ResourceLocation TEXTURE = EJOLTAPI.id("textures/gui/book/energized_power_book.png");
+    public static final ResourceLocation TEXTURE = EJOLTAPI.id("textures/gui/book/enerjolt_book.png");
     public static final ResourceLocation FRONT_COVER = EJOLTAPI.id("textures/gui/book/front_cover.png");
     public static final ResourceLocation BACK_COVER = EJOLTAPI.id("textures/gui/book/back_cover.png");
 

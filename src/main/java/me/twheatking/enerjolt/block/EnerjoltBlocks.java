@@ -1,21 +1,28 @@
 package me.twheatking.enerjolt.block;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.block.custom.AndesiteCasingBlock;
+import me.twheatking.enerjolt.block.custom.ZincCasingBlock;
 import me.twheatking.enerjolt.item.EnerjoltItems;
 import me.twheatking.enerjolt.machine.tier.*;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.SoundType;
+
+import java.util.function.Supplier;
 
 public final class EnerjoltBlocks {
     private EnerjoltBlocks() {}
@@ -28,6 +35,84 @@ public final class EnerjoltBlocks {
     private static DeferredItem<Item> createBlockItem(String name, DeferredBlock<? extends Block> blockRegistryObject) {
         return createBlockItem(name, blockRegistryObject, new Item.Properties());
     }
+
+    //register blocks
+    public static final DeferredBlock<Block> ZINC_ORE = registerBlock("zinc_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.STONE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .randomTicks()
+                            .strength(3.0F, 3.0F)
+            )
+    );
+    public static final DeferredBlock<Block> ZINC_DEEPSLATE_ORE = registerBlock("zinc_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,6),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .randomTicks()
+                            .strength(4.0F, 3.0F)
+            )
+    );
+
+    public static final DeferredBlock<Block> ZINC_END_ORE = registerBlock("zinc_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(5, 9),
+                    BlockBehaviour.Properties.of().strength(7f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> ZINC_NETHER_ORE = registerBlock("zinc_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1, 5),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> WHEAT_INGOT_BLOCK = registerBlock("wheat_ingot_block",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_BROWN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .randomTicks()
+                            .strength(3.0F, 3.0F)
+            )
+    );public static final DeferredBlock<Block> ZINC_BLOCK = registerBlock("zinc_block",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.COLOR_GREEN)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .randomTicks()
+                            .strength(3.0F, 3.0F)
+                            //.sound(ModSounds.ZINC_BLOCK_SOUNDS)
+            )
+    );
+    public static final DeferredBlock<StairBlock> ZINC_STAIRS = registerBlock("zinc_stairs",
+            () -> new StairBlock(EnerjoltBlocks.ZINC_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<SlabBlock> ZINC_SLAB = registerBlock("zinc_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<PressurePlateBlock> ZINC_PRESSURE_PLATE = registerBlock("zinc_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<ButtonBlock> ZINC_BUTTON = registerBlock("zinc_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 40, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noCollission()));
+
+    public static final DeferredBlock<FenceBlock> ZINC_FENCE = registerBlock("zinc_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<FenceGateBlock> ZINC_FENCE_GATE = registerBlock("zinc_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<WallBlock> ZINC_WALL = registerBlock("zinc_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<DoorBlock> ZINC_DOOR = registerBlock("zinc_door",
+            () -> new DoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> ZINC_TRAPDOOR = registerBlock("zinc_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final DeferredBlock<Block> ZINC_CASING = registerBlock("zinc_casing",
+            () -> new ZincCasingBlock());
+    public static final DeferredBlock<Block> ANDESITE_CASING = registerBlock("andesite_casing",
+            () -> new AndesiteCasingBlock());
 
     public static final DeferredBlock<Block> SILICON_BLOCK = BLOCKS.register("silicon_block",
             () -> new Block(BlockBehaviour.Properties.of().
@@ -683,6 +768,16 @@ public final class EnerjoltBlocks {
                     requiresCorrectToolForDrops().strength(5.0f, 6.0f).sound(SoundType.METAL)));
     public static final DeferredItem<Item> REINFORCED_ADVANCED_MACHINE_FRAME_ITEM = createBlockItem("reinforced_advanced_machine_frame", REINFORCED_ADVANCED_MACHINE_FRAME);
 
+
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> toReturn =BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
+        EnerjoltItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
     }

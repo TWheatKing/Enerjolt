@@ -112,21 +112,51 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void registerBlocks() {
+        // Ores and storage blocks
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_ORE);
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_DEEPSLATE_ORE);
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_END_ORE);
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_NETHER_ORE);
+        cubeAllBlockWithItem(EnerjoltBlocks.WHEAT_INGOT_BLOCK);
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_BLOCK);
+
+        // Zinc building blocks
+        stairsBlock(EnerjoltBlocks.ZINC_STAIRS.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        slabBlock(EnerjoltBlocks.ZINC_SLAB.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        pressurePlateBlock(EnerjoltBlocks.ZINC_PRESSURE_PLATE.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        buttonBlock(EnerjoltBlocks.ZINC_BUTTON.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        fenceBlock(EnerjoltBlocks.ZINC_FENCE.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        fenceGateBlock(EnerjoltBlocks.ZINC_FENCE_GATE.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        wallBlock(EnerjoltBlocks.ZINC_WALL.get(), getBlockTexture(EnerjoltBlocks.ZINC_BLOCK));
+
+        doorBlockWithRenderType(EnerjoltBlocks.ZINC_DOOR.get(), createModLoc("block/zinc_door_bottom"), createModLoc("block/zinc_door_top"), "cutout");
+
+        trapdoorBlockWithRenderType(EnerjoltBlocks.ZINC_TRAPDOOR.get(), createModLoc("block/zinc_trapdoor"), true, "cutout");
+
+        // Casings
+        cubeAllBlockWithItem(EnerjoltBlocks.ZINC_CASING);
+        cubeAllBlockWithItem(EnerjoltBlocks.ANDESITE_CASING);
+
+        // Existing blocks
         cubeAllBlockWithItem(EnerjoltBlocks.SILICON_BLOCK);
-
         cubeAllBlockWithItem(EnerjoltBlocks.TIN_BLOCK);
-
         cubeAllBlockWithItem(EnerjoltBlocks.SAWDUST_BLOCK);
-
         cubeAllBlockWithItem(EnerjoltBlocks.TIN_ORE);
         cubeAllBlockWithItem(EnerjoltBlocks.DEEPSLATE_TIN_ORE);
-
         cubeAllBlockWithItem(EnerjoltBlocks.RAW_TIN_BLOCK);
 
+        // Conveyor belts
         itemConveyorBeltBlockWithItem(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT);
         itemConveyorBeltBlockWithItem(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT);
         itemConveyorBeltBlockWithItem(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT);
 
+        // Conveyor belt machines
         orientableSixDirsBlockWithBackItem(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_LOADER, false);
         orientableSixDirsBlockWithBackItem(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_LOADER, false);
         orientableSixDirsBlockWithBackItem(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_LOADER, false);
@@ -180,6 +210,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 cubeBlockModel(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_MERGER, "", "_top", "_top",
                         "_output", "_input", "_input", "_input"));
 
+        // Fluid systems
         fluidPipeBlockWithItem(EnerjoltBlocks.IRON_FLUID_PIPE);
         fluidPipeBlockWithItem(EnerjoltBlocks.GOLDEN_FLUID_PIPE);
 
@@ -188,6 +219,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fluidTankBlockWithItem(EnerjoltBlocks.FLUID_TANK_LARGE);
         fluidTankBlockWithItem(EnerjoltBlocks.CREATIVE_FLUID_TANK);
 
+        // Storage
         horizontalBlockWithItem(EnerjoltBlocks.ITEM_SILO_TINY, false);
         horizontalBlockWithItem(EnerjoltBlocks.ITEM_SILO_SMALL, false);
         horizontalBlockWithItem(EnerjoltBlocks.ITEM_SILO_MEDIUM, false);
@@ -195,6 +227,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(EnerjoltBlocks.ITEM_SILO_GIANT, false);
         horizontalBlockWithItem(EnerjoltBlocks.CREATIVE_ITEM_SILO, false);
 
+        // Cables
         cableBlockWithItem(EnerjoltBlocks.TIN_CABLE);
         cableBlockWithItem(EnerjoltBlocks.COPPER_CABLE);
         cableBlockWithItem(EnerjoltBlocks.GOLD_CABLE);
@@ -202,6 +235,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         cableBlockWithItem(EnerjoltBlocks.ENERGIZED_GOLD_CABLE);
         cableBlockWithItem(EnerjoltBlocks.ENERGIZED_CRYSTAL_MATRIX_CABLE);
 
+        // Transformers
         transformerBlockWithItem(EnerjoltBlocks.LV_TRANSFORMER_1_TO_N);
         transformerBlockWithItem(EnerjoltBlocks.LV_TRANSFORMER_3_TO_3);
         transformerBlockWithItem(EnerjoltBlocks.LV_TRANSFORMER_N_TO_1);
@@ -220,10 +254,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         configurableTransformerBlockWithItem(EnerjoltBlocks.CONFIGURABLE_HV_TRANSFORMER);
         configurableTransformerBlockWithItem(EnerjoltBlocks.CONFIGURABLE_EHV_TRANSFORMER);
 
+        // Energy storage
         horizontalBlockWithItem(EnerjoltBlocks.BATTERY_BOX, true);
         horizontalBlockWithItem(EnerjoltBlocks.ADVANCED_BATTERY_BOX, true);
         horizontalBlockWithItem(EnerjoltBlocks.CREATIVE_BATTERY_BOX, true);
 
+        // Processing machines
         horizontalTwoSideBlockWithItem(EnerjoltBlocks.PRESS_MOLD_MAKER, true);
 
         activatableOrientableBlockWithItem(EnerjoltBlocks.ALLOY_FURNACE,
@@ -241,13 +277,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(EnerjoltBlocks.ADVANCED_PULVERIZER, true);
 
         horizontalBlockWithItem(EnerjoltBlocks.SAWMILL, true);
-
         horizontalBlockWithItem(EnerjoltBlocks.COMPRESSOR, true);
-
         horizontalBlockWithItem(EnerjoltBlocks.METAL_PRESS, false);
 
         horizontalTwoSideBlockWithItem(EnerjoltBlocks.AUTO_PRESS_MOLD_MAKER, true);
-
         horizontalBlockWithItem(EnerjoltBlocks.AUTO_STONECUTTER, false);
 
         orientableBlockWithItem(EnerjoltBlocks.PLANT_GROWTH_CHAMBER,
@@ -293,6 +326,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         orientableSixDirsBlockWithItem(EnerjoltBlocks.MINECART_UNCHARGER, true);
         orientableSixDirsBlockWithItem(EnerjoltBlocks.ADVANCED_MINECART_UNCHARGER, true);
 
+        // Solar panels
         solarPanelBlockWithItem(EnerjoltBlocks.SOLAR_PANEL_1);
         solarPanelBlockWithItem(EnerjoltBlocks.SOLAR_PANEL_2);
         solarPanelBlockWithItem(EnerjoltBlocks.SOLAR_PANEL_3);
@@ -300,6 +334,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         solarPanelBlockWithItem(EnerjoltBlocks.SOLAR_PANEL_5);
         solarPanelBlockWithItem(EnerjoltBlocks.SOLAR_PANEL_6);
 
+        // Generators
         activatableOrientableMachineBlockWithItem(EnerjoltBlocks.COAL_ENGINE, false);
 
         poweredLampBlockWithItem(EnerjoltBlocks.POWERED_LAMP);
@@ -345,10 +380,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         "_side", "_side", "_side", "_side"),
                 TeleporterBlock.POWERED);
 
+        // Machine frames
         horizontalBlockWithItem(EnerjoltBlocks.BASIC_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.HARDENED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.ADVANCED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME, false);
+    }
+
+    // Helper method for ResourceLocation
+    private ResourceLocation createModLoc(String path) {
+        return ResourceLocation.fromNamespaceAndPath(EJOLTAPI.MOD_ID, path);
     }
 
     private ModelFile cubeBlockModel(Holder<? extends Block> block, String fileSuffix, String upSuffix,
@@ -396,7 +437,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private ModelFile orientableWithBackBlockModel(Holder<? extends Block> block, String fileSuffix, String topSuffix,
-                                           String bottomSuffix, String frontSuffix, String backSuffix, String sideSuffix) {
+                                                   String bottomSuffix, String frontSuffix, String backSuffix, String sideSuffix) {
         ResourceLocation blockId = Objects.requireNonNull(block.getKey()).location();
 
         return models().
@@ -416,7 +457,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private ModelFile orientableVerticalWithBackBlockModel(Holder<? extends Block> block, String fileSuffix, String topSuffix,
-                                                   String bottomSuffix, String frontSuffix, String backSuffix, String sideSuffix) {
+                                                           String bottomSuffix, String frontSuffix, String backSuffix, String sideSuffix) {
         ResourceLocation blockId = Objects.requireNonNull(block.getKey()).location();
 
         return models().
@@ -443,7 +484,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private ModelFile orientableVerticalBlockModel(Holder<? extends Block> block, String fileSuffix, String topSuffix,
-                                           String bottomSuffix, String frontSuffix, String sideSuffix) {
+                                                   String bottomSuffix, String frontSuffix, String sideSuffix) {
         ResourceLocation blockId = Objects.requireNonNull(block.getKey()).location();
 
         return models().
@@ -534,7 +575,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void activatableBlockWithItem(Holder<? extends Block> block, ModelFile modelNormal,
-                                                    ModelFile modelActive, BooleanProperty isActiveProperty) {
+                                          ModelFile modelActive, BooleanProperty isActiveProperty) {
         getVariantBuilder(block.value()).partialState().
                 with(isActiveProperty, false).modelForState().modelFile(modelNormal).addModel().partialState().
                 with(isActiveProperty, true).modelForState().modelFile(modelActive).addModel().partialState();
@@ -890,8 +931,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 with(BlockStateProperties.LEVEL, 0).modelForState().modelFile(modelOff).addModel();
 
         for(int i = 1;i < 16;i++)
-                blockStateBuilder.partialState().
-                        with(BlockStateProperties.LEVEL, i).modelForState().modelFile(modelOn).addModel();
+            blockStateBuilder.partialState().
+                    with(BlockStateProperties.LEVEL, i).modelForState().modelFile(modelOn).addModel();
 
         simpleBlockItem(block.value(), modelOff);
     }

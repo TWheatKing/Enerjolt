@@ -26,6 +26,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
+        // Minecraft tags
         tag(ItemTags.BOOKSHELF_BOOKS).
                 add(EnerjoltItems.ENERJOLT_BOOK.get());
 
@@ -37,6 +38,79 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         EnerjoltItems.GOLD_PLATE.get(),
                         EnerjoltItems.GOLDEN_HAMMER.get());
 
+        // Stairs
+        tag(ItemTags.STAIRS).
+                add(EnerjoltBlocks.ZINC_STAIRS.get().asItem());
+
+        // Slabs
+        tag(ItemTags.SLABS).
+                add(EnerjoltBlocks.ZINC_SLAB.get().asItem());
+
+        // Buttons
+        tag(ItemTags.BUTTONS).
+                add(EnerjoltBlocks.ZINC_BUTTON.get().asItem());
+
+        // Fences
+        tag(ItemTags.FENCES).
+                add(EnerjoltBlocks.ZINC_FENCE.get().asItem());
+
+        // Fence gates
+        tag(ItemTags.FENCE_GATES).
+                add(EnerjoltBlocks.ZINC_FENCE_GATE.get().asItem());
+
+        // Walls
+        tag(ItemTags.WALLS).
+                add(EnerjoltBlocks.ZINC_WALL.get().asItem());
+
+        // Doors
+        tag(ItemTags.DOORS).
+                add(EnerjoltBlocks.ZINC_DOOR.get().asItem());
+
+        // Trapdoors
+        tag(ItemTags.TRAPDOORS).
+                add(EnerjoltBlocks.ZINC_TRAPDOOR.get().asItem());
+
+        // Swords
+        tag(ItemTags.SWORDS).
+                add(EnerjoltItems.ZINC_SWORD.get());
+
+        // Pickaxes
+        tag(ItemTags.PICKAXES).
+                add(EnerjoltItems.ZINC_PICKAXE.get());
+
+        // Axes
+        tag(ItemTags.AXES).
+                add(EnerjoltItems.ZINC_AXE.get());
+
+        // Shovels
+        tag(ItemTags.SHOVELS).
+                add(EnerjoltItems.ZINC_SHOVEL.get());
+
+        // Hoes
+        tag(ItemTags.HOES).
+                add(EnerjoltItems.ZINC_HOE.get());
+
+        // Head armor
+        tag(ItemTags.HEAD_ARMOR).
+                add(EnerjoltItems.ZINC_HELMET.get());
+
+        // Chest armor
+        tag(ItemTags.CHEST_ARMOR).
+                add(EnerjoltItems.ZINC_CHESTPLATE.get());
+
+        // Leg armor
+        tag(ItemTags.LEG_ARMOR).
+                add(EnerjoltItems.ZINC_LEGGINGS.get());
+
+        // Foot armor
+        tag(ItemTags.FOOT_ARMOR).
+                add(EnerjoltItems.ZINC_BOOTS.get());
+
+        // Trim templates
+        tag(ItemTags.TRIM_TEMPLATES).
+                add(EnerjoltItems.ZINC_SMITHING_TEMPLATE.get());
+
+        // Enerjolt-specific tags
         tag(EnerjoltItemTags.RAW_METAL_PRESS_MOLDS).
                 add(EnerjoltItems.RAW_GEAR_PRESS_MOLD.get(),
                         EnerjoltItems.RAW_ROD_PRESS_MOLD.get(),
@@ -47,6 +121,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         EnerjoltItems.ROD_PRESS_MOLD.get(),
                         EnerjoltItems.WIRE_PRESS_MOLD.get());
 
+        // AE2 compatibility tags
         tag(CompatibilityItemTags.AE2_ITEM_P2P_TUNNEL_ATTUNEMENTS).
                 add(
                         EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_ITEM.get(),
@@ -107,6 +182,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         EnerjoltBlocks.CREATIVE_BATTERY_BOX_ITEM.get()
                 );
 
+        // Common tags - Ores
         tag(Tags.Items.ORES).
                 addTag(CommonItemTags.ORES_TIN);
         tag(CommonItemTags.ORES_TIN).
@@ -114,10 +190,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM.get());
 
         tag(Tags.Items.ORES_IN_GROUND_STONE).
-                add(EnerjoltBlocks.TIN_ORE_ITEM.get());
+                add(EnerjoltBlocks.TIN_ORE_ITEM.get(),
+                        EnerjoltBlocks.ZINC_ORE.get().asItem());
         tag(Tags.Items.ORES_IN_GROUND_DEEPSLATE).
-                add(EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM.get());
+                add(EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM.get(),
+                        EnerjoltBlocks.ZINC_DEEPSLATE_ORE.get().asItem());
+        tag(Tags.Items.ORES_IN_GROUND_NETHERRACK).
+                add(EnerjoltBlocks.ZINC_NETHER_ORE.get().asItem());
 
+        // Storage blocks
         tag(Tags.Items.STORAGE_BLOCKS).
                 addTag(CommonItemTags.STORAGE_BLOCKS_SILICON).
                 addTag(CommonItemTags.STORAGE_BLOCKS_RAW_TIN).
@@ -129,11 +210,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(CommonItemTags.STORAGE_BLOCKS_TIN).
                 add(EnerjoltBlocks.TIN_BLOCK_ITEM.get());
 
+        // Raw materials
         tag(Tags.Items.RAW_MATERIALS).
                 addTag(CommonItemTags.RAW_MATERIALS_TIN);
         tag(CommonItemTags.RAW_MATERIALS_TIN).
                 add(EnerjoltItems.RAW_TIN.get());
 
+        // Dusts
         tag(Tags.Items.DUSTS).
                 addTag(CommonItemTags.DUSTS_WOOD).
                 addTag(CommonItemTags.DUSTS_CHARCOAL).
@@ -154,14 +237,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(CommonItemTags.DUSTS_GOLD).
                 add(EnerjoltItems.GOLD_DUST.get());
 
+        // Nuggets
         tag(Tags.Items.NUGGETS).
                 addTag(CommonItemTags.NUGGETS_TIN);
         tag(CommonItemTags.NUGGETS_TIN).
                 add(EnerjoltItems.TIN_NUGGET.get());
 
+        // Silicon
         tag(CommonItemTags.SILICON).
                 add(EnerjoltItems.SILICON.get());
 
+        // Ingots
         tag(Tags.Items.INGOTS).
                 addTag(CommonItemTags.INGOTS_TIN).
                 addTag(CommonItemTags.INGOTS_STEEL).
@@ -182,6 +268,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(CommonItemTags.INGOTS_ENERGIZED_GOLD).
                 add(EnerjoltItems.ENERGIZED_GOLD_INGOT.get());
 
+        // Plates
         tag(CommonItemTags.PLATES).
                 addTag(CommonItemTags.PLATES_TIN).
                 addTag(CommonItemTags.PLATES_COPPER).
@@ -205,16 +292,19 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(CommonItemTags.PLATES_ENERGIZED_GOLD).
                 add(EnerjoltItems.ENERGIZED_GOLD_PLATE.get());
 
+        // Gears
         tag(CommonItemTags.GEARS).
                 addTag(CommonItemTags.GEARS_IRON);
         tag(CommonItemTags.GEARS_IRON).
                 add(EnerjoltItems.IRON_GEAR.get());
 
+        // Rods
         tag(Tags.Items.RODS).
                 addTag(CommonItemTags.RODS_IRON);
         tag(CommonItemTags.RODS_IRON).
                 add(EnerjoltItems.IRON_ROD.get());
 
+        // Wires
         tag(CommonItemTags.WIRES).
                 addTag(CommonItemTags.WIRES_TIN).
                 addTag(CommonItemTags.WIRES_COPPER).
@@ -232,6 +322,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(CommonItemTags.WIRES_ENERGIZED_GOLD).
                 add(EnerjoltItems.ENERGIZED_GOLD_WIRE.get());
 
+        // Tools
         tag(Tags.Items.TOOLS).
                 addTag(CommonItemTags.TOOLS_HAMMERS).
                 addTag(CommonItemTags.TOOLS_CUTTERS);

@@ -10,6 +10,7 @@ import me.twheatking.enerjolt.block.entity.renderer.ItemConveyorBeltBlockEntityR
 import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
 import me.twheatking.enerjolt.config.ModConfigs;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
+import me.twheatking.enerjolt.entity.client.EvilIronZombieRenderer;
 import me.twheatking.enerjolt.fluid.EnerjoltFluidTypes;
 import me.twheatking.enerjolt.fluid.EnerjoltFluids;
 import me.twheatking.enerjolt.input.ModKeyBindings;
@@ -46,6 +47,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
@@ -486,6 +488,7 @@ public class Enerjolt {
             EntityRenderers.register(EnerjoltEntityTypes.ADVANCED_BATTERY_BOX_MINECART.get(),
                     entity -> new MinecartRenderer<>(entity, new ModelLayerLocation(
                             ResourceLocation.fromNamespaceAndPath("minecraft", "chest_minecart"), "main")));
+            EntityRenderers.register(EnerjoltEntityTypes.EVILIRONZOMBIE.get(), EvilIronZombieRenderer::new);
 
             ItemBlockRenderTypes.setRenderLayer(EnerjoltFluids.DIRTY_WATER.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(EnerjoltFluids.FLOWING_DIRTY_WATER.get(), RenderType.translucent());
@@ -649,4 +652,5 @@ public class Enerjolt {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
+
 }

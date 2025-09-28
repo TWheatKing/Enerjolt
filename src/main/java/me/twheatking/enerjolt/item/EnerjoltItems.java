@@ -2,6 +2,7 @@ package me.twheatking.enerjolt.item;
 
 import me.twheatking.enerjolt.Enerjolt;
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
 import me.twheatking.enerjolt.item.custom.AndesiteAlloyItem;
 import me.twheatking.enerjolt.item.custom.ChiselItem;
 import me.twheatking.enerjolt.item.custom.ModArmorItem;
@@ -10,6 +11,7 @@ import me.twheatking.enerjolt.machine.tier.BatteryTier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -442,6 +444,10 @@ public final class EnerjoltItems {
 
     public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
+
+    public static final DeferredItem<Item> EVIL_IRON_ZOMBIE_SPAWN_EGG = ITEMS.register("evil_iron_zombie_spawn_egg",
+            () -> new DeferredSpawnEggItem(EnerjoltEntityTypes.EVILIRONZOMBIE, 0x31afaf, 0xffac00,
+                    new Item.Properties()));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

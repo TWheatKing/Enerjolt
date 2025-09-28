@@ -273,6 +273,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Fluids
         basicItem(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
+
+        withExistingParent(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     private void registerSpecialModels() {

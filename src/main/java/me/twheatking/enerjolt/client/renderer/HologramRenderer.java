@@ -2,18 +2,16 @@ package me.twheatking.enerjolt.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import me.twheatking.enerjolt.Enerjolt;
+import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.block.entity.IndustrialGreenhouseBlockEntity;
 import me.twheatking.enerjolt.block.entity.PhotosyntheticChamberBlockEntity;
 import me.twheatking.enerjolt.block.multiblock.MultiblockPattern;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.block.BlockRenderDispatcher;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -26,7 +24,7 @@ import org.joml.Matrix4f;
 import java.util.List;
 import java.util.UUID;
 
-@EventBusSubscriber(modid = Enerjolt.MOD_ID, bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
+@EventBusSubscriber(modid = EJOLTAPI.MOD_ID, value = Dist.CLIENT)
 public class HologramRenderer {
 
     @SubscribeEvent
@@ -120,15 +118,13 @@ public class HologramRenderer {
         }
 
         // Highlight center with special outline
-        if (centerPos != null) {
-            if (level.getBlockState(centerPos).isAir()) {
-                renderBlockOutline(poseStack, lineConsumer, centerPos, cameraPos,
-                        0.0f, 0.5f, 1.0f, 0.8f); // Blue
-            }
-            if (level.getBlockState(centerPos.above()).isAir()) {
-                renderBlockOutline(poseStack, lineConsumer, centerPos.above(), cameraPos,
-                        1.0f, 1.0f, 0.0f, 0.8f); // Yellow
-            }
+        if (level.getBlockState(centerPos).isAir()) {
+            renderBlockOutline(poseStack, lineConsumer, centerPos, cameraPos,
+                    0.0f, 0.5f, 1.0f, 0.8f); // Blue
+        }
+        if (level.getBlockState(centerPos.above()).isAir()) {
+            renderBlockOutline(poseStack, lineConsumer, centerPos.above(), cameraPos,
+                    1.0f, 1.0f, 0.0f, 0.8f); // Yellow
         }
     }
 

@@ -554,7 +554,7 @@ public class Enerjolt {
         EnerjoltBlockEntities.registerCapabilities(event);
     }
 
-    @EventBusSubscriber(modid = EJOLTAPI.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = EJOLTAPI.MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

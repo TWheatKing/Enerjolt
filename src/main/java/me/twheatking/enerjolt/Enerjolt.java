@@ -7,6 +7,7 @@ import me.twheatking.enerjolt.block.behavior.ModBlockBehaviors;
 import me.twheatking.enerjolt.block.entity.EnerjoltBlockEntities;
 import me.twheatking.enerjolt.block.entity.renderer.FluidTankBlockEntityRenderer;
 import me.twheatking.enerjolt.block.entity.renderer.ItemConveyorBeltBlockEntityRenderer;
+import me.twheatking.enerjolt.client.renderer.HologramRenderer;
 import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
 import me.twheatking.enerjolt.config.ModConfigs;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
@@ -53,6 +54,7 @@ import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -388,6 +390,11 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.ZINC_CASING);
             event.accept(EnerjoltBlocks.ANDESITE_CASING);
 
+            // === GREENHOUSE BLOCKS ===
+            event.accept(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE);
+            event.accept(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER);
+
+
             // === MATERIALS & COMPONENTS ===
             event.accept(EnerjoltItems.CABLE_INSULATOR);
             event.accept(EnerjoltItems.CHARCOAL_FILTER);
@@ -553,6 +560,7 @@ public class Enerjolt {
         public static void onClientSetup(FMLClientSetupEvent event) {
             ModConfigs.registerConfigs(false);
 
+
             event.enqueueWork(() -> {
                 ItemProperties.registerGeneric(EJOLTAPI.id("active"), (itemStack, level, entity, seed) -> {
                     Item item = itemStack.getItem();
@@ -715,6 +723,9 @@ public class Enerjolt {
 
             event.register(EnerjoltMenuTypes.MINECART_BATTERY_BOX_MENU.get(), MinecartBatteryBoxScreen::new);
             event.register(EnerjoltMenuTypes.MINECART_ADVANCED_BATTERY_BOX_MENU.get(), MinecartAdvancedBatteryBoxScreen::new);
+
+            event.register(EnerjoltMenuTypes.INDUSTRIAL_GREENHOUSE_MENU.get(), IndustrialGreenhouseScreen::new);
+            event.register(EnerjoltMenuTypes.PHOTOSYNTHETIC_CHAMBER_MENU.get(), PhotosyntheticChamberScreen::new);
         }
 
         @SubscribeEvent

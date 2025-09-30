@@ -769,6 +769,19 @@ public final class EnerjoltBlocks {
     public static final DeferredItem<Item> REINFORCED_ADVANCED_MACHINE_FRAME_ITEM = createBlockItem("reinforced_advanced_machine_frame", REINFORCED_ADVANCED_MACHINE_FRAME);
 
 
+    public static final DeferredBlock<Block> INDUSTRIAL_GREENHOUSE = BLOCKS.register("industrial_greenhouse",
+            () -> new IndustrialGreenhouseBlock(BlockBehaviour.Properties.of().
+                    requiresCorrectToolForDrops().strength(5.0f, 6.0f).sound(SoundType.METAL).
+                    lightLevel(IndustrialGreenhouseBlock.LIGHT_EMISSION)));
+    public static final DeferredItem<Item> INDUSTRIAL_GREENHOUSE_ITEM = createBlockItem("industrial_greenhouse", INDUSTRIAL_GREENHOUSE);
+
+    public static final DeferredBlock<Block> PHOTOSYNTHETIC_CHAMBER = BLOCKS.register("photosynthetic_chamber",
+            () -> new PhotosyntheticChamberBlock(BlockBehaviour.Properties.of().
+                    requiresCorrectToolForDrops().strength(5.0f, 6.0f).sound(SoundType.METAL).
+                    lightLevel(PhotosyntheticChamberBlock.LIGHT_EMISSION)));
+    public static final DeferredItem<Item> PHOTOSYNTHETIC_CHAMBER_ITEM = createBlockItem("photosynthetic_chamber", PHOTOSYNTHETIC_CHAMBER);
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn =BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

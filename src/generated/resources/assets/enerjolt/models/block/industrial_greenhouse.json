@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "enerjolt:block/industrial_greenhouse_top",
+    "front": "enerjolt:block/industrial_greenhouse_front",
+    "particle": "#top",
+    "side": "enerjolt:block/industrial_greenhouse_side",
+    "top": "enerjolt:block/industrial_greenhouse_top"
+  }
+}

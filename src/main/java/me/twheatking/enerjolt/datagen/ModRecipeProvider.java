@@ -16,8 +16,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -68,6 +70,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buildChargerRecipes(output);
         buildEnergizerRecipes(output);
         buildCrystalGrowthChamberRecipes(output);
+        industrialGreenhouseRecipe(output);
+        photosyntheticChamberRecipe(output);
     }
 
     private void buildCraftingRecipes(RecipeOutput output) {
@@ -3450,5 +3454,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         CrystalGrowthChamberRecipe recipe = new CrystalGrowthChamberRecipe(output, input, inputCount, ticks);
         recipeOutput.accept(recipeId, recipe, null);
+    }
+
+    private void industrialGreenhouseRecipe(RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get())
+                .pattern("GGG")
+                .pattern("RCR")
+                .pattern("IMI")
+                .define('G', Tags.Items.GLASS_PANES)
+                .define('R', Items.REDSTONE)
+                .define('C', EnerjoltBlocks.ADVANCED_POWERED_FURNACE.get()) // or another machine as base
+                .define('I', Tags.Items.INGOTS_IRON)
+                .define('M', EnerjoltBlocks.ADVANCED_MACHINE_FRAME.get())
+                .unlockedBy("has_machine_frame", has(EnerjoltBlocks.ADVANCED_MACHINE_FRAME.get()))
+                .save(recipeOutput);
+    }
+
+    private void photosyntheticChamberRecipe(RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER.get())
+                .pattern("GDG")
+                .pattern("ECE")
+                .pattern("IMI")
+                .define('G', Tags.Items.GLASS_PANES)
+                .define('D', Tags.Items.GEMS_DIAMOND)
+                .define('E', Tags.Items.ENDER_PEARLS)
+                .define('C', EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get()) // upgrade from greenhouse
+                .define('I', EnerjoltItems.ADVANCED_SOLAR_CELL)
+                .define('M', EnerjoltBlocks.ADVANCED_MACHINE_FRAME.get())
+                .unlockedBy("has_greenhouse", has(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get()))
+                .save(recipeOutput);
     }
 }

@@ -30,6 +30,8 @@ public final class ModMessages {
                 SyncCurrentRecipeS2CPacket::handle);
         registrar.playToClient(SyncFurnaceRecipeTypeS2CPacket.ID, SyncFurnaceRecipeTypeS2CPacket.STREAM_CODEC,
                 SyncFurnaceRecipeTypeS2CPacket::handle);
+        registrar.playToClient(HologramSyncS2CPacket.ID, HologramSyncS2CPacket.STREAM_CODEC,
+                HologramSyncS2CPacket::handle);
 
         //Client -> Server
         registrar.playToServer(PopEnergizedPowerBookFromLecternC2SPacket.ID, PopEnergizedPowerBookFromLecternC2SPacket.STREAM_CODEC,

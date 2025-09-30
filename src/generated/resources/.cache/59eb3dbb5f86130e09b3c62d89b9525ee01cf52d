@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-26T17:52:21.9583003	Loot Tables
+// 1.21.1	2025-09-30T17:10:43.3932296	Loot Tables
 6057c5aa66956358a343a25ac1d09d47e729f7e4 data/enerjolt/loot_table/blocks/advanced_auto_crafter.json
 a5d9df26904f5037ac297af8ec29140879b7a398 data/enerjolt/loot_table/blocks/advanced_battery_box.json
 460b9b2f416c31c2323ff25d4f17ebba19b85555 data/enerjolt/loot_table/blocks/advanced_charger.json
@@ -68,6 +68,7 @@ d5725619168e8b55f3a414facc9f2c452b792ae6 data/enerjolt/loot_table/blocks/heat_ge
 7c9b78ab46559fad9b1fdd239cb38c99239b51b7 data/enerjolt/loot_table/blocks/hv_transformer_3_to_3.json
 45bd8f054effd924232ee1e1e560d0574fcb198d data/enerjolt/loot_table/blocks/hv_transformer_n_to_1.json
 188334c70baa27edcaafcefb989857f694e51dab data/enerjolt/loot_table/blocks/induction_smelter.json
+a419a11282e5e03a227e74875f506b095d586dd8 data/enerjolt/loot_table/blocks/industrial_greenhouse.json
 f37529a4edd0a19808eb46206e13c56cb003d9a2 data/enerjolt/loot_table/blocks/item_conveyor_belt.json
 b089e6a193fd74faba2deeb6ae359828d3bbf936 data/enerjolt/loot_table/blocks/item_conveyor_belt_loader.json
 bbfa10a854195d3559627a80f05db9dcea27c587 data/enerjolt/loot_table/blocks/item_conveyor_belt_merger.json
@@ -86,6 +87,7 @@ fb1589e91df60a8a0026d27718e6fea7b85f05ca data/enerjolt/loot_table/blocks/item_si
 494ee19614db33f7a5f43dfd5415ccf1de2943e7 data/enerjolt/loot_table/blocks/metal_press.json
 b075d72f792d0f1d86e12ac652466e524e0b03bb data/enerjolt/loot_table/blocks/minecart_charger.json
 0c3f3d49abb995c10e738091700a0b83f59b1bfd data/enerjolt/loot_table/blocks/minecart_uncharger.json
+265669891b3b0e2e70c67debc4a446dfd9157c31 data/enerjolt/loot_table/blocks/photosynthetic_chamber.json
 a7755ee7c40fd8abc9d0398f940b6038c8f8a4f0 data/enerjolt/loot_table/blocks/plant_growth_chamber.json
 938ff16bed389efdf8bc711986b52ce23022fba9 data/enerjolt/loot_table/blocks/powered_furnace.json
 31a72dc23e8f8ffd19389ae3f79bcdb2528ebc34 data/enerjolt/loot_table/blocks/powered_lamp.json

@@ -469,6 +469,14 @@ public final class EnerjoltBlockEntities {
             BLOCK_ENTITIES.register("teleporter", () -> BlockEntityType.Builder.of(TeleporterBlockEntity::new,
                     EnerjoltBlocks.TELEPORTER.get()).build(null));
 
+    public static final Supplier<BlockEntityType<IndustrialGreenhouseBlockEntity>> INDUSTRIAL_GREENHOUSE_ENTITY =
+            BLOCK_ENTITIES.register("industrial_greenhouse", () -> BlockEntityType.Builder.of(IndustrialGreenhouseBlockEntity::new,
+                    EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PhotosyntheticChamberBlockEntity>> PHOTOSYNTHETIC_CHAMBER_ENTITY =
+            BLOCK_ENTITIES.register("photosynthetic_chamber", () -> BlockEntityType.Builder.of(PhotosyntheticChamberBlockEntity::new,
+                    EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER.get()).build(null));
+
     public static void register(IEventBus modEventBus) {
         BLOCK_ENTITIES.register(modEventBus);
     }
@@ -813,5 +821,19 @@ public final class EnerjoltBlockEntities {
                 TELEPORTER_ENTITY.get(), TeleporterBlockEntity::getItemHandlerCapability);
         event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK,
                 TELEPORTER_ENTITY.get(), TeleporterBlockEntity::getEnergyStorageCapability);
+
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,
+                INDUSTRIAL_GREENHOUSE_ENTITY.get(), IndustrialGreenhouseBlockEntity::getItemHandlerCapability);
+        event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,
+                INDUSTRIAL_GREENHOUSE_ENTITY.get(), IndustrialGreenhouseBlockEntity::getFluidHandlerCapability);
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK,
+                INDUSTRIAL_GREENHOUSE_ENTITY.get(), IndustrialGreenhouseBlockEntity::getEnergyStorageCapability);
+
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK,
+                PHOTOSYNTHETIC_CHAMBER_ENTITY.get(), PhotosyntheticChamberBlockEntity::getItemHandlerCapability);
+        event.registerBlockEntity(Capabilities.FluidHandler.BLOCK,
+                PHOTOSYNTHETIC_CHAMBER_ENTITY.get(), PhotosyntheticChamberBlockEntity::getFluidHandlerCapability);
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK,
+                PHOTOSYNTHETIC_CHAMBER_ENTITY.get(), PhotosyntheticChamberBlockEntity::getEnergyStorageCapability);
     }
 }

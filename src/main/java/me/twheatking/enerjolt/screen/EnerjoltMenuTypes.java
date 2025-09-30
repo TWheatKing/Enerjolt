@@ -263,6 +263,12 @@ public final class EnerjoltMenuTypes {
     public static final Supplier<MenuType<CreativeItemSiloMenu>> CREATIVE_ITEM_SILO_MENU = registerMenuType("creative_item_silo",
             CreativeItemSiloMenu::new);
 
+    public static final Supplier<MenuType<IndustrialGreenhouseMenu>> INDUSTRIAL_GREENHOUSE_MENU = registerMenuType("industrial_greenhouse",
+            IndustrialGreenhouseMenu::new);
+
+    public static final Supplier<MenuType<PhotosyntheticChamberMenu>> PHOTOSYNTHETIC_CHAMBER_MENU = registerMenuType("photosynthetic_chamber",
+            PhotosyntheticChamberMenu::new);
+
     public static void register(IEventBus modEventBus) {
         MENUS.register(modEventBus);
     }

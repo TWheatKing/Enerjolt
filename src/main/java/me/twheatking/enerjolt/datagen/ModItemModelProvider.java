@@ -318,6 +318,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem("zinc_deepslate_ore");
         simpleBlockItem("zinc_end_ore");
         simpleBlockItem("zinc_nether_ore");
+
+        simpleBlockItem("industrial_greenhouse");
+        simpleBlockItem("photosynthetic_chamber");
     }
 
     // Helper methods

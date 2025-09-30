@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-30T12:44:49.8417107	Item Models: enerjolt
+// 1.21.1	2025-09-30T17:10:43.3887167	Item Models: enerjolt
 5b7864d859e6ed67e8ad342989af4969b8d295e1 assets/enerjolt/models/item/advanced_alloy_ingot.json
 4db3339ad2e79ed948f1819c3a6e759773ab7ff1 assets/enerjolt/models/item/advanced_alloy_plate.json
 b70bba637deb82d326556dcf5b5f19d7f1b9f1f9 assets/enerjolt/models/item/advanced_battery_box_minecart.json
@@ -97,6 +97,7 @@ dc436d31db55c461f79b231449191800ce6a7dba assets/enerjolt/models/item/gold_wire.j
 eeb4083fa621393aecb2b6d0a42a5706a14be67b assets/enerjolt/models/item/good_fertilizer.json
 90f69673346301ca62103a72ff4655abc44c1a30 assets/enerjolt/models/item/graphite.json
 733d42f13a498e2cb1a4e3357a6eada49601fe49 assets/enerjolt/models/item/grate.json
+ae1a40d4022a76392760059cbe3a7b35ec34e4c0 assets/enerjolt/models/item/industrial_greenhouse.json
 7080cfab7c223d611456edfc75a0efe49b402920 assets/enerjolt/models/item/inventory_charger.json
 ea031a162beac02101ef2612956cf04365ebffd3 assets/enerjolt/models/item/inventory_coal_engine.json
 e560ad16243b6c9095f6d82c28b66c823e976818 assets/enerjolt/models/item/inventory_coal_engine_active.json
@@ -118,6 +119,7 @@ f94f8359bd59162477a540e2ae2909e8fad76788 assets/enerjolt/models/item/netherite_b
 77e0b727a7a1e12a4112fcf882a5e01160ce8c1c assets/enerjolt/models/item/netherite_hammer.json
 b6ddcdc2102ba43da90601db6fc9e64e6c9ba871 assets/enerjolt/models/item/netherite_plate.json
 022a8aa9619d8b721b70c1928f214174bd804981 assets/enerjolt/models/item/nickel.json
+8991082433681449e04dbacd69ebf43438ce3fe9 assets/enerjolt/models/item/photosynthetic_chamber.json
 e11805a39d5920ca8af12db08c86b235915dea18 assets/enerjolt/models/item/platinum.json
 f49cae2bdc5522f52bcb82e8a7e9573f7329ab69 assets/enerjolt/models/item/processing_unit.json
 273e1cb5a9ff062e11340ce765002be8e1e8369f assets/enerjolt/models/item/ram.json

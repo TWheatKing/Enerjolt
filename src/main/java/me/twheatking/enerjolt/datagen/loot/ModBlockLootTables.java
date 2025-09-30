@@ -205,6 +205,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.HARDENED_MACHINE_FRAME);
         dropSelf(EnerjoltBlocks.ADVANCED_MACHINE_FRAME);
         dropSelf(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME);
+
+        dropSelf(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get());
+        dropSelf(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER.get());
     }
 
     private void dropSelf(DeferredHolder<Block, ? extends Block> block) {

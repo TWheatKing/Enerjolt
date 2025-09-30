@@ -385,6 +385,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(EnerjoltBlocks.HARDENED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.ADVANCED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME, false);
+        activatableOrientableMachineBlockWithItem(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE, false);
+        activatableOrientableMachineBlockWithItem(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER, false);
     }
 
     // Helper method for ResourceLocation

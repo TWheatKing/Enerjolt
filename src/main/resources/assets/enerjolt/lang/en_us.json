@@ -1881,5 +1881,17 @@
 
   "item.enerjolt.evil_iron_zombie": "Evil Iron Zombie",
   "item.enerjolt.evil_iron_zombie_spawn_egg": "Evil Iron Zombie Spawn Egg",
-  "entity.mccourse.evil_iron_zombie": "Evil Iron Zombie"
+  "entity.mccourse.evil_iron_zombie": "Evil Iron Zombie",
+
+  "block.enerjolt.industrial_greenhouse": "Industrial Greenhouse",
+  "block.enerjolt.photosynthetic_chamber": "Photosynthetic Chamber",
+
+  "tooltip.enerjolt.industrial_greenhouse.energy_required_to_finish.txt": "Energy Required to Finish",
+  "tooltip.enerjolt.photosynthetic_chamber.energy_required_to_finish.txt": "Energy Required to Finish",
+
+  "tooltip.enerjolt.multiblock.formed": "Multiblock Formed",
+  "tooltip.enerjolt.multiblock.not_formed": "Multiblock Not Formed",
+
+  "container.enerjolt.industrial_greenhouse": "Industrial Greenhouse",
+  "container.enerjolt.photosynthetic_chamber": "Photosynthetic Chamber"
 }

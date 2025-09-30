@@ -1,0 +1,10 @@
+{
+  "parent": "enerjolt:block/fluid_tank_template",
+  "textures": {
+    "front": "enerjolt:block/fluid_tank_medium_front",
+    "interior": "enerjolt:block/fluid_tank_medium_interior",
+    "particle": "#up",
+    "side": "enerjolt:block/fluid_tank_medium_side",
+    "up": "enerjolt:block/fluid_tank_medium_top"
+  }
+}

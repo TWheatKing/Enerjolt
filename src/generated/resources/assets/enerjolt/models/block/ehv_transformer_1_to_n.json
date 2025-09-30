@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "enerjolt:block/ehv_transformer_output",
+    "front": "enerjolt:block/ehv_transformer_input",
+    "particle": "#top",
+    "side": "enerjolt:block/ehv_transformer_output",
+    "top": "enerjolt:block/ehv_transformer_output"
+  }
+}

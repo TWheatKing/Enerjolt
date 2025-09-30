@@ -1,0 +1,7 @@
+{
+  "parent": "enerjolt:block/item_conveyor_belt_flat_template",
+  "textures": {
+    "belt": "enerjolt:block/express_item_conveyor_belt",
+    "particle": "#belt"
+  }
+}

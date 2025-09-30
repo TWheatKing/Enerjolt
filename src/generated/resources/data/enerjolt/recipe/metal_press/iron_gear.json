@@ -1,0 +1,13 @@
+{
+  "type": "enerjolt:metal_press",
+  "ingredient": {
+    "tag": "c:plates/iron"
+  },
+  "inputCount": 2,
+  "output": {
+    "item": "enerjolt:iron_gear"
+  },
+  "pressMold": {
+    "item": "enerjolt:gear_press_mold"
+  }
+}

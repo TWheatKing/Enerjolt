@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:charger",
+  "energy": 4194304,
+  "ingredient": {
+    "tag": "c:ingots/copper"
+  },
+  "output": {
+    "item": "enerjolt:energized_copper_ingot"
+  }
+}

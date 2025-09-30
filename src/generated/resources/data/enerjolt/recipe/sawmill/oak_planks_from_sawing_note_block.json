@@ -1,0 +1,13 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "minecraft:note_block"
+  },
+  "output": {
+    "count": 8,
+    "item": "minecraft:oak_planks"
+  },
+  "secondaryOutput": {
+    "item": "minecraft:redstone"
+  }
+}

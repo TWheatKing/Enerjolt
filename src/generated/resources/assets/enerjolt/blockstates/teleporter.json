@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "enerjolt:block/teleporter"
+    },
+    "powered=true": {
+      "model": "enerjolt:block/teleporter_ready"
+    }
+  }
+}

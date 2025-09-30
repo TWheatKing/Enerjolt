@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "enerjolt:block/fluid_transposer_top",
+    "front": "enerjolt:block/fluid_transposer_front",
+    "particle": "#top",
+    "side": "enerjolt:block/fluid_transposer_side",
+    "top": "enerjolt:block/fluid_transposer_top"
+  }
+}

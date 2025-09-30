@@ -1,0 +1,23 @@
+// 1.21.1	2025-09-26T17:52:21.9573001	Tags for minecraft:block mod id enerjolt
+bb4186a3e465b9f0dc55195ffc40227269df8852 data/c/tags/block/ores.json
+a409fab6f8665d8b3cf3432607b374acc2c73da0 data/c/tags/block/ores/tin.json
+f9525feff18c29c50992584172a29cd9b32afff0 data/c/tags/block/ores_in_ground/deepslate.json
+27219c8e07770d15dbde2b51157af58cb801aa47 data/c/tags/block/ores_in_ground/netherrack.json
+45b40498c0f69ed0c3225fd2db4a879b4b7be10d data/c/tags/block/ores_in_ground/stone.json
+a525f9a4e52147a86f2f5c31a84fcd315cd235ea data/c/tags/block/storage_blocks.json
+d0f3b7e5fc3f04c7f69b86d8b829df74f01d0e9b data/c/tags/block/storage_blocks/raw_tin.json
+b06c5a79fc4ee0aad6ec7979922559b986be3533 data/c/tags/block/storage_blocks/silicon.json
+2a49a2587c9566a0efc0635ad032d061dee281ea data/c/tags/block/storage_blocks/tin.json
+ef3128674ffff4687ca4e83910a389f197b9d75b data/minecraft/tags/block/buttons.json
+8fb7ddadeaec0e50d5f25397eacbef39f7bdd820 data/minecraft/tags/block/doors.json
+15b65e06e9ffd822d5575a995c336fb0e2e428cc data/minecraft/tags/block/fences.json
+76de3c91700a786cac0f9bc4d38ff3c6439e4247 data/minecraft/tags/block/fence_gates.json
+e9425c298929771a77ee271d2c22a7281278966c data/minecraft/tags/block/mineable/axe.json
+6ebd47caabb8dd3e1d9f02fad7f4c6dc594706e1 data/minecraft/tags/block/mineable/pickaxe.json
+00ceacfb4eaa42502fc454f698008d9f13165213 data/minecraft/tags/block/needs_stone_tool.json
+c31c1245bda0b3f509decee794003c00f75e6199 data/minecraft/tags/block/pressure_plates.json
+ef16261caed12c2d5c2a2b99c0eda047ca430004 data/minecraft/tags/block/prevent_mob_spawning_inside.json
+a844d7689cd32b31566657d0bda79defebde9e1a data/minecraft/tags/block/slabs.json
+db0f0d8633f0ffe7cb0bd2d38546e20b72d4cb1c data/minecraft/tags/block/stairs.json
+268e4c881510a7991fa8113903f401409b58ee78 data/minecraft/tags/block/trapdoors.json
+34fd072195e95053015e3a0950812fe640a3c1cb data/minecraft/tags/block/walls.json

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/fluid_drainer_bottom",
+    "east": "enerjolt:block/fluid_drainer_side",
+    "north": "enerjolt:block/fluid_drainer_side",
+    "particle": "#up",
+    "south": "enerjolt:block/fluid_drainer_side",
+    "up": "enerjolt:block/fluid_drainer_top",
+    "west": "enerjolt:block/fluid_drainer_side"
+  }
+}

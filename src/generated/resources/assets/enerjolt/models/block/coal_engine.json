@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "enerjolt:block/coal_engine_top",
+    "front": "enerjolt:block/coal_engine_front",
+    "particle": "#top",
+    "side": "enerjolt:block/coal_engine_side",
+    "top": "enerjolt:block/coal_engine_top"
+  }
+}

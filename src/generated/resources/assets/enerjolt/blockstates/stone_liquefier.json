@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/stone_liquefier",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/stone_liquefier"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/stone_liquefier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/stone_liquefier",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enerjolt:block/zinc_slab"
+    },
+    "type=double": {
+      "model": "enerjolt:block/zinc_block"
+    },
+    "type=top": {
+      "model": "enerjolt:block/zinc_slab_top"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "enerjolt:block/heat_generator"
+    }
+  }
+}

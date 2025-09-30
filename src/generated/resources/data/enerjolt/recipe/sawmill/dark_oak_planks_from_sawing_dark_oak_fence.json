@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "minecraft:dark_oak_fence"
+  },
+  "output": {
+    "item": "minecraft:dark_oak_planks"
+  },
+  "sawdustAmount": 2
+}

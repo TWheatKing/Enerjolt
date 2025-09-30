@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/fluid_tank_large",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/fluid_tank_large"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/fluid_tank_large",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/fluid_tank_large",
+      "y": 270
+    }
+  }
+}

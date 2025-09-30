@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/filtration_plant_top",
+    "east": "enerjolt:block/filtration_plant_side",
+    "north": "enerjolt:block/filtration_plant_front",
+    "particle": "#up",
+    "south": "enerjolt:block/filtration_plant_side",
+    "up": "enerjolt:block/filtration_plant_top",
+    "west": "enerjolt:block/filtration_plant_front"
+  }
+}

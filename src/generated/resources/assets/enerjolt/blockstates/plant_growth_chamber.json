@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/plant_growth_chamber",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/plant_growth_chamber"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/plant_growth_chamber",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/plant_growth_chamber",
+      "y": 270
+    }
+  }
+}

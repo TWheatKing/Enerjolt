@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/item_conveyor_belt_sorter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/item_conveyor_belt_sorter"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/item_conveyor_belt_sorter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/item_conveyor_belt_sorter",
+      "y": 270
+    }
+  }
+}

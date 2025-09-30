@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "enerjolt:block/minecart_uncharger_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "enerjolt:block/minecart_uncharger",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/minecart_uncharger"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/minecart_uncharger",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "enerjolt:block/minecart_uncharger_vertical"
+    },
+    "facing=west": {
+      "model": "enerjolt:block/minecart_uncharger",
+      "y": 270
+    }
+  }
+}

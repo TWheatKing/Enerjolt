@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/item_conveyor_belt_loader_top",
+    "east": "enerjolt:block/item_conveyor_belt_loader_side",
+    "north": "enerjolt:block/item_conveyor_belt_loader_front",
+    "particle": "#up",
+    "south": "enerjolt:block/item_conveyor_belt_loader_back",
+    "up": "enerjolt:block/item_conveyor_belt_loader_top",
+    "west": "enerjolt:block/item_conveyor_belt_loader_side"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enerjolt:basic_upgrade_module"
+    },
+    "G": {
+      "tag": "c:plates/gold"
+    },
+    "S": {
+      "tag": "c:silicon"
+    },
+    "b": {
+      "item": "enerjolt:basic_solar_cell"
+    }
+  },
+  "pattern": [
+    "GSG",
+    "bBb",
+    "GSG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:moon_light_upgrade_module_1"
+  }
+}

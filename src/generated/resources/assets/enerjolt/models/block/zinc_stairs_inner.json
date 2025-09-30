@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "enerjolt:block/zinc_block",
+    "side": "enerjolt:block/zinc_block",
+    "top": "enerjolt:block/zinc_block"
+  }
+}

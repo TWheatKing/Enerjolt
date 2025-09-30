@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/fast_item_conveyor_belt_switch_top",
+    "east": "enerjolt:block/fast_item_conveyor_belt_switch_output_disabled",
+    "north": "enerjolt:block/fast_item_conveyor_belt_switch_input",
+    "particle": "#up",
+    "south": "enerjolt:block/fast_item_conveyor_belt_switch_side",
+    "up": "enerjolt:block/fast_item_conveyor_belt_switch_top",
+    "west": "enerjolt:block/fast_item_conveyor_belt_switch_output_enabled"
+  }
+}

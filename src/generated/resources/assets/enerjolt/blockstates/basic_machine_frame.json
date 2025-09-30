@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "enerjolt:block/basic_machine_frame"
+    }
+  }
+}

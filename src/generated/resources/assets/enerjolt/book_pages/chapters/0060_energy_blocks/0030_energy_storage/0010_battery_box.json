@@ -1,0 +1,17 @@
+{
+  "block": [
+    "enerjolt:battery_box",
+    "enerjolt:advanced_battery_box"
+  ],
+  "content": {
+    "extra": [
+      {
+        "bold": true,
+        "color": "black",
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.battery_box"
+      }
+    ],
+    "text": ""
+  }
+}

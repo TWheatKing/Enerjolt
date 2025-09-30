@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:crusher",
+  "ingredient": {
+    "item": "minecraft:sandstone"
+  },
+  "output": {
+    "item": "minecraft:sand"
+  }
+}

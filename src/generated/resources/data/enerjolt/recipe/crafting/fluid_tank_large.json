@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "enerjolt:fluid_tank_medium"
+    },
+    "I": {
+      "tag": "c:storage_blocks/iron"
+    }
+  },
+  "pattern": [
+    "IFI",
+    "IFI",
+    "IFI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:fluid_tank_large"
+  }
+}

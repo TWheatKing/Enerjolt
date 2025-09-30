@@ -1,0 +1,29 @@
+{
+  "values": [
+    "enerjolt:tin_cable",
+    "enerjolt:copper_cable",
+    "enerjolt:gold_cable",
+    "enerjolt:energized_copper_cable",
+    "enerjolt:energized_gold_cable",
+    "enerjolt:energized_crystal_matrix_cable",
+    "enerjolt:lv_transformer_1_to_n",
+    "enerjolt:lv_transformer_3_to_3",
+    "enerjolt:lv_transformer_n_to_1",
+    "enerjolt:transformer_1_to_n",
+    "enerjolt:transformer_3_to_3",
+    "enerjolt:transformer_n_to_1",
+    "enerjolt:hv_transformer_1_to_n",
+    "enerjolt:hv_transformer_3_to_3",
+    "enerjolt:hv_transformer_n_to_1",
+    "enerjolt:ehv_transformer_1_to_n",
+    "enerjolt:ehv_transformer_3_to_3",
+    "enerjolt:ehv_transformer_n_to_1",
+    "enerjolt:configurable_lv_transformer",
+    "enerjolt:configurable_mv_transformer",
+    "enerjolt:configurable_hv_transformer",
+    "enerjolt:configurable_ehv_transformer",
+    "enerjolt:battery_box",
+    "enerjolt:advanced_battery_box",
+    "enerjolt:creative_battery_box"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/advanced/reinforced_advanced_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:teleporter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.energizedpower.teleporter.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:teleporter"
+    },
+    "title": {
+      "translate": "advancements.energizedpower.teleporter.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

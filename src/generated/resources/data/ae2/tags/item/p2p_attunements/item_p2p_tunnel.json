@@ -1,0 +1,16 @@
+{
+  "values": [
+    "enerjolt:item_conveyor_belt",
+    "enerjolt:fast_item_conveyor_belt",
+    "enerjolt:express_item_conveyor_belt",
+    "enerjolt:item_conveyor_belt_loader",
+    "enerjolt:fast_item_conveyor_belt_loader",
+    "enerjolt:express_item_conveyor_belt_loader",
+    "enerjolt:item_silo_tiny",
+    "enerjolt:item_silo_small",
+    "enerjolt:item_silo_medium",
+    "enerjolt:item_silo_large",
+    "enerjolt:item_silo_giant",
+    "enerjolt:creative_item_silo"
+  ]
+}

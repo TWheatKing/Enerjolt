@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/plant_growth_chamber_top",
+    "east": "enerjolt:block/plant_growth_chamber_side",
+    "north": "enerjolt:block/plant_growth_chamber_front",
+    "particle": "#up",
+    "south": "enerjolt:block/plant_growth_chamber_front",
+    "up": "enerjolt:block/plant_growth_chamber_top",
+    "west": "enerjolt:block/plant_growth_chamber_side"
+  }
+}

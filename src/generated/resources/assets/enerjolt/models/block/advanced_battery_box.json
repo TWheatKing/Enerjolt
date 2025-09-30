@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/advanced_battery_box_bottom",
+    "east": "enerjolt:block/advanced_battery_box_side",
+    "north": "enerjolt:block/advanced_battery_box_side",
+    "particle": "#up",
+    "south": "enerjolt:block/advanced_battery_box_side",
+    "up": "enerjolt:block/advanced_battery_box_top",
+    "west": "enerjolt:block/advanced_battery_box_side"
+  }
+}

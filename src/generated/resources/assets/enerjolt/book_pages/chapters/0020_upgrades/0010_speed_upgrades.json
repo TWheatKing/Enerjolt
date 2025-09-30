@@ -1,0 +1,20 @@
+{
+  "content": {
+    "extra": [
+      {
+        "bold": true,
+        "color": "black",
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.speed_upgrades"
+      }
+    ],
+    "text": ""
+  },
+  "image": [
+    "enerjolt:textures/item/speed_upgrade_module_1.png",
+    "enerjolt:textures/item/speed_upgrade_module_2.png",
+    "enerjolt:textures/item/speed_upgrade_module_3.png",
+    "enerjolt:textures/item/speed_upgrade_module_4.png",
+    "enerjolt:textures/item/speed_upgrade_module_5.png"
+  ]
+}

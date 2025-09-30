@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/express_item_conveyor_belt_merger",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/express_item_conveyor_belt_merger"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/express_item_conveyor_belt_merger",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/express_item_conveyor_belt_merger",
+      "y": 270
+    }
+  }
+}

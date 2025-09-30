@@ -1,0 +1,17 @@
+{
+  "block": [
+    "enerjolt:fluid_pump",
+    "enerjolt:advanced_fluid_pump"
+  ],
+  "content": {
+    "extra": [
+      {
+        "bold": true,
+        "color": "black",
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.fluid_pumps"
+      }
+    ],
+    "text": ""
+  }
+}

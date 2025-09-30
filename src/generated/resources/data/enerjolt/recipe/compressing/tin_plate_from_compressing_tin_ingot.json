@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:ingots/tin"
+  },
+  "output": {
+    "item": "enerjolt:tin_plate"
+  }
+}

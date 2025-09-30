@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/creative_fluid_tank",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/creative_fluid_tank"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/creative_fluid_tank",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/creative_fluid_tank",
+      "y": 270
+    }
+  }
+}

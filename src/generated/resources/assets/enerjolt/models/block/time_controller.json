@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/time_controller_top",
+    "east": "enerjolt:block/time_controller_side",
+    "north": "enerjolt:block/time_controller_front",
+    "particle": "#up",
+    "south": "enerjolt:block/time_controller_side",
+    "up": "enerjolt:block/time_controller_top",
+    "west": "enerjolt:block/time_controller_front"
+  }
+}

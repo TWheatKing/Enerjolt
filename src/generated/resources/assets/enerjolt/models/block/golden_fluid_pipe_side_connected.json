@@ -1,0 +1,7 @@
+{
+  "parent": "enerjolt:block/fluid_pipe_side_connected_template",
+  "textures": {
+    "fluid_pipe_side": "enerjolt:block/golden_fluid_pipe_side_connected",
+    "particle": "enerjolt:block/golden_fluid_pipe_side_connected"
+  }
+}

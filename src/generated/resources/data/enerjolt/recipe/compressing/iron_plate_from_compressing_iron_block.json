@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:storage_blocks/iron"
+  },
+  "output": {
+    "count": 9,
+    "item": "enerjolt:iron_plate"
+  }
+}

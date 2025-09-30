@@ -1,0 +1,18 @@
+{
+  "block": [
+    "enerjolt:item_conveyor_belt_merger",
+    "enerjolt:fast_item_conveyor_belt_merger",
+    "enerjolt:express_item_conveyor_belt_merger"
+  ],
+  "content": {
+    "extra": [
+      {
+        "bold": true,
+        "color": "black",
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.item_conveyor_belt_merger"
+      }
+    ],
+    "text": ""
+  }
+}

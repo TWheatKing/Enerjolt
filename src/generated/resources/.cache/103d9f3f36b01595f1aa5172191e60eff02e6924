@@ -1,0 +1,12 @@
+// 1.21.1	2025-09-25T23:46:01.223733	Registries
+876b171403c27e5aea34489b24db8ccb54a3251f data/enerjolt/neoforge/biome_modifier/add_tin_ore.json
+b2fbe28b6e32dc16eb15ee200dcd374bab27b95e data/enerjolt/painting_variant/factory.json
+d85c60bc54810354203b2fd4c13d7e82be300c4f data/enerjolt/painting_variant/gear.json
+1bd2c9bd6f5e582b003823b3e6ce80f03d5c94f6 data/enerjolt/worldgen/configured_feature/tin_ore.json
+6b0939ab01cb93f8b7d9b82522fc9177b738f5dc data/enerjolt/worldgen/placed_feature/tin_ore.json
+39304475375626f12fb58430ebe2e4014ab3ccf4 data/enerjolt/worldgen/structure/factory_1.json
+f8d0f343a1a04c7f5c5853119c674fa12ddf879f data/enerjolt/worldgen/structure/small_solar_farm.json
+31b10d76a924c2a5193b98edd02fc2967c93d1e1 data/enerjolt/worldgen/structure_set/factory_1.json
+a9bd6530fa52868e9506e29cd7c0810ce495d3ac data/enerjolt/worldgen/structure_set/small_solar_farm.json
+8676122c7e1b4ec652878a2077e9cf70cdb4ebe2 data/enerjolt/worldgen/template_pool/factory_1/start_pool.json
+d7203649507d4586e2e3b07a5a82e671fd515363 data/enerjolt/worldgen/template_pool/small_solar_farm/start_pool.json

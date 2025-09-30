@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/crusher_bottom",
+    "east": "enerjolt:block/crusher_side",
+    "north": "enerjolt:block/crusher_side",
+    "particle": "#up",
+    "south": "enerjolt:block/crusher_side",
+    "up": "enerjolt:block/crusher_top",
+    "west": "enerjolt:block/crusher_side"
+  }
+}

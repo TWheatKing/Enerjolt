@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:crusher",
+  "ingredient": {
+    "item": "minecraft:deepslate"
+  },
+  "output": {
+    "item": "minecraft:cobbled_deepslate"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "enerjolt:block/single_side",
+  "textures": {
+    "particle": "#side",
+    "side": "enerjolt:block/ehv_transformer_output"
+  }
+}

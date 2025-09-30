@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/uncharger_bottom",
+    "east": "enerjolt:block/uncharger_side",
+    "north": "enerjolt:block/uncharger_side",
+    "particle": "#up",
+    "south": "enerjolt:block/uncharger_side",
+    "up": "enerjolt:block/uncharger_top",
+    "west": "enerjolt:block/uncharger_side"
+  }
+}

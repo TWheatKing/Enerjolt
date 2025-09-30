@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader_vertical"
+    },
+    "facing=west": {
+      "model": "enerjolt:block/fast_item_conveyor_belt_loader",
+      "y": 270
+    }
+  }
+}

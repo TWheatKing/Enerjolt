@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "minecraft:bowl"
+  },
+  "output": {
+    "item": "minecraft:stick"
+  },
+  "sawdustAmount": 2
+}

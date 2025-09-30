@@ -1,0 +1,7 @@
+{
+  "parent": "enerjolt:block/cable_core_template",
+  "textures": {
+    "cable": "enerjolt:block/energized_crystal_matrix_cable",
+    "particle": "enerjolt:block/energized_crystal_matrix_cable"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "block": [
+    "enerjolt:solar_panel_1",
+    "enerjolt:solar_panel_2",
+    "enerjolt:solar_panel_3",
+    "enerjolt:solar_panel_4",
+    "enerjolt:solar_panel_5",
+    "enerjolt:solar_panel_6"
+  ],
+  "content": {
+    "extra": [
+      {
+        "bold": true,
+        "color": "black",
+        "extra": [
+          "\n"
+        ],
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.solar_panels.1"
+      },
+      {
+        "bold": true,
+        "color": "black",
+        "font": "minecraft:uniform",
+        "translate": "book.energizedpower.page.solar_panels.2"
+      }
+    ],
+    "text": ""
+  }
+}

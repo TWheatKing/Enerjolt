@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "enerjolt:block/wheat_ingot_block"
+  }
+}

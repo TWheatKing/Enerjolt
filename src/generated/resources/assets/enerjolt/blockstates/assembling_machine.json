@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/assembling_machine",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/assembling_machine"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/assembling_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/assembling_machine",
+      "y": 270
+    }
+  }
+}

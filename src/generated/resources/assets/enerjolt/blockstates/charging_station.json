@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "charging=false": {
+      "model": "enerjolt:block/charging_station"
+    },
+    "charging=true": {
+      "model": "enerjolt:block/charging_station_on"
+    }
+  }
+}

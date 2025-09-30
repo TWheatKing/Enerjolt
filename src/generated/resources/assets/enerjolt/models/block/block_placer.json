@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "bottom": "enerjolt:block/block_placer_bottom",
+    "front": "enerjolt:block/block_placer_front",
+    "particle": "#top",
+    "side": "enerjolt:block/block_placer_side",
+    "top": "enerjolt:block/block_placer_top"
+  }
+}

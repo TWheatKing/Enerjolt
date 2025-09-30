@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/metal_press_top",
+    "east": "enerjolt:block/metal_press_side",
+    "north": "enerjolt:block/metal_press_side",
+    "particle": "#up",
+    "south": "enerjolt:block/metal_press_side",
+    "up": "enerjolt:block/metal_press_top",
+    "west": "enerjolt:block/metal_press_side"
+  }
+}

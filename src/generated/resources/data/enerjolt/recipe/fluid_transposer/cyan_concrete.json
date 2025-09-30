@@ -1,0 +1,14 @@
+{
+  "type": "enerjolt:fluid_transposer",
+  "fluid": {
+    "amount": 1000,
+    "id": "minecraft:water"
+  },
+  "ingredient": {
+    "item": "minecraft:cyan_concrete_powder"
+  },
+  "mode": "FILLING",
+  "output": {
+    "item": "minecraft:cyan_concrete"
+  }
+}

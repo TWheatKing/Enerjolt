@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:crusher",
+  "ingredient": {
+    "item": "minecraft:polished_diorite"
+  },
+  "output": {
+    "item": "minecraft:diorite"
+  }
+}

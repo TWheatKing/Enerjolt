@@ -1,0 +1,14 @@
+{
+  "type": "enerjolt:fluid_transposer",
+  "fluid": {
+    "amount": 250,
+    "id": "minecraft:water"
+  },
+  "ingredient": {
+    "item": "minecraft:dirt"
+  },
+  "mode": "FILLING",
+  "output": {
+    "item": "minecraft:mud"
+  }
+}

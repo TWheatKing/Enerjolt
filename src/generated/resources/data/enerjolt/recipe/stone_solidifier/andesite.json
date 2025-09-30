@@ -1,0 +1,8 @@
+{
+  "type": "enerjolt:stone_solidifier",
+  "lavaAmount": 50,
+  "output": {
+    "item": "minecraft:andesite"
+  },
+  "waterAmount": 1000
+}

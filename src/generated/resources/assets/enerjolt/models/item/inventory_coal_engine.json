@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "enerjolt:item/inventory_coal_engine_active",
+      "predicate": {
+        "enerjolt:active": 1.0
+      }
+    },
+    {
+      "model": "enerjolt:item/inventory_coal_engine_on",
+      "predicate": {
+        "enerjolt:active": 1.0,
+        "enerjolt:working": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "enerjolt:item/inventory_coal_engine"
+  }
+}

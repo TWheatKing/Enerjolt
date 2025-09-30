@@ -1,0 +1,59 @@
+{
+  "parent": "minecraft:block/cube",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#back",
+          "uv": [
+            0.0,
+            16.0,
+            16.0,
+            0.0
+          ]
+        },
+        "east": {
+          "cullface": "east",
+          "rotation": 90,
+          "texture": "#side"
+        },
+        "north": {
+          "cullface": "north",
+          "texture": "#top"
+        },
+        "south": {
+          "cullface": "south",
+          "texture": "#bottom"
+        },
+        "up": {
+          "cullface": "up",
+          "texture": "#front"
+        },
+        "west": {
+          "cullface": "west",
+          "rotation": 270,
+          "texture": "#side"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ]
+    }
+  ],
+  "textures": {
+    "back": "enerjolt:block/express_item_conveyor_belt_loader_back",
+    "bottom": "enerjolt:block/express_item_conveyor_belt_loader_top",
+    "front": "enerjolt:block/express_item_conveyor_belt_loader_front",
+    "particle": "#top",
+    "side": "enerjolt:block/express_item_conveyor_belt_loader_side",
+    "top": "enerjolt:block/express_item_conveyor_belt_loader_top"
+  }
+}

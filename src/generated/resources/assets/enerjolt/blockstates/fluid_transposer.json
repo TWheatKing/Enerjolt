@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/fluid_transposer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/fluid_transposer"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/fluid_transposer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/fluid_transposer",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/auto_stonecutter_top",
+    "east": "enerjolt:block/auto_stonecutter_side",
+    "north": "enerjolt:block/auto_stonecutter_side",
+    "particle": "#up",
+    "south": "enerjolt:block/auto_stonecutter_side",
+    "up": "enerjolt:block/auto_stonecutter_top",
+    "west": "enerjolt:block/auto_stonecutter_side"
+  }
+}

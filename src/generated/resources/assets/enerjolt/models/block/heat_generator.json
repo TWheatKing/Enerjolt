@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/heat_generator_top",
+    "east": "enerjolt:block/heat_generator_side",
+    "north": "enerjolt:block/heat_generator_side",
+    "particle": "#up",
+    "south": "enerjolt:block/heat_generator_side",
+    "up": "enerjolt:block/heat_generator_top",
+    "west": "enerjolt:block/heat_generator_side"
+  }
+}

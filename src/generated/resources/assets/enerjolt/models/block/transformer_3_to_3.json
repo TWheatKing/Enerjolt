@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/mv_transformer_output",
+    "east": "enerjolt:block/mv_transformer_output",
+    "north": "enerjolt:block/mv_transformer_input",
+    "particle": "#up",
+    "south": "enerjolt:block/mv_transformer_output",
+    "up": "enerjolt:block/mv_transformer_input",
+    "west": "enerjolt:block/mv_transformer_input"
+  }
+}

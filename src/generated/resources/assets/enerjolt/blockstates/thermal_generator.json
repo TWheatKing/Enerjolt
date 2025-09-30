@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "enerjolt:block/thermal_generator",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "enerjolt:block/thermal_generator"
+    },
+    "facing=south": {
+      "model": "enerjolt:block/thermal_generator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enerjolt:block/thermal_generator",
+      "y": 270
+    }
+  }
+}

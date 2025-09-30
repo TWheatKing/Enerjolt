@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "enerjolt:block/weather_controller_top",
+    "east": "enerjolt:block/weather_controller_side",
+    "north": "enerjolt:block/weather_controller_front",
+    "particle": "#up",
+    "south": "enerjolt:block/weather_controller_side",
+    "up": "enerjolt:block/weather_controller_top",
+    "west": "enerjolt:block/weather_controller_front"
+  }
+}

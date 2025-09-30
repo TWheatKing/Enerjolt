@@ -135,10 +135,10 @@ public class AdvancedAutoCrafterBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.auto_crafter.txt.shift.1",
+                components.add(Component.translatable("tooltip.enerjolt.auto_crafter.txt.shift.1",
                         EnergyUtils.getEnergyWithPrefix(AdvancedAutoCrafterBlockEntity.ENERGY_CONSUMPTION_PER_TICK_PER_INGREDIENT)).withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

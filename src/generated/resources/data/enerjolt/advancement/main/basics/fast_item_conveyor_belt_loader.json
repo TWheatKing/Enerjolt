@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fast_item_conveyor_belt_loader.description"
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_loader.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fast_item_conveyor_belt_loader"
     },
     "title": {
-      "translate": "advancements.energizedpower.fast_item_conveyor_belt_loader.title"
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_loader.title"
     }
   },
   "requirements": [

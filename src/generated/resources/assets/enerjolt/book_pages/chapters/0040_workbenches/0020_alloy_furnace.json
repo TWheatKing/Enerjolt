@@ -9,7 +9,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.alloy_furnace.1"
+        "translate": "book.enerjolt.page.alloy_furnace.1"
       },
       {
         "bold": true,
@@ -18,13 +18,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.alloy_furnace.2"
+        "translate": "book.enerjolt.page.alloy_furnace.2"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.alloy_furnace.3"
+        "translate": "book.enerjolt.page.alloy_furnace.3"
       }
     ],
     "text": ""

@@ -13,7 +13,7 @@ public class SawmillScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<SawmillMenu> {
     public SawmillScreen(SawmillMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/sawmill.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }

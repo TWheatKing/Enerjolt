@@ -23,7 +23,7 @@ public class FluidTransposerScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<FluidTransposerMenu> {
     public FluidTransposerScreen(FluidTransposerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/fluid_transposer.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }
@@ -104,7 +104,7 @@ public class FluidTransposerScreen
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {
@@ -121,7 +121,7 @@ public class FluidTransposerScreen
             //Mode button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.fluid_transposer.mode." +
+            components.add(Component.translatable("tooltip.enerjolt.fluid_transposer.mode." +
                     menu.getMode().getSerializedName()));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);

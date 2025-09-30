@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.minecart_uncharger.description"
+      "translate": "advancements.enerjolt.minecart_uncharger.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:minecart_uncharger"
     },
     "title": {
-      "translate": "advancements.energizedpower.minecart_uncharger.title"
+      "translate": "advancements.enerjolt.minecart_uncharger.title"
     }
   },
   "requirements": [

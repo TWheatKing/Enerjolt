@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.basic_machine_frame.description"
+      "translate": "advancements.enerjolt.basic_machine_frame.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:basic_machine_frame"
     },
     "title": {
-      "translate": "advancements.energizedpower.basic_machine_frame.title"
+      "translate": "advancements.enerjolt.basic_machine_frame.title"
     }
   },
   "requirements": [

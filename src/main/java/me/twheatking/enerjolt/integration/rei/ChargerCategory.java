@@ -31,7 +31,7 @@ public class ChargerCategory implements DisplayCategory<ChargerDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.charger");
+        return Component.translatable("container.enerjolt.charger");
     }
 
     @Override

@@ -36,11 +36,11 @@ public class FluidAnalyzerItem extends EnerjoltEnergyItem {
         super.appendHoverText(itemStack, context, components, tooltipFlag);
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.fluid_analyzer.txt.shift.1").withStyle(ChatFormatting.GRAY));
-            components.add(Component.translatable("tooltip.energizedpower.fluid_analyzer.txt.shift.2",
+            components.add(Component.translatable("tooltip.enerjolt.fluid_analyzer.txt.shift.1").withStyle(ChatFormatting.GRAY));
+            components.add(Component.translatable("tooltip.enerjolt.fluid_analyzer.txt.shift.2",
                     EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.GRAY));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 
@@ -55,13 +55,13 @@ public class FluidAnalyzerItem extends EnerjoltEnergyItem {
 
     private void addOutputTextForFluidStorage(List<Component> components, @Nullable IFluidHandler fluidStorage, boolean blockFaceSpecificInformation) {
         if(fluidStorage == null) {
-            components.add(Component.translatable("txt.energizedpower.fluid_analyzer.no_fluid_block" + (blockFaceSpecificInformation?"_side":"")).
+            components.add(Component.translatable("txt.enerjolt.fluid_analyzer.no_fluid_block" + (blockFaceSpecificInformation?"_side":"")).
                     withStyle(ChatFormatting.RED));
 
             return;
         }
 
-        components.add(Component.translatable("txt.energizedpower.fluid_analyzer.fluid_output.tank_count" + (blockFaceSpecificInformation?"_side":""),
+        components.add(Component.translatable("txt.enerjolt.fluid_analyzer.fluid_output.tank_count" + (blockFaceSpecificInformation?"_side":""),
                 fluidStorage.getTanks()).withStyle(ChatFormatting.BLUE));
 
         for(int i = 0;i < fluidStorage.getTanks();i++) {
@@ -70,7 +70,7 @@ public class FluidAnalyzerItem extends EnerjoltEnergyItem {
             int fluidAmount = fluidEmpty?0:fluidStorage.getFluidInTank(i).getAmount();
 
             components.add(Component.literal("• ").append(
-                    Component.translatable("txt.energizedpower.fluid_analyzer.fluid_output.tank_fluid_content",
+                    Component.translatable("txt.enerjolt.fluid_analyzer.fluid_output.tank_fluid_content",
                     i + 1, fluidEmpty?"":Component.translatable(fluidStorage.getFluidInTank(i).getDescriptionId()).append(" "),
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(fluidStorage.getTankCapacity(i)))
             ).withStyle(ChatFormatting.BLUE));
@@ -85,7 +85,7 @@ public class FluidAnalyzerItem extends EnerjoltEnergyItem {
 
         if(getEnergy(stack) < ENERGY_CONSUMPTION_PER_USE) {
             useItem(stack, useOnContext.getPlayer(), List.of(
-                    Component.translatable("txt.energizedpower.fluid_analyzer.no_energy_left",
+                    Component.translatable("txt.enerjolt.fluid_analyzer.no_energy_left",
                             EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.RED)
             ));
 
@@ -102,7 +102,7 @@ public class FluidAnalyzerItem extends EnerjoltEnergyItem {
         IFluidHandler fluidStorage = level.getCapability(Capabilities.FluidHandler.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, null);
         addOutputTextForFluidStorage(components, fluidStorage, false);
 
-        components.add(Component.translatable("txt.energizedpower.fluid_analyzer.output_side_information").withStyle(ChatFormatting.GOLD));
+        components.add(Component.translatable("txt.enerjolt.fluid_analyzer.output_side_information").withStyle(ChatFormatting.GOLD));
         IFluidHandler fluidStorageSided = level.getCapability(Capabilities.FluidHandler.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, useOnContext.getClickedFace());
         addOutputTextForFluidStorage(components, fluidStorageSided, true);
 

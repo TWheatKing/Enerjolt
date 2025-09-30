@@ -143,12 +143,12 @@ public class TeleporterBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.teleporter.txt.shift.1",
+                components.add(Component.translatable("tooltip.enerjolt.teleporter.txt.shift.1",
                         Component.keybind(ModKeyBindings.KEY_TELEPORTER_USE)).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-                components.add(Component.translatable("tooltip.energizedpower.teleporter.txt.shift.2").
+                components.add(Component.translatable("tooltip.enerjolt.teleporter.txt.shift.2").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

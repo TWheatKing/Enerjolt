@@ -2,7 +2,7 @@ package me.twheatking.enerjolt.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import me.twheatking.enerjolt.api.EJOLTAPI;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -12,7 +12,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class ItemConveyorBeltLoaderScreen extends EnergizedPowerBaseContainerScreen<ItemConveyorBeltLoaderMenu> {
+public class ItemConveyorBeltLoaderScreen extends EnerjoltBaseContainerScreen<ItemConveyorBeltLoaderMenu> {
     private final ResourceLocation TEXTURE;
 
     public ItemConveyorBeltLoaderScreen(ItemConveyorBeltLoaderMenu menu, Inventory inventory, Component component) {

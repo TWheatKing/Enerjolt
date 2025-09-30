@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.stone_liquefier.description"
+      "translate": "advancements.enerjolt.stone_liquefier.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:stone_liquefier"
     },
     "title": {
-      "translate": "advancements.energizedpower.stone_liquefier.title"
+      "translate": "advancements.enerjolt.stone_liquefier.title"
     }
   },
   "requirements": [

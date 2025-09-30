@@ -12,7 +12,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.auto_crafters.1"
+        "translate": "book.enerjolt.page.auto_crafters.1"
       },
       {
         "bold": true,
@@ -21,7 +21,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.auto_crafters.2"
+        "translate": "book.enerjolt.page.auto_crafters.2"
       },
       {
         "color": "black",
@@ -30,13 +30,13 @@
         ],
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.auto_crafters.3"
+        "translate": "book.enerjolt.page.auto_crafters.3"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.auto_crafters.4"
+        "translate": "book.enerjolt.page.auto_crafters.4"
       }
     ],
     "text": ""

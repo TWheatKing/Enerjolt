@@ -16,7 +16,7 @@
           " "
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.cables.1"
+        "translate": "book.enerjolt.page.cables.1"
       },
       {
         "bold": true,
@@ -25,13 +25,13 @@
           " "
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.cables.2"
+        "translate": "book.enerjolt.page.cables.2"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.cables.3"
+        "translate": "book.enerjolt.page.cables.3"
       }
     ],
     "text": ""

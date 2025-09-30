@@ -41,7 +41,7 @@ public class FiltrationPlantCategory implements IRecipeCategory<RecipeHolder<Fil
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.filtration_plant");
+        return Component.translatable("container.enerjolt.filtration_plant");
     }
 
     @Override
@@ -63,7 +63,7 @@ public class FiltrationPlantCategory implements IRecipeCategory<RecipeHolder<Fil
 
         iRecipeLayout.addSlot(RecipeIngredientRole.OUTPUT, 64, 5).addItemStack(outputEntries[0]).
                 addRichTooltipCallback((view, tooltip) -> {
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -76,7 +76,7 @@ public class FiltrationPlantCategory implements IRecipeCategory<RecipeHolder<Fil
                     if(view.isEmpty())
                         return;
 
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getSecondaryOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)

@@ -32,8 +32,8 @@ public class ModAdvancedAdvancements implements AdvancementProvider.AdvancementG
         AdvancementHolder energizedPowerAdvanced = Advancement.Builder.advancement().
                 display(
                         EnerjoltItems.ENERGIZED_COPPER_INGOT,
-                        Component.translatable("advancements.energizedpower.energizedpower_advanced.title"),
-                        Component.translatable("advancements.energizedpower.energizedpower_advanced.description"),
+                        Component.translatable("advancements.enerjolt.enerjolt_advanced.title"),
+                        Component.translatable("advancements.enerjolt.enerjolt_advanced.description"),
                         EJOLTAPI.id("textures/block/advanced_machine_frame_top.png"),
                         AdvancementType.TASK,
                         true,
@@ -484,8 +484,8 @@ public class ModAdvancedAdvancements implements AdvancementProvider.AdvancementG
         return Advancement.Builder.advancement().parent(parent).
                 display(
                         icon,
-                        Component.translatable("advancements.energizedpower." + advancementId + ".title"),
-                        Component.translatable("advancements.energizedpower." + advancementId + ".description"),
+                        Component.translatable("advancements.enerjolt." + advancementId + ".title"),
+                        Component.translatable("advancements.enerjolt." + advancementId + ".description"),
                         null,
                         type,
                         true,

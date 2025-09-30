@@ -26,7 +26,7 @@ public class FluidPumpScreen
 
     public FluidPumpScreen(FluidPumpMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.fluid_pump.process_energy_left.txt",
+                "tooltip.enerjolt.fluid_pump.process_energy_left.txt",
                 EJOLTAPI.id("textures/gui/container/fluid_pump.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/fluid_pump.png"));
 
@@ -55,12 +55,12 @@ public class FluidPumpScreen
 
         Component component;
         if(SHOW_RELATIVE_COORDINATES) {
-            component = Component.translatable("tooltip.energizedpower.fluid_pump.target_relative",
+            component = Component.translatable("tooltip.enerjolt.fluid_pump.target_relative",
                     String.format(Locale.ENGLISH, "%+d", menu.getTargetOffset().getX()),
                     String.format(Locale.ENGLISH, "%+d", menu.getTargetOffset().getY()),
                     String.format(Locale.ENGLISH, "%+d", menu.getTargetOffset().getZ()));
         }else {
-            component = Component.translatable("tooltip.energizedpower.fluid_pump.target",
+            component = Component.translatable("tooltip.enerjolt.fluid_pump.target",
                     targetPos.getX(), targetPos.getY(), targetPos.getZ());
         }
 
@@ -70,7 +70,7 @@ public class FluidPumpScreen
 
 
         if(menu.getSlot(4 * 9).getItem().isEmpty()) {
-            component = Component.translatable("tooltip.energizedpower.fluid_pump.cobblestone_missing").
+            component = Component.translatable("tooltip.enerjolt.fluid_pump.cobblestone_missing").
                     withStyle(ChatFormatting.RED);
 
             componentWidth = font.width(component);
@@ -79,7 +79,7 @@ public class FluidPumpScreen
         }else if(menu.isExtractingFluid()) {
             FluidState targetFluidState = menu.getBlockEntity().getLevel().getFluidState(targetPos);
             if(!targetFluidState.isEmpty()) {
-                component = Component.translatable("tooltip.energizedpower.fluid_pump.extracting",
+                component = Component.translatable("tooltip.enerjolt.fluid_pump.extracting",
                         Component.translatable(new FluidStack(targetFluidState.getType(), 1).getDescriptionId()));
 
                 componentWidth = font.width(component);
@@ -102,7 +102,7 @@ public class FluidPumpScreen
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {

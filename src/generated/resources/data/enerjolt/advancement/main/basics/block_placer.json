@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.block_placer.description"
+      "translate": "advancements.enerjolt.block_placer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:block_placer"
     },
     "title": {
-      "translate": "advancements.energizedpower.block_placer.title"
+      "translate": "advancements.enerjolt.block_placer.title"
     }
   },
   "requirements": [

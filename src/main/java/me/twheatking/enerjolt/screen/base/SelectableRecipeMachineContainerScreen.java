@@ -130,7 +130,7 @@ public abstract class SelectableRecipeMachineContainerScreen
         //Down button
         if(isHovering(recipeSelectorPosX - 13, recipeSelectorPosY + 2, 11, 12, mouseX, mouseY)) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.recipe.selector.prev_recipe"));
+            components.add(Component.translatable("tooltip.enerjolt.recipe.selector.prev_recipe"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }
@@ -138,7 +138,7 @@ public abstract class SelectableRecipeMachineContainerScreen
         //Up button
         if(isHovering(recipeSelectorPosX + 18, recipeSelectorPosY + 2, 11, 12, mouseX, mouseY)) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.recipe.selector.next_recipe"));
+            components.add(Component.translatable("tooltip.enerjolt.recipe.selector.next_recipe"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

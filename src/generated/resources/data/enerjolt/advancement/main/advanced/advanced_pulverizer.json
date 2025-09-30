@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.advanced_pulverizer.description"
+      "translate": "advancements.enerjolt.advanced_pulverizer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:advanced_pulverizer"
     },
     "title": {
-      "translate": "advancements.energizedpower.advanced_pulverizer.title"
+      "translate": "advancements.enerjolt.advanced_pulverizer.title"
     }
   },
   "requirements": [

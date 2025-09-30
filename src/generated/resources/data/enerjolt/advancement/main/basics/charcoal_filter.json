@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.charcoal_filter.description"
+      "translate": "advancements.enerjolt.charcoal_filter.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:charcoal_filter"
     },
     "title": {
-      "translate": "advancements.energizedpower.charcoal_filter.title"
+      "translate": "advancements.enerjolt.charcoal_filter.title"
     }
   },
   "requirements": [

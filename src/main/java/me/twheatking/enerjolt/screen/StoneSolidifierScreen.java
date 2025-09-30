@@ -21,7 +21,7 @@ public class StoneSolidifierScreen
         extends SelectableRecipeMachineContainerScreen<StoneSolidifierRecipe, StoneSolidifierMenu> {
     public StoneSolidifierScreen(StoneSolidifierMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/stone_solidifier.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
 
@@ -38,7 +38,7 @@ public class StoneSolidifierScreen
         ItemStack output = currentRecipe.value().getOutput();
         if(!output.isEmpty()) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.count_with_item.txt", output.getCount(),
+            components.add(Component.translatable("tooltip.enerjolt.count_with_item.txt", output.getCount(),
                     output.getHoverName()));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
@@ -86,7 +86,7 @@ public class StoneSolidifierScreen
 
                 int fluidAmount = fluidEmpty?0:menu.getFluid(i).getAmount();
 
-                Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+                Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                         FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity(i)));
 
                 if(!fluidEmpty) {

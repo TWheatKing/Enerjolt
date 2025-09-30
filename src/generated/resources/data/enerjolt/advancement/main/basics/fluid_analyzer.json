@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fluid_analyzer.description"
+      "translate": "advancements.enerjolt.fluid_analyzer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fluid_analyzer"
     },
     "title": {
-      "translate": "advancements.energizedpower.fluid_analyzer.title"
+      "translate": "advancements.enerjolt.fluid_analyzer.title"
     }
   },
   "requirements": [

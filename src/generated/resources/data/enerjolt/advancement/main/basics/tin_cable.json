@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.tin_cable.description"
+      "translate": "advancements.enerjolt.tin_cable.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:tin_cable"
     },
     "title": {
-      "translate": "advancements.energizedpower.tin_cable.title"
+      "translate": "advancements.enerjolt.tin_cable.title"
     }
   },
   "requirements": [

@@ -31,7 +31,7 @@ public class EnergizerCategory implements DisplayCategory<EnergizerDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.energizer");
+        return Component.translatable("container.enerjolt.energizer");
     }
 
     @Override

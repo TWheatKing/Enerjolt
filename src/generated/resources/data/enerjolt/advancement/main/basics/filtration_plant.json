@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.filtration_plant.description"
+      "translate": "advancements.enerjolt.filtration_plant.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:filtration_plant"
     },
     "title": {
-      "translate": "advancements.energizedpower.filtration_plant.title"
+      "translate": "advancements.enerjolt.filtration_plant.title"
     }
   },
   "requirements": [

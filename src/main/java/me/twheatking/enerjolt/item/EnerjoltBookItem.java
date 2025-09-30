@@ -1,6 +1,6 @@
 package me.twheatking.enerjolt.item;
 
-import me.twheatking.enerjolt.screen.EnergizedPowerBookScreen;
+import me.twheatking.enerjolt.screen.EnerjoltBookScreen;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -28,14 +28,14 @@ public class EnerjoltBookItem extends WrittenBookItem {
 
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
-        components.add(Component.translatable("book.byAuthor", "JDDev0").withStyle(ChatFormatting.GRAY));
+        components.add(Component.translatable("book.byAuthor", "TheWheatKing").withStyle(ChatFormatting.GRAY));
         components.add(Component.translatable("book.generation.0").withStyle(ChatFormatting.GRAY));
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.energized_power_book.txt.shift.1").
+            components.add(Component.translatable("tooltip.enerjolt.enerjolt_book.txt.shift.1").
                     withStyle(ChatFormatting.GRAY));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 
@@ -66,7 +66,7 @@ public class EnerjoltBookItem extends WrittenBookItem {
 
     @OnlyIn(Dist.CLIENT)
     private void showBookViewScreen(ResourceLocation openOnPageForBlock) {
-        Minecraft.getInstance().setScreen(new EnergizedPowerBookScreen(openOnPageForBlock));
+        Minecraft.getInstance().setScreen(new EnerjoltBookScreen(openOnPageForBlock));
     }
 
     @Override

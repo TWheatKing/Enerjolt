@@ -40,29 +40,29 @@ public class InventoryCoalEngineItem extends EnerjoltEnergyItem implements Activ
 
         boolean active = isActive(itemStack);
 
-        components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.status").withStyle(ChatFormatting.GRAY).
-                append(Component.translatable("tooltip.energizedpower.inventory_coal_engine.status." +
+        components.add(Component.translatable("tooltip.enerjolt.inventory_coal_engine.status").withStyle(ChatFormatting.GRAY).
+                append(Component.translatable("tooltip.enerjolt.inventory_coal_engine.status." +
                         (active?"activated":"deactivated")).withStyle(active?ChatFormatting.GREEN:ChatFormatting.RED)));
 
         if(Screen.hasShiftDown()) {
             int energyProductionLeft = getEnergyProductionLeft(itemStack);
             ItemStack item = getCurrentBurningItem(itemStack);
             if(energyProductionLeft > 0 && item != null) {
-                components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.currently_burning").
+                components.add(Component.translatable("tooltip.enerjolt.inventory_coal_engine.txt.shift.currently_burning").
                         withStyle(ChatFormatting.GRAY).
                         append(item.getDisplayName()));
 
-                components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.energy_production_left",
+                components.add(Component.translatable("tooltip.enerjolt.inventory_coal_engine.txt.shift.energy_production_left",
                                 EnergyUtils.getEnergyWithPrefix(energyProductionLeft)).
                         withStyle(ChatFormatting.GRAY));
             }
 
-            components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.1").
+            components.add(Component.translatable("tooltip.enerjolt.inventory_coal_engine.txt.shift.1").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-            components.add(Component.translatable("tooltip.energizedpower.inventory_coal_engine.txt.shift.2").
+            components.add(Component.translatable("tooltip.enerjolt.inventory_coal_engine.txt.shift.2").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

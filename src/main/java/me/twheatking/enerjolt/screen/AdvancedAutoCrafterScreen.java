@@ -20,7 +20,7 @@ public class AdvancedAutoCrafterScreen
 
     public AdvancedAutoCrafterScreen(AdvancedAutoCrafterMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/advanced_auto_crafter.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/advanced_auto_crafter.png"));
 
@@ -115,35 +115,35 @@ public class AdvancedAutoCrafterScreen
             //Ignore NBT checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_crafter.cbx.ignore_nbt"));
+            components.add(Component.translatable("tooltip.enerjolt.auto_crafter.cbx.ignore_nbt"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(158, 38, 11, 11, mouseX, mouseY)) {
             //Extract mode
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_crafter.cbx.extract_mode." + (menu.isSecondaryExtractMode()?"2":"1")));
+            components.add(Component.translatable("tooltip.enerjolt.auto_crafter.cbx.extract_mode." + (menu.isSecondaryExtractMode()?"2":"1")));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(158, 59, 11, 11, mouseX, mouseY)) {
             //Allow Output Overflow checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_crafter.cbx.allow_output_overflow"));
+            components.add(Component.translatable("tooltip.enerjolt.auto_crafter.cbx.allow_output_overflow"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(126, 16, 12, 12, mouseX, mouseY)) {
             //Cycle through recipes
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_crafter.cycle_through_recipes"));
+            components.add(Component.translatable("tooltip.enerjolt.auto_crafter.cycle_through_recipes"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(96, 16, 12, 12, mouseX, mouseY)) {
             //Set recipe index
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_crafter.recipe_index", menu.getRecipeIndex() + 1));
+            components.add(Component.translatable("tooltip.enerjolt.auto_crafter.recipe_index", menu.getRecipeIndex() + 1));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

@@ -38,7 +38,7 @@ public class PressMoldMakerCategory implements IRecipeCategory<RecipeHolder<Pres
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.press_mold_maker");
+        return Component.translatable("container.enerjolt.press_mold_maker");
     }
 
     @Override

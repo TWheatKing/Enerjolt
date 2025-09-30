@@ -27,7 +27,7 @@ public class PressMoldMakerCategory implements DisplayCategory<PressMoldMakerDis
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.press_mold_maker");
+        return Component.translatable("container.enerjolt.press_mold_maker");
     }
 
     @Override

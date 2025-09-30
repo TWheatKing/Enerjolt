@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.assembling_machine.description"
+      "translate": "advancements.enerjolt.assembling_machine.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:assembling_machine"
     },
     "title": {
-      "translate": "advancements.energizedpower.assembling_machine.title"
+      "translate": "advancements.enerjolt.assembling_machine.title"
     }
   },
   "requirements": [

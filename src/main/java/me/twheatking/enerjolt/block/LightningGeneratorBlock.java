@@ -138,11 +138,11 @@ public class LightningGeneratorBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.lightning_generator.txt.shift.1",
+                components.add(Component.translatable("tooltip.enerjolt.lightning_generator.txt.shift.1",
                         EnergyUtils.getEnergyWithPrefix(ENERGY_PER_LIGHTNING_STRIKE)).withStyle(ChatFormatting.GRAY));
-                components.add(Component.translatable("tooltip.energizedpower.lightning_generator.txt.shift.2").withStyle(ChatFormatting.GRAY));
+                components.add(Component.translatable("tooltip.enerjolt.lightning_generator.txt.shift.2").withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

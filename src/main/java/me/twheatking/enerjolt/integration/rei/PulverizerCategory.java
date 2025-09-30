@@ -29,7 +29,7 @@ public class PulverizerCategory implements DisplayCategory<PulverizerDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.pulverizer");
+        return Component.translatable("container.enerjolt.pulverizer");
     }
 
     @Override
@@ -54,7 +54,7 @@ public class PulverizerCategory implements DisplayCategory<PulverizerDisplay> {
         widgets.add(Widgets.createSlot(new Point(x + 65, y + 5)).disableBackground().markOutput().
                 entries(display.getOutputEntries().get(0).map(stack -> {
                     List<Component> tooltip = new ArrayList<>();
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = display.recipe().value().getOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -65,7 +65,7 @@ public class PulverizerCategory implements DisplayCategory<PulverizerDisplay> {
         widgets.add(Widgets.createSlot(new Point(x + 92, y + 5)).disableBackground().markOutput().
                 entries(display.getOutputEntries().size() == 2?display.getOutputEntries().get(1).map(stack -> {
                     List<Component> tooltip = new ArrayList<>();
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = display.recipe().value().getSecondaryOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)

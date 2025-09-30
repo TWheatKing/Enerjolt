@@ -28,7 +28,7 @@ public class MetalPressCategory implements DisplayCategory<MetalPressDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.metal_press");
+        return Component.translatable("container.enerjolt.metal_press");
     }
 
     @Override

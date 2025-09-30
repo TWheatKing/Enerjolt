@@ -18,7 +18,7 @@ public class StoneLiquefierScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<StoneLiquefierMenu> {
     public StoneLiquefierScreen(StoneLiquefierMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/stone_liquefier.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }
@@ -58,7 +58,7 @@ public class StoneLiquefierScreen
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {

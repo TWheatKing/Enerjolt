@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.heat_generator.description"
+      "translate": "advancements.enerjolt.heat_generator.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:heat_generator"
     },
     "title": {
-      "translate": "advancements.energizedpower.heat_generator.title"
+      "translate": "advancements.enerjolt.heat_generator.title"
     }
   },
   "requirements": [

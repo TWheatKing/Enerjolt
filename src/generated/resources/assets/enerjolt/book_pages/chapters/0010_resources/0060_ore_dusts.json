@@ -5,7 +5,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.ore_dusts"
+        "translate": "book.enerjolt.page.ore_dusts"
       }
     ],
     "text": ""

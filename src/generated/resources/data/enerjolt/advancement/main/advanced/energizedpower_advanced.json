@@ -14,14 +14,14 @@
   "display": {
     "background": "enerjolt:textures/block/advanced_machine_frame_top.png",
     "description": {
-      "translate": "advancements.energizedpower.energizedpower_advanced.description"
+      "translate": "advancements.enerjolt.enerjolt_advanced.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:energized_copper_ingot"
     },
     "title": {
-      "translate": "advancements.energizedpower.energizedpower_advanced.title"
+      "translate": "advancements.enerjolt.enerjolt_advanced.title"
     }
   },
   "requirements": [

@@ -13,13 +13,13 @@
           " "
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_switch.1"
+        "translate": "book.enerjolt.page.item_conveyor_belt_switch.1"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_switch.2"
+        "translate": "book.enerjolt.page.item_conveyor_belt_switch.2"
       }
     ],
     "text": ""

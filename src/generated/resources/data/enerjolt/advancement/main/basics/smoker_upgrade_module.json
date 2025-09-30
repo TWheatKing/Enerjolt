@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.smoker_upgrade_module.description"
+      "translate": "advancements.enerjolt.smoker_upgrade_module.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:smoker_upgrade_module"
     },
     "title": {
-      "translate": "advancements.energizedpower.smoker_upgrade_module.title"
+      "translate": "advancements.enerjolt.smoker_upgrade_module.title"
     }
   },
   "requirements": [

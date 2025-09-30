@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fluid_drainer.description"
+      "translate": "advancements.enerjolt.fluid_drainer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fluid_drainer"
     },
     "title": {
-      "translate": "advancements.energizedpower.fluid_drainer.title"
+      "translate": "advancements.enerjolt.fluid_drainer.title"
     }
   },
   "requirements": [

@@ -9,13 +9,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.drain.1"
+        "translate": "book.enerjolt.page.drain.1"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.drain.2"
+        "translate": "book.enerjolt.page.drain.2"
       }
     ],
     "text": ""

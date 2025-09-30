@@ -36,11 +36,11 @@ public abstract class UpgradeModuleItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
-        components.add(Component.translatable("tooltip.energizedpower.upgrade.values"));
+        components.add(Component.translatable("tooltip.enerjolt.upgrade.values"));
 
         for(UpgradeModuleModifier modifier:getUpgradeModuleModifiers())
-            components.add(Component.translatable("tooltip.energizedpower.upgrade.value",
-                    Component.translatable("tooltip.energizedpower.upgrade_module_modifier." + modifier.getSerializedName()),
+            components.add(Component.translatable("tooltip.enerjolt.upgrade.value",
+                    Component.translatable("tooltip.enerjolt.upgrade_module_modifier." + modifier.getSerializedName()),
                     getUpgradeModuleModifierText(modifier, getUpgradeModuleModifierValue(modifier))));
     }
 }

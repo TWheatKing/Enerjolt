@@ -14,7 +14,7 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.inventory_coal_engine.description"
+      "translate": "advancements.enerjolt.inventory_coal_engine.description"
     },
     "icon": {
       "components": {
@@ -25,7 +25,7 @@
       "id": "enerjolt:inventory_coal_engine"
     },
     "title": {
-      "translate": "advancements.energizedpower.inventory_coal_engine.title"
+      "translate": "advancements.enerjolt.inventory_coal_engine.title"
     }
   },
   "requirements": [

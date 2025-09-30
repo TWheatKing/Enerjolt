@@ -44,7 +44,7 @@ public class FluidTransposerCategory implements IRecipeCategory<RecipeHolder<Flu
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.fluid_transposer");
+        return Component.translatable("container.enerjolt.fluid_transposer");
     }
 
     @Override
@@ -97,7 +97,7 @@ public class FluidTransposerCategory implements IRecipeCategory<RecipeHolder<Flu
         int tooltipY = 4;
         if(mouseX >= (double)(tooltipX - 1) && mouseX < (double)(tooltipX + 20 + 1) &&
                 mouseY >= (double)(tooltipY - 1) && mouseY < (double)(tooltipY + 20 + 1)) {
-            tooltip.add(Component.translatable("tooltip.energizedpower.fluid_transposer.mode." +
+            tooltip.add(Component.translatable("tooltip.enerjolt.fluid_transposer.mode." +
                     recipe.value().getMode().getSerializedName()));
         }
     }

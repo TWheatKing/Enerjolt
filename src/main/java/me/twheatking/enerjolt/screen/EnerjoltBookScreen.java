@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @OnlyIn(Dist.CLIENT)
-public class EnergizedPowerBookScreen extends Screen {
+public class EnerjoltBookScreen extends Screen {
     public static final ResourceLocation TEXTURE = EJOLTAPI.id("textures/gui/book/enerjolt_book.png");
     public static final ResourceLocation FRONT_COVER = EJOLTAPI.id("textures/gui/book/front_cover.png");
     public static final ResourceLocation BACK_COVER = EJOLTAPI.id("textures/gui/book/back_cover.png");
@@ -71,22 +71,22 @@ public class EnergizedPowerBookScreen extends Screen {
     private boolean isCurrentPageCached;
 
     public static void setPages(List<PageContent> pages) {
-        EnergizedPowerBookScreen.pages = new ArrayList<>(pages);
+        EnerjoltBookScreen.pages = new ArrayList<>(pages);
     }
 
-    public EnergizedPowerBookScreen() {
+    public EnerjoltBookScreen() {
         this(null, null);
     }
 
-    public EnergizedPowerBookScreen(ResourceLocation openOnPageForBlock) {
+    public EnerjoltBookScreen(ResourceLocation openOnPageForBlock) {
         this(null, openOnPageForBlock);
     }
 
-    public EnergizedPowerBookScreen(LecternBlockEntity lecternBlockEntity) {
+    public EnerjoltBookScreen(LecternBlockEntity lecternBlockEntity) {
         this(lecternBlockEntity, null);
     }
 
-    public EnergizedPowerBookScreen(LecternBlockEntity lecternBlockEntity, ResourceLocation openOnPageForBlock) {
+    public EnerjoltBookScreen(LecternBlockEntity lecternBlockEntity, ResourceLocation openOnPageForBlock) {
         super(GameNarrator.NO_TITLE);
 
         this.lecternBlockEntity = lecternBlockEntity;
@@ -101,7 +101,7 @@ public class EnergizedPowerBookScreen extends Screen {
         List<FormattedPageContent> formattedPages = new ArrayList<>();
         formattedPages.add(new FormattedPageContent(EJOLTAPI.id("front_cover"),
                 null,
-                font.split(Component.translatable("book.energizedpower.front.cover.text").
+                font.split(Component.translatable("book.enerjolt.front.cover.text").
                         withStyle(ChatFormatting.GRAY), MAX_CHARS_PER_LINE), null, null));
         for(PageContent pageContent:pages) {
             ResourceLocation pageId = pageContent.getPageId();
@@ -406,7 +406,7 @@ public class EnergizedPowerBookScreen extends Screen {
 
         float scaleFactor = 1.35f;
 
-        Component component = Component.literal("Energized Power").withStyle(ChatFormatting.GOLD);
+        Component component = Component.literal("Enerjolt").withStyle(ChatFormatting.GOLD);
         int textWidth = font.width(component);
 
         guiGraphics.pose().scale(scaleFactor, scaleFactor, 1.f);

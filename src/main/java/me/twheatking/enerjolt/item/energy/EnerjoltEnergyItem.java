@@ -64,7 +64,7 @@ public class EnerjoltEnergyItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
-        components.add(Component.translatable("tooltip.energizedpower.energy_meter.content.txt",
+        components.add(Component.translatable("tooltip.enerjolt.energy_meter.content.txt",
                         EnergyUtils.getEnergyWithPrefix(getEnergy(itemStack)), EnergyUtils.getEnergyWithPrefix(getCapacity(itemStack))).
                 withStyle(ChatFormatting.GRAY));
     }

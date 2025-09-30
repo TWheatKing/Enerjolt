@@ -13,7 +13,7 @@ public class MetalPressScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<MetalPressMenu> {
     public MetalPressScreen(MetalPressMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/metal_press.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }

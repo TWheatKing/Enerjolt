@@ -30,16 +30,16 @@ public class CreativeBatteryItem extends EnerjoltEnergyItem {
         super.appendHoverText(itemStack, context, components, tooltipFlag);
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.capacity.txt",
-                            Component.translatable("tooltip.energizedpower.infinite.txt").
+            components.add(Component.translatable("tooltip.enerjolt.capacity.txt",
+                            Component.translatable("tooltip.enerjolt.infinite.txt").
                                     withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)).
                     withStyle(ChatFormatting.GRAY));
-            components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
-                            Component.translatable("tooltip.energizedpower.infinite.txt").
+            components.add(Component.translatable("tooltip.enerjolt.transfer_rate.txt",
+                            Component.translatable("tooltip.enerjolt.infinite.txt").
                                     withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)).
                     withStyle(ChatFormatting.GRAY));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 }

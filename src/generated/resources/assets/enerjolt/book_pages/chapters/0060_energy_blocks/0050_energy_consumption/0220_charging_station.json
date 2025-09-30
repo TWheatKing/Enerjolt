@@ -6,7 +6,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.charging_station"
+        "translate": "book.enerjolt.page.charging_station"
       }
     ],
     "text": ""

@@ -9,7 +9,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.fluid_pumps"
+        "translate": "book.enerjolt.page.fluid_pumps"
       }
     ],
     "text": ""

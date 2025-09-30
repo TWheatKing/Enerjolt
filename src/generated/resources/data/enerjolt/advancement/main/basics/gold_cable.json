@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.gold_cable.description"
+      "translate": "advancements.enerjolt.gold_cable.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:gold_cable"
     },
     "title": {
-      "translate": "advancements.energizedpower.gold_cable.title"
+      "translate": "advancements.enerjolt.gold_cable.title"
     }
   },
   "requirements": [

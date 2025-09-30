@@ -134,10 +134,10 @@ public class MetalPressBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.metal_press.txt.shift.1").
+                components.add(Component.translatable("tooltip.enerjolt.metal_press.txt.shift.1").
                         withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

@@ -8,13 +8,13 @@
           "\n\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.sawdust.1"
+        "translate": "book.enerjolt.page.sawdust.1"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.sawdust.2"
+        "translate": "book.enerjolt.page.sawdust.2"
       }
     ],
     "text": ""

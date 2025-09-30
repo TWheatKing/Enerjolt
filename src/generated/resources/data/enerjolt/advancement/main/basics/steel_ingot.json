@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.steel_ingot.description"
+      "translate": "advancements.enerjolt.steel_ingot.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:steel_ingot"
     },
     "title": {
-      "translate": "advancements.energizedpower.steel_ingot.title"
+      "translate": "advancements.enerjolt.steel_ingot.title"
     }
   },
   "requirements": [

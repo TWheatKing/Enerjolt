@@ -8,13 +8,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.plates.1"
+        "translate": "book.enerjolt.page.plates.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.plates.2"
+        "translate": "book.enerjolt.page.plates.2"
       }
     ],
     "text": ""

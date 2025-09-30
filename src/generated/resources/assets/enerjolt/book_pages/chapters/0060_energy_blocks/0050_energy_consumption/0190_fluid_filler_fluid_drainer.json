@@ -9,7 +9,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.fluid_filler_fluid_drainer"
+        "translate": "book.enerjolt.page.fluid_filler_fluid_drainer"
       }
     ],
     "text": ""

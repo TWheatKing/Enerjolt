@@ -4,7 +4,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.SetCreativeFluidTankFluidStackC2SPacket;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class CreativeFluidTankScreen extends EnergizedPowerBaseContainerScreen<CreativeFluidTankMenu> {
+public class CreativeFluidTankScreen extends EnerjoltBaseContainerScreen<CreativeFluidTankMenu> {
     private final ResourceLocation TEXTURE;
 
     public CreativeFluidTankScreen(CreativeFluidTankMenu menu, Inventory inventory, Component component) {
@@ -98,13 +98,13 @@ public class CreativeFluidTankScreen extends EnergizedPowerBaseContainerScreen<C
 
             Component tooltipComponent;
             if(fluidEmpty) {
-                tooltipComponent = Component.literal("0 / ").append(Component.translatable("tooltip.energizedpower.infinite.txt").
+                tooltipComponent = Component.literal("0 / ").append(Component.translatable("tooltip.enerjolt.infinite.txt").
                         withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC));
             }else {
                 tooltipComponent = Component.translatable(menu.getFluid(0).getDescriptionId()).append(" ").
-                        append(Component.translatable("tooltip.energizedpower.infinite.txt").
+                        append(Component.translatable("tooltip.enerjolt.infinite.txt").
                                 withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)).append(" / ").
-                        append(Component.translatable("tooltip.energizedpower.infinite.txt").
+                        append(Component.translatable("tooltip.enerjolt.infinite.txt").
                                 withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC));
             }
 

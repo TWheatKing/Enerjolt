@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.iron_plate.description"
+      "translate": "advancements.enerjolt.iron_plate.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:iron_plate"
     },
     "title": {
-      "translate": "advancements.energizedpower.iron_plate.title"
+      "translate": "advancements.enerjolt.iron_plate.title"
     }
   },
   "requirements": [

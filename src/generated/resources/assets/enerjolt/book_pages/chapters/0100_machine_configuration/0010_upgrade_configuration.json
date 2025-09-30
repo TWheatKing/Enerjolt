@@ -5,7 +5,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.upgrade_configuration"
+        "translate": "book.enerjolt.page.upgrade_configuration"
       }
     ],
     "text": ""

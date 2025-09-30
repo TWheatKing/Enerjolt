@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.basic_circuit.description"
+      "translate": "advancements.enerjolt.basic_circuit.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:basic_circuit"
     },
     "title": {
-      "translate": "advancements.energizedpower.basic_circuit.title"
+      "translate": "advancements.enerjolt.basic_circuit.title"
     }
   },
   "requirements": [

@@ -30,7 +30,7 @@ public class AutoCrafterTransferHandler implements TransferHandler {
             return Result.createNotApplicable();
 
         if(!recipe.canCraftInDimensions(3, 3))
-            return Result.createFailed(Component.translatable("recipes.energizedpower.transfer.too_large"));
+            return Result.createFailed(Component.translatable("recipes.enerjolt.transfer.too_large"));
 
         if(!context.isActuallyCrafting())
             return Result.createSuccessful().blocksFurtherHandling();

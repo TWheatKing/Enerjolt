@@ -135,8 +135,8 @@ public class FluidPipeBlock extends BaseEntityBlock implements SimpleWaterlogged
 
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.fluid_pipe.wrench_configuration.face_change_not_possible",
-                                Component.translatable("tooltip.energizedpower.direction." + selectedFace.getSerializedName()).
+                        Component.translatable("tooltip.enerjolt.fluid_pipe.wrench_configuration.face_change_not_possible",
+                                Component.translatable("tooltip.enerjolt.direction." + selectedFace.getSerializedName()).
                                         withStyle(ChatFormatting.WHITE)
                         ).withStyle(ChatFormatting.RED)
                 ));
@@ -150,8 +150,8 @@ public class FluidPipeBlock extends BaseEntityBlock implements SimpleWaterlogged
         if(fluidStorage == null) {
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.fluid_pipe.wrench_configuration.face_change_not_possible",
-                                Component.translatable("tooltip.energizedpower.direction." + selectedFace.getSerializedName()).
+                        Component.translatable("tooltip.enerjolt.fluid_pipe.wrench_configuration.face_change_not_possible",
+                                Component.translatable("tooltip.enerjolt.direction." + selectedFace.getSerializedName()).
                                         withStyle(ChatFormatting.WHITE)
                         ).withStyle(ChatFormatting.RED)
                 ));
@@ -163,8 +163,8 @@ public class FluidPipeBlock extends BaseEntityBlock implements SimpleWaterlogged
         if(fluidStorage.getTanks() == 0) {
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.fluid_pipe.wrench_configuration.face_change_not_possible",
-                                Component.translatable("tooltip.energizedpower.direction." + selectedFace.getSerializedName()).
+                        Component.translatable("tooltip.enerjolt.fluid_pipe.wrench_configuration.face_change_not_possible",
+                                Component.translatable("tooltip.enerjolt.direction." + selectedFace.getSerializedName()).
                                         withStyle(ChatFormatting.WHITE)
                         ).withStyle(ChatFormatting.RED)
                 ));
@@ -187,8 +187,8 @@ public class FluidPipeBlock extends BaseEntityBlock implements SimpleWaterlogged
 
         if(player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.fluid_pipe.wrench_configuration.face_changed",
-                            Component.translatable("tooltip.energizedpower.direction." + selectedFace.getSerializedName()).
+                    Component.translatable("tooltip.enerjolt.fluid_pipe.wrench_configuration.face_changed",
+                            Component.translatable("tooltip.enerjolt.direction." + selectedFace.getSerializedName()).
                                     withStyle(ChatFormatting.WHITE),
                             Component.translatable(pipeConnection.getTranslationKey()).
                                     withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD)
@@ -387,14 +387,14 @@ public class FluidPipeBlock extends BaseEntityBlock implements SimpleWaterlogged
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.wrench_configurable").
+                components.add(Component.translatable("tooltip.enerjolt.wrench_configurable").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
 
-                components.add(Component.translatable("tooltip.energizedpower.fluid_pipe.max_extraction",
+                components.add(Component.translatable("tooltip.enerjolt.fluid_pipe.max_extraction",
                                 FluidUtils.getFluidAmountWithPrefix(tier.getTransferRate())).
                         withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

@@ -95,12 +95,12 @@ public class CreativeItemSiloBlock extends BaseEntityBlock {
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
 
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.item_silo_capacity.txt",
-                                Component.translatable("tooltip.energizedpower.infinite.txt").
+                components.add(Component.translatable("tooltip.enerjolt.item_silo_capacity.txt",
+                                Component.translatable("tooltip.enerjolt.infinite.txt").
                                         withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC)).
                         withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

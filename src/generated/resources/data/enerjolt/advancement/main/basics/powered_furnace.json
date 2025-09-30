@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.powered_furnace.description"
+      "translate": "advancements.enerjolt.powered_furnace.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:powered_furnace"
     },
     "title": {
-      "translate": "advancements.energizedpower.powered_furnace.title"
+      "translate": "advancements.enerjolt.powered_furnace.title"
     }
   },
   "requirements": [

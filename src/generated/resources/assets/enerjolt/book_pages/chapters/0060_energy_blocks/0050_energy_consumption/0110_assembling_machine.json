@@ -9,7 +9,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.assembling_machine.1"
+        "translate": "book.enerjolt.page.assembling_machine.1"
       },
       {
         "color": "black",
@@ -18,13 +18,13 @@
         ],
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.assembling_machine.2"
+        "translate": "book.enerjolt.page.assembling_machine.2"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.assembling_machine.3"
+        "translate": "book.enerjolt.page.assembling_machine.3"
       }
     ],
     "text": ""

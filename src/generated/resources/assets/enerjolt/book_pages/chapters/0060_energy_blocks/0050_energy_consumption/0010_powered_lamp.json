@@ -6,7 +6,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.powered_lamp"
+        "translate": "book.enerjolt.page.powered_lamp"
       }
     ],
     "text": ""

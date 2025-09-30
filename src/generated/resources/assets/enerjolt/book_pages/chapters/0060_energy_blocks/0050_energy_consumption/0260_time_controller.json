@@ -9,13 +9,13 @@
           "\n\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.time_controller.1"
+        "translate": "book.enerjolt.page.time_controller.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.time_controller.2"
+        "translate": "book.enerjolt.page.time_controller.2"
       }
     ],
     "text": ""

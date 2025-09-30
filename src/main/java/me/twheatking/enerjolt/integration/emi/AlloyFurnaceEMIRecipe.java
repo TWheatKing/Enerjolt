@@ -89,14 +89,14 @@ public class AlloyFurnaceEMIRecipe implements EmiRecipe {
         widgets.addSlot(output.get(0), 98, 0).large(true).recipeContext(this);
         SlotWidget secondaryOutputSlot = widgets.addSlot(output.size() == 2?output.get(1):EmiStack.EMPTY, 124, 0).large(true).recipeContext(this);
         if(output.size() == 2) {
-            secondaryOutputSlot.appendTooltip(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+            secondaryOutputSlot.appendTooltip(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
             double[] percentages = secondaryOutputWithPercentages.percentages();
             for(int i = 0;i < percentages.length;i++)
                 secondaryOutputSlot.appendTooltip(Component.literal(String.format(Locale.ENGLISH, "%2d • %.2f %%", i + 1, 100 * percentages[i])));
         }
 
-        Component ticksText = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component ticksText = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         widgets.addText(ticksText.getVisualOrderText(),
                 widgets.getWidth() - Minecraft.getInstance().font.width(ticksText),
                 widgets.getHeight() - Minecraft.getInstance().font.lineHeight, ChatFormatting.WHITE.getColor(), false);

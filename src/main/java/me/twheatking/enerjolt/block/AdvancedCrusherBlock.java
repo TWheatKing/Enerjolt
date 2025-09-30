@@ -134,9 +134,9 @@ public class AdvancedCrusherBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.advanced_crusher.txt.shift.1").withStyle(ChatFormatting.GRAY));
+                components.add(Component.translatable("tooltip.enerjolt.advanced_crusher.txt.shift.1").withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

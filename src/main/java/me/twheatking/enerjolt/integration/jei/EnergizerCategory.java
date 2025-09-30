@@ -44,7 +44,7 @@ public class EnergizerCategory implements IRecipeCategory<RecipeHolder<Energizer
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.energizer");
+        return Component.translatable("container.enerjolt.energizer");
     }
 
     @Override

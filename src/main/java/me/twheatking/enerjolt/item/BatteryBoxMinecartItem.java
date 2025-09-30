@@ -77,14 +77,14 @@ public class BatteryBoxMinecartItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.capacity.txt",
+            components.add(Component.translatable("tooltip.enerjolt.capacity.txt",
                             EnergyUtils.getEnergyWithPrefix(MinecartBatteryBox.CAPACITY)).
                     withStyle(ChatFormatting.GRAY));
-            components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
+            components.add(Component.translatable("tooltip.enerjolt.transfer_rate.txt",
                             EnergyUtils.getEnergyWithPrefix(MinecartBatteryBox.MAX_TRANSFER)).
                     withStyle(ChatFormatting.GRAY));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

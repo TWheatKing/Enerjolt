@@ -13,11 +13,11 @@ public class CoalEngineScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<CoalEngineMenu> {
     public CoalEngineScreen(CoalEngineMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.coal_engine.txt",
+                "tooltip.enerjolt.coal_engine.txt",
                 EJOLTAPI.id("textures/gui/container/coal_engine.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_energy_capacity.png"));
 
-        energyPerTickBarTooltipComponentID = "tooltip.energizedpower.energy_production_per_tick.txt";
+        energyPerTickBarTooltipComponentID = "tooltip.enerjolt.energy_production_per_tick.txt";
     }
 
     @Override

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.battery_box_minecart.description"
+      "translate": "advancements.enerjolt.battery_box_minecart.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:battery_box_minecart"
     },
     "title": {
-      "translate": "advancements.energizedpower.battery_box_minecart.title"
+      "translate": "advancements.enerjolt.battery_box_minecart.title"
     }
   },
   "requirements": [

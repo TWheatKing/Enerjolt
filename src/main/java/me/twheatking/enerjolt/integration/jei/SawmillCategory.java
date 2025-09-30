@@ -39,7 +39,7 @@ public class SawmillCategory implements IRecipeCategory<RecipeHolder<SawmillReci
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.sawmill");
+        return Component.translatable("container.enerjolt.sawmill");
     }
 
     @Override

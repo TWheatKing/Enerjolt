@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.reinforced_advanced_solar_cell.description"
+      "translate": "advancements.enerjolt.reinforced_advanced_solar_cell.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:reinforced_advanced_solar_cell"
     },
     "title": {
-      "translate": "advancements.energizedpower.reinforced_advanced_solar_cell.title"
+      "translate": "advancements.enerjolt.reinforced_advanced_solar_cell.title"
     }
   },
   "requirements": [

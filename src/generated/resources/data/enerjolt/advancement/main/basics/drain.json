@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.drain.description"
+      "translate": "advancements.enerjolt.drain.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:drain"
     },
     "title": {
-      "translate": "advancements.energizedpower.drain.title"
+      "translate": "advancements.enerjolt.drain.title"
     }
   },
   "requirements": [

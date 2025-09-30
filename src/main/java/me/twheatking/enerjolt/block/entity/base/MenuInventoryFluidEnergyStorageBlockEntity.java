@@ -38,6 +38,6 @@ public abstract class MenuInventoryFluidEnergyStorageBlockEntity
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower." + machineName);
+        return Component.translatable("container.enerjolt." + machineName);
     }
 }

@@ -13,7 +13,7 @@ public class EnergizerScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<EnergizerMenu> {
     public EnergizerScreen(EnergizerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/energizer.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_energy_capacity.png"));
     }

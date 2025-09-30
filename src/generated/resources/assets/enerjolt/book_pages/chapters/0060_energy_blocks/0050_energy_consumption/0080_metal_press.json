@@ -9,7 +9,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.metal_press.1"
+        "translate": "book.enerjolt.page.metal_press.1"
       },
       {
         "color": "black",
@@ -18,7 +18,7 @@
         ],
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.metal_press.2"
+        "translate": "book.enerjolt.page.metal_press.2"
       },
       {
         "color": "black",
@@ -27,13 +27,13 @@
         ],
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.metal_press.3"
+        "translate": "book.enerjolt.page.metal_press.3"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.metal_press.4"
+        "translate": "book.enerjolt.page.metal_press.4"
       }
     ],
     "text": ""

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.solar_panel_4.description"
+      "translate": "advancements.enerjolt.solar_panel_4.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:solar_panel_4"
     },
     "title": {
-      "translate": "advancements.energizedpower.solar_panel_4.title"
+      "translate": "advancements.enerjolt.solar_panel_4.title"
     }
   },
   "requirements": [

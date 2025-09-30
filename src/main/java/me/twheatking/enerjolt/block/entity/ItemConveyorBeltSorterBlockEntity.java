@@ -93,7 +93,7 @@ public class ItemConveyorBeltSorterBlockEntity extends BlockEntity implements Me
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower." + switch(tier) {
+        return Component.translatable("container.enerjolt." + switch(tier) {
             case BASIC -> "item_conveyor_belt_sorter";
             case FAST -> "fast_item_conveyor_belt_sorter";
             case EXPRESS -> "express_item_conveyor_belt_sorter";

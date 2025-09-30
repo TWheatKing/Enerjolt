@@ -34,9 +34,9 @@ public class FurnaceModeUpgradeModuleItem extends UpgradeModuleItem {
         return switch(modifier) {
             case FURNACE_MODE -> {
                 if(value == 1)
-                    yield Component.translatable("item.energizedpower.blast_furnace_upgrade_module.effect_text").withStyle(ChatFormatting.YELLOW);
+                    yield Component.translatable("item.enerjolt.blast_furnace_upgrade_module.effect_text").withStyle(ChatFormatting.YELLOW);
                 else if(value == 2)
-                    yield Component.translatable("item.energizedpower.smoker_upgrade_module.effect_text").withStyle(ChatFormatting.YELLOW);
+                    yield Component.translatable("item.enerjolt.smoker_upgrade_module.effect_text").withStyle(ChatFormatting.YELLOW);
 
                 yield Component.empty();
             }

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.time_controller.description"
+      "translate": "advancements.enerjolt.time_controller.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:time_controller"
     },
     "title": {
-      "translate": "advancements.energizedpower.time_controller.title"
+      "translate": "advancements.enerjolt.time_controller.title"
     }
   },
   "requirements": [

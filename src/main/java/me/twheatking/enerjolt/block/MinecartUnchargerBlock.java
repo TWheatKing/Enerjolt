@@ -118,11 +118,11 @@ public class MinecartUnchargerBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
+                components.add(Component.translatable("tooltip.enerjolt.transfer_rate.txt",
                                 EnergyUtils.getEnergyWithPrefix(MinecartUnchargerBlockEntity.MAX_TRANSFER)).
                         withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

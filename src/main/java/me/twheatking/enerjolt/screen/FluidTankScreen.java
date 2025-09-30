@@ -5,7 +5,7 @@ import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.SetCheckboxC2SPacket;
 import me.twheatking.enerjolt.networking.packet.SetFluidTankFilterC2SPacket;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import me.twheatking.enerjolt.util.FluidUtils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class FluidTankScreen extends EnergizedPowerBaseContainerScreen<FluidTankMenu> {
+public class FluidTankScreen extends EnerjoltBaseContainerScreen<FluidTankMenu> {
     private final ResourceLocation TEXTURE;
 
     public FluidTankScreen(FluidTankMenu menu, Inventory inventory, Component component) {
@@ -125,7 +125,7 @@ public class FluidTankScreen extends EnergizedPowerBaseContainerScreen<FluidTank
 
             int fluidAmount = fluidEmpty?0:menu.getFluid(0).getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity(0)));
 
             if(!fluidEmpty) {
@@ -142,7 +142,7 @@ public class FluidTankScreen extends EnergizedPowerBaseContainerScreen<FluidTank
             //Ignore NBT checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.fluid_tanks.cbx.ignore_nbt"));
+            components.add(Component.translatable("tooltip.enerjolt.fluid_tanks.cbx.ignore_nbt"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }
@@ -155,16 +155,16 @@ public class FluidTankScreen extends EnergizedPowerBaseContainerScreen<FluidTank
             FluidStack fluidFilter = menu.getFluid(1);
 
             if(fluidFilter.isEmpty())
-                components.add(Component.translatable("tooltip.energizedpower.fluid_tanks.fluid_filter.no_filter_set"));
+                components.add(Component.translatable("tooltip.enerjolt.fluid_tanks.fluid_filter.no_filter_set"));
             else
-                components.add(Component.translatable("tooltip.energizedpower.fluid_tanks.fluid_filter.filter_set",
+                components.add(Component.translatable("tooltip.enerjolt.fluid_tanks.fluid_filter.filter_set",
                         Component.translatable(fluidFilter.getDescriptionId())));
 
             components.add(Component.empty());
 
-            components.add(Component.translatable("tooltip.energizedpower.fluid_tanks.fluid_filter.txt.1").
+            components.add(Component.translatable("tooltip.enerjolt.fluid_tanks.fluid_filter.txt.1").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-            components.add(Component.translatable("tooltip.energizedpower.fluid_tanks.fluid_filter.txt.2").
+            components.add(Component.translatable("tooltip.enerjolt.fluid_tanks.fluid_filter.txt.2").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);

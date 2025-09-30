@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.copper_wire.description"
+      "translate": "advancements.enerjolt.copper_wire.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:copper_wire"
     },
     "title": {
-      "translate": "advancements.energizedpower.copper_wire.title"
+      "translate": "advancements.enerjolt.copper_wire.title"
     }
   },
   "requirements": [

@@ -5,7 +5,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mojang.logging.LogUtils;
-import me.twheatking.enerjolt.screen.EnergizedPowerBookScreen;
+import me.twheatking.enerjolt.screen.EnerjoltBookScreen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
@@ -43,7 +43,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
             }
         };
 
-        List<EnergizedPowerBookScreen.PageContent> pages = new ArrayList<>();
+        List<EnerjoltBookScreen.PageContent> pages = new ArrayList<>();
 
         List<Map.Entry<ResourceLocation, JsonElement>> elementEntries = elements.entrySet().stream().
                 sorted(Comparator.comparing(o -> o.getKey().getPath())).
@@ -56,7 +56,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
 
             try {
                 if(!element.isJsonObject()) {
-                    LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': Element must be a JSON Object",
+                    LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': Element must be a JSON Object",
                             pageId.getPath(), pageId.getNamespace()));
 
                     continue;
@@ -69,7 +69,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                     JsonElement pageToRemoveElement = object.get("remove");
 
                     if(!pageToRemoveElement.isJsonPrimitive() || !pageToRemoveElement.getAsJsonPrimitive().isString()) {
-                        LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': remove must be a string primitive",
+                        LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': remove must be a string primitive",
                                 pageId.getPath(), pageId.getNamespace()));
 
                         continue;
@@ -89,7 +89,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                     }
 
                     if(!containsKeyFlag) {
-                        LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': page to be removed was not found",
+                        LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': page to be removed was not found",
                                 pageId.getPath(), pageId.getNamespace()));
 
                         continue;
@@ -111,7 +111,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                     JsonElement imageElement = object.get("image");
                     if(imageElement.isJsonPrimitive()) {
                         if(!imageElement.getAsJsonPrimitive().isString()) {
-                            LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
+                            LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
                                     pageId.getPath(), pageId.getNamespace()));
 
                             continue;
@@ -124,7 +124,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                         JsonArray imageJsonArray = imageElement.getAsJsonArray();
 
                         if(imageJsonArray.isEmpty()) {
-                            LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': Image array must contain at least one element",
+                            LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': Image array must contain at least one element",
                                     pageId.getPath(), pageId.getNamespace()));
 
                             continue;
@@ -133,7 +133,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                         List<ResourceLocation> imageResourceLocationList = new ArrayList<>(imageJsonArray.size());
                         for(JsonElement imageJsonEle:imageJsonArray) {
                             if(!imageJsonEle.isJsonPrimitive() || !imageJsonEle.getAsJsonPrimitive().isString()) {
-                                LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
+                                LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
                                         pageId.getPath(), pageId.getNamespace()));
 
                                 continue outer;
@@ -144,7 +144,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
 
                         imageResourceLocations = imageResourceLocationList.toArray(new ResourceLocation[0]);
                     }else {
-                        LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
+                        LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': image must be a string primitive or an array of string primitives",
                                 pageId.getPath(), pageId.getNamespace()));
 
                         continue;
@@ -156,7 +156,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                     JsonElement blockElement = object.get("block");
                     if(blockElement.isJsonPrimitive()) {
                         if(!blockElement.getAsJsonPrimitive().isString()) {
-                            LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
+                            LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
                                     pageId.getPath(), pageId.getNamespace()));
 
                             continue;
@@ -169,7 +169,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                         JsonArray blockJsonArray = blockElement.getAsJsonArray();
 
                         if(blockJsonArray.isEmpty()) {
-                            LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': Block array must contain at least one element",
+                            LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': Block array must contain at least one element",
                                     pageId.getPath(), pageId.getNamespace()));
 
                             continue;
@@ -178,7 +178,7 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
                         List<ResourceLocation> blockResourceLocationsList = new ArrayList<>(blockJsonArray.size());
                         for(JsonElement blockJsonEle:blockJsonArray) {
                             if(!blockJsonEle.isJsonPrimitive() || !blockJsonEle.getAsJsonPrimitive().isString()) {
-                                LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
+                                LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
                                         pageId.getPath(), pageId.getNamespace()));
 
                                 continue outer;
@@ -189,20 +189,20 @@ public class EnerjoltBookReloadListener extends SimpleJsonResourceReloadListener
 
                         blockResourceLocations = blockResourceLocationsList.toArray(new ResourceLocation[0]);
                     }else {
-                        LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
+                        LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s': block must be a string primitive or an array of string primitives",
                                 pageId.getPath(), pageId.getNamespace()));
 
                         continue;
                     }
                 }
 
-                pages.add(new EnergizedPowerBookScreen.PageContent(pageId, chapterTitleComponent, contentComponent, imageResourceLocations, blockResourceLocations));
+                pages.add(new EnerjoltBookScreen.PageContent(pageId, chapterTitleComponent, contentComponent, imageResourceLocations, blockResourceLocations));
             }catch(Exception e) {
-                LOGGER.error(String.format("Failed to load energized power book page '%s' from data pack '%s'",
+                LOGGER.error(String.format("Failed to load enerjolt book page '%s' from data pack '%s'",
                         pageId.getPath(), pageId.getNamespace()), e);
             }
         }
 
-        EnergizedPowerBookScreen.setPages(pages);
+        EnerjoltBookScreen.setPages(pages);
     }
 }

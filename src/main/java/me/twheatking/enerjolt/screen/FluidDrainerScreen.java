@@ -50,7 +50,7 @@ public class FluidDrainerScreen
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {

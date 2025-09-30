@@ -4,7 +4,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.SetCheckboxC2SPacket;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class ItemConveyorBeltSorterScreen extends EnergizedPowerBaseContainerScreen<ItemConveyorBeltSorterMenu> {
+public class ItemConveyorBeltSorterScreen extends EnerjoltBaseContainerScreen<ItemConveyorBeltSorterMenu> {
     private final ResourceLocation TEXTURE;
 
     public ItemConveyorBeltSorterScreen(ItemConveyorBeltSorterMenu menu, Inventory inventory, Component component) {
@@ -104,7 +104,7 @@ public class ItemConveyorBeltSorterScreen extends EnergizedPowerBaseContainerScr
                 //Output connection label [3x]
 
                 List<Component> components = new ArrayList<>(2);
-                components.add(Component.translatable("tooltip.energizedpower.item_conveyor_belt_sorter.label.output_connection." +
+                components.add(Component.translatable("tooltip.enerjolt.item_conveyor_belt_sorter.label.output_connection." +
                         (menu.isOutputBeltConnected(i)?"connection":"no_connection"), i + 1));
 
                 guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
@@ -112,14 +112,14 @@ public class ItemConveyorBeltSorterScreen extends EnergizedPowerBaseContainerScr
                 //Whitelist checkbox [3x]
 
                 List<Component> components = new ArrayList<>(2);
-                components.add(Component.translatable("tooltip.energizedpower.item_conveyor_belt_sorter.cbx." + (menu.isWhitelist(i)?"whitelist":"blacklist")));
+                components.add(Component.translatable("tooltip.enerjolt.item_conveyor_belt_sorter.cbx." + (menu.isWhitelist(i)?"whitelist":"blacklist")));
 
                 guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
             }else if(isHovering(153, 19 + i * 18, 13, 13, mouseX, mouseY)) {
                 //Ignore NBT checkbox [3x]
 
                 List<Component> components = new ArrayList<>(2);
-                components.add(Component.translatable("tooltip.energizedpower.item_conveyor_belt_sorter.cbx.ignore_nbt"));
+                components.add(Component.translatable("tooltip.enerjolt.item_conveyor_belt_sorter.cbx.ignore_nbt"));
 
                 guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
             }

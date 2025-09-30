@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.wrench.description"
+      "translate": "advancements.enerjolt.wrench.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:wrench"
     },
     "title": {
-      "translate": "advancements.energizedpower.wrench.title"
+      "translate": "advancements.enerjolt.wrench.title"
     }
   },
   "requirements": [

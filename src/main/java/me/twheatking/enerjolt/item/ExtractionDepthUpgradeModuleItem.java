@@ -54,7 +54,7 @@ public class ExtractionDepthUpgradeModuleItem extends UpgradeModuleItem {
     public Component getUpgradeModuleModifierText(UpgradeModuleModifier modifier, double value) {
         return switch(modifier) {
             case EXTRACTION_DEPTH -> Component.literal(String.format(Locale.ENGLISH, "+%d ", (int)value)).
-                    append(Component.translatable("tooltip.energizedpower.upgrade_module_modifier.extraction_depth.unit")).
+                    append(Component.translatable("tooltip.enerjolt.upgrade_module_modifier.extraction_depth.unit")).
                     withStyle(ChatFormatting.GREEN);
 
             default -> Component.empty();

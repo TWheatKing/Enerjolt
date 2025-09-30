@@ -40,7 +40,7 @@ public class AssemblingMachineCategory implements IRecipeCategory<RecipeHolder<A
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.assembling_machine");
+        return Component.translatable("container.enerjolt.assembling_machine");
     }
 
     @Override

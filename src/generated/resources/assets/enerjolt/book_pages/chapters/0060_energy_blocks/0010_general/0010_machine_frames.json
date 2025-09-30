@@ -14,13 +14,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.machine_frames.1"
+        "translate": "book.enerjolt.page.machine_frames.1"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.machine_frames.2"
+        "translate": "book.enerjolt.page.machine_frames.2"
       }
     ],
     "text": ""

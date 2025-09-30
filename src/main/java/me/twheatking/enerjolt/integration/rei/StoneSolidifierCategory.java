@@ -27,7 +27,7 @@ public class StoneSolidifierCategory implements DisplayCategory<StoneSolidifierD
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.stone_solidifier");
+        return Component.translatable("container.enerjolt.stone_solidifier");
     }
 
     @Override

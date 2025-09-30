@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.charger.description"
+      "translate": "advancements.enerjolt.charger.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:charger"
     },
     "title": {
-      "translate": "advancements.energizedpower.charger.title"
+      "translate": "advancements.enerjolt.charger.title"
     }
   },
   "requirements": [

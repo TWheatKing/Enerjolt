@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public abstract class EnergyStorageContainerScreen<T extends AbstractContainerMenu & IEnergyStorageMenu> extends EnergizedPowerBaseContainerScreen<T> {
+public abstract class EnergyStorageContainerScreen<T extends AbstractContainerMenu & IEnergyStorageMenu> extends EnerjoltBaseContainerScreen<T> {
     protected final ResourceLocation TEXTURE;
 
     protected int energyMeterX = 8;
@@ -29,7 +29,7 @@ public abstract class EnergyStorageContainerScreen<T extends AbstractContainerMe
     protected int energyMeterU = 0;
     protected int energyMeterV = 0;
 
-    protected String energyPerTickBarTooltipComponentID = "tooltip.energizedpower.energy_consumption_per_tick.txt";
+    protected String energyPerTickBarTooltipComponentID = "tooltip.enerjolt.energy_consumption_per_tick.txt";
     protected final String energyIndicatorBarTooltipComponentID;
 
     public EnergyStorageContainerScreen(T menu, Inventory inventory, Component titleComponent) {
@@ -106,7 +106,7 @@ public abstract class EnergyStorageContainerScreen<T extends AbstractContainerMe
         if(!menu.isInUpgradeModuleView()) {
             if(isHovering(energyMeterX, energyMeterY, energyMeterWidth, energyMeterHeight, mouseX, mouseY)) {
                 List<Component> components = new ArrayList<>(2);
-                components.add(Component.translatable("tooltip.energizedpower.energy_meter.content.txt",
+                components.add(Component.translatable("tooltip.enerjolt.energy_meter.content.txt",
                         EnergyUtils.getEnergyWithPrefix(menu.getEnergy()), EnergyUtils.getEnergyWithPrefix(menu.getCapacity())));
                 if(menu.getEnergyIndicatorBarValue() > 0 && energyIndicatorBarTooltipComponentID != null) {
                     components.add(Component.translatable(energyIndicatorBarTooltipComponentID,

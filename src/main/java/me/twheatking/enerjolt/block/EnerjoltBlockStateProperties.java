@@ -49,7 +49,7 @@ public final class EnerjoltBlockStateProperties {
         }
 
         public String getTranslationKey() {
-            return "block_state.energizedpower.pipe_connection." + getSerializedName();
+            return "block_state.enerjolt.pipe_connection." + getSerializedName();
         }
     }
 
@@ -77,7 +77,7 @@ public final class EnerjoltBlockStateProperties {
         }
 
         public String getTranslationKey() {
-            return "block_state.energizedpower.transformer_connection." + getSerializedName();
+            return "block_state.enerjolt.transformer_connection." + getSerializedName();
         }
     }
 
@@ -186,7 +186,7 @@ public final class EnerjoltBlockStateProperties {
         }
 
         public String getTranslationKey() {
-            return "block_state.energizedpower.conveyor_belt_direction." + getSerializedName();
+            return "block_state.enerjolt.conveyor_belt_direction." + getSerializedName();
         }
     }
 }

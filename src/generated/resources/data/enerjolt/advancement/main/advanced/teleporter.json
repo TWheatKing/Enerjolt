@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.teleporter.description"
+      "translate": "advancements.enerjolt.teleporter.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:teleporter"
     },
     "title": {
-      "translate": "advancements.energizedpower.teleporter.title"
+      "translate": "advancements.enerjolt.teleporter.title"
     }
   },
   "requirements": [

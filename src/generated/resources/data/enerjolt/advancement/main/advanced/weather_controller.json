@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.weather_controller.description"
+      "translate": "advancements.enerjolt.weather_controller.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:weather_controller"
     },
     "title": {
-      "translate": "advancements.energizedpower.weather_controller.title"
+      "translate": "advancements.enerjolt.weather_controller.title"
     }
   },
   "requirements": [

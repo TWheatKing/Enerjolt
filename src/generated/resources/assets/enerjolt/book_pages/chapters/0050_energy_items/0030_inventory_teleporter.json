@@ -5,7 +5,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.inventory_teleporter"
+        "translate": "book.enerjolt.page.inventory_teleporter"
       }
     ],
     "text": ""

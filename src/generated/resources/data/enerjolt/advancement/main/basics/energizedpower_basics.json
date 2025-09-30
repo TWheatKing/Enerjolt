@@ -15,14 +15,14 @@
     "announce_to_chat": false,
     "background": "enerjolt:textures/block/basic_machine_frame_top.png",
     "description": {
-      "translate": "advancements.energizedpower.energizedpower_basics.description"
+      "translate": "advancements.enerjolt.enerjolt_basics.description"
     },
     "icon": {
       "count": 1,
       "id": "minecraft:copper_ingot"
     },
     "title": {
-      "translate": "advancements.energizedpower.energizedpower_basics.title"
+      "translate": "advancements.enerjolt.enerjolt_basics.title"
     }
   },
   "requirements": [

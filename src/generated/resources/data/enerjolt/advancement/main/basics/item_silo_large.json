@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.item_silo_large.description"
+      "translate": "advancements.enerjolt.item_silo_large.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:item_silo_large"
     },
     "title": {
-      "translate": "advancements.energizedpower.item_silo_large.title"
+      "translate": "advancements.enerjolt.item_silo_large.title"
     }
   },
   "requirements": [

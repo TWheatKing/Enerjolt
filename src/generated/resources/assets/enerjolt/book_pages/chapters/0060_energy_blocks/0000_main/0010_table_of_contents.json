@@ -16,10 +16,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.general.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.general.title",
             "underlined": true
           }
         ],
@@ -39,10 +39,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.energy_transportation.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.energy_transportation.title",
             "underlined": true
           }
         ],
@@ -62,10 +62,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.energy_storage.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.energy_storage.title",
             "underlined": true
           }
         ],
@@ -85,10 +85,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.energy_production.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.energy_production.title",
             "underlined": true
           }
         ],
@@ -108,10 +108,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.energy_consumption.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.energy_consumption.title",
             "underlined": true
           }
         ],
@@ -119,6 +119,6 @@
         "text": "\n\n• "
       }
     ],
-    "translate": "book.energizedpower.page.energy_blocks.table_of_contents.title"
+    "translate": "book.enerjolt.page.energy_blocks.table_of_contents.title"
   }
 }

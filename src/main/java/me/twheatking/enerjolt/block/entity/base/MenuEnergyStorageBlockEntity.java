@@ -32,6 +32,6 @@ public abstract class MenuEnergyStorageBlockEntity<E extends IEnerjoltEnergyStor
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower." + machineName);
+        return Component.translatable("container.enerjolt." + machineName);
     }
 }

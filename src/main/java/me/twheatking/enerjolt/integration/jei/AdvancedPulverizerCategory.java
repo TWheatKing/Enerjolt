@@ -40,7 +40,7 @@ public class AdvancedPulverizerCategory implements IRecipeCategory<RecipeHolder<
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.advanced_pulverizer");
+        return Component.translatable("container.enerjolt.advanced_pulverizer");
     }
 
     @Override
@@ -61,7 +61,7 @@ public class AdvancedPulverizerCategory implements IRecipeCategory<RecipeHolder<
 
         iRecipeLayout.addSlot(RecipeIngredientRole.OUTPUT, 65, 5).addItemStack(outputEntries[0]).
                 addRichTooltipCallback((view, tooltip) -> {
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getOutput().percentagesAdvanced();
                     for(int i = 0;i < percentages.length;i++)
@@ -74,7 +74,7 @@ public class AdvancedPulverizerCategory implements IRecipeCategory<RecipeHolder<
                     if(view.isEmpty())
                         return;
 
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getSecondaryOutput().percentagesAdvanced();
                     for(int i = 0;i < percentages.length;i++)

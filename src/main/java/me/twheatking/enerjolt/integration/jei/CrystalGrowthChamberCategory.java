@@ -45,7 +45,7 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.crystal_growth_chamber");
+        return Component.translatable("container.enerjolt.crystal_growth_chamber");
     }
 
     @Override
@@ -67,7 +67,7 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
 
         iRecipeLayoutBuilder.addSlot(RecipeIngredientRole.OUTPUT, 77, 5).addItemStack(recipe.value().getMaxOutputCount()).
                 addRichTooltipCallback((view, tooltip) -> {
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -79,7 +79,7 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
     public void draw(RecipeHolder<CrystalGrowthChamberRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * CrystalGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
-        Component component = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         int textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 98 - textWidth, 30, 0xFFFFFFFF, false);

@@ -2,7 +2,7 @@ package me.twheatking.enerjolt.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import me.twheatking.enerjolt.api.EJOLTAPI;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import me.twheatking.enerjolt.util.FluidUtils;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class DrainScreen extends EnergizedPowerBaseContainerScreen<DrainMenu> {
+public class DrainScreen extends EnerjoltBaseContainerScreen<DrainMenu> {
     private final ResourceLocation TEXTURE;
 
     public DrainScreen(DrainMenu menu, Inventory inventory, Component component) {
@@ -63,7 +63,7 @@ public class DrainScreen extends EnergizedPowerBaseContainerScreen<DrainMenu> {
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {

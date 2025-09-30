@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.iron_fluid_pipe.description"
+      "translate": "advancements.enerjolt.iron_fluid_pipe.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fluid_pipe"
     },
     "title": {
-      "translate": "advancements.energizedpower.iron_fluid_pipe.title"
+      "translate": "advancements.enerjolt.iron_fluid_pipe.title"
     }
   },
   "requirements": [

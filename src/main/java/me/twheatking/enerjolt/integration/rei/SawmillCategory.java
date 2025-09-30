@@ -28,7 +28,7 @@ public class SawmillCategory implements DisplayCategory<SawmillDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.sawmill");
+        return Component.translatable("container.enerjolt.sawmill");
     }
 
     @Override

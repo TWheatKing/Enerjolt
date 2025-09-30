@@ -25,7 +25,7 @@ public class FiltrationPlantScreen
         extends SelectableRecipeMachineContainerScreen<FiltrationPlantRecipe, FiltrationPlantMenu> {
     public FiltrationPlantScreen(FiltrationPlantMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/filtration_plant.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
 
@@ -51,7 +51,7 @@ public class FiltrationPlantScreen
             components.add(Component.empty().
                     append(output.getHoverName()).
                     append(Component.literal(": ")).
-                    append(Component.translatable("recipes.energizedpower.transfer.output_percentages"))
+                    append(Component.translatable("recipes.enerjolt.transfer.output_percentages"))
             );
 
             double[] percentages = (i == 0?currentRecipe.value().getOutput():currentRecipe.value().getSecondaryOutput()).
@@ -110,7 +110,7 @@ public class FiltrationPlantScreen
 
                 int fluidAmount = fluidEmpty?0:menu.getFluid(i).getAmount();
 
-                Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+                Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                         FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity(i)));
 
                 if(!fluidEmpty) {
@@ -129,7 +129,7 @@ public class FiltrationPlantScreen
             if(isHovering(62 + 72*i, 44, 16, 16, mouseX, mouseY) &&
                     menu.getSlot(4 * 9 + i).getItem().isEmpty()) {
                 List<Component> components = new ArrayList<>(2);
-                components.add(Component.translatable("tooltip.energizedpower.filtration_plant.charcoal_filter_missing").
+                components.add(Component.translatable("tooltip.enerjolt.filtration_plant.charcoal_filter_missing").
                         withStyle(ChatFormatting.RED));
 
                 guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);

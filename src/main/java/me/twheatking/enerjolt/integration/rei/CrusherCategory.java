@@ -28,7 +28,7 @@ public class CrusherCategory implements DisplayCategory<CrusherDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.crusher");
+        return Component.translatable("container.enerjolt.crusher");
     }
 
     @Override

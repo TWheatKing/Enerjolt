@@ -1,13 +1,13 @@
 package me.twheatking.enerjolt.screen;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class CreativeItemSiloScreen extends EnergizedPowerBaseContainerScreen<CreativeItemSiloMenu> {
+public class CreativeItemSiloScreen extends EnerjoltBaseContainerScreen<CreativeItemSiloMenu> {
     private final ResourceLocation TEXTURE;
 
     public CreativeItemSiloScreen(CreativeItemSiloMenu menu, Inventory inventory, Component component) {

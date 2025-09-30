@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.raw_press_molds.description"
+      "translate": "advancements.enerjolt.raw_press_molds.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:raw_gear_press_mold"
     },
     "title": {
-      "translate": "advancements.energizedpower.raw_press_molds.title"
+      "translate": "advancements.enerjolt.raw_press_molds.title"
     }
   },
   "requirements": [

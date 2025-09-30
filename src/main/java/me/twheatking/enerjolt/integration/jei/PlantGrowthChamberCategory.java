@@ -48,7 +48,7 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.plant_growth_chamber");
+        return Component.translatable("container.enerjolt.plant_growth_chamber");
     }
 
     @Override
@@ -81,7 +81,7 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
             if(optionalItemStack.isEmpty())
                 return;
 
-            tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+            tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
             OutputItemStackWithPercentages[] outputs = recipe.value().getOutputs();
             for(int i = 0;i < outputs.length;i++) {
@@ -109,7 +109,7 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
     public void draw(RecipeHolder<PlantGrowthChamberRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * PlantGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
-        Component component = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         int textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 108 - textWidth, 40, 0xFFFFFFFF, false);

@@ -90,7 +90,7 @@ public abstract class ConfigurableUpgradableEnergyStorageContainerScreen
             RedstoneMode redstoneMode = menu.getRedstoneMode();
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.machine_configuration.redstone_mode." + redstoneMode.getSerializedName()));
+            components.add(Component.translatable("tooltip.enerjolt.machine_configuration.redstone_mode." + redstoneMode.getSerializedName()));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(-22, 50, 20, 20, mouseX, mouseY)) {
@@ -99,7 +99,7 @@ public abstract class ConfigurableUpgradableEnergyStorageContainerScreen
             ComparatorMode comparatorMode = menu.getComparatorMode();
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.machine_configuration.comparator_mode." + comparatorMode.getSerializedName()));
+            components.add(Component.translatable("tooltip.enerjolt.machine_configuration.comparator_mode." + comparatorMode.getSerializedName()));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

@@ -32,7 +32,7 @@ public class PlantGrowthChamberCategory implements DisplayCategory<PlantGrowthCh
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.plant_growth_chamber");
+        return Component.translatable("container.enerjolt.plant_growth_chamber");
     }
 
     @Override
@@ -64,7 +64,7 @@ public class PlantGrowthChamberCategory implements DisplayCategory<PlantGrowthCh
             int index = i;
             outputSlotEntries.get(i % 4).addAll(outputEntries.get(i).map(stack -> {
                 List<Component> tooltip = new ArrayList<>();
-                tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                 double[] percentages = display.recipe().value().getOutputs()[index].percentages();
                 for(int j = 0;j < percentages.length;j++)
@@ -85,7 +85,7 @@ public class PlantGrowthChamberCategory implements DisplayCategory<PlantGrowthCh
 
         int ticks = (int)(display.recipe().value().getTicks() * PlantGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
         widgets.add(Widgets.createLabel(new Point(x + bounds.width - 10, y + bounds.height - 17),
-                        Component.translatable("recipes.energizedpower.info.ticks",
+                        Component.translatable("recipes.enerjolt.info.ticks",
                                 ticks)).
                 noShadow().rightAligned());
 

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.cable_insulator.description"
+      "translate": "advancements.enerjolt.cable_insulator.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:cable_insulator"
     },
     "title": {
-      "translate": "advancements.energizedpower.cable_insulator.title"
+      "translate": "advancements.enerjolt.cable_insulator.title"
     }
   },
   "requirements": [

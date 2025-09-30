@@ -13,7 +13,7 @@ public class ChargerScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<ChargerMenu> {
     public ChargerScreen(ChargerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.charger.item_energy_left.txt",
+                "tooltip.enerjolt.charger.item_energy_left.txt",
                 EJOLTAPI.id("textures/gui/container/charger.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_energy_capacity.png"));
     }

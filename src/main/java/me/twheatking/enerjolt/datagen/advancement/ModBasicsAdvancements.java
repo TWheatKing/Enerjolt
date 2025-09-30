@@ -33,8 +33,8 @@ public class ModBasicsAdvancements implements AdvancementProvider.AdvancementGen
         AdvancementHolder energizedPowerBasics = Advancement.Builder.advancement().
                 display(
                         Items.COPPER_INGOT,
-                        Component.translatable("advancements.energizedpower.energizedpower_basics.title"),
-                        Component.translatable("advancements.energizedpower.energizedpower_basics.description"),
+                        Component.translatable("advancements.enerjolt.enerjolt_basics.title"),
+                        Component.translatable("advancements.enerjolt.enerjolt_basics.description"),
                         EJOLTAPI.id("textures/block/basic_machine_frame_top.png"),
                         AdvancementType.TASK,
                         true,
@@ -683,8 +683,8 @@ public class ModBasicsAdvancements implements AdvancementProvider.AdvancementGen
         return Advancement.Builder.advancement().parent(parent).
                 display(
                         icon,
-                        Component.translatable("advancements.energizedpower." + advancementId + ".title"),
-                        Component.translatable("advancements.energizedpower." + advancementId + ".description"),
+                        Component.translatable("advancements.enerjolt." + advancementId + ".title"),
+                        Component.translatable("advancements.enerjolt." + advancementId + ".description"),
                         null,
                         type,
                         true,

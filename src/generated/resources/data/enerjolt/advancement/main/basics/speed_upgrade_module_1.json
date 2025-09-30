@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.speed_upgrade_module_1.description"
+      "translate": "advancements.enerjolt.speed_upgrade_module_1.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:speed_upgrade_module_1"
     },
     "title": {
-      "translate": "advancements.energizedpower.speed_upgrade_module_1.title"
+      "translate": "advancements.enerjolt.speed_upgrade_module_1.title"
     }
   },
   "requirements": [

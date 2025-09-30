@@ -16,10 +16,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.resources.title",
+            "translate": "book.enerjolt.page.chapter.resources.title",
             "underlined": true
           }
         ],
@@ -39,10 +39,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.upgrades.title",
+            "translate": "book.enerjolt.page.chapter.upgrades.title",
             "underlined": true
           }
         ],
@@ -62,10 +62,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.tools.title",
+            "translate": "book.enerjolt.page.chapter.tools.title",
             "underlined": true
           }
         ],
@@ -85,10 +85,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.workbenches.title",
+            "translate": "book.enerjolt.page.chapter.workbenches.title",
             "underlined": true
           }
         ],
@@ -108,10 +108,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_items.title",
+            "translate": "book.enerjolt.page.chapter.energy_items.title",
             "underlined": true
           }
         ],
@@ -131,10 +131,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.energy_blocks.title",
+            "translate": "book.enerjolt.page.chapter.energy_blocks.title",
             "underlined": true
           }
         ],
@@ -154,10 +154,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.fluid_blocks.title",
+            "translate": "book.enerjolt.page.chapter.fluid_blocks.title",
             "underlined": true
           }
         ],
@@ -177,10 +177,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.item_transportation.title",
+            "translate": "book.enerjolt.page.chapter.item_transportation.title",
             "underlined": true
           }
         ],
@@ -200,10 +200,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.fluids.title",
+            "translate": "book.enerjolt.page.chapter.fluids.title",
             "underlined": true
           }
         ],
@@ -223,10 +223,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.machine_configuration.title",
+            "translate": "book.enerjolt.page.chapter.machine_configuration.title",
             "underlined": true
           }
         ],
@@ -246,10 +246,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.entities.title",
+            "translate": "book.enerjolt.page.chapter.entities.title",
             "underlined": true
           }
         ],
@@ -269,10 +269,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.chapter.structures.title",
+            "translate": "book.enerjolt.page.chapter.structures.title",
             "underlined": true
           }
         ],
@@ -280,6 +280,6 @@
         "text": "\n\n• "
       }
     ],
-    "translate": "book.energizedpower.page.table_of_contents.title"
+    "translate": "book.enerjolt.page.table_of_contents.title"
   }
 }

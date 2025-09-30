@@ -2,7 +2,7 @@
   "content": {
     "extra": [
       {
-        "translate": "book.energizedpower.page.chapter.energy_blocks.general"
+        "translate": "book.enerjolt.page.chapter.energy_blocks.general"
       },
       {
         "bold": true,
@@ -17,10 +17,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.energy_blocks.table_of_contents.title",
+            "translate": "book.enerjolt.page.energy_blocks.table_of_contents.title",
             "underlined": true
           }
         ],
@@ -32,6 +32,6 @@
   },
   "title": {
     "color": "gold",
-    "translate": "book.energizedpower.page.chapter.energy_blocks.general.title"
+    "translate": "book.enerjolt.page.chapter.energy_blocks.general.title"
   }
 }

@@ -43,7 +43,7 @@ public class ChargerCategory implements IRecipeCategory<RecipeHolder<ChargerReci
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.charger");
+        return Component.translatable("container.enerjolt.charger");
     }
 
     @Override

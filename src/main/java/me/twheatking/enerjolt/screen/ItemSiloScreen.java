@@ -1,13 +1,13 @@
 package me.twheatking.enerjolt.screen;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class ItemSiloScreen extends EnergizedPowerBaseContainerScreen<ItemSiloMenu> {
+public class ItemSiloScreen extends EnerjoltBaseContainerScreen<ItemSiloMenu> {
     private final ResourceLocation TEXTURE;
 
     public ItemSiloScreen(ItemSiloMenu menu, Inventory inventory, Component component) {
@@ -34,7 +34,7 @@ public class ItemSiloScreen extends EnergizedPowerBaseContainerScreen<ItemSiloMe
     }
 
     private void renderInfoText(GuiGraphics guiGraphics, int x, int y) {
-        Component component = Component.translatable("tooltip.energizedpower.item_silo.amount", menu.getCount(), menu.getMaxCount());
+        Component component = Component.translatable("tooltip.enerjolt.item_silo.amount", menu.getCount(), menu.getMaxCount());
         int componentWidth = font.width(component);
 
         guiGraphics.drawString(font, component, (int)(x + (176 - componentWidth) * .5f), y + 58, 0xFF000000, false);

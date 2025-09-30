@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.stone_solidifier.description"
+      "translate": "advancements.enerjolt.stone_solidifier.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:stone_solidifier"
     },
     "title": {
-      "translate": "advancements.energizedpower.stone_solidifier.title"
+      "translate": "advancements.enerjolt.stone_solidifier.title"
     }
   },
   "requirements": [

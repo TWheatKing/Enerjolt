@@ -28,7 +28,7 @@ public class PlantGrowthChamberFertilizerCategory implements DisplayCategory<Pla
 
     @Override
     public Component getTitle() {
-        return Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer");
+        return Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer");
     }
 
     @Override
@@ -52,11 +52,11 @@ public class PlantGrowthChamberFertilizerCategory implements DisplayCategory<Pla
                 entries(display.getInputEntries().get(0)));
 
         widgets.add(Widgets.createLabel(new Point(x + bounds.width - 10, y + bounds.height - 34),
-                        Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.speed_multiplier",
+                        Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.speed_multiplier",
                                 display.recipe().value().getSpeedMultiplier())).
                 noShadow().rightAligned());
         widgets.add(Widgets.createLabel(new Point(x + bounds.width - 10, y + bounds.height - 17),
-                        Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.energy_consumption_multiplier",
+                        Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.energy_consumption_multiplier",
                                 display.recipe().value().getEnergyConsumptionMultiplier())).
                 noShadow().rightAligned());
 

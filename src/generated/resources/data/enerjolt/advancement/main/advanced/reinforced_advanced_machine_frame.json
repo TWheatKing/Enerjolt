@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.reinforced_advanced_machine_frame.description"
+      "translate": "advancements.enerjolt.reinforced_advanced_machine_frame.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:reinforced_advanced_machine_frame"
     },
     "title": {
-      "translate": "advancements.energizedpower.reinforced_advanced_machine_frame.title"
+      "translate": "advancements.enerjolt.reinforced_advanced_machine_frame.title"
     }
   },
   "requirements": [

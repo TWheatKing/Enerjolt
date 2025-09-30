@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.item_conveyor_belt_switch.description"
+      "translate": "advancements.enerjolt.item_conveyor_belt_switch.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:item_conveyor_belt_switch"
     },
     "title": {
-      "translate": "advancements.energizedpower.item_conveyor_belt_switch.title"
+      "translate": "advancements.enerjolt.item_conveyor_belt_switch.title"
     }
   },
   "requirements": [

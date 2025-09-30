@@ -30,7 +30,7 @@ public class CrystalGrowthChamberCategory implements DisplayCategory<CrystalGrow
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.crystal_growth_chamber");
+        return Component.translatable("container.enerjolt.crystal_growth_chamber");
     }
 
     @Override
@@ -55,7 +55,7 @@ public class CrystalGrowthChamberCategory implements DisplayCategory<CrystalGrow
         widgets.add(Widgets.createSlot(new Point(x + 77, y + 5)).disableBackground().markOutput().
                 entries(display.getOutputEntries().get(0).map(stack -> {
                     List<Component> tooltip = new ArrayList<>();
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = display.recipe().value().getOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -66,7 +66,7 @@ public class CrystalGrowthChamberCategory implements DisplayCategory<CrystalGrow
 
         int ticks = (int)(display.recipe().value().getTicks() * CrystalGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
         widgets.add(Widgets.createLabel(new Point(x + bounds.width - 10, y + bounds.height - 17),
-                        Component.translatable("recipes.energizedpower.info.ticks",
+                        Component.translatable("recipes.enerjolt.info.ticks",
                                 ticks)).
                 noShadow().rightAligned());
 

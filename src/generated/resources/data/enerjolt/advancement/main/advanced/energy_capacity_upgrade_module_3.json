@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energy_capacity_upgrade_module_3.description"
+      "translate": "advancements.enerjolt.energy_capacity_upgrade_module_3.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:energy_capacity_upgrade_module_3"
     },
     "title": {
-      "translate": "advancements.energizedpower.energy_capacity_upgrade_module_3.title"
+      "translate": "advancements.enerjolt.energy_capacity_upgrade_module_3.title"
     }
   },
   "requirements": [

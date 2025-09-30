@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.basic_solar_cell.description"
+      "translate": "advancements.enerjolt.basic_solar_cell.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:basic_solar_cell"
     },
     "title": {
-      "translate": "advancements.energizedpower.basic_solar_cell.title"
+      "translate": "advancements.enerjolt.basic_solar_cell.title"
     }
   },
   "requirements": [

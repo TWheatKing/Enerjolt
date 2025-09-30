@@ -13,7 +13,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.1"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.1"
       },
       {
         "bold": true,
@@ -22,7 +22,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.2"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.2"
       },
       {
         "bold": true,
@@ -31,7 +31,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.3"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.3"
       },
       {
         "bold": true,
@@ -40,7 +40,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.4"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.4"
       },
       {
         "bold": true,
@@ -49,7 +49,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.5"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.5"
       },
       {
         "bold": true,
@@ -58,7 +58,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.6"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.6"
       },
       {
         "bold": true,
@@ -67,7 +67,7 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.7"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.7"
       },
       {
         "bold": true,
@@ -76,13 +76,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.8"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.8"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.item_conveyor_belt_sorter.9"
+        "translate": "book.enerjolt.page.item_conveyor_belt_sorter.9"
       }
     ],
     "text": ""

@@ -9,13 +9,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.thermal_generator.1"
+        "translate": "book.enerjolt.page.thermal_generator.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.thermal_generator.2"
+        "translate": "book.enerjolt.page.thermal_generator.2"
       }
     ],
     "text": ""

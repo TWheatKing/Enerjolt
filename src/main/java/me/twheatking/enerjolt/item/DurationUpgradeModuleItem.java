@@ -74,7 +74,7 @@ public class DurationUpgradeModuleItem extends UpgradeModuleItem {
         return switch(modifier) {
             case DURATION -> {
                 if(value == Double.POSITIVE_INFINITY)
-                    yield Component.translatable("tooltip.energizedpower.infinite.txt").
+                    yield Component.translatable("tooltip.enerjolt.infinite.txt").
                             withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.ITALIC);
 
                 yield Component.literal(String.format(Locale.US, "• %.2f", value)).

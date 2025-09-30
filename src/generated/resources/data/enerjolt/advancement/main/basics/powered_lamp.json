@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.powered_lamp.description"
+      "translate": "advancements.enerjolt.powered_lamp.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:powered_lamp"
     },
     "title": {
-      "translate": "advancements.energizedpower.powered_lamp.title"
+      "translate": "advancements.enerjolt.powered_lamp.title"
     }
   },
   "requirements": [

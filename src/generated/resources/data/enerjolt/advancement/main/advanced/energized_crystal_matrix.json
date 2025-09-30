@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energized_crystal_matrix.description"
+      "translate": "advancements.enerjolt.energized_crystal_matrix.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:energized_crystal_matrix"
     },
     "title": {
-      "translate": "advancements.energizedpower.energized_crystal_matrix.title"
+      "translate": "advancements.enerjolt.energized_crystal_matrix.title"
     }
   },
   "requirements": [

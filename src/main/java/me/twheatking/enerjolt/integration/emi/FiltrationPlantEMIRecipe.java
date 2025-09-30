@@ -80,7 +80,7 @@ public class FiltrationPlantEMIRecipe implements EmiRecipe {
 
         SlotWidget outputSlot = widgets.addSlot(output.get(0), 63, 4).recipeContext(this);
         {
-            outputSlot.appendTooltip(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+            outputSlot.appendTooltip(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
             double[] percentages = outputWithPercentages.percentages();
             for(int i = 0;i < percentages.length;i++)
@@ -89,7 +89,7 @@ public class FiltrationPlantEMIRecipe implements EmiRecipe {
         }
         SlotWidget secondaryOutputSlot = widgets.addSlot(output.size() == 2?output.get(1):EmiStack.EMPTY, 91, 4).recipeContext(this);
         if(output.size() == 2) {
-            secondaryOutputSlot.appendTooltip(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+            secondaryOutputSlot.appendTooltip(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
             double[] percentages = secondaryOutputWithPercentages.percentages();
             for(int i = 0;i < percentages.length;i++)

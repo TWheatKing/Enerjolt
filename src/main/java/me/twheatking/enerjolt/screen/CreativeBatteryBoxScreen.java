@@ -4,7 +4,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.SetCheckboxC2SPacket;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class CreativeBatteryBoxScreen extends EnergizedPowerBaseContainerScreen<CreativeBatteryBoxMenu> {
+public class CreativeBatteryBoxScreen extends EnerjoltBaseContainerScreen<CreativeBatteryBoxMenu> {
     private final ResourceLocation TEXTURE;
 
     public CreativeBatteryBoxScreen(CreativeBatteryBoxMenu menu, Inventory inventory, Component component) {
@@ -80,10 +80,10 @@ public class CreativeBatteryBoxScreen extends EnergizedPowerBaseContainerScreen<
     }
 
     private void renderCheckboxLabels(GuiGraphics guiGraphics, int x, int y, int mouseX, int mouseY) {
-        guiGraphics.drawString(font, Component.translatable("tooltip.energizedpower.creative_battery_box.cbx.energy_production"),
+        guiGraphics.drawString(font, Component.translatable("tooltip.enerjolt.creative_battery_box.cbx.energy_production"),
                 x + 25, y + 30, 0, false);
 
-        guiGraphics.drawString(font, Component.translatable("tooltip.energizedpower.creative_battery_box.cbx.energy_consumption"),
+        guiGraphics.drawString(font, Component.translatable("tooltip.enerjolt.creative_battery_box.cbx.energy_consumption"),
                 x + 25, y + 48, 0, false);
     }
 
@@ -102,14 +102,14 @@ public class CreativeBatteryBoxScreen extends EnergizedPowerBaseContainerScreen<
             //Ignore NBT checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.creative_battery_box.cbx.energy_production"));
+            components.add(Component.translatable("tooltip.enerjolt.creative_battery_box.cbx.energy_production"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(10, 46, 11, 11, mouseX, mouseY)) {
             //Ignore NBT checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.creative_battery_box.cbx.energy_consumption"));
+            components.add(Component.translatable("tooltip.enerjolt.creative_battery_box.cbx.energy_consumption"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

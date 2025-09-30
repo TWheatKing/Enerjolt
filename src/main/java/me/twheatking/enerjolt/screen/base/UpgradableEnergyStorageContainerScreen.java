@@ -120,7 +120,7 @@ public abstract class UpgradableEnergyStorageContainerScreen<T extends AbstractC
             //Upgrade view
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.upgrade_view.button." +
+            components.add(Component.translatable("tooltip.enerjolt.upgrade_view.button." +
                     (menu.isInUpgradeModuleView()?"close":"open")));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);

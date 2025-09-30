@@ -36,7 +36,7 @@ public class InWorldCategory implements IRecipeCategory<InWorldCategory.InWorldR
 
     @Override
     public Component getTitle() {
-        return Component.translatable("recipes.energizedpower.in_world_crafting");
+        return Component.translatable("recipes.enerjolt.in_world_crafting");
     }
 
     @Override

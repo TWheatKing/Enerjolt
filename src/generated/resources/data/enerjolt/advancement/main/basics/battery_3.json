@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.battery_3.description"
+      "translate": "advancements.enerjolt.battery_3.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:battery_3"
     },
     "title": {
-      "translate": "advancements.energizedpower.battery_3.title"
+      "translate": "advancements.enerjolt.battery_3.title"
     }
   },
   "requirements": [

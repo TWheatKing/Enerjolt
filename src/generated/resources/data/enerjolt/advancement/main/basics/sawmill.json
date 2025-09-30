@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.sawmill.description"
+      "translate": "advancements.enerjolt.sawmill.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:sawmill"
     },
     "title": {
-      "translate": "advancements.energizedpower.sawmill.title"
+      "translate": "advancements.enerjolt.sawmill.title"
     }
   },
   "requirements": [

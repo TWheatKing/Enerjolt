@@ -49,7 +49,7 @@ public class AdvancedAutoCrafterTransferHandler implements IRecipeTransferHandle
     public @Nullable IRecipeTransferError transferRecipe(AdvancedAutoCrafterMenu container, RecipeHolder<CraftingRecipe> recipe, IRecipeSlotsView recipeSlots, Player player,
                                                          boolean maxTransfer, boolean doTransfer) {
         if(!recipe.value().canCraftInDimensions(3, 3))
-            return helper.createUserErrorWithTooltip(Component.translatable("recipes.energizedpower.transfer.too_large"));
+            return helper.createUserErrorWithTooltip(Component.translatable("recipes.enerjolt.transfer.too_large"));
 
         if(!doTransfer)
             return null;

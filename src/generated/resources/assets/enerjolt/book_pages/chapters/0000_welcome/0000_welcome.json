@@ -7,13 +7,13 @@
         "extra": [
           "\n\n"
         ],
-        "translate": "book.energizedpower.page.welcome.title"
+        "translate": "book.enerjolt.page.welcome.title"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.welcome.1"
+        "translate": "book.enerjolt.page.welcome.1"
       },
       {
         "bold": true,
@@ -28,10 +28,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.link"
+                "translate": "book.enerjolt.tooltip.link"
               }
             },
-            "translate": "book.energizedpower.page.welcome.2",
+            "translate": "book.enerjolt.page.welcome.2",
             "underlined": true
           }
         ],
@@ -43,7 +43,7 @@
         "color": "black",
         "extra": [
           {
-            "translate": "book.energizedpower.page.welcome.3"
+            "translate": "book.enerjolt.page.welcome.3"
           },
           ": ",
           {
@@ -55,10 +55,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.link"
+                "translate": "book.enerjolt.tooltip.link"
               }
             },
-            "translate": "book.energizedpower.page.welcome.3.link",
+            "translate": "book.enerjolt.page.welcome.3.link",
             "underlined": true
           }
         ],
@@ -70,7 +70,7 @@
         "color": "black",
         "extra": [
           {
-            "translate": "book.energizedpower.page.welcome.4"
+            "translate": "book.enerjolt.page.welcome.4"
           },
           ": ",
           {
@@ -82,10 +82,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.link"
+                "translate": "book.enerjolt.tooltip.link"
               }
             },
-            "translate": "book.energizedpower.page.welcome.4.link",
+            "translate": "book.enerjolt.page.welcome.4.link",
             "underlined": true
           }
         ],
@@ -97,7 +97,7 @@
         "color": "black",
         "extra": [
           {
-            "translate": "book.energizedpower.page.welcome.5"
+            "translate": "book.enerjolt.page.welcome.5"
           },
           ": ",
           {
@@ -109,10 +109,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.link"
+                "translate": "book.enerjolt.tooltip.link"
               }
             },
-            "translate": "book.energizedpower.page.welcome.5.link",
+            "translate": "book.enerjolt.page.welcome.5.link",
             "underlined": true
           }
         ],

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.express_item_conveyor_belt_sorter.description"
+      "translate": "advancements.enerjolt.express_item_conveyor_belt_sorter.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:express_item_conveyor_belt_sorter"
     },
     "title": {
-      "translate": "advancements.energizedpower.express_item_conveyor_belt_sorter.title"
+      "translate": "advancements.enerjolt.express_item_conveyor_belt_sorter.title"
     }
   },
   "requirements": [

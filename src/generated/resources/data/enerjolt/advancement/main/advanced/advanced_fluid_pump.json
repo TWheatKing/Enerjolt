@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.advanced_fluid_pump.description"
+      "translate": "advancements.enerjolt.advanced_fluid_pump.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:advanced_fluid_pump"
     },
     "title": {
-      "translate": "advancements.energizedpower.advanced_fluid_pump.title"
+      "translate": "advancements.enerjolt.advanced_fluid_pump.title"
     }
   },
   "requirements": [

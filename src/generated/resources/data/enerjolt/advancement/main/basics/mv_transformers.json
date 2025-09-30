@@ -19,14 +19,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.mv_transformers.description"
+      "translate": "advancements.enerjolt.mv_transformers.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:transformer_1_to_n"
     },
     "title": {
-      "translate": "advancements.energizedpower.mv_transformers.title"
+      "translate": "advancements.enerjolt.mv_transformers.title"
     }
   },
   "requirements": [

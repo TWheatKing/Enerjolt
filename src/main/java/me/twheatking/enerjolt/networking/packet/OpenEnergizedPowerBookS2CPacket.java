@@ -1,7 +1,7 @@
 package me.twheatking.enerjolt.networking.packet;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
-import me.twheatking.enerjolt.screen.EnergizedPowerBookScreen;
+import me.twheatking.enerjolt.screen.EnerjoltBookScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.RegistryFriendlyByteBuf;
@@ -48,6 +48,6 @@ public record OpenEnergizedPowerBookS2CPacket(BlockPos pos) implements CustomPac
 
     @OnlyIn(Dist.CLIENT)
     private static void showBookViewScreen(LecternBlockEntity lecternBlockEntity) {
-        Minecraft.getInstance().setScreen(new EnergizedPowerBookScreen(lecternBlockEntity));
+        Minecraft.getInstance().setScreen(new EnerjoltBookScreen(lecternBlockEntity));
     }
 }

@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.redstone_alloy_ingot.description"
+      "translate": "advancements.enerjolt.redstone_alloy_ingot.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:redstone_alloy_ingot"
     },
     "title": {
-      "translate": "advancements.energizedpower.redstone_alloy_ingot.title"
+      "translate": "advancements.enerjolt.redstone_alloy_ingot.title"
     }
   },
   "requirements": [

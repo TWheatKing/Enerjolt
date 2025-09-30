@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.coal_engine.description"
+      "translate": "advancements.enerjolt.coal_engine.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:coal_engine"
     },
     "title": {
-      "translate": "advancements.energizedpower.coal_engine.title"
+      "translate": "advancements.enerjolt.coal_engine.title"
     }
   },
   "requirements": [

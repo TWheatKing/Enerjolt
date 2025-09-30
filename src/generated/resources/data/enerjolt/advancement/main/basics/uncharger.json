@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.uncharger.description"
+      "translate": "advancements.enerjolt.uncharger.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:uncharger"
     },
     "title": {
-      "translate": "advancements.energizedpower.uncharger.title"
+      "translate": "advancements.enerjolt.uncharger.title"
     }
   },
   "requirements": [

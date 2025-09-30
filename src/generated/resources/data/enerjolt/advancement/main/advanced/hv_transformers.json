@@ -19,14 +19,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.hv_transformers.description"
+      "translate": "advancements.enerjolt.hv_transformers.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:hv_transformer_1_to_n"
     },
     "title": {
-      "translate": "advancements.energizedpower.hv_transformers.title"
+      "translate": "advancements.enerjolt.hv_transformers.title"
     }
   },
   "requirements": [

@@ -29,7 +29,7 @@ public class AlloyFurnaceCategory implements DisplayCategory<AlloyFurnaceDisplay
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.alloy_furnace");
+        return Component.translatable("container.enerjolt.alloy_furnace");
     }
 
     @Override
@@ -66,7 +66,7 @@ public class AlloyFurnaceCategory implements DisplayCategory<AlloyFurnaceDisplay
         widgets.add(Widgets.createSlot(new Point(x + 125, y + 5)).disableBackground().markOutput().
                 entries(display.getOutputEntries().size() == 2?display.getOutputEntries().get(1).map(stack -> {
                     List<Component> tooltip = new ArrayList<>();
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = display.recipe().value().getSecondaryOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -77,7 +77,7 @@ public class AlloyFurnaceCategory implements DisplayCategory<AlloyFurnaceDisplay
 
         int ticks = (int)(display.recipe().value().getTicks() * AlloyFurnaceBlockEntity.RECIPE_DURATION_MULTIPLIER);
         widgets.add(Widgets.createLabel(new Point(x + bounds.width - 10, y + bounds.height - 17),
-                        Component.translatable("recipes.energizedpower.info.ticks",
+                        Component.translatable("recipes.enerjolt.info.ticks",
                                 ticks)).
                 noShadow().rightAligned());
 

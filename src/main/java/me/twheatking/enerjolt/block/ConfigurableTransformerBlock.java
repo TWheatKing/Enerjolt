@@ -143,8 +143,8 @@ public class ConfigurableTransformerBlock extends BaseEntityBlock implements Sim
 
         if(player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.configurable_transformer.wrench_configuration.face_changed",
-                            Component.translatable("tooltip.energizedpower.direction." + selectedFace.getSerializedName()).
+                    Component.translatable("tooltip.enerjolt.configurable_transformer.wrench_configuration.face_changed",
+                            Component.translatable("tooltip.enerjolt.direction." + selectedFace.getSerializedName()).
                                     withStyle(ChatFormatting.WHITE),
                             Component.translatable(transformerConnection.getTranslationKey()).
                                     withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD)
@@ -251,20 +251,20 @@ public class ConfigurableTransformerBlock extends BaseEntityBlock implements Sim
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.wrench_configurable").
+                components.add(Component.translatable("tooltip.enerjolt.wrench_configurable").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
 
-                components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
+                components.add(Component.translatable("tooltip.enerjolt.transfer_rate.txt",
                                 EnergyUtils.getEnergyWithPrefix(tier.getMaxEnergyTransferFromTier())).
                         withStyle(ChatFormatting.GRAY));
                 components.add(Component.empty());
-                components.add(Component.translatable("tooltip.energizedpower.transformer.txt.shift.1").withStyle(ChatFormatting.GRAY));
-                components.add(Component.translatable("tooltip.energizedpower.transformer.txt.shift.2").
+                components.add(Component.translatable("tooltip.enerjolt.transformer.txt.shift.1").withStyle(ChatFormatting.GRAY));
+                components.add(Component.translatable("tooltip.enerjolt.transformer.txt.shift.2").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-                components.add(Component.translatable("tooltip.energizedpower.transformer.txt.shift.3").
+                components.add(Component.translatable("tooltip.enerjolt.transformer.txt.shift.3").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

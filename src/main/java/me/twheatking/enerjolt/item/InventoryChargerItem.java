@@ -55,7 +55,7 @@ public class InventoryChargerItem extends Item implements MenuProvider {
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower.inventory_charger");
+        return Component.translatable("container.enerjolt.inventory_charger");
     }
 
     @Nullable
@@ -94,18 +94,18 @@ public class InventoryChargerItem extends Item implements MenuProvider {
         int capacity = getCapacity(inventory);
         int maxTransfer = getMaxTransfer(inventory);
 
-        components.add(Component.translatable("tooltip.energizedpower.energy_meter.content.txt",
+        components.add(Component.translatable("tooltip.enerjolt.energy_meter.content.txt",
                         EnergyUtils.getEnergyWithPrefix(energy), EnergyUtils.getEnergyWithPrefix(capacity)).
                 withStyle(ChatFormatting.GRAY));
-        components.add(Component.translatable("tooltip.energizedpower.transfer_rate.txt",
+        components.add(Component.translatable("tooltip.enerjolt.transfer_rate.txt",
                         EnergyUtils.getEnergyWithPrefix(maxTransfer)).
                 withStyle(ChatFormatting.GRAY));
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.inventory_charger.txt.shift.1").
+            components.add(Component.translatable("tooltip.enerjolt.inventory_charger.txt.shift.1").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

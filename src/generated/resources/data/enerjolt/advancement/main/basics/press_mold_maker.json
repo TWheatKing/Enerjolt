@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.press_mold_maker.description"
+      "translate": "advancements.enerjolt.press_mold_maker.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:press_mold_maker"
     },
     "title": {
-      "translate": "advancements.energizedpower.press_mold_maker.title"
+      "translate": "advancements.enerjolt.press_mold_maker.title"
     }
   },
   "requirements": [

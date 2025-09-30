@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.compressor.description"
+      "translate": "advancements.enerjolt.compressor.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:compressor"
     },
     "title": {
-      "translate": "advancements.energizedpower.compressor.title"
+      "translate": "advancements.enerjolt.compressor.title"
     }
   },
   "requirements": [

@@ -97,7 +97,7 @@ public class PlantGrowthChamberEMIRecipe implements EmiRecipe {
         for(int i = 0;i < outputsWithPercentages.length;i++) {
             SlotWidget outputSlot = outputSlots[i % 4];
 
-            Component oddsText = Component.translatable("recipes.energizedpower.transfer.output_percentages");
+            Component oddsText = Component.translatable("recipes.enerjolt.transfer.output_percentages");
 
             if(i >= 4 || i + 4 < outputsWithPercentages.length) {
                 outputSlot.appendTooltip(Component.translatable(outputsWithPercentages[i].output().getDescriptionId()).
@@ -115,7 +115,7 @@ public class PlantGrowthChamberEMIRecipe implements EmiRecipe {
             }
         }
 
-        Component ticksText = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component ticksText = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         widgets.addText(ticksText.getVisualOrderText(),
                 widgets.getWidth() - Minecraft.getInstance().font.width(ticksText),
                 widgets.getHeight() - Minecraft.getInstance().font.lineHeight, ChatFormatting.WHITE.getColor(), false);

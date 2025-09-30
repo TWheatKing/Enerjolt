@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energized_copper_plate.description"
+      "translate": "advancements.enerjolt.energized_copper_plate.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:energized_copper_plate"
     },
     "title": {
-      "translate": "advancements.energizedpower.energized_copper_plate.title"
+      "translate": "advancements.enerjolt.energized_copper_plate.title"
     }
   },
   "requirements": [

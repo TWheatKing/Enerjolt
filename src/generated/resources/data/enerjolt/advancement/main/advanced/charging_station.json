@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.charging_station.description"
+      "translate": "advancements.enerjolt.charging_station.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:charging_station"
     },
     "title": {
-      "translate": "advancements.energizedpower.charging_station.title"
+      "translate": "advancements.enerjolt.charging_station.title"
     }
   },
   "requirements": [

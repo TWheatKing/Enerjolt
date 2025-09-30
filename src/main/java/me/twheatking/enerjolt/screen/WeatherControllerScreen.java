@@ -89,8 +89,8 @@ public class WeatherControllerScreen
 
     private void renderInfoText(GuiGraphics guiGraphics, int x, int y) {
         Component component = menu.hasEnoughEnergy()?
-                Component.translatable("tooltip.energizedpower.ready.txt").withStyle(ChatFormatting.DARK_GREEN):
-                Component.translatable("tooltip.energizedpower.not_enough_energy.txt").withStyle(ChatFormatting.RED);
+                Component.translatable("tooltip.enerjolt.ready.txt").withStyle(ChatFormatting.DARK_GREEN):
+                Component.translatable("tooltip.enerjolt.not_enough_energy.txt").withStyle(ChatFormatting.RED);
 
         int componentWidth = font.width(component);
 
@@ -105,21 +105,21 @@ public class WeatherControllerScreen
             //Weather clear button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.weather_controller.btn.clear"));
+            components.add(Component.translatable("tooltip.enerjolt.weather_controller.btn.clear"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(88, 34, 18, 18, mouseX, mouseY)) {
             //Weather rain button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.weather_controller.btn.rain"));
+            components.add(Component.translatable("tooltip.enerjolt.weather_controller.btn.rain"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(124, 34, 18, 18, mouseX, mouseY)) {
             //Weather thunder button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.weather_controller.btn.thunder"));
+            components.add(Component.translatable("tooltip.enerjolt.weather_controller.btn.thunder"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

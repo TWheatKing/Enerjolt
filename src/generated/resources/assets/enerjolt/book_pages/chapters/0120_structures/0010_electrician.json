@@ -7,7 +7,7 @@
         "extra": [
           "\n\n"
         ],
-        "translate": "book.energizedpower.page.electrician.title"
+        "translate": "book.enerjolt.page.electrician.title"
       },
       {
         "bold": true,
@@ -16,7 +16,7 @@
           "\n\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.electrician.1"
+        "translate": "book.enerjolt.page.electrician.1"
       },
       {
         "bold": true,
@@ -25,13 +25,13 @@
           "\n\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.electrician.2"
+        "translate": "book.enerjolt.page.electrician.2"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.electrician.3"
+        "translate": "book.enerjolt.page.electrician.3"
       }
     ],
     "text": ""

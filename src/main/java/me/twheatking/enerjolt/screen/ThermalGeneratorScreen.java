@@ -18,11 +18,11 @@ public class ThermalGeneratorScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<ThermalGeneratorMenu> {
     public ThermalGeneratorScreen(ThermalGeneratorMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.thermal_generator.txt",
+                "tooltip.enerjolt.thermal_generator.txt",
                 EJOLTAPI.id("textures/gui/container/thermal_generator.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_energy_capacity.png"));
 
-        energyPerTickBarTooltipComponentID = "tooltip.energizedpower.energy_production_per_tick.txt";
+        energyPerTickBarTooltipComponentID = "tooltip.enerjolt.energy_production_per_tick.txt";
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ThermalGeneratorScreen
 
             int fluidAmount = fluidEmpty?0:menu.getFluid().getAmount();
 
-            Component tooltipComponent = Component.translatable("tooltip.energizedpower.fluid_meter.content_amount.txt",
+            Component tooltipComponent = Component.translatable("tooltip.enerjolt.fluid_meter.content_amount.txt",
                     FluidUtils.getFluidAmountWithPrefix(fluidAmount), FluidUtils.getFluidAmountWithPrefix(menu.getTankCapacity()));
 
             if(!fluidEmpty) {

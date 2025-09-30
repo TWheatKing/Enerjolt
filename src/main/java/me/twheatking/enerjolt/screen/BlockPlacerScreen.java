@@ -19,7 +19,7 @@ public class BlockPlacerScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<BlockPlacerMenu> {
     public BlockPlacerScreen(BlockPlacerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.block_placer.block_energy_left.txt",
+                "tooltip.enerjolt.block_placer.block_energy_left.txt",
                 EJOLTAPI.id("textures/gui/container/block_placer.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }
@@ -67,7 +67,7 @@ public class BlockPlacerScreen
             //Inverse rotation checkbox
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.block_placer.cbx.inverse_rotation"));
+            components.add(Component.translatable("tooltip.enerjolt.block_placer.cbx.inverse_rotation"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

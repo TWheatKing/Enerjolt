@@ -6,7 +6,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.weather_controller"
+        "translate": "book.enerjolt.page.weather_controller"
       }
     ],
     "text": ""

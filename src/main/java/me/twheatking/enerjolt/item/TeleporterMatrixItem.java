@@ -83,14 +83,14 @@ public class TeleporterMatrixItem extends Item {
         if(state.is(EnerjoltBlocks.TELEPORTER.get())) {
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.teleporter_matrix.set").
+                        Component.translatable("tooltip.enerjolt.teleporter_matrix.set").
                                 withStyle(ChatFormatting.GREEN)
                 ));
             }
         }else {
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.teleporter_matrix.set.warning").
+                        Component.translatable("tooltip.enerjolt.teleporter_matrix.set.warning").
                                 withStyle(ChatFormatting.YELLOW)
                 ));
             }
@@ -111,7 +111,7 @@ public class TeleporterMatrixItem extends Item {
 
         if(player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter_matrix.cleared").
+                    Component.translatable("tooltip.enerjolt.teleporter_matrix.cleared").
                             withStyle(ChatFormatting.GREEN)
             ));
         }
@@ -125,28 +125,28 @@ public class TeleporterMatrixItem extends Item {
         boolean linked = isLinked(itemStack) && dimPos != null;
 
 
-        components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.status").withStyle(ChatFormatting.GRAY).
-                append(Component.translatable("tooltip.energizedpower.teleporter_matrix.status." +
+        components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.status").withStyle(ChatFormatting.GRAY).
+                append(Component.translatable("tooltip.enerjolt.teleporter_matrix.status." +
                         (linked?"linked":"unlinked")).withStyle(linked?ChatFormatting.GREEN:ChatFormatting.RED)));
 
         if(linked) {
             components.add(Component.empty());
 
-           components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.location").
+           components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.location").
                    append(Component.literal(dimPos.x() + " " + dimPos.y() + " " + dimPos.z())));
-           components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.dimension").
+           components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.dimension").
                    append(Component.literal(dimPos.dimensionId().toString())));
         }
 
         components.add(Component.empty());
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.txt.shift.1").
+            components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.txt.shift.1").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-            components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.txt.shift.2").
+            components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.txt.shift.2").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

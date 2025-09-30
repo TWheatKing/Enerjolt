@@ -16,13 +16,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.solar_panels.1"
+        "translate": "book.enerjolt.page.solar_panels.1"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.solar_panels.2"
+        "translate": "book.enerjolt.page.solar_panels.2"
       }
     ],
     "text": ""

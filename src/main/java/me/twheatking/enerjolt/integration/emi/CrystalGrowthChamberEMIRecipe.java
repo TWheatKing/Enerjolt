@@ -79,7 +79,7 @@ public class CrystalGrowthChamberEMIRecipe implements EmiRecipe {
         widgets.addSlot(input.get(0), 0, 4).drawBack(false);
         SlotWidget outputSlot = widgets.addSlot(output.get(0), 76, 4).drawBack(false).recipeContext(this);
         {
-            outputSlot.appendTooltip(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+            outputSlot.appendTooltip(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
             double[] percentages = outputWithPercentages.percentages();
             for(int i = 0;i < percentages.length;i++)
@@ -87,7 +87,7 @@ public class CrystalGrowthChamberEMIRecipe implements EmiRecipe {
 
         }
 
-        Component ticksText = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component ticksText = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         widgets.addText(ticksText.getVisualOrderText(),
                 widgets.getWidth() - Minecraft.getInstance().font.width(ticksText),
                 widgets.getHeight() - Minecraft.getInstance().font.lineHeight, ChatFormatting.WHITE.getColor(), false);

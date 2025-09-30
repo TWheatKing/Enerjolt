@@ -29,7 +29,7 @@ public class FluidTransposerCategory implements DisplayCategory<FluidTransposerD
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.fluid_transposer");
+        return Component.translatable("container.enerjolt.fluid_transposer");
     }
 
     @Override
@@ -77,7 +77,7 @@ public class FluidTransposerCategory implements DisplayCategory<FluidTransposerD
         }
 
         widgets.add(Widgets.createTooltip(new Rectangle(x + 119, y + 4, 20, 20),
-                List.of(Component.translatable("tooltip.energizedpower.fluid_transposer.mode." +
+                List.of(Component.translatable("tooltip.enerjolt.fluid_transposer.mode." +
                         display.recipe().value().getMode().getSerializedName()))));
 
         return widgets;

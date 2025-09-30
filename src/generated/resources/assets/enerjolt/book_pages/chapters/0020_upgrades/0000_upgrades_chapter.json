@@ -2,7 +2,7 @@
   "content": {
     "extra": [
       {
-        "translate": "book.energizedpower.page.chapter.upgrades"
+        "translate": "book.enerjolt.page.chapter.upgrades"
       },
       {
         "bold": true,
@@ -17,10 +17,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.table_of_contents.title",
+            "translate": "book.enerjolt.page.table_of_contents.title",
             "underlined": true
           }
         ],
@@ -33,6 +33,6 @@
   "image": "enerjolt:textures/item/speed_upgrade_module_1.png",
   "title": {
     "color": "gold",
-    "translate": "book.energizedpower.page.chapter.upgrades.title"
+    "translate": "book.enerjolt.page.chapter.upgrades.title"
   }
 }

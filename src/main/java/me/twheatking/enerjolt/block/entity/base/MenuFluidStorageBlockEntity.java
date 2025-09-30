@@ -32,6 +32,6 @@ public abstract class MenuFluidStorageBlockEntity<F extends IFluidHandler>
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower." + machineName);
+        return Component.translatable("container.enerjolt." + machineName);
     }
 }

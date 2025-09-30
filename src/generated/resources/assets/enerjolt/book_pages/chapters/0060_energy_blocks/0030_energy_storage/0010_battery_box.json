@@ -9,7 +9,7 @@
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.battery_box"
+        "translate": "book.enerjolt.page.battery_box"
       }
     ],
     "text": ""

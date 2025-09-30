@@ -146,11 +146,11 @@ public class ItemSiloBlock extends BaseEntityBlock {
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.item_silo_capacity.txt", tier.getItemSiloCapacity()).withStyle(ChatFormatting.GRAY));
+                components.add(Component.translatable("tooltip.enerjolt.item_silo_capacity.txt", tier.getItemSiloCapacity()).withStyle(ChatFormatting.GRAY));
 
-                components.add(Component.translatable("tooltip.energizedpower.item_silo.txt.shift").withStyle(ChatFormatting.GRAY));
+                components.add(Component.translatable("tooltip.enerjolt.item_silo.txt.shift").withStyle(ChatFormatting.GRAY));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

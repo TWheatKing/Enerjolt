@@ -74,7 +74,7 @@ public abstract  class PageContentProvider implements DataProvider {
         return component.withStyle(ChatFormatting.BLUE, ChatFormatting.UNDERLINE).withStyle(Style.EMPTY.
                 withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, link)).
                 withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-                        Component.translatable("book.energizedpower.tooltip.link"))));
+                        Component.translatable("book.enerjolt.tooltip.link"))));
     }
 
     protected PageContent addSimplePage(String pageId, @Nullable Component content) {

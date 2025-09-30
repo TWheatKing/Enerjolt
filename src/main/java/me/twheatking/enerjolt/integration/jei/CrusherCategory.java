@@ -36,7 +36,7 @@ public class CrusherCategory implements IRecipeCategory<RecipeHolder<CrusherReci
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.crusher");
+        return Component.translatable("container.enerjolt.crusher");
     }
 
     @Override

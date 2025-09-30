@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energy_analyzer.description"
+      "translate": "advancements.enerjolt.energy_analyzer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:energy_analyzer"
     },
     "title": {
-      "translate": "advancements.energizedpower.energy_analyzer.title"
+      "translate": "advancements.enerjolt.energy_analyzer.title"
     }
   },
   "requirements": [

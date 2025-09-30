@@ -72,12 +72,12 @@ public class PlantGrowthChamberFertilizerEMIRecipe implements EmiRecipe {
 
         widgets.addSlot(input.get(0), 0, 0).drawBack(false);
 
-        Component speedMultiplierText = Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.speed_multiplier", speedMultiplier);
+        Component speedMultiplierText = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.speed_multiplier", speedMultiplier);
         widgets.addText(speedMultiplierText.getVisualOrderText(),
                 widgets.getWidth() - Minecraft.getInstance().font.width(speedMultiplierText),
                 widgets.getHeight() - Minecraft.getInstance().font.lineHeight - 17, ChatFormatting.WHITE.getColor(), false);
 
-        Component energyConsumptionMultiplierText = Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.energy_consumption_multiplier",
+        Component energyConsumptionMultiplierText = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.energy_consumption_multiplier",
                 energyConsumptionMultiplier);
         widgets.addText(energyConsumptionMultiplierText.getVisualOrderText(),
                 widgets.getWidth() - Minecraft.getInstance().font.width(energyConsumptionMultiplierText),

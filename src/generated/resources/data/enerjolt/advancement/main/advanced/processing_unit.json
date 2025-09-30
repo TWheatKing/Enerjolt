@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.processing_unit.description"
+      "translate": "advancements.enerjolt.processing_unit.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:processing_unit"
     },
     "title": {
-      "translate": "advancements.energizedpower.processing_unit.title"
+      "translate": "advancements.enerjolt.processing_unit.title"
     }
   },
   "requirements": [

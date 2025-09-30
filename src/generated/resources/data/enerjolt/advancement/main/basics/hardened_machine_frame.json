@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.hardened_machine_frame.description"
+      "translate": "advancements.enerjolt.hardened_machine_frame.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:hardened_machine_frame"
     },
     "title": {
-      "translate": "advancements.energizedpower.hardened_machine_frame.title"
+      "translate": "advancements.enerjolt.hardened_machine_frame.title"
     }
   },
   "requirements": [

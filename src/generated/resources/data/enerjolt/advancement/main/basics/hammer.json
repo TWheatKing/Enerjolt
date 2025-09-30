@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.hammer.description"
+      "translate": "advancements.enerjolt.hammer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:iron_hammer"
     },
     "title": {
-      "translate": "advancements.energizedpower.hammer.title"
+      "translate": "advancements.enerjolt.hammer.title"
     }
   },
   "requirements": [

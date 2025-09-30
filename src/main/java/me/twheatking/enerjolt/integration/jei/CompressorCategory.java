@@ -39,7 +39,7 @@ public class CompressorCategory implements IRecipeCategory<RecipeHolder<Compress
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.compressor");
+        return Component.translatable("container.enerjolt.compressor");
     }
 
     @Override

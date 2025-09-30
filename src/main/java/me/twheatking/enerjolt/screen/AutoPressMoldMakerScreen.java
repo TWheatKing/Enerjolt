@@ -22,7 +22,7 @@ public class AutoPressMoldMakerScreen
         extends SelectableRecipeMachineContainerScreen<PressMoldMakerRecipe, AutoPressMoldMakerMenu> {
     public AutoPressMoldMakerScreen(AutoPressMoldMakerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/auto_press_mold_maker.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_speed_1_energy_efficiency_1_energy_capacity.png"));
     }
@@ -37,9 +37,9 @@ public class AutoPressMoldMakerScreen
         ItemStack output = currentRecipe.value().getOutput();
         if(!output.isEmpty()) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.count_with_item.txt", output.getCount(),
+            components.add(Component.translatable("tooltip.enerjolt.count_with_item.txt", output.getCount(),
                     output.getHoverName()));
-            components.add(Component.translatable("tooltip.energizedpower.press_mold_maker.btn.recipes", currentRecipe.value().getClayCount(),
+            components.add(Component.translatable("tooltip.enerjolt.press_mold_maker.btn.recipes", currentRecipe.value().getClayCount(),
                     Component.translatable(Items.CLAY_BALL.getDescriptionId())).withStyle(ChatFormatting.ITALIC));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
@@ -69,7 +69,7 @@ public class AutoPressMoldMakerScreen
         if(isHovering(57, 44, 16, 16, mouseX, mouseY) &&
                 menu.getSlot(4 * 9 + 1).getItem().isEmpty()) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.auto_press_mold_maker.shovel_missing").
+            components.add(Component.translatable("tooltip.enerjolt.auto_press_mold_maker.shovel_missing").
                     withStyle(ChatFormatting.RED));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);

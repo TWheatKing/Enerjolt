@@ -58,7 +58,7 @@ public class InventoryTeleporterItem extends EnerjoltEnergyItem implements MenuP
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("container.energizedpower.inventory_teleporter");
+        return Component.translatable("container.enerjolt.inventory_teleporter");
     }
 
     @Nullable
@@ -77,28 +77,28 @@ public class InventoryTeleporterItem extends EnerjoltEnergyItem implements MenuP
         DimensionalPositionComponent dimPos = teleporterMatrixItemStack.get(EnerjoltDataComponentTypes.DIMENSIONAL_POSITION);
         boolean linked = TeleporterMatrixItem.isLinked(teleporterMatrixItemStack) && dimPos != null;
 
-        components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.status").withStyle(ChatFormatting.GRAY).
-                append(Component.translatable("tooltip.energizedpower.teleporter_matrix.status." +
+        components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.status").withStyle(ChatFormatting.GRAY).
+                append(Component.translatable("tooltip.enerjolt.teleporter_matrix.status." +
                         (linked?"linked":"unlinked")).withStyle(linked?ChatFormatting.GREEN:ChatFormatting.RED)));
 
         if(linked) {
             components.add(Component.empty());
 
-            components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.location").
+            components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.location").
                     append(Component.literal(dimPos.x() + " " + dimPos.y() + " " + dimPos.z())));
-            components.add(Component.translatable("tooltip.energizedpower.teleporter_matrix.dimension").
+            components.add(Component.translatable("tooltip.enerjolt.teleporter_matrix.dimension").
                     append(Component.literal(dimPos.dimensionId().toString())));
         }
 
         components.add(Component.empty());
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.inventory_teleporter.txt.shift.1").
+            components.add(Component.translatable("tooltip.enerjolt.inventory_teleporter.txt.shift.1").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
-            components.add(Component.translatable("tooltip.energizedpower.inventory_teleporter.txt.shift.2").
+            components.add(Component.translatable("tooltip.enerjolt.inventory_teleporter.txt.shift.2").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

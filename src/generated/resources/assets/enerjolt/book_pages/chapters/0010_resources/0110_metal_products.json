@@ -8,13 +8,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.metal_products.1"
+        "translate": "book.enerjolt.page.metal_products.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.metal_products.2"
+        "translate": "book.enerjolt.page.metal_products.2"
       }
     ],
     "text": ""

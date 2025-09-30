@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.alloy_furnace.description"
+      "translate": "advancements.enerjolt.alloy_furnace.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:alloy_furnace"
     },
     "title": {
-      "translate": "advancements.energizedpower.alloy_furnace.title"
+      "translate": "advancements.enerjolt.alloy_furnace.title"
     }
   },
   "requirements": [

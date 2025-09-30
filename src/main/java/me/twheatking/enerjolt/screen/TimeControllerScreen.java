@@ -91,8 +91,8 @@ public class TimeControllerScreen extends EnergyStorageContainerScreen<TimeContr
 
     private void renderInfoText(GuiGraphics guiGraphics, int x, int y) {
         Component component = menu.getEnergy() < TimeControllerBlockEntity.CAPACITY?
-                Component.translatable("tooltip.energizedpower.not_enough_energy.txt").withStyle(ChatFormatting.RED):
-                Component.translatable("tooltip.energizedpower.ready.txt").withStyle(ChatFormatting.DARK_GREEN);
+                Component.translatable("tooltip.enerjolt.not_enough_energy.txt").withStyle(ChatFormatting.RED):
+                Component.translatable("tooltip.enerjolt.ready.txt").withStyle(ChatFormatting.DARK_GREEN);
 
         int componentWidth = font.width(component);
 
@@ -107,28 +107,28 @@ public class TimeControllerScreen extends EnergyStorageContainerScreen<TimeContr
             //Day button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.time_controller.btn.day"));
+            components.add(Component.translatable("tooltip.enerjolt.time_controller.btn.day"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(70, 34, 18, 18, mouseX, mouseY)) {
             //Noon button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.time_controller.btn.noon"));
+            components.add(Component.translatable("tooltip.enerjolt.time_controller.btn.noon"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(106, 34, 18, 18, mouseX, mouseY)) {
             //Night button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.time_controller.btn.night"));
+            components.add(Component.translatable("tooltip.enerjolt.time_controller.btn.night"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }else if(isHovering(142, 34, 18, 18, mouseX, mouseY)) {
             //Midnight button
 
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.time_controller.btn.midnight"));
+            components.add(Component.translatable("tooltip.enerjolt.time_controller.btn.midnight"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

@@ -14,7 +14,7 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energized_crystal_matrix_cable.description"
+      "translate": "advancements.enerjolt.energized_crystal_matrix_cable.description"
     },
     "frame": "challenge",
     "icon": {
@@ -22,7 +22,7 @@
       "id": "enerjolt:energized_crystal_matrix_cable"
     },
     "title": {
-      "translate": "advancements.energizedpower.energized_crystal_matrix_cable.title"
+      "translate": "advancements.enerjolt.energized_crystal_matrix_cable.title"
     }
   },
   "requirements": [

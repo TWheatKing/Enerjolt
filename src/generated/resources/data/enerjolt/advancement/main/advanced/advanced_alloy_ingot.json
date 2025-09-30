@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.advanced_alloy_ingot.description"
+      "translate": "advancements.enerjolt.advanced_alloy_ingot.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:advanced_alloy_ingot"
     },
     "title": {
-      "translate": "advancements.energizedpower.advanced_alloy_ingot.title"
+      "translate": "advancements.enerjolt.advanced_alloy_ingot.title"
     }
   },
   "requirements": [

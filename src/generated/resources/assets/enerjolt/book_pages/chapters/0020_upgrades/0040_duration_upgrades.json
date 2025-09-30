@@ -8,13 +8,13 @@
           "\n"
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.duration_upgrades.1"
+        "translate": "book.enerjolt.page.duration_upgrades.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.duration_upgrades.2"
+        "translate": "book.enerjolt.page.duration_upgrades.2"
       }
     ],
     "text": ""

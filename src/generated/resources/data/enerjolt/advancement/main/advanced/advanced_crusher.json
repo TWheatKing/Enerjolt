@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.advanced_crusher.description"
+      "translate": "advancements.enerjolt.advanced_crusher.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:advanced_crusher"
     },
     "title": {
-      "translate": "advancements.energizedpower.advanced_crusher.title"
+      "translate": "advancements.enerjolt.advanced_crusher.title"
     }
   },
   "requirements": [

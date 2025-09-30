@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.range_upgrade_module_2.description"
+      "translate": "advancements.enerjolt.range_upgrade_module_2.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:range_upgrade_module_2"
     },
     "title": {
-      "translate": "advancements.energizedpower.range_upgrade_module_2.title"
+      "translate": "advancements.enerjolt.range_upgrade_module_2.title"
     }
   },
   "requirements": [

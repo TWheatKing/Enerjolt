@@ -35,11 +35,11 @@ public class EnergyAnalyzerItem extends EnerjoltEnergyItem {
         super.appendHoverText(itemStack, context, components, tooltipFlag);
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.energy_analyzer.txt.shift.1").withStyle(ChatFormatting.GRAY));
-            components.add(Component.translatable("tooltip.energizedpower.energy_analyzer.txt.shift.2",
+            components.add(Component.translatable("tooltip.enerjolt.energy_analyzer.txt.shift.1").withStyle(ChatFormatting.GRAY));
+            components.add(Component.translatable("tooltip.enerjolt.energy_analyzer.txt.shift.2",
                     EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.GRAY));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 
@@ -54,22 +54,22 @@ public class EnergyAnalyzerItem extends EnerjoltEnergyItem {
 
     private void addOutputTextForEnergyStorage(List<Component> components, @Nullable IEnergyStorage energyStorage, boolean blockFaceSpecificInformation) {
         if(energyStorage == null) {
-            components.add(Component.translatable("txt.energizedpower.energy_analyzer.no_energy_block" + (blockFaceSpecificInformation?"_side":"")).
+            components.add(Component.translatable("txt.enerjolt.energy_analyzer.no_energy_block" + (blockFaceSpecificInformation?"_side":"")).
                     withStyle(ChatFormatting.RED));
 
             return;
         }
 
-        components.add(Component.translatable("txt.energizedpower.energy_analyzer.energy_output",
+        components.add(Component.translatable("txt.enerjolt.energy_analyzer.energy_output",
                 EnergyUtils.getEnergyWithPrefix(energyStorage.getEnergyStored()),
                 EnergyUtils.getEnergyWithPrefix(energyStorage.getMaxEnergyStored())).withStyle(ChatFormatting.GOLD));
 
         if(energyStorage.canReceive())
-            components.add(Component.translatable("txt.energizedpower.energy_analyzer.energy_can_receive" + (blockFaceSpecificInformation?"_side":"")).
+            components.add(Component.translatable("txt.enerjolt.energy_analyzer.energy_can_receive" + (blockFaceSpecificInformation?"_side":"")).
                     withStyle(ChatFormatting.GOLD));
 
         if(energyStorage.canExtract())
-            components.add(Component.translatable("txt.energizedpower.energy_analyzer.energy_can_extract" + (blockFaceSpecificInformation?"_side":"")).
+            components.add(Component.translatable("txt.enerjolt.energy_analyzer.energy_can_extract" + (blockFaceSpecificInformation?"_side":"")).
                     withStyle(ChatFormatting.GOLD));
     }
 
@@ -81,7 +81,7 @@ public class EnergyAnalyzerItem extends EnerjoltEnergyItem {
 
         if(getEnergy(stack) < ENERGY_CONSUMPTION_PER_USE) {
             useItem(stack, useOnContext.getPlayer(), List.of(
-                    Component.translatable("txt.energizedpower.energy_analyzer.no_energy_left",
+                    Component.translatable("txt.enerjolt.energy_analyzer.no_energy_left",
                             EnergyUtils.getEnergyWithPrefix(ENERGY_CONSUMPTION_PER_USE)).withStyle(ChatFormatting.RED)
             ));
 
@@ -98,7 +98,7 @@ public class EnergyAnalyzerItem extends EnerjoltEnergyItem {
         IEnergyStorage energyStorage = level.getCapability(Capabilities.EnergyStorage.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, null);
         addOutputTextForEnergyStorage(components, energyStorage, false);
 
-        components.add(Component.translatable("txt.energizedpower.energy_analyzer.output_side_information").withStyle(ChatFormatting.BLUE));
+        components.add(Component.translatable("txt.enerjolt.energy_analyzer.output_side_information").withStyle(ChatFormatting.BLUE));
         IEnergyStorage energyStorageSided = level.getCapability(Capabilities.EnergyStorage.BLOCK, blockPos, level.getBlockState(blockPos), blockEntity, useOnContext.getClickedFace());
         addOutputTextForEnergyStorage(components, energyStorageSided, true);
 

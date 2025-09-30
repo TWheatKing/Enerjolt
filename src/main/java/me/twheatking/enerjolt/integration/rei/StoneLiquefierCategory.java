@@ -24,7 +24,7 @@ public class StoneLiquefierCategory implements DisplayCategory<StoneLiquefierDis
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.stone_liquefier");
+        return Component.translatable("container.enerjolt.stone_liquefier");
     }
 
     @Override

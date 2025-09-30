@@ -9,13 +9,13 @@
           " "
         ],
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.stone_liquefier.1"
+        "translate": "book.enerjolt.page.stone_liquefier.1"
       },
       {
         "color": "black",
         "font": "minecraft:uniform",
         "italic": true,
-        "translate": "book.energizedpower.page.stone_liquefier.2"
+        "translate": "book.enerjolt.page.stone_liquefier.2"
       }
     ],
     "text": ""

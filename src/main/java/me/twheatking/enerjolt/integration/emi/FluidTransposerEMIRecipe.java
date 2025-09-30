@@ -110,7 +110,7 @@ public class FluidTransposerEMIRecipe implements EmiRecipe {
                     120, 5, 16, 16, 0, 0, 16, 16, 16, 16);
         }
 
-        widgets.addTooltipText(List.of(Component.translatable("tooltip.energizedpower.fluid_transposer.mode." + mode.getSerializedName())),
+        widgets.addTooltipText(List.of(Component.translatable("tooltip.enerjolt.fluid_transposer.mode." + mode.getSerializedName())),
                 118, 3, 20, 20);
     }
 }

@@ -42,8 +42,8 @@ public class WrenchItem extends Item {
         itemStack.set(EnerjoltDataComponentTypes.CURRENT_FACE, currentFace);
 
         player.connection.send(new ClientboundSetActionBarTextPacket(
-                Component.translatable("tooltip.energizedpower.wrench.select_face",
-                        Component.translatable("tooltip.energizedpower.direction." + currentFace.getSerializedName()).
+                Component.translatable("tooltip.enerjolt.wrench.select_face",
+                        Component.translatable("tooltip.enerjolt.direction." + currentFace.getSerializedName()).
                                 withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD)
                 ).withStyle(ChatFormatting.GRAY)
         ));
@@ -63,7 +63,7 @@ public class WrenchItem extends Item {
         if(!(block instanceof WrenchConfigurable wrenchConfigurableBlock)) {
             if(player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                        Component.translatable("tooltip.energizedpower.wrench.not_configurable").withStyle(ChatFormatting.RED)
+                        Component.translatable("tooltip.enerjolt.wrench.not_configurable").withStyle(ChatFormatting.RED)
                 ));
             }
 
@@ -114,16 +114,16 @@ public class WrenchItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag tooltipFlag) {
         Direction currentFace = getCurrentFace(itemStack);
-        components.add(Component.translatable("tooltip.energizedpower.wrench.select_face",
-                Component.translatable("tooltip.energizedpower.direction." + currentFace.getSerializedName()).
+        components.add(Component.translatable("tooltip.enerjolt.wrench.select_face",
+                Component.translatable("tooltip.enerjolt.direction." + currentFace.getSerializedName()).
                         withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD)
         ).withStyle(ChatFormatting.GRAY));
 
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.energizedpower.wrench.txt.shift").
+            components.add(Component.translatable("tooltip.enerjolt.wrench.txt.shift").
                     withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }else {
-            components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+            components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
         }
     }
 

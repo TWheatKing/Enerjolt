@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.crystal_growth_chamber.description"
+      "translate": "advancements.enerjolt.crystal_growth_chamber.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:crystal_growth_chamber"
     },
     "title": {
-      "translate": "advancements.energizedpower.crystal_growth_chamber.title"
+      "translate": "advancements.enerjolt.crystal_growth_chamber.title"
     }
   },
   "requirements": [

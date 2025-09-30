@@ -42,7 +42,7 @@ public class PlantGrowthChamberFertilizerCategory implements IRecipeCategory<Rec
 
     @Override
     public Component getTitle() {
-        return Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer");
+        return Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer");
     }
 
     @Override
@@ -65,12 +65,12 @@ public class PlantGrowthChamberFertilizerCategory implements IRecipeCategory<Rec
         fertlizerSlot.draw(guiGraphics, 0, 0);
 
         Font font = Minecraft.getInstance().font;
-        Component component = Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.speed_multiplier", recipe.value().getSpeedMultiplier());
+        Component component = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.speed_multiplier", recipe.value().getSpeedMultiplier());
         int textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 144 - textWidth, 5, 0xFFFFFFFF, false);
 
-        component = Component.translatable("recipes.energizedpower.plant_growth_chamber_fertilizer.energy_consumption_multiplier", recipe.value().getEnergyConsumptionMultiplier());
+        component = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.energy_consumption_multiplier", recipe.value().getEnergyConsumptionMultiplier());
         textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 144 - textWidth, 22, 0xFFFFFFFF, false);

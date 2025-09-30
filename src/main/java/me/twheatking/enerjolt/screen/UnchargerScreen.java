@@ -12,10 +12,10 @@ public class UnchargerScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<UnchargerMenu> {
     public UnchargerScreen(UnchargerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.uncharger.item_energy_left.txt",
+                "tooltip.enerjolt.uncharger.item_energy_left.txt",
                 EJOLTAPI.id("textures/gui/container/uncharger.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/1_energy_capacity.png"));
 
-        energyPerTickBarTooltipComponentID = "tooltip.energizedpower.energy_production_per_tick.txt";
+        energyPerTickBarTooltipComponentID = "tooltip.enerjolt.energy_production_per_tick.txt";
     }
 }

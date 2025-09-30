@@ -37,7 +37,7 @@ public class StoneSolidifierCategory implements IRecipeCategory<RecipeHolder<Sto
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.stone_solidifier");
+        return Component.translatable("container.enerjolt.stone_solidifier");
     }
 
     @Override

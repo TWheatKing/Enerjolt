@@ -5,7 +5,7 @@ import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.CraftPressMoldMakerRecipeC2SPacket;
 import me.twheatking.enerjolt.recipe.PressMoldMakerRecipe;
-import me.twheatking.enerjolt.screen.base.EnergizedPowerBaseContainerScreen;
+import me.twheatking.enerjolt.screen.base.EnerjoltBaseContainerScreen;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.GameRenderer;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 @OnlyIn(Dist.CLIENT)
-public class PressMoldMakerScreen extends EnergizedPowerBaseContainerScreen<PressMoldMakerMenu> {
+public class PressMoldMakerScreen extends EnerjoltBaseContainerScreen<PressMoldMakerMenu> {
     private final ResourceLocation TEXTURE;
 
     private int scrollIndexOffset = 0;
@@ -156,9 +156,9 @@ public class PressMoldMakerScreen extends EnergizedPowerBaseContainerScreen<Pres
                 ItemStack output = recipe.getOutput();
                 if(!output.isEmpty()) {
                     List<Component> components = new ArrayList<>(2);
-                    components.add(Component.translatable("tooltip.energizedpower.count_with_item.txt", output.getCount(),
+                    components.add(Component.translatable("tooltip.enerjolt.count_with_item.txt", output.getCount(),
                             output.getHoverName()));
-                    components.add(Component.translatable("tooltip.energizedpower.press_mold_maker.btn.recipes", recipe.getClayCount(),
+                    components.add(Component.translatable("tooltip.enerjolt.press_mold_maker.btn.recipes", recipe.getClayCount(),
                             Component.translatable(Items.CLAY_BALL.getDescriptionId())).withStyle(ChatFormatting.ITALIC));
 
                     guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
@@ -169,7 +169,7 @@ public class PressMoldMakerScreen extends EnergizedPowerBaseContainerScreen<Pres
         //Up button
         if(isHovering(155, 19, 11, 12, mouseX, mouseY)) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.press_mold_maker.btn.up"));
+            components.add(Component.translatable("tooltip.enerjolt.press_mold_maker.btn.up"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }
@@ -177,7 +177,7 @@ public class PressMoldMakerScreen extends EnergizedPowerBaseContainerScreen<Pres
         //Down button
         if(isHovering(155, 55, 11, 12, mouseX, mouseY)) {
             List<Component> components = new ArrayList<>(2);
-            components.add(Component.translatable("tooltip.energizedpower.press_mold_maker.btn.down"));
+            components.add(Component.translatable("tooltip.enerjolt.press_mold_maker.btn.down"));
 
             guiGraphics.renderTooltip(font, components, Optional.empty(), mouseX, mouseY);
         }

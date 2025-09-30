@@ -21,10 +21,10 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import org.joml.Matrix4f;
 
 @OnlyIn(Dist.CLIENT)
-public abstract class EnergizedPowerBaseContainerScreen<T extends AbstractContainerMenu> extends AbstractContainerScreen<T> {
+public abstract class EnerjoltBaseContainerScreen<T extends AbstractContainerMenu> extends AbstractContainerScreen<T> {
     protected final ResourceLocation MACHINE_SPRITES_TEXTURE = EJOLTAPI.id("textures/gui/container/sprites/machine_sprites.png");
 
-    public EnergizedPowerBaseContainerScreen(T menu, Inventory inventory, Component titleComponent) {
+    public EnerjoltBaseContainerScreen(T menu, Inventory inventory, Component titleComponent) {
         super(menu, inventory, titleComponent);
     }
 

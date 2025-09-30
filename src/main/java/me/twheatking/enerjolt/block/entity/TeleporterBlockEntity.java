@@ -192,7 +192,7 @@ public class TeleporterBlockEntity
 
         if(energyStorage.getEnergyStored() < energyStorage.getMaxEnergyStored()) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.not_enough_energy").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.not_enough_energy").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -201,7 +201,7 @@ public class TeleporterBlockEntity
 
         if(!teleporterMatrixItemStack.is(EnerjoltItems.TELEPORTER_MATRIX.get())) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.no_teleporter_matrix").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.no_teleporter_matrix").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -210,7 +210,7 @@ public class TeleporterBlockEntity
 
         if(!TeleporterMatrixItem.isLinked(teleporterMatrixItemStack)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.teleporter_matrix_not_bound").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.teleporter_matrix_not_bound").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -220,7 +220,7 @@ public class TeleporterBlockEntity
         BlockPos toPos = TeleporterMatrixItem.getBlockPos(level, teleporterMatrixItemStack);
         if(toPos == null) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.teleporter_matrix_invalid_position").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.teleporter_matrix_invalid_position").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -230,7 +230,7 @@ public class TeleporterBlockEntity
         Level toDimension = TeleporterMatrixItem.getDimension(level, teleporterMatrixItemStack);
         if(!(toDimension instanceof ServerLevel)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.teleporter_matrix_invalid_dimension").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.teleporter_matrix_invalid_dimension").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -239,7 +239,7 @@ public class TeleporterBlockEntity
 
         if(pos != null && pos.equals(toPos) && level.dimension().equals(toDimension.dimension())) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.teleporter_self_position").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.teleporter_self_position").
                             withStyle(ChatFormatting.RED)
             ));
 
@@ -254,7 +254,7 @@ public class TeleporterBlockEntity
         //Intra dimensional enabled
         if(intraDimensional && !TeleporterBlockEntity.INTRA_DIMENSIONAL_ENABLED) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.intra_dimensional_disabled",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.intra_dimensional_disabled",
                                     fromDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -265,7 +265,7 @@ public class TeleporterBlockEntity
         //Inter dimensional enabled
         if(!intraDimensional && !TeleporterBlockEntity.INTER_DIMENSIONAL_ENABLED) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.inter_dimensional_disabled",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.inter_dimensional_disabled",
                                     fromDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -276,7 +276,7 @@ public class TeleporterBlockEntity
         //Dimension Blacklist
         if(TeleporterBlockEntity.DIMENSION_BLACKLIST.contains(fromDimensionId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.dimension",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.dimension",
                                     fromDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -285,7 +285,7 @@ public class TeleporterBlockEntity
         }
         if(TeleporterBlockEntity.DIMENSION_BLACKLIST.contains(toDimensionId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.dimension",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.dimension",
                                     toDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -296,7 +296,7 @@ public class TeleporterBlockEntity
         //Intra Dimension Blacklist
         if(intraDimensional && TeleporterBlockEntity.INTRA_DIMENSIONAL_BLACKLIST.contains(fromDimensionId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.intra_dimensional",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.intra_dimensional",
                                     fromDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -307,7 +307,7 @@ public class TeleporterBlockEntity
         //Inter Dimension From Blacklist
         if(!intraDimensional && TeleporterBlockEntity.INTER_DIMENSIONAL_FROM_BLACKLIST.contains(fromDimensionId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.inter_dimensional_from",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_from",
                                     fromDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -318,7 +318,7 @@ public class TeleporterBlockEntity
         //Inter Dimension To Blacklist
         if(!intraDimensional && TeleporterBlockEntity.INTER_DIMENSIONAL_TO_BLACKLIST.contains(toDimensionId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.inter_dimensional_to",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_to",
                                     toDimensionId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -334,7 +334,7 @@ public class TeleporterBlockEntity
         //Dimension Type Blacklist
         if(TeleporterBlockEntity.DIMENSION_TYPE_BLACKLIST.contains(fromDimensionTypeId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.dimension_type",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.dimension_type",
                                     fromDimensionTypeId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -343,7 +343,7 @@ public class TeleporterBlockEntity
         }
         if(TeleporterBlockEntity.DIMENSION_TYPE_BLACKLIST.contains(toDimensionTypeId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.dimension_type",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.dimension_type",
                                     toDimensionTypeId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -354,7 +354,7 @@ public class TeleporterBlockEntity
         //Intra Dimension Type Blacklist
         if(intraDimensional && TeleporterBlockEntity.INTRA_DIMENSIONAL_TYPE_BLACKLIST.contains(fromDimensionTypeId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.intra_dimensional_type",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.intra_dimensional_type",
                                     fromDimensionTypeId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -365,7 +365,7 @@ public class TeleporterBlockEntity
         //Inter Dimension From Type Blacklist
         if(!intraDimensional && TeleporterBlockEntity.INTER_DIMENSIONAL_FROM_TYPE_BLACKLIST.contains(fromDimensionTypeId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.inter_dimensional_from_type",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_from_type",
                                     fromDimensionTypeId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -376,7 +376,7 @@ public class TeleporterBlockEntity
         //Inter Dimension To Type Blacklist
         if(!intraDimensional && TeleporterBlockEntity.INTER_DIMENSIONAL_TO_TYPE_BLACKLIST.contains(toDimensionTypeId)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.blacklist.inter_dimensional_to_type",
+                    Component.translatable("tooltip.enerjolt.teleporter.use.blacklist.inter_dimensional_to_type",
                                     toDimensionTypeId.toString()).
                             withStyle(ChatFormatting.RED)
             ));
@@ -388,7 +388,7 @@ public class TeleporterBlockEntity
         BlockEntity toBlockEntity = toDimension.getBlockEntity(toPos);
         if(!(toBlockEntity instanceof TeleporterBlockEntity)) {
             player.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.teleporter.use.teleporter_matrix_no_teleporter").
+                    Component.translatable("tooltip.enerjolt.teleporter.use.teleporter_matrix_no_teleporter").
                             withStyle(ChatFormatting.RED)
             ));
 

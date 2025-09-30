@@ -28,7 +28,7 @@ public class CompressorCategory implements DisplayCategory<CompressorDisplay> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.compressor");
+        return Component.translatable("container.enerjolt.compressor");
     }
 
     @Override

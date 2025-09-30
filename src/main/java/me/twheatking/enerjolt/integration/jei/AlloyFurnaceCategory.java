@@ -47,7 +47,7 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
 
     @Override
     public Component getTitle() {
-        return Component.translatable("container.energizedpower.alloy_furnace");
+        return Component.translatable("container.enerjolt.alloy_furnace");
     }
 
     @Override
@@ -81,7 +81,7 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
                     if(view.isEmpty())
                         return;
 
-                    tooltip.add(Component.translatable("recipes.energizedpower.transfer.output_percentages"));
+                    tooltip.add(Component.translatable("recipes.enerjolt.transfer.output_percentages"));
 
                     double[] percentages = recipe.value().getSecondaryOutput().percentages();
                     for(int i = 0;i < percentages.length;i++)
@@ -93,7 +93,7 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
     public void draw(RecipeHolder<AlloyFurnaceRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * AlloyFurnaceBlockEntity.RECIPE_DURATION_MULTIPLIER);
-        Component component = Component.translatable("recipes.energizedpower.info.ticks", ticks);
+        Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);
         int textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 147 - textWidth, 29, 0xFFFFFFFF, false);

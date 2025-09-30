@@ -3,7 +3,7 @@
   "content": {
     "extra": [
       {
-        "translate": "book.energizedpower.page.chapter.workbenches"
+        "translate": "book.enerjolt.page.chapter.workbenches"
       },
       {
         "bold": true,
@@ -18,10 +18,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.table_of_contents.title",
+            "translate": "book.enerjolt.page.table_of_contents.title",
             "underlined": true
           }
         ],
@@ -33,6 +33,6 @@
   },
   "title": {
     "color": "gold",
-    "translate": "book.energizedpower.page.chapter.workbenches.title"
+    "translate": "book.enerjolt.page.chapter.workbenches.title"
   }
 }

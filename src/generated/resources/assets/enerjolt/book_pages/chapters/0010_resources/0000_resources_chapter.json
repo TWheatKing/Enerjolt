@@ -2,7 +2,7 @@
   "content": {
     "extra": [
       {
-        "translate": "book.energizedpower.page.chapter.resources.1"
+        "translate": "book.enerjolt.page.chapter.resources.1"
       },
       {
         "bold": true,
@@ -17,10 +17,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.table_of_contents.title",
+            "translate": "book.enerjolt.page.table_of_contents.title",
             "underlined": true
           }
         ],
@@ -33,6 +33,6 @@
   "image": "enerjolt:textures/item/energized_copper_ingot.png",
   "title": {
     "color": "gold",
-    "translate": "book.energizedpower.page.chapter.resources.title"
+    "translate": "book.enerjolt.page.chapter.resources.title"
   }
 }

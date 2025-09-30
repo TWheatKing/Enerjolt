@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fluid_transposer.description"
+      "translate": "advancements.enerjolt.fluid_transposer.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fluid_transposer"
     },
     "title": {
-      "translate": "advancements.energizedpower.fluid_transposer.title"
+      "translate": "advancements.enerjolt.fluid_transposer.title"
     }
   },
   "requirements": [

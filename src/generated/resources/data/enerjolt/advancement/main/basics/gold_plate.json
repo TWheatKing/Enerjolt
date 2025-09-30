@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.gold_plate.description"
+      "translate": "advancements.enerjolt.gold_plate.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:gold_plate"
     },
     "title": {
-      "translate": "advancements.energizedpower.gold_plate.title"
+      "translate": "advancements.enerjolt.gold_plate.title"
     }
   },
   "requirements": [

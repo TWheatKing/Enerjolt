@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.moon_light_upgrade_module_2.description"
+      "translate": "advancements.enerjolt.moon_light_upgrade_module_2.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:moon_light_upgrade_module_2"
     },
     "title": {
-      "translate": "advancements.energizedpower.moon_light_upgrade_module_2.title"
+      "translate": "advancements.enerjolt.moon_light_upgrade_module_2.title"
     }
   },
   "requirements": [

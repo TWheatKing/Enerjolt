@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.energized_power_book.description"
+      "translate": "advancements.enerjolt.energized_power_book.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:enerjolt_book"
     },
     "title": {
-      "translate": "advancements.energizedpower.energized_power_book.title"
+      "translate": "advancements.enerjolt.energized_power_book.title"
     }
   },
   "requirements": [

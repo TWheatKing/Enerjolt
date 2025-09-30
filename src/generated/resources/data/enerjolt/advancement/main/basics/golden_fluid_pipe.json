@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.golden_fluid_pipe.description"
+      "translate": "advancements.enerjolt.golden_fluid_pipe.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:golden_fluid_pipe"
     },
     "title": {
-      "translate": "advancements.energizedpower.golden_fluid_pipe.title"
+      "translate": "advancements.enerjolt.golden_fluid_pipe.title"
     }
   },
   "requirements": [

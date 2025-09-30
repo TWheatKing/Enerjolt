@@ -2,7 +2,7 @@
   "content": {
     "extra": [
       {
-        "translate": "book.energizedpower.page.chapter.tools"
+        "translate": "book.enerjolt.page.chapter.tools"
       },
       {
         "bold": true,
@@ -17,10 +17,10 @@
             "hoverEvent": {
               "action": "show_text",
               "contents": {
-                "translate": "book.energizedpower.tooltip.page"
+                "translate": "book.enerjolt.tooltip.page"
               }
             },
-            "translate": "book.energizedpower.page.table_of_contents.title",
+            "translate": "book.enerjolt.page.table_of_contents.title",
             "underlined": true
           }
         ],
@@ -33,6 +33,6 @@
   "image": "enerjolt:textures/item/stone_hammer.png",
   "title": {
     "color": "gold",
-    "translate": "book.energizedpower.page.chapter.tools.title"
+    "translate": "book.enerjolt.page.chapter.tools.title"
   }
 }

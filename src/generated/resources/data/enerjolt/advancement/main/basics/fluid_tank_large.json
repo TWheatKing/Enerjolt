@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fluid_tank_large.description"
+      "translate": "advancements.enerjolt.fluid_tank_large.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fluid_tank_large"
     },
     "title": {
-      "translate": "advancements.energizedpower.fluid_tank_large.title"
+      "translate": "advancements.enerjolt.fluid_tank_large.title"
     }
   },
   "requirements": [

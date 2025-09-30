@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.auto_crafter.description"
+      "translate": "advancements.enerjolt.auto_crafter.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:auto_crafter"
     },
     "title": {
-      "translate": "advancements.energizedpower.auto_crafter.title"
+      "translate": "advancements.enerjolt.auto_crafter.title"
     }
   },
   "requirements": [

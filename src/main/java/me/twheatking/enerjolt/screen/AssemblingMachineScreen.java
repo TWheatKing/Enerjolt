@@ -13,7 +13,7 @@ public class AssemblingMachineScreen
         extends ConfigurableUpgradableEnergyStorageContainerScreen<AssemblingMachineMenu> {
     public AssemblingMachineScreen(AssemblingMachineMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component,
-                "tooltip.energizedpower.recipe.energy_required_to_finish.txt",
+                "tooltip.enerjolt.recipe.energy_required_to_finish.txt",
                 EJOLTAPI.id("textures/gui/container/assembling_machine.png"),
                 EJOLTAPI.id("textures/gui/container/upgrade_view/assembling_machine.png"));
 

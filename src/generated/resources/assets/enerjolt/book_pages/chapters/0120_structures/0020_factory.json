@@ -7,13 +7,13 @@
         "extra": [
           "\n\n"
         ],
-        "translate": "book.energizedpower.page.factory.title"
+        "translate": "book.enerjolt.page.factory.title"
       },
       {
         "bold": true,
         "color": "black",
         "font": "minecraft:uniform",
-        "translate": "book.energizedpower.page.factory.1"
+        "translate": "book.enerjolt.page.factory.1"
       }
     ],
     "text": ""

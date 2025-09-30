@@ -144,8 +144,8 @@ public class ItemConveyorBeltBlock extends BaseEntityBlock implements WrenchConf
 
         if(player instanceof ServerPlayer serverPlayer) {
             serverPlayer.connection.send(new ClientboundSetActionBarTextPacket(
-                    Component.translatable("tooltip.energizedpower.item_conveyor_belt.wrench_configuration.changed",
-                            Component.translatable("tooltip.energizedpower.conveyor_belt_direction.slope." + (shape == null?"flat":(shape?"ascending":"descending"))).
+                    Component.translatable("tooltip.enerjolt.item_conveyor_belt.wrench_configuration.changed",
+                            Component.translatable("tooltip.enerjolt.conveyor_belt_direction.slope." + (shape == null?"flat":(shape?"ascending":"descending"))).
                                     withStyle(ChatFormatting.WHITE, ChatFormatting.BOLD)
                     ).withStyle(ChatFormatting.GREEN)
             ));
@@ -208,10 +208,10 @@ public class ItemConveyorBeltBlock extends BaseEntityBlock implements WrenchConf
         @Override
         public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
             if(Screen.hasShiftDown()) {
-                components.add(Component.translatable("tooltip.energizedpower.wrench_configurable").
+                components.add(Component.translatable("tooltip.enerjolt.wrench_configurable").
                         withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
             }else {
-                components.add(Component.translatable("tooltip.energizedpower.shift_details.txt").withStyle(ChatFormatting.YELLOW));
+                components.add(Component.translatable("tooltip.enerjolt.shift_details.txt").withStyle(ChatFormatting.YELLOW));
             }
         }
     }

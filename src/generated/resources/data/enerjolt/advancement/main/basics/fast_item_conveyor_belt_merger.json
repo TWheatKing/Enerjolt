@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.fast_item_conveyor_belt_merger.description"
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_merger.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:fast_item_conveyor_belt_merger"
     },
     "title": {
-      "translate": "advancements.energizedpower.fast_item_conveyor_belt_merger.title"
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_merger.title"
     }
   },
   "requirements": [

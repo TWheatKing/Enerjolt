@@ -14,14 +14,14 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.energizedpower.tin_plate.description"
+      "translate": "advancements.enerjolt.tin_plate.description"
     },
     "icon": {
       "count": 1,
       "id": "enerjolt:tin_plate"
     },
     "title": {
-      "translate": "advancements.energizedpower.tin_plate.title"
+      "translate": "advancements.enerjolt.tin_plate.title"
     }
   },
   "requirements": [

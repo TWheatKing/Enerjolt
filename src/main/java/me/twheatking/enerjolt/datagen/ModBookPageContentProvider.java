@@ -67,112 +67,112 @@ public class ModBookPageContentProvider extends PageContentProvider {
         chapterId("welcome");
 
         addSimplePage(pageId("welcome"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.welcome.title").
+                Component.translatable("book.enerjolt.page.welcome.title").
                         withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.welcome.1").
+                Component.translatable("book.enerjolt.page.welcome.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ).append(
                 Component.literal("\n").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(addLinkToComponent(Component.translatable("book.energizedpower.page.welcome.2"),
+                        append(addLinkToComponent(Component.translatable("book.enerjolt.page.welcome.2"),
                                 "https://wiki.jddev0.com/books/energized-power/page/home"))
         ).append(
                 Component.literal("\n").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.welcome.3")).append(": ").
-                        append(addLinkToComponent(Component.translatable("book.energizedpower.page.welcome.3.link"),
+                        append(Component.translatable("book.enerjolt.page.welcome.3")).append(": ").
+                        append(addLinkToComponent(Component.translatable("book.enerjolt.page.welcome.3.link"),
                                 "https://github.com/JDDev0/EnergizedPower/issues"))
         ).append(
                 Component.literal("\n").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.welcome.4")).append(": ").
-                        append(addLinkToComponent(Component.translatable("book.energizedpower.page.welcome.4.link"),
+                        append(Component.translatable("book.enerjolt.page.welcome.4")).append(": ").
+                        append(addLinkToComponent(Component.translatable("book.enerjolt.page.welcome.4.link"),
                                 "https://discord.gg/sAKDNAU7yH"))
         ).append(
                 Component.literal("\n").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.welcome.5")).append(": ").
-                        append(addLinkToComponent(Component.translatable("book.energizedpower.page.welcome.5.link"),
+                        append(Component.translatable("book.enerjolt.page.welcome.5")).append(": ").
+                        append(addLinkToComponent(Component.translatable("book.enerjolt.page.welcome.5.link"),
                                 "https://www.reddit.com/r/EnergizedPower/"))
         ));
 
         addSimplePage(pageId("credits"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.credits.title").
+                Component.translatable("book.enerjolt.page.credits.title").
                         withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.credits.subtitle").
+                Component.translatable("book.enerjolt.page.credits.subtitle").
                         withStyle(ChatFormatting.DARK_GREEN, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.1")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.1")).append(": ").
                         append(addLinkToComponent(Component.literal("flashbulbs"),
                                 "https://github.com/flashbulbs"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.2")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.2")).append(": ").
                         append(addLinkToComponent(Component.literal("flashbulbs"),
                                 "https://github.com/flashbulbs"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.3")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.3")).append(": ").
                         append(addLinkToComponent(Component.literal("flashbulbs"),
                                 "https://github.com/flashbulbs"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.4")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.4")).append(": ").
                         append(addLinkToComponent(Component.literal("flashbulbs"),
                                 "https://github.com/flashbulbs"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.5")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.5")).append(": ").
                         append(addLinkToComponent(Component.literal("HanJiang-cn"),
                                 "https://github.com/HanJiang-cn"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.6")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.6")).append(": ").
                         append(addLinkToComponent(Component.literal("Roby1164"),
                                 "https://github.com/Roby1164"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.7")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.7")).append(": ").
                         append(addLinkToComponent(Component.literal("Eyyup"),
                                 "https://github.com/msb-eyyup"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.8")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.8")).append(": ").
                         append(Component.literal("Imperial Officer")).
                         append(", ").
                         append(addLinkToComponent(Component.literal("PlayboyX312"), "https://github.com/PlayboyX312"))
         ).append(
                 Component.literal("\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
-                        append(Component.translatable("book.energizedpower.page.credits.9")).append(": ").
+                        append(Component.translatable("book.enerjolt.page.credits.9")).append(": ").
                         append(addLinkToComponent(Component.literal("Lucanoria"),
                                 "https://github.com/Lucanoria"))
         ));
 
         mainTableOfContentPageId = pageId("table_of_contents");
-        tableOfContentPageTitles.put(mainTableOfContentPageId, "book.energizedpower.page.table_of_contents.title");
+        tableOfContentPageTitles.put(mainTableOfContentPageId, "book.enerjolt.page.table_of_contents.title");
         tableOfContentsEntries.put(mainTableOfContentPageId, new ArrayList<>());
     }
     private void registerResourcesChapter() {
         chapterId("resources");
 
-        String resourcesChapterTitle = "book.energizedpower.page.chapter.resources.title";
+        String resourcesChapterTitle = "book.enerjolt.page.chapter.resources.title";
         PageContent resourcesChapterPage = addChapterPage(pageId("resources_chapter"),
                 Component.translatable(resourcesChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.resources.1")
+                        Component.translatable("book.enerjolt.page.chapter.resources.1")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -181,39 +181,39 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(resourcesChapterTitle, resourcesChapterPage));
 
         addSimplePage(pageId("cable_insulator"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.cable_insulator.1").
+                Component.translatable("book.enerjolt.page.cable_insulator.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.cable_insulator.2").
+                Component.translatable("book.enerjolt.page.cable_insulator.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.cable_insulator.3").
+                Component.translatable("book.enerjolt.page.cable_insulator.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/cable_insulator.png"));
 
         addSimplePage(pageId("saw_blade"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.saw_blade").
+                Component.translatable("book.enerjolt.page.saw_blade").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/saw_blade.png"));
 
         addSimplePage(pageId("silicon"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.silicon.1").
+                Component.translatable("book.enerjolt.page.silicon.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.silicon.2").
+                Component.translatable("book.enerjolt.page.silicon.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/silicon.png"));
 
         addSimplePage(pageId("sawdust"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.sawdust.1").
+                Component.translatable("book.enerjolt.page.sawdust.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.sawdust.2").
+                Component.translatable("book.enerjolt.page.sawdust.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/sawdust.png"));
 
         addSimplePage(pageId("fertilizers"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fertilizers").
+                Component.translatable("book.enerjolt.page.fertilizers").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/basic_fertilizer.png"),
@@ -222,7 +222,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("ore_dusts"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.ore_dusts").
+                Component.translatable("book.enerjolt.page.ore_dusts").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/tin_dust.png"),
@@ -232,20 +232,20 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("charcoal_dust"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.charcoal_dust").
+                Component.translatable("book.enerjolt.page.charcoal_dust").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/charcoal_dust.png"));
 
         addSimplePage(pageId("charcoal_filter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.charcoal_filter").
+                Component.translatable("book.enerjolt.page.charcoal_filter").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/charcoal_filter.png"));
 
         addSimplePage(pageId("plates"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.plates.1").
+                Component.translatable("book.enerjolt.page.plates.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plates.2").
+                Component.translatable("book.enerjolt.page.plates.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/tin_plate.png"),
@@ -258,7 +258,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("alloys"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.alloys").
+                Component.translatable("book.enerjolt.page.alloys").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/steel_ingot.png"),
@@ -267,10 +267,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("metal_products"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.metal_products.1").
+                Component.translatable("book.enerjolt.page.metal_products.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.metal_products.2").
+                Component.translatable("book.enerjolt.page.metal_products.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/iron_gear.png"),
@@ -283,7 +283,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("circuits"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.circuits").
+                Component.translatable("book.enerjolt.page.circuits").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/basic_circuit.png"),
@@ -293,38 +293,38 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("energized_copper_ingot"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energized_copper_ingot.1").
+                Component.translatable("book.enerjolt.page.energized_copper_ingot.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.energized_copper_ingot.2").
+                Component.translatable("book.enerjolt.page.energized_copper_ingot.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.energized_copper_ingot.3").
+                Component.translatable("book.enerjolt.page.energized_copper_ingot.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ).append(
-                Component.translatable("book.energizedpower.page.energized_copper_ingot.4").
+                Component.translatable("book.enerjolt.page.energized_copper_ingot.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/energized_copper_ingot.png"));
 
         addSimplePage(pageId("energized_gold_ingot"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energized_gold_ingot").
+                Component.translatable("book.enerjolt.page.energized_gold_ingot").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/energized_gold_ingot.png"));
 
         addSimplePage(pageId("energized_crystal_matrix"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energized_crystal_matrix").
+                Component.translatable("book.enerjolt.page.energized_crystal_matrix").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/energized_crystal_matrix.png"));
     }
     private void registerUpgradesChapter() {
         chapterId("upgrades");
 
-        String upgradesChapterTitle = "book.energizedpower.page.chapter.upgrades.title";
+        String upgradesChapterTitle = "book.enerjolt.page.chapter.upgrades.title";
         PageContent upgradesChapterPage = addChapterPage(pageId("upgrades_chapter"),
                 Component.translatable(upgradesChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.upgrades")
+                        Component.translatable("book.enerjolt.page.chapter.upgrades")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -333,7 +333,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(upgradesChapterTitle, upgradesChapterPage));
 
         addSimplePage(pageId("speed_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.speed_upgrades").
+                Component.translatable("book.enerjolt.page.speed_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/speed_upgrade_module_1.png"),
@@ -344,7 +344,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("energy_efficiency_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energy_efficiency_upgrades").
+                Component.translatable("book.enerjolt.page.energy_efficiency_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/energy_efficiency_upgrade_module_1.png"),
@@ -355,7 +355,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("energy_capacity_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energy_capacity_upgrades").
+                Component.translatable("book.enerjolt.page.energy_capacity_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/energy_capacity_upgrade_module_1.png"),
@@ -366,10 +366,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("duration_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.duration_upgrades.1").
+                Component.translatable("book.enerjolt.page.duration_upgrades.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.duration_upgrades.2").
+                Component.translatable("book.enerjolt.page.duration_upgrades.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/duration_upgrade_module_1.png"),
@@ -381,7 +381,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("range_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.range_upgrades").
+                Component.translatable("book.enerjolt.page.range_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/range_upgrade_module_1.png"),
@@ -390,7 +390,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("extraction_depth_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.extraction_depth_upgrades").
+                Component.translatable("book.enerjolt.page.extraction_depth_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/extraction_depth_upgrade_module_1.png"),
@@ -401,7 +401,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("extraction_range_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.extraction_range_upgrades").
+                Component.translatable("book.enerjolt.page.extraction_range_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/extraction_range_upgrade_module_1.png"),
@@ -412,7 +412,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("furnace_mode_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.furnace_mode_upgrades").
+                Component.translatable("book.enerjolt.page.furnace_mode_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/blast_furnace_upgrade_module.png"),
@@ -420,7 +420,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("moon_light_upgrades"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.moon_light_upgrades").
+                Component.translatable("book.enerjolt.page.moon_light_upgrades").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/moon_light_upgrade_module_1.png"),
@@ -431,12 +431,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerToolsChapter() {
         chapterId("tools");
 
-        String toolsChapterTitle = "book.energizedpower.page.chapter.tools.title";
+        String toolsChapterTitle = "book.enerjolt.page.chapter.tools.title";
         PageContent toolsChapterPage = addChapterPage(pageId("tools_chapter"),
                 Component.translatable(toolsChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.tools")
+                        Component.translatable("book.enerjolt.page.chapter.tools")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -445,7 +445,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(toolsChapterTitle, toolsChapterPage));
 
         addSimplePage(pageId("hammers"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.hammers").
+                Component.translatable("book.enerjolt.page.hammers").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/wooden_hammer.png"),
@@ -457,27 +457,27 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("cutters"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.cutters.1").
+                Component.translatable("book.enerjolt.page.cutters.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.cutters.2").
+                Component.translatable("book.enerjolt.page.cutters.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/cutter.png"));
 
         addSimplePage(pageId("wrench"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.wrench").
+                Component.translatable("book.enerjolt.page.wrench").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/wrench.png"));
     }
     private void registerWorkbenchesChapter() {
         chapterId("workbenches");
 
-        String workbenchesChapterTitle = "book.energizedpower.page.chapter.workbenches.title";
+        String workbenchesChapterTitle = "book.enerjolt.page.chapter.workbenches.title";
         PageContent workbenchesChapterPage = addChapterPage(pageId("workbenches_chapter"),
                 Component.translatable(workbenchesChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.workbenches")
+                        Component.translatable("book.enerjolt.page.chapter.workbenches")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -486,30 +486,30 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(workbenchesChapterTitle, workbenchesChapterPage));
 
         addSimplePage(pageId("press_mold_maker"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.press_mold_maker").
+                Component.translatable("book.enerjolt.page.press_mold_maker").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.PRESS_MOLD_MAKER.get());
 
         addSimplePage(pageId("alloy_furnace"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.alloy_furnace.1").
+                Component.translatable("book.enerjolt.page.alloy_furnace.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.alloy_furnace.2").
+                Component.translatable("book.enerjolt.page.alloy_furnace.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.alloy_furnace.3").
+                Component.translatable("book.enerjolt.page.alloy_furnace.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.ALLOY_FURNACE.get());
     }
     private void registerEnergyItemsChapter() {
         chapterId("energy_items");
 
-        String energyItemsChapterTitle = "book.energizedpower.page.chapter.energy_items.title";
+        String energyItemsChapterTitle = "book.enerjolt.page.chapter.energy_items.title";
         PageContent energyItemsChapterPage = addChapterPage(pageId("energy_items_chapter"),
                 Component.translatable(energyItemsChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_items")
+                        Component.translatable("book.enerjolt.page.chapter.energy_items")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -518,53 +518,53 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(energyItemsChapterTitle, energyItemsChapterPage));
 
         addSimplePage(pageId("inventory_coal_engine"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.inventory_coal_engine.1").
+                Component.translatable("book.enerjolt.page.inventory_coal_engine.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.inventory_coal_engine.2").
+                Component.translatable("book.enerjolt.page.inventory_coal_engine.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.inventory_coal_engine.3").
+                Component.translatable("book.enerjolt.page.inventory_coal_engine.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ).append(
-                Component.translatable("book.energizedpower.page.inventory_coal_engine.4").
+                Component.translatable("book.enerjolt.page.inventory_coal_engine.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/inventory_coal_engine_on.png"));
 
         addSimplePage(pageId("inventory_charger"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.inventory_charger.1").
+                Component.translatable("book.enerjolt.page.inventory_charger.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.inventory_charger.2").
+                Component.translatable("book.enerjolt.page.inventory_charger.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/inventory_charger.png"));
 
         addSimplePage(pageId("inventory_teleporter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.inventory_teleporter").
+                Component.translatable("book.enerjolt.page.inventory_teleporter").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/inventory_teleporter.png"));
 
         addSimplePage(pageId("energy_analyzer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energy_analyzer.1").
+                Component.translatable("book.enerjolt.page.energy_analyzer.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.energy_analyzer.2").
+                Component.translatable("book.enerjolt.page.energy_analyzer.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/energy_analyzer.png"));
 
         addSimplePage(pageId("fluid_analyzer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_analyzer.1").
+                Component.translatable("book.enerjolt.page.fluid_analyzer.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.fluid_analyzer.2").
+                Component.translatable("book.enerjolt.page.fluid_analyzer.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/fluid_analyzer.png"));
 
         addSimplePage(pageId("batteries"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.batteries.1").
+                Component.translatable("book.enerjolt.page.batteries.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.batteries.2").
+                Component.translatable("book.enerjolt.page.batteries.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/battery_1.png"),
@@ -591,12 +591,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerEnergyBlocksChapterMainSubChapter() {
         subChapterId("main");
 
-        String energyBlocksMainChapterTitle = "book.energizedpower.page.chapter.energy_blocks.title";
+        String energyBlocksMainChapterTitle = "book.enerjolt.page.chapter.energy_blocks.title";
         PageContent energyBlocksMainChapterPage = addChapterPage(pageId("energy_blocks_chapter"),
                 Component.translatable(energyBlocksMainChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -605,18 +605,18 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(energyBlocksMainChapterTitle, energyBlocksMainChapterPage));
 
         energyBlocksTableOfContentPageId = pageId("table_of_contents");
-        tableOfContentPageTitles.put(energyBlocksTableOfContentPageId, "book.energizedpower.page.energy_blocks.table_of_contents.title");
+        tableOfContentPageTitles.put(energyBlocksTableOfContentPageId, "book.enerjolt.page.energy_blocks.table_of_contents.title");
         tableOfContentsEntries.put(energyBlocksTableOfContentPageId, new ArrayList<>());
     }
     private void registerEnergyBlocksChapterGeneralSubChapter() {
         subChapterId("general");
 
-        String energyBlocksGeneralChapterTitle = "book.energizedpower.page.chapter.energy_blocks.general.title";
+        String energyBlocksGeneralChapterTitle = "book.enerjolt.page.chapter.energy_blocks.general.title";
         PageContent energyBlocksGeneralChapterPage = addChapterPage(pageId("general_chapter"),
                 Component.translatable(energyBlocksGeneralChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks.general")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks.general")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -625,10 +625,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(energyBlocksTableOfContentPageId).add(Pair.of(energyBlocksGeneralChapterTitle, energyBlocksGeneralChapterPage));
 
         addSimplePage(pageId("machine_frames"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.machine_frames.1").
+                Component.translatable("book.enerjolt.page.machine_frames.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.machine_frames.2").
+                Component.translatable("book.enerjolt.page.machine_frames.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_MACHINE_FRAME.get(),
@@ -640,12 +640,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerEnergyBlocksChapterEnergyTransportationSubChapter() {
         subChapterId("energy_transportation");
 
-        String energyBlocksEnergyTransportationChapterTitle = "book.energizedpower.page.chapter.energy_blocks.energy_transportation.title";
+        String energyBlocksEnergyTransportationChapterTitle = "book.enerjolt.page.chapter.energy_blocks.energy_transportation.title";
         PageContent energyBlocksEnergyTransportationChapterPage = addChapterPage(pageId("energy_transportation_chapter"),
                 Component.translatable(energyBlocksEnergyTransportationChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks.energy_transportation")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks.energy_transportation")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -654,13 +654,13 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(energyBlocksTableOfContentPageId).add(Pair.of(energyBlocksEnergyTransportationChapterTitle, energyBlocksEnergyTransportationChapterPage));
 
         addSimplePage(pageId("cables"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.cables.1").
+                Component.translatable("book.enerjolt.page.cables.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.cables.2").
+                Component.translatable("book.enerjolt.page.cables.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.cables.3").
+                Component.translatable("book.enerjolt.page.cables.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.TIN_CABLE.get(),
@@ -672,31 +672,31 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("transformers"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.transformers.1").
+                Component.translatable("book.enerjolt.page.transformers.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.2").
+                Component.translatable("book.enerjolt.page.transformers.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.3").
+                Component.translatable("book.enerjolt.page.transformers.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.4").
+                Component.translatable("book.enerjolt.page.transformers.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.5").
+                Component.translatable("book.enerjolt.page.transformers.5").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.6").
+                Component.translatable("book.enerjolt.page.transformers.6").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.7").
+                Component.translatable("book.enerjolt.page.transformers.7").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.8").
+                Component.translatable("book.enerjolt.page.transformers.8").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.transformers.9").
+                Component.translatable("book.enerjolt.page.transformers.9").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.LV_TRANSFORMER_1_TO_N.get(),
@@ -718,13 +718,13 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("minecart_charger_uncharger"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.minecart_charger_uncharger.1").
+                Component.translatable("book.enerjolt.page.minecart_charger_uncharger.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.minecart_charger_uncharger.2").
+                Component.translatable("book.enerjolt.page.minecart_charger_uncharger.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.minecart_charger_uncharger.3").
+                Component.translatable("book.enerjolt.page.minecart_charger_uncharger.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.MINECART_CHARGER.get(),
@@ -736,12 +736,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerEnergyBlocksChapterEnergyStorageSubChapter() {
         subChapterId("energy_storage");
 
-        String energyBlocksEnergyStorageChapterTitle = "book.energizedpower.page.chapter.energy_blocks.energy_storage.title";
+        String energyBlocksEnergyStorageChapterTitle = "book.enerjolt.page.chapter.energy_blocks.energy_storage.title";
         PageContent energyBlocksEnergyStorageChapterPage = addChapterPage(pageId("energy_storage_chapter"),
                 Component.translatable(energyBlocksEnergyStorageChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks.energy_storage")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks.energy_storage")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -750,7 +750,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(energyBlocksTableOfContentPageId).add(Pair.of(energyBlocksEnergyStorageChapterTitle, energyBlocksEnergyStorageChapterPage));
 
         addSimplePage(pageId("battery_box"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.battery_box").
+                Component.translatable("book.enerjolt.page.battery_box").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BATTERY_BOX.get(),
@@ -760,12 +760,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerEnergyBlocksChapterEnergyProductionSubChapter() {
         subChapterId("energy_production");
 
-        String energyBlocksEnergyProductionChapterTitle = "book.energizedpower.page.chapter.energy_blocks.energy_production.title";
+        String energyBlocksEnergyProductionChapterTitle = "book.enerjolt.page.chapter.energy_blocks.energy_production.title";
         PageContent energyBlocksEnergyProductionChapterPage = addChapterPage(pageId("energy_production_chapter"),
                 Component.translatable(energyBlocksEnergyProductionChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks.energy_production")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks.energy_production")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -774,10 +774,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(energyBlocksTableOfContentPageId).add(Pair.of(energyBlocksEnergyProductionChapterTitle, energyBlocksEnergyProductionChapterPage));
 
         addSimplePage(pageId("solar_cells"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.solar_cells.1").
+                Component.translatable("book.enerjolt.page.solar_cells.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.solar_cells.2").
+                Component.translatable("book.enerjolt.page.solar_cells.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/basic_solar_cell.png"),
@@ -786,10 +786,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("solar_panels"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.solar_panels.1").
+                Component.translatable("book.enerjolt.page.solar_panels.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.solar_panels.2").
+                Component.translatable("book.enerjolt.page.solar_panels.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.SOLAR_PANEL_1.get(),
@@ -801,52 +801,52 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("coal_engine"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.coal_engine.1").
+                Component.translatable("book.enerjolt.page.coal_engine.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.coal_engine.2").
+                Component.translatable("book.enerjolt.page.coal_engine.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.COAL_ENGINE.get());
 
         addSimplePage(pageId("heat_generator"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.heat_generator.1").
+                Component.translatable("book.enerjolt.page.heat_generator.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.heat_generator.2").
+                Component.translatable("book.enerjolt.page.heat_generator.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.heat_generator.3").
+                Component.translatable("book.enerjolt.page.heat_generator.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.heat_generator.4").
+                Component.translatable("book.enerjolt.page.heat_generator.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.HEAT_GENERATOR.get());
 
         addSimplePage(pageId("thermal_generator"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.thermal_generator.1").
+                Component.translatable("book.enerjolt.page.thermal_generator.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.thermal_generator.2").
+                Component.translatable("book.enerjolt.page.thermal_generator.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.THERMAL_GENERATOR.get());
 
         addSimplePage(pageId("lightning_generator"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.lightning_generator.1").
+                Component.translatable("book.enerjolt.page.lightning_generator.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.lightning_generator.2").
+                Component.translatable("book.enerjolt.page.lightning_generator.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.LIGHTNING_GENERATOR.get());
     }
     private void registerEnergyBlocksChapterEnergyConsumptionSubChapter() {
         subChapterId("energy_consumption");
 
-        String energyBlocksEnergyConsumptionChapterTitle = "book.energizedpower.page.chapter.energy_blocks.energy_consumption.title";
+        String energyBlocksEnergyConsumptionChapterTitle = "book.enerjolt.page.chapter.energy_blocks.energy_consumption.title";
         PageContent energyBlocksEnergyConsumptionChapterPage = addChapterPage(pageId("energy_consumption_chapter"),
                 Component.translatable(energyBlocksEnergyConsumptionChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.energy_blocks.energy_consumption")
+                        Component.translatable("book.enerjolt.page.chapter.energy_blocks.energy_consumption")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -855,15 +855,15 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(energyBlocksTableOfContentPageId).add(Pair.of(energyBlocksEnergyConsumptionChapterTitle, energyBlocksEnergyConsumptionChapterPage));
 
         addSimplePage(pageId("powered_lamp"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.powered_lamp").
+                Component.translatable("book.enerjolt.page.powered_lamp").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.POWERED_LAMP.get());
 
         addSimplePage(pageId("powered_furnaces"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.powered_furnaces.1").
+                Component.translatable("book.enerjolt.page.powered_furnaces.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.powered_furnaces.2").
+                Component.translatable("book.enerjolt.page.powered_furnaces.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.POWERED_FURNACE.get(),
@@ -871,16 +871,16 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("auto_crafters"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.auto_crafters.1").
+                Component.translatable("book.enerjolt.page.auto_crafters.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.auto_crafters.2").
+                Component.translatable("book.enerjolt.page.auto_crafters.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.auto_crafters.3").
+                Component.translatable("book.enerjolt.page.auto_crafters.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.auto_crafters.4").
+                Component.translatable("book.enerjolt.page.auto_crafters.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.AUTO_CRAFTER.get(),
@@ -888,10 +888,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("crushers"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.crushers.1").
+                Component.translatable("book.enerjolt.page.crushers.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.crushers.2").
+                Component.translatable("book.enerjolt.page.crushers.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.CRUSHER.get(),
@@ -899,10 +899,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("pulverizers"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.pulverizers.1").
+                Component.translatable("book.enerjolt.page.pulverizers.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.pulverizers.2").
+                Component.translatable("book.enerjolt.page.pulverizers.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.PULVERIZER.get(),
@@ -910,126 +910,126 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("sawmill"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.sawmill.1").
+                Component.translatable("book.enerjolt.page.sawmill.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.sawmill.2").
+                Component.translatable("book.enerjolt.page.sawmill.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.SAWMILL.get());
 
         addSimplePage(pageId("compressor"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.compressor").
+                Component.translatable("book.enerjolt.page.compressor").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.COMPRESSOR.get());
 
         addSimplePage(pageId("metal_press"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.metal_press.1").
+                Component.translatable("book.enerjolt.page.metal_press.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.metal_press.2").
+                Component.translatable("book.enerjolt.page.metal_press.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.metal_press.3").
+                Component.translatable("book.enerjolt.page.metal_press.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.metal_press.4").
+                Component.translatable("book.enerjolt.page.metal_press.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.METAL_PRESS.get());
 
         addSimplePage(pageId("auto_press_mold_maker"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.auto_press_mold_maker").
+                Component.translatable("book.enerjolt.page.auto_press_mold_maker").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.AUTO_PRESS_MOLD_MAKER.get());
 
         addSimplePage(pageId("auto_stonecutter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.auto_stonecutter").
+                Component.translatable("book.enerjolt.page.auto_stonecutter").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.AUTO_STONECUTTER.get());
 
         addSimplePage(pageId("assembling_machine"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.assembling_machine.1").
+                Component.translatable("book.enerjolt.page.assembling_machine.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.assembling_machine.2").
+                Component.translatable("book.enerjolt.page.assembling_machine.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.assembling_machine.3").
+                Component.translatable("book.enerjolt.page.assembling_machine.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.ASSEMBLING_MACHINE.get());
 
         addSimplePage(pageId("plant_growth_chamber"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.1").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.2").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.3").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.4").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.5").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.5").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.6").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.6").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.plant_growth_chamber.7").
+                Component.translatable("book.enerjolt.page.plant_growth_chamber.7").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.PLANT_GROWTH_CHAMBER.get());
 
         addSimplePage(pageId("stone_liquefier"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.stone_liquefier.1").
+                Component.translatable("book.enerjolt.page.stone_liquefier.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.stone_liquefier.2").
+                Component.translatable("book.enerjolt.page.stone_liquefier.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.STONE_LIQUEFIER.get());
 
         addSimplePage(pageId("stone_solidifier"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.stone_solidifier.1").
+                Component.translatable("book.enerjolt.page.stone_solidifier.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.stone_solidifier.2").
+                Component.translatable("book.enerjolt.page.stone_solidifier.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.STONE_SOLIDIFIER.get());
 
         addSimplePage(pageId("filtration_plant"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.filtration_plant.1").
+                Component.translatable("book.enerjolt.page.filtration_plant.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.filtration_plant.2").
+                Component.translatable("book.enerjolt.page.filtration_plant.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.FILTRATION_PLANT.get());
 
         addSimplePage(pageId("fluid_transposer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_transposer").
+                Component.translatable("book.enerjolt.page.fluid_transposer").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.FLUID_TRANSPOSER.get());
 
         addSimplePage(pageId("induction_smelter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.induction_smelter.1").
+                Component.translatable("book.enerjolt.page.induction_smelter.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.induction_smelter.2").
+                Component.translatable("book.enerjolt.page.induction_smelter.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.induction_smelter.3").
+                Component.translatable("book.enerjolt.page.induction_smelter.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.INDUCTION_SMELTER.get());
 
         addSimplePage(pageId("block_placer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.block_placer.1").
+                Component.translatable("book.enerjolt.page.block_placer.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.block_placer.2").
+                Component.translatable("book.enerjolt.page.block_placer.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.BLOCK_PLACER.get());
 
         addSimplePage(pageId("fluid_filler_fluid_drainer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_filler_fluid_drainer").
+                Component.translatable("book.enerjolt.page.fluid_filler_fluid_drainer").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.FLUID_FILLER.get(),
@@ -1037,7 +1037,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("fluid_pumps"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_pumps").
+                Component.translatable("book.enerjolt.page.fluid_pumps").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.FLUID_PUMP.get(),
@@ -1045,10 +1045,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("charger_uncharger"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.charger_uncharger.1").
+                Component.translatable("book.enerjolt.page.charger_uncharger.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.charger_uncharger.2").
+                Component.translatable("book.enerjolt.page.charger_uncharger.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.CHARGER.get(),
@@ -1058,49 +1058,49 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("charging_station"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.charging_station").
+                Component.translatable("book.enerjolt.page.charging_station").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.CHARGING_STATION.get());
 
         addSimplePage(pageId("crystal_growth_chamber"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.crystal_growth_chamber").
+                Component.translatable("book.enerjolt.page.crystal_growth_chamber").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.CRYSTAL_GROWTH_CHAMBER.get());
 
         addSimplePage(pageId("energizer"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.energizer").
+                Component.translatable("book.enerjolt.page.energizer").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.ENERGIZER.get());
 
         addSimplePage(pageId("weather_controller"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.weather_controller").
+                Component.translatable("book.enerjolt.page.weather_controller").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.WEATHER_CONTROLLER.get());
 
         addSimplePage(pageId("time_controller"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.time_controller.1").
+                Component.translatable("book.enerjolt.page.time_controller.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.time_controller.2").
+                Component.translatable("book.enerjolt.page.time_controller.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EnerjoltBlocks.TIME_CONTROLLER.get());
 
         addSimplePage(pageId("teleporter_matrix"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.teleporter_matrix.1").
+                Component.translatable("book.enerjolt.page.teleporter_matrix.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.teleporter_matrix.2").
+                Component.translatable("book.enerjolt.page.teleporter_matrix.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/teleporter_matrix.png"));
 
         addSimplePage(pageId("teleporter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.teleporter.1").
+                Component.translatable("book.enerjolt.page.teleporter.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.teleporter.2").
+                Component.translatable("book.enerjolt.page.teleporter.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.teleporter.3.1").
+                Component.translatable("book.enerjolt.page.teleporter.3.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append(
                                 Component.literal(" [").withStyle(ChatFormatting.BLACK).withStyle(DEFAULT_FONT)
                         ).append(
@@ -1109,7 +1109,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
                         ).append(
                                 Component.literal("] ").withStyle(ChatFormatting.BLACK).withStyle(DEFAULT_FONT)
                         ).append(
-                                Component.translatable("book.energizedpower.page.teleporter.3.2")
+                                Component.translatable("book.enerjolt.page.teleporter.3.2")
                         )
         ), EnerjoltBlocks.TELEPORTER.get());
     }
@@ -1117,12 +1117,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerFluidBlocksChapter() {
         chapterId("fluid_blocks");
 
-        String fluidBlocksChapterTitle = "book.energizedpower.page.chapter.fluid_blocks.title";
+        String fluidBlocksChapterTitle = "book.enerjolt.page.chapter.fluid_blocks.title";
         PageContent fluidBlocksChapterPage = addChapterPage(pageId("fluid_blocks_chapter"),
                 Component.translatable(fluidBlocksChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.fluid_blocks")
+                        Component.translatable("book.enerjolt.page.chapter.fluid_blocks")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1131,16 +1131,16 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(fluidBlocksChapterTitle, fluidBlocksChapterPage));
 
         addSimplePage(pageId("fluid_pipes"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_pipes.1").
+                Component.translatable("book.enerjolt.page.fluid_pipes.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.fluid_pipes.2").
+                Component.translatable("book.enerjolt.page.fluid_pipes.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.fluid_pipes.3").
+                Component.translatable("book.enerjolt.page.fluid_pipes.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.fluid_pipes.4").
+                Component.translatable("book.enerjolt.page.fluid_pipes.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.IRON_FLUID_PIPE.get(),
@@ -1148,10 +1148,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("fluid_tanks"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.fluid_tanks.1").
+                Component.translatable("book.enerjolt.page.fluid_tanks.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.fluid_tanks.2").
+                Component.translatable("book.enerjolt.page.fluid_tanks.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.FLUID_TANK_SMALL.get(),
@@ -1160,22 +1160,22 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("drain"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.drain.1").
+                Component.translatable("book.enerjolt.page.drain.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.drain.2").
+                Component.translatable("book.enerjolt.page.drain.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EnerjoltBlocks.DRAIN.get());
     }
     private void registerItemTransportationChapter() {
         chapterId("item_transportation");
 
-        String itemTransportationChapterTitle = "book.energizedpower.page.chapter.item_transportation.title";
+        String itemTransportationChapterTitle = "book.enerjolt.page.chapter.item_transportation.title";
         PageContent itemTransportationChapterPage = addChapterPage(pageId("item_transportation_chapter"),
                 Component.translatable(itemTransportationChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.item_transportation")
+                        Component.translatable("book.enerjolt.page.chapter.item_transportation")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1184,22 +1184,22 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(itemTransportationChapterTitle, itemTransportationChapterPage));
 
         addSimplePage(pageId("item_conveyor_belt"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.1").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.2").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.3").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.4").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.5").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.5").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt.6").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt.6").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT.get(),
@@ -1208,19 +1208,19 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_conveyor_belt_loader"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_loader.1").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_loader.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_loader.2").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_loader.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_loader.3").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_loader.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_loader.4").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_loader.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_loader.5").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_loader.5").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_LOADER.get(),
@@ -1229,31 +1229,31 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_conveyor_belt_sorter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.1").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.2").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.3").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.4").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.4").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.5").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.5").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.6").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.6").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.7").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.7").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.8").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.8").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_sorter.9").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_sorter.9").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SORTER.get(),
@@ -1262,10 +1262,10 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_conveyor_belt_switch"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_switch.1").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_switch.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_switch.2").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_switch.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SWITCH.get(),
@@ -1274,7 +1274,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_conveyor_belt_splitter"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_splitter").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_splitter").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SPLITTER.get(),
@@ -1283,7 +1283,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_conveyor_belt_merger"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_conveyor_belt_merger").
+                Component.translatable("book.enerjolt.page.item_conveyor_belt_merger").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_MERGER.get(),
@@ -1292,13 +1292,13 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("item_silos"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.item_silos.1").
+                Component.translatable("book.enerjolt.page.item_silos.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(" ")
         ).append(
-                Component.translatable("book.energizedpower.page.item_silos.2").
+                Component.translatable("book.enerjolt.page.item_silos.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.item_silos.3").
+                Component.translatable("book.enerjolt.page.item_silos.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.ITALIC).withStyle(UNIFORM)
         ), new Block[] {
                 EnerjoltBlocks.ITEM_SILO_TINY.get(),
@@ -1311,12 +1311,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerFluidsChapter() {
         chapterId("fluids");
 
-        String fluidsChapterTitle = "book.energizedpower.page.chapter.fluids.title";
+        String fluidsChapterTitle = "book.enerjolt.page.chapter.fluids.title";
         PageContent fluidsChapterPage = addChapterPage(pageId("fluids_chapter"),
                 Component.translatable(fluidsChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.fluids")
+                        Component.translatable("book.enerjolt.page.chapter.fluids")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1325,22 +1325,22 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(fluidsChapterTitle, fluidsChapterPage));
 
         addSimplePage(pageId("dirty_water"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.dirty_water.1").
+                Component.translatable("book.enerjolt.page.dirty_water.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n")
         ).append(
-                Component.translatable("book.energizedpower.page.dirty_water.2").
+                Component.translatable("book.enerjolt.page.dirty_water.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/item/dirty_water_bucket.png"));
     }
     private void registerMachineConfigurationChapter() {
         chapterId("machine_configuration");
 
-        String machineConfigurationChapterTitle = "book.energizedpower.page.chapter.machine_configuration.title";
+        String machineConfigurationChapterTitle = "book.enerjolt.page.chapter.machine_configuration.title";
         PageContent machineConfigurationChapterPage = addChapterPage(pageId("machine_configuration_chapter"),
                 Component.translatable(machineConfigurationChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.machine_configuration")
+                        Component.translatable("book.enerjolt.page.chapter.machine_configuration")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1349,29 +1349,29 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(machineConfigurationChapterTitle, machineConfigurationChapterPage));
 
         addSimplePage(pageId("upgrade_configuration"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.upgrade_configuration").
+                Component.translatable("book.enerjolt.page.upgrade_configuration").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), EJOLTAPI.id("textures/gui/book_icons/upgrade_view.png"));
 
         addSimplePage(pageId("redstone_mode_configuration"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.redstone_mode_configuration.1").
+                Component.translatable("book.enerjolt.page.redstone_mode_configuration.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.redstone_mode_configuration.2").
+                                Component.translatable("book.enerjolt.page.redstone_mode_configuration.2").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.redstone_mode_configuration.3").
+                                Component.translatable("book.enerjolt.page.redstone_mode_configuration.3").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.redstone_mode_configuration.4").
+                                Component.translatable("book.enerjolt.page.redstone_mode_configuration.4").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ), new ResourceLocation[] {
@@ -1381,24 +1381,24 @@ public class ModBookPageContentProvider extends PageContentProvider {
         });
 
         addSimplePage(pageId("comparator_mode_configuration"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.comparator_mode_configuration.1").
+                Component.translatable("book.enerjolt.page.comparator_mode_configuration.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.comparator_mode_configuration.2").
+                                Component.translatable("book.enerjolt.page.comparator_mode_configuration.2").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.comparator_mode_configuration.3").
+                                Component.translatable("book.enerjolt.page.comparator_mode_configuration.3").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ).append(
                 Component.literal("\n\n• ").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append(
-                                Component.translatable("book.energizedpower.page.comparator_mode_configuration.4").
+                                Component.translatable("book.enerjolt.page.comparator_mode_configuration.4").
                                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
                         )
         ), new ResourceLocation[] {
@@ -1410,12 +1410,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerEntitiesChapter() {
         chapterId("entities");
 
-        String entitiesChapterTitle = "book.energizedpower.page.chapter.entities.title";
+        String entitiesChapterTitle = "book.enerjolt.page.chapter.entities.title";
         PageContent entitiesChapterPage = addChapterPage(pageId("entities_chapter"),
                 Component.translatable(entitiesChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.entities")
+                        Component.translatable("book.enerjolt.page.chapter.entities")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1424,7 +1424,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(entitiesChapterTitle, entitiesChapterPage));
 
         addSimplePage(pageId("battery_box_minecarts"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.battery_box_minecarts").
+                Component.translatable("book.enerjolt.page.battery_box_minecarts").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ), new ResourceLocation[] {
                 EJOLTAPI.id("textures/item/battery_box_minecart.png"),
@@ -1434,12 +1434,12 @@ public class ModBookPageContentProvider extends PageContentProvider {
     private void registerStructuresChapter() {
         chapterId("structures");
 
-        String structuresChapterTitle = "book.energizedpower.page.chapter.structures.title";
+        String structuresChapterTitle = "book.enerjolt.page.chapter.structures.title";
         PageContent structuresChapterPage = addChapterPage(pageId("structures_chapter"),
                 Component.translatable(structuresChapterTitle).
                         withStyle(ChatFormatting.GOLD),
                 Component.empty().append(
-                        Component.translatable("book.energizedpower.page.chapter.structures")
+                        Component.translatable("book.enerjolt.page.chapter.structures")
                 ).append(
                         Component.literal("\n\n").
                                 withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).
@@ -1448,32 +1448,32 @@ public class ModBookPageContentProvider extends PageContentProvider {
         tableOfContentsEntries.get(mainTableOfContentPageId).add(Pair.of(structuresChapterTitle, structuresChapterPage));
 
         addSimplePage(pageId("electrician"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.electrician.title").
+                Component.translatable("book.enerjolt.page.electrician.title").
                         withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.electrician.1").
+                Component.translatable("book.enerjolt.page.electrician.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.electrician.2").
+                Component.translatable("book.enerjolt.page.electrician.2").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.electrician.3").
+                Component.translatable("book.enerjolt.page.electrician.3").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ));
 
         addSimplePage(pageId("factory"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.factory.title").
+                Component.translatable("book.enerjolt.page.factory.title").
                         withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.factory.1").
+                Component.translatable("book.enerjolt.page.factory.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ));
 
         addSimplePage(pageId("small_solar_farm"), Component.empty().append(
-                Component.translatable("book.energizedpower.page.small_solar_farm.title").
+                Component.translatable("book.enerjolt.page.small_solar_farm.title").
                         withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD).append("\n\n")
         ).append(
-                Component.translatable("book.energizedpower.page.small_solar_farm.1").
+                Component.translatable("book.enerjolt.page.small_solar_farm.1").
                         withStyle(ChatFormatting.BLACK, ChatFormatting.BOLD).withStyle(UNIFORM)
         ));
     }
@@ -1497,7 +1497,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
                 withStyle(Style.EMPTY.
                         withClickEvent(new ClickEvent(ClickEvent.Action.CHANGE_PAGE, chapterPage.pageId().toString())).
                         withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-                                Component.translatable("book.energizedpower.tooltip.page"))));
+                                Component.translatable("book.enerjolt.tooltip.page"))));
     }
     private MutableComponent backToTableOfContentComponent(String tableOfContentPageId) {
         return Component.translatable(tableOfContentPageTitles.get(tableOfContentPageId)).
@@ -1505,7 +1505,7 @@ public class ModBookPageContentProvider extends PageContentProvider {
                         withClickEvent(new ClickEvent(ClickEvent.Action.CHANGE_PAGE,
                                 EJOLTAPI.MOD_ID + ":" + tableOfContentPageId)).
                         withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
-                                Component.translatable("book.energizedpower.tooltip.page"))));
+                                Component.translatable("book.enerjolt.tooltip.page"))));
     }
 
     private int nextChapterSortingNumber() {

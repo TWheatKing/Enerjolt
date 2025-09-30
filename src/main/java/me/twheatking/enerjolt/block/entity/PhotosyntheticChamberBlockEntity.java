@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -38,6 +39,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.HologramSyncS2CPacket;
+import me.twheatking.enerjolt.networking.packet.MultiblockPatternSyncS2CPacket;
 
 import java.util.*;
 
@@ -67,6 +69,8 @@ public class PhotosyntheticChamberBlockEntity
         }
     };
 
+    private MultiblockPattern.Shape chamberShape = MultiblockPattern.Shape.DOME; // Default to dome for chambers
+
     // Multiblock
     private MultiblockPattern pattern;
     private boolean isFormed = false;
@@ -93,6 +97,7 @@ public class PhotosyntheticChamberBlockEntity
         );
         Direction facing = blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
         this.pattern = new MultiblockPattern(null, blockPos, facing, 5);
+        this.pattern.setShape(chamberShape);
     }
 
     @Override
@@ -182,6 +187,7 @@ public class PhotosyntheticChamberBlockEntity
         nbt.putBoolean("IsFormed", isFormed);
         nbt.putBoolean("ShowHologram", showHologram);
         nbt.putInt("MultiblockSize", multiblockSize);
+        nbt.putString("ChamberShape", chamberShape.name());
         nbt.put("FluidTank", fluidTank.writeToNBT(registries, new CompoundTag()));
     }
 
@@ -193,6 +199,11 @@ public class PhotosyntheticChamberBlockEntity
         isFormed = nbt.getBoolean("IsFormed");
         showHologram = nbt.getBoolean("ShowHologram");
         multiblockSize = nbt.getInt("MultiblockSize");
+        try {
+            chamberShape = MultiblockPattern.Shape.valueOf(nbt.getString("ChamberShape"));
+        } catch (Exception e) {
+            chamberShape = MultiblockPattern.Shape.DOME; // Default for chambers
+        }
         if (nbt.contains("FluidTank")) {
             fluidTank.readFromNBT(registries, nbt.getCompound("FluidTank"));
         }
@@ -252,22 +263,31 @@ public class PhotosyntheticChamberBlockEntity
 
     private void validateMultiblock() {
         Direction facing = getBlockState().getValue(PhotosyntheticChamberBlock.FACING);
+        boolean wasFormed = isFormed;
 
         // Try 5x5 first
         pattern = new MultiblockPattern(level, worldPosition, facing, 5);
+        pattern.setShape(chamberShape); // Set shape AFTER creating pattern
         if (pattern.validate(true)) {
             multiblockSize = 5;
             isFormed = true;
             updateFormedState(true);
+            if (!wasFormed) {
+                syncPatternToClients();
+            }
             return;
         }
 
         // Try 7x7
         pattern = new MultiblockPattern(level, worldPosition, facing, 7);
+        pattern.setShape(chamberShape); // Set shape AFTER creating pattern
         if (pattern.validate(true)) {
             multiblockSize = 7;
             isFormed = true;
             updateFormedState(true);
+            if (!wasFormed) {
+                syncPatternToClients();
+            }
             return;
         }
 
@@ -275,6 +295,7 @@ public class PhotosyntheticChamberBlockEntity
         if (isFormed) {
             isFormed = false;
             updateFormedState(false);
+            syncPatternToClients();
         }
     }
 
@@ -283,6 +304,22 @@ public class PhotosyntheticChamberBlockEntity
         if (state.getValue(PhotosyntheticChamberBlock.FORMED) != formed) {
             level.setBlock(worldPosition, state.setValue(PhotosyntheticChamberBlock.FORMED, formed), 3);
         }
+    }
+
+    private void syncPatternToClients() {
+        if (level == null || level.isClientSide) return;
+
+        MultiblockPatternSyncS2CPacket packet = new MultiblockPatternSyncS2CPacket(
+                worldPosition,
+                getBlockState().getValue(PhotosyntheticChamberBlock.FACING),
+                pattern.getSize(),
+                pattern.isValid(),
+                new ArrayList<>(pattern.getMissingBlocks()),
+                new ArrayList<>(pattern.getGlassPositions()),
+                pattern.getCenterPos()
+        );
+
+        ModMessages.sendToPlayersWithinXBlocks(packet, worldPosition, (ServerLevel) level, 64);
     }
 
     private boolean canProcess() {
@@ -429,6 +466,8 @@ public class PhotosyntheticChamberBlockEntity
         } else {
             playersViewingHologram.add(playerId);
             newState = true;
+            // Also sync pattern when enabling hologram
+            syncPatternToClients();
         }
 
         // Send packet to client
@@ -443,6 +482,14 @@ public class PhotosyntheticChamberBlockEntity
         } else {
             playersViewingHologram.remove(playerId);
         }
+    }
+
+    public void setPatternClient(MultiblockPatternSyncS2CPacket packet) {
+        // Reconstruct pattern on client side
+        this.pattern = new MultiblockPattern(level, packet.controllerPos(), packet.facing(), packet.size());
+        this.pattern.setShape(chamberShape);
+        // Manually set the validation results
+        this.pattern.setClientData(packet.isValid(), packet.missingBlocks(), packet.glassPositions(), packet.centerPos());
     }
 
     public MultiblockPattern getPattern() {

@@ -9,9 +9,13 @@ import me.twheatking.enerjolt.block.multiblock.MultiblockPattern;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.block.BlockRenderDispatcher;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -19,6 +23,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
+import net.neoforged.neoforge.client.model.data.ModelData;
 import org.joml.Matrix4f;
 
 import java.util.List;
@@ -26,6 +31,33 @@ import java.util.UUID;
 
 @EventBusSubscriber(modid = EJOLTAPI.MOD_ID, value = Dist.CLIENT)
 public class HologramRenderer {
+
+    // ======================== HOLOGRAM CUSTOMIZATION ========================
+
+    // Ghost block transparency (0.0 = invisible, 1.0 = fully opaque)
+    private static final float GHOST_BLOCK_ALPHA = 0.35f;
+
+    // Block choices for different positions
+    private static final BlockState CENTER_DIRT_BLOCK = Blocks.DIRT.defaultBlockState();
+    private static final BlockState PLANT_BLOCK = Blocks.OAK_SAPLING.defaultBlockState();
+    private static final BlockState GLASS_BLOCK = Blocks.GLASS.defaultBlockState();
+    private static final BlockState FRAME_BLOCK = Blocks.IRON_BARS.defaultBlockState(); // Use iron bars for greenhouse look
+
+    // Outline colors (R, G, B, Alpha) - values from 0.0 to 1.0
+    private static final float[] MISSING_BLOCK_OUTLINE = {1.0f, 0.8f, 0.0f, 0.7f}; // Gold/yellow
+    private static final float[] VALID_BLOCK_OUTLINE = {0.0f, 1.0f, 0.0f, 0.5f};   // Green
+    private static final float[] CENTER_DIRT_OUTLINE = {0.4f, 0.2f, 0.0f, 0.8f};   // Brown
+    private static final float[] PLANT_OUTLINE = {0.0f, 1.0f, 0.0f, 0.8f};         // Bright green
+
+    // Render settings
+    private static final boolean SHOW_GHOST_BLOCKS = true;        // Show actual block models
+    private static final boolean SHOW_OUTLINES = true;             // Show colored outlines
+    private static final boolean SHOW_VALID_BLOCK_OUTLINES = true; // Show green outlines on correct blocks
+
+    // Advanced: Custom block choices based on position
+    private static final boolean USE_VARIED_GLASS = true; // Use different glass types
+
+    // ========================================================================
 
     @SubscribeEvent
     public static void onRenderLevelStage(RenderLevelStageEvent event) {
@@ -86,8 +118,8 @@ public class HologramRenderer {
         int glassCount = glassPositions.size();
         boolean needsMoreGlass = glassCount < 16;
 
-        // Get the line buffer once for all outlines
-        VertexConsumer lineConsumer = bufferSource.getBuffer(RenderType.lines());
+        BlockRenderDispatcher dispatcher = Minecraft.getInstance().getBlockRenderer();
+        RandomSource random = RandomSource.create();
 
         // Render ghost blocks for all positions
         for (BlockPos pos : framePositions) {
@@ -96,41 +128,78 @@ public class HologramRenderer {
 
             if (isMissing) {
                 // Determine what block should be here
-                float r, g, b, a;
+                BlockState ghostBlock = getGhostBlockState(pos, centerPos, needsMoreGlass, framePositions);
 
-                if (pos.equals(centerPos)) {
-                    r = 0.6f; g = 0.4f; b = 0.2f; a = 0.5f; // Brown for dirt
-                } else if (pos.equals(centerPos.above())) {
-                    r = 1.0f; g = 1.0f; b = 0.0f; a = 0.6f; // Yellow for plant
-                } else if (needsMoreGlass && framePositions.indexOf(pos) % 3 == 0) {
-                    r = 0.5f; g = 0.8f; b = 1.0f; a = 0.4f; // Light blue for glass
-                } else {
-                    r = 0.7f; g = 0.7f; b = 0.7f; a = 0.3f; // Gray for any block
+                if (ghostBlock != null && SHOW_GHOST_BLOCKS) {
+                    renderGhostBlock(poseStack, bufferSource, dispatcher, pos, cameraPos, ghostBlock, random);
                 }
 
-                // Draw filled outline instead of trying to render block model
-                renderFilledBlock(poseStack, bufferSource, pos, cameraPos, r, g, b, a * 0.3f);
-                renderBlockOutline(poseStack, lineConsumer, pos, cameraPos, r, g, b, a);
+                // Also render outline for missing blocks
+                if (SHOW_OUTLINES) {
+                    renderBlockOutline(poseStack, bufferSource, pos, cameraPos,
+                            MISSING_BLOCK_OUTLINE[0], MISSING_BLOCK_OUTLINE[1],
+                            MISSING_BLOCK_OUTLINE[2], MISSING_BLOCK_OUTLINE[3]);
+                }
             } else {
                 // Show green outline for valid blocks
-                renderBlockOutline(poseStack, lineConsumer, pos, cameraPos, 0.0f, 1.0f, 0.0f, 0.5f);
+                if (SHOW_OUTLINES && SHOW_VALID_BLOCK_OUTLINES) {
+                    renderBlockOutline(poseStack, bufferSource, pos, cameraPos,
+                            VALID_BLOCK_OUTLINE[0], VALID_BLOCK_OUTLINE[1],
+                            VALID_BLOCK_OUTLINE[2], VALID_BLOCK_OUTLINE[3]);
+                }
             }
         }
 
-        // Highlight center with special outline
+        // Highlight center with special rendering
         if (level.getBlockState(centerPos).isAir()) {
-            renderBlockOutline(poseStack, lineConsumer, centerPos, cameraPos,
-                    0.0f, 0.5f, 1.0f, 0.8f); // Blue
+            if (SHOW_GHOST_BLOCKS) {
+                renderGhostBlock(poseStack, bufferSource, dispatcher, centerPos, cameraPos, CENTER_DIRT_BLOCK, random);
+            }
+            if (SHOW_OUTLINES) {
+                renderBlockOutline(poseStack, bufferSource, centerPos, cameraPos,
+                        CENTER_DIRT_OUTLINE[0], CENTER_DIRT_OUTLINE[1],
+                        CENTER_DIRT_OUTLINE[2], CENTER_DIRT_OUTLINE[3]);
+            }
         }
         if (level.getBlockState(centerPos.above()).isAir()) {
-            renderBlockOutline(poseStack, lineConsumer, centerPos.above(), cameraPos,
-                    1.0f, 1.0f, 0.0f, 0.8f); // Yellow
+            if (SHOW_GHOST_BLOCKS) {
+                renderGhostBlock(poseStack, bufferSource, dispatcher, centerPos.above(), cameraPos, PLANT_BLOCK, random);
+            }
+            if (SHOW_OUTLINES) {
+                renderBlockOutline(poseStack, bufferSource, centerPos.above(), cameraPos,
+                        PLANT_OUTLINE[0], PLANT_OUTLINE[1],
+                        PLANT_OUTLINE[2], PLANT_OUTLINE[3]);
+            }
         }
     }
 
-    private static void renderFilledBlock(PoseStack poseStack, MultiBufferSource bufferSource,
-                                          BlockPos pos, Vec3 cameraPos,
-                                          float r, float g, float b, float a) {
+    private static BlockState getGhostBlockState(BlockPos pos, BlockPos centerPos, boolean needsMoreGlass, List<BlockPos> framePositions) {
+        if (pos.equals(centerPos)) {
+            return CENTER_DIRT_BLOCK;
+        } else if (pos.equals(centerPos.above())) {
+            return PLANT_BLOCK;
+        } else if (needsMoreGlass && framePositions.indexOf(pos) % 3 == 0) {
+            // Use varied glass types for a more interesting look
+            if (USE_VARIED_GLASS) {
+                int index = framePositions.indexOf(pos);
+                return switch (index % 6) {
+                    case 0 -> Blocks.GLASS.defaultBlockState();
+                    case 1 -> Blocks.WHITE_STAINED_GLASS.defaultBlockState();
+                    case 2 -> Blocks.LIGHT_BLUE_STAINED_GLASS.defaultBlockState();
+                    case 3 -> Blocks.CYAN_STAINED_GLASS.defaultBlockState();
+                    case 4 -> Blocks.LIME_STAINED_GLASS.defaultBlockState();
+                    default -> Blocks.GLASS.defaultBlockState();
+                };
+            }
+            return GLASS_BLOCK;
+        } else {
+            return FRAME_BLOCK;
+        }
+    }
+
+    private static void renderGhostBlock(PoseStack poseStack, MultiBufferSource bufferSource,
+                                         BlockRenderDispatcher dispatcher, BlockPos pos, Vec3 cameraPos,
+                                         BlockState state, RandomSource random) {
         poseStack.pushPose();
 
         double x = pos.getX() - cameraPos.x;
@@ -139,43 +208,25 @@ public class HologramRenderer {
 
         poseStack.translate(x, y, z);
 
-        Matrix4f matrix = poseStack.last().pose();
-        VertexConsumer consumer = bufferSource.getBuffer(RenderType.translucent());
+        // Create a translucent vertex consumer wrapper
+        VertexConsumer baseConsumer = bufferSource.getBuffer(RenderType.translucent());
+        VertexConsumer translucentConsumer = new TranslucentVertexConsumer(baseConsumer, GHOST_BLOCK_ALPHA);
 
-        float min = 0.001f;
-        float max = 0.999f;
-
-        // Render all 6 faces
-        // Bottom
-        addQuad(consumer, matrix, min, min, min, max, min, min, max, min, max, min, min, max, r, g, b, a, 0, -1, 0);
-        // Top
-        addQuad(consumer, matrix, min, max, max, max, max, max, max, max, min, min, max, min, r, g, b, a, 0, 1, 0);
-        // North
-        addQuad(consumer, matrix, max, max, min, max, min, min, min, min, min, min, max, min, r, g, b, a, 0, 0, -1);
-        // South
-        addQuad(consumer, matrix, min, max, max, min, min, max, max, min, max, max, max, max, r, g, b, a, 0, 0, 1);
-        // West
-        addQuad(consumer, matrix, min, max, min, min, min, min, min, min, max, min, max, max, r, g, b, a, -1, 0, 0);
-        // East
-        addQuad(consumer, matrix, max, max, max, max, min, max, max, min, min, max, max, min, r, g, b, a, 1, 0, 0);
+        // Render the block model with translucency
+        dispatcher.renderSingleBlock(
+                state,
+                poseStack,
+                bufferSource,
+                0x00F000F0, // Full bright
+                OverlayTexture.NO_OVERLAY,
+                ModelData.EMPTY,
+                RenderType.translucent()
+        );
 
         poseStack.popPose();
     }
 
-    private static void addQuad(VertexConsumer consumer, Matrix4f matrix,
-                                float x1, float y1, float z1,
-                                float x2, float y2, float z2,
-                                float x3, float y3, float z3,
-                                float x4, float y4, float z4,
-                                float r, float g, float b, float a,
-                                float nx, float ny, float nz) {
-        consumer.addVertex(matrix, x1, y1, z1).setColor(r, g, b, a).setNormal(nx, ny, nz);
-        consumer.addVertex(matrix, x2, y2, z2).setColor(r, g, b, a).setNormal(nx, ny, nz);
-        consumer.addVertex(matrix, x3, y3, z3).setColor(r, g, b, a).setNormal(nx, ny, nz);
-        consumer.addVertex(matrix, x4, y4, z4).setColor(r, g, b, a).setNormal(nx, ny, nz);
-    }
-
-    private static void renderBlockOutline(PoseStack poseStack, VertexConsumer consumer,
+    private static void renderBlockOutline(PoseStack poseStack, MultiBufferSource bufferSource,
                                            BlockPos pos, Vec3 cameraPos,
                                            float r, float g, float b, float a) {
         poseStack.pushPose();
@@ -187,6 +238,9 @@ public class HologramRenderer {
         poseStack.translate(x, y, z);
 
         Matrix4f matrix = poseStack.last().pose();
+
+        // Get fresh line consumer for this outline
+        VertexConsumer consumer = bufferSource.getBuffer(RenderType.lines());
 
         float minX = 0.0f, minY = 0.0f, minZ = 0.0f;
         float maxX = 1.0f, maxY = 1.0f, maxZ = 1.0f;
@@ -218,5 +272,48 @@ public class HologramRenderer {
                                 float r, float g, float b, float a) {
         consumer.addVertex(matrix, x1, y1, z1).setColor(r, g, b, a).setNormal(0, 1, 0);
         consumer.addVertex(matrix, x2, y2, z2).setColor(r, g, b, a).setNormal(0, 1, 0);
+    }
+
+    /**
+     * Wrapper to make blocks render with translucency
+     */
+    private static class TranslucentVertexConsumer implements VertexConsumer {
+        private final VertexConsumer delegate;
+        private final float alpha;
+
+        public TranslucentVertexConsumer(VertexConsumer delegate, float alpha) {
+            this.delegate = delegate;
+            this.alpha = alpha;
+        }
+
+        @Override
+        public VertexConsumer addVertex(float x, float y, float z) {
+            return delegate.addVertex(x, y, z);
+        }
+
+        @Override
+        public VertexConsumer setColor(int r, int g, int b, int a) {
+            return delegate.setColor(r, g, b, (int)(a * alpha));
+        }
+
+        @Override
+        public VertexConsumer setUv(float u, float v) {
+            return delegate.setUv(u, v);
+        }
+
+        @Override
+        public VertexConsumer setUv1(int u, int v) {
+            return delegate.setUv1(u, v);
+        }
+
+        @Override
+        public VertexConsumer setUv2(int u, int v) {
+            return delegate.setUv2(u, v);
+        }
+
+        @Override
+        public VertexConsumer setNormal(float x, float y, float z) {
+            return delegate.setNormal(x, y, z);
+        }
     }
 }

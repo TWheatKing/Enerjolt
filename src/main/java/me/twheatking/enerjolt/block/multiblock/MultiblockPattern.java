@@ -12,15 +12,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MultiblockPattern {
+    public enum Shape {
+        CUBE,
+        DOME
+    }
+
     private final int size; // 5 or 7
     private final BlockPos controllerPos;
     private final Direction facing;
     private final Level level;
+    private Shape shape = Shape.CUBE; // Default to cube
 
     // Structure validation results
     private boolean isValid = false;
     private List<BlockPos> missingBlocks = new ArrayList<>();
     private List<BlockPos> glassPositions = new ArrayList<>();
+    private List<BlockPos> suggestedPositions = new ArrayList<>(); // Suggestions for hologram
     private BlockPos centerPos;
 
     public MultiblockPattern(Level level, BlockPos controllerPos, Direction facing, int size) {
@@ -28,6 +35,14 @@ public class MultiblockPattern {
         this.controllerPos = controllerPos;
         this.facing = facing;
         this.size = size;
+    }
+
+    public void setShape(Shape shape) {
+        this.shape = shape;
+    }
+
+    public Shape getShape() {
+        return shape;
     }
 
     /**
@@ -38,6 +53,7 @@ public class MultiblockPattern {
     public boolean validate(boolean requirePlant) {
         missingBlocks.clear();
         glassPositions.clear();
+        suggestedPositions.clear();
         isValid = false;
 
         // Calculate center position (bottom center of the structure)
@@ -60,47 +76,116 @@ public class MultiblockPattern {
             }
         }
 
-        // Count glass blocks
+        // ONLY check the base (y=0) - walls and roof are optional/suggestions
         int glassCount = 0;
 
-        // Check all positions in the cube
         for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                for (int z = 0; z < size; z++) {
-                    BlockPos checkPos = getWorldPos(x, y, z);
+            for (int z = 0; z < size; z++) {
+                BlockPos checkPos = getWorldPos(x, 0, z); // Only y=0 (base)
 
-                    // Skip controller position
-                    if (checkPos.equals(controllerPos)) continue;
+                // Skip controller position
+                if (checkPos.equals(controllerPos)) continue;
 
-                    // Skip center bottom (dirt) and above it (plant)
-                    if (checkPos.equals(centerPos) || checkPos.equals(centerPos.above())) continue;
+                // Skip center bottom (dirt)
+                if (checkPos.equals(centerPos)) continue;
 
-                    BlockState state = level.getBlockState(checkPos);
+                BlockState state = level.getBlockState(checkPos);
 
-                    // Check if this should be a wall/frame position
-                    if (isFramePosition(x, y, z)) {
-                        if (state.isAir()) {
-                            missingBlocks.add(checkPos);
-                        } else {
-                            // Check if it's glass
-                            if (isGlassBlock(state.getBlock())) {
-                                glassCount++;
-                                glassPositions.add(checkPos);
-                            }
+                // Check if this should be a base frame position
+                if (isBaseFramePosition(x, z)) {
+                    if (state.isAir()) {
+                        missingBlocks.add(checkPos);
+                    } else {
+                        // Check if it's glass
+                        if (isGlassBlock(state.getBlock())) {
+                            glassCount++;
+                            glassPositions.add(checkPos);
                         }
                     }
                 }
             }
         }
 
-        // Must have at least 16 glass blocks
-        if (glassCount < 16) {
+        // Calculate suggested positions for walls/roof (for hologram only)
+        calculateSuggestedPositions();
+
+        // Must have at least 8 glass blocks in base
+        if (glassCount < 8) {
             isValid = false;
             return false;
         }
 
         isValid = missingBlocks.isEmpty();
         return isValid;
+    }
+
+    /**
+     * Calculate suggested positions for walls and roof (for hologram visualization)
+     */
+    private void calculateSuggestedPositions() {
+        suggestedPositions.clear();
+
+        if (shape == Shape.CUBE) {
+            // Add all frame positions except base
+            for (int x = 0; x < size; x++) {
+                for (int y = 1; y < size; y++) { // Start from y=1 (above base)
+                    for (int z = 0; z < size; z++) {
+                        if (isFramePosition(x, y, z)) {
+                            BlockPos pos = getWorldPos(x, y, z);
+                            if (!pos.equals(centerPos.above())) { // Don't suggest over plant
+                                suggestedPositions.add(pos);
+                            }
+                        }
+                    }
+                }
+            }
+        } else if (shape == Shape.DOME) {
+            // Add dome-shaped suggestions
+            int radius = size / 2;
+            int centerX = size / 2;
+            int centerZ = size / 2;
+
+            for (int x = 0; x < size; x++) {
+                for (int z = 0; z < size; z++) {
+                    // Calculate distance from center
+                    double dx = x - centerX;
+                    double dz = z - centerZ;
+                    double distFromCenter = Math.sqrt(dx * dx + dz * dz);
+
+                    if (distFromCenter <= radius + 0.5) {
+                        // Calculate dome height at this position
+                        double normalizedDist = distFromCenter / radius;
+                        int domeHeight = (int) Math.round(radius * Math.sqrt(1 - normalizedDist * normalizedDist));
+
+                        // Add vertical wall/roof positions up to dome height
+                        for (int y = 1; y <= domeHeight; y++) {
+                            // Only add edge positions for walls, fill in top for dome
+                            if (y == domeHeight || isEdgePosition(x, z)) {
+                                BlockPos pos = getWorldPos(x, y, z);
+                                if (!pos.equals(centerPos.above())) {
+                                    suggestedPositions.add(pos);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Check if position is on the edge (for dome walls)
+     */
+    private boolean isEdgePosition(int x, int z) {
+        return x == 0 || x == size - 1 || z == 0 || z == size - 1;
+    }
+
+    /**
+     * Checks if a position is part of the base frame
+     */
+    private boolean isBaseFramePosition(int x, int z) {
+        // Base frame is the outer perimeter at y=0
+        return x == 0 || x == size - 1 || z == 0 || z == size - 1;
     }
 
     /**
@@ -189,27 +274,43 @@ public class MultiblockPattern {
     public boolean isValid() { return isValid; }
     public List<BlockPos> getMissingBlocks() { return missingBlocks; }
     public List<BlockPos> getGlassPositions() { return glassPositions; }
+    public List<BlockPos> getSuggestedPositions() { return suggestedPositions; }
     public BlockPos getCenterPos() { return centerPos; }
     public int getSize() { return size; }
 
     /**
+     * Sets client-side data from sync packet (client only)
+     */
+    public void setClientData(boolean isValid, List<BlockPos> missingBlocks, List<BlockPos> glassPositions, BlockPos centerPos) {
+        this.isValid = isValid;
+        this.missingBlocks = new ArrayList<>(missingBlocks);
+        this.glassPositions = new ArrayList<>(glassPositions);
+        this.centerPos = centerPos;
+        // Recalculate suggestions on client
+        calculateSuggestedPositions();
+    }
+
+    /**
      * Gets all frame positions for hologram rendering
+     * This includes both required (base) and suggested (walls/roof) positions
      */
     public List<BlockPos> getAllFramePositions() {
         List<BlockPos> positions = new ArrayList<>();
 
+        // Add base positions (required)
         for (int x = 0; x < size; x++) {
-            for (int y = 0; y < size; y++) {
-                for (int z = 0; z < size; z++) {
-                    if (isFramePosition(x, y, z)) {
-                        BlockPos pos = getWorldPos(x, y, z);
-                        if (!pos.equals(controllerPos)) {
-                            positions.add(pos);
-                        }
+            for (int z = 0; z < size; z++) {
+                if (isBaseFramePosition(x, z)) {
+                    BlockPos pos = getWorldPos(x, 0, z);
+                    if (!pos.equals(controllerPos)) {
+                        positions.add(pos);
                     }
                 }
             }
         }
+
+        // Add suggested wall/roof positions
+        positions.addAll(suggestedPositions);
 
         return positions;
     }

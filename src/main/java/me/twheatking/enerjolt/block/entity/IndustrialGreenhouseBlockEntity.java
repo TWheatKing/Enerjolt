@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -36,6 +37,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.HologramSyncS2CPacket;
+import me.twheatking.enerjolt.networking.packet.MultiblockPatternSyncS2CPacket;
 
 import java.util.*;
 
@@ -64,6 +66,8 @@ public class IndustrialGreenhouseBlockEntity
             return stack.getFluid() == Fluids.WATER;
         }
     };
+
+    private MultiblockPattern.Shape greenhouseShape = MultiblockPattern.Shape.CUBE; // Default to dome for chambers
 
     // Multiblock
     private MultiblockPattern pattern;
@@ -177,6 +181,7 @@ public class IndustrialGreenhouseBlockEntity
         nbt.putBoolean("IsFormed", isFormed);
         nbt.putBoolean("ShowHologram", showHologram);
         nbt.putInt("MultiblockSize", multiblockSize);
+        nbt.putString("GreenhouseShape", greenhouseShape.name());
         nbt.put("FluidTank", fluidTank.writeToNBT(registries, new CompoundTag()));
     }
 
@@ -188,6 +193,11 @@ public class IndustrialGreenhouseBlockEntity
         isFormed = nbt.getBoolean("IsFormed");
         showHologram = nbt.getBoolean("ShowHologram");
         multiblockSize = nbt.getInt("MultiblockSize");
+        try {
+            greenhouseShape = MultiblockPattern.Shape.valueOf(nbt.getString("GreenhouseShape"));
+        } catch (Exception e) {
+            greenhouseShape = MultiblockPattern.Shape.CUBE;
+        }
         if (nbt.contains("FluidTank")) {
             fluidTank.readFromNBT(registries, nbt.getCompound("FluidTank"));
         }
@@ -247,22 +257,32 @@ public class IndustrialGreenhouseBlockEntity
 
     private void validateMultiblock() {
         Direction facing = getBlockState().getValue(IndustrialGreenhouseBlock.FACING);
+        boolean wasFormed = isFormed;
+
 
         // Try 5x5 first
         pattern = new MultiblockPattern(level, worldPosition, facing, 5);
+        pattern.setShape(greenhouseShape);
         if (pattern.validate(true)) {
             multiblockSize = 5;
             isFormed = true;
             updateFormedState(true);
+            if (!wasFormed) {
+                syncPatternToClients();
+            }
             return;
         }
 
         // Try 7x7
         pattern = new MultiblockPattern(level, worldPosition, facing, 7);
+        pattern.setShape(greenhouseShape);
         if (pattern.validate(true)) {
             multiblockSize = 7;
             isFormed = true;
             updateFormedState(true);
+            if (!wasFormed) {
+                syncPatternToClients();
+            }
             return;
         }
 
@@ -270,6 +290,7 @@ public class IndustrialGreenhouseBlockEntity
         if (isFormed) {
             isFormed = false;
             updateFormedState(false);
+            syncPatternToClients();
         }
     }
 
@@ -278,6 +299,22 @@ public class IndustrialGreenhouseBlockEntity
         if (state.getValue(IndustrialGreenhouseBlock.FORMED) != formed) {
             level.setBlock(worldPosition, state.setValue(IndustrialGreenhouseBlock.FORMED, formed), 3);
         }
+    }
+
+    private void syncPatternToClients() {
+        if (level == null || level.isClientSide) return;
+
+        MultiblockPatternSyncS2CPacket packet = new MultiblockPatternSyncS2CPacket(
+                worldPosition,
+                getBlockState().getValue(IndustrialGreenhouseBlock.FACING),
+                pattern.getSize(),
+                pattern.isValid(),
+                new ArrayList<>(pattern.getMissingBlocks()),
+                new ArrayList<>(pattern.getGlassPositions()),
+                pattern.getCenterPos()
+        );
+
+        ModMessages.sendToPlayersWithinXBlocks(packet, worldPosition, (ServerLevel) level, 64);
     }
 
     private boolean canProcess() {
@@ -394,6 +431,8 @@ public class IndustrialGreenhouseBlockEntity
         } else {
             playersViewingHologram.add(playerId);
             newState = true;
+            // Also sync pattern when enabling hologram
+            syncPatternToClients();
         }
 
         // Send packet to client
@@ -408,6 +447,13 @@ public class IndustrialGreenhouseBlockEntity
         } else {
             playersViewingHologram.remove(playerId);
         }
+    }
+
+    public void setPatternClient(MultiblockPatternSyncS2CPacket packet) {
+        // Reconstruct pattern on client side
+        this.pattern = new MultiblockPattern(level, packet.controllerPos(), packet.facing(), packet.size());
+        // Manually set the validation results
+        this.pattern.setClientData(packet.isValid(), packet.missingBlocks(), packet.glassPositions(), packet.centerPos());
     }
 
     public MultiblockPattern getPattern() {

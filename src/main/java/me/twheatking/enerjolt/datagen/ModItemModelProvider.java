@@ -22,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         registerBasicModels();
+        registerBlockItems();
         registerSpecialModels();
     }
 
@@ -275,6 +276,67 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
 
         withExistingParent(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    private void registerBlockItems() {
+        // Simple blocks that just reference their block model
+        simpleBlockItem("zinc_block");
+        simpleBlockItem("wheat_ingot_block");
+
+        // Zinc decorative blocks
+        simpleBlockItem("zinc_stairs");
+        simpleBlockItem("zinc_slab");
+        simpleBlockItem("zinc_button");
+        simpleBlockItem("zinc_pressure_plate");
+
+        // Fences need the inventory variant
+        fenceItem("zinc_fence", "zinc_block");
+
+        // Fence gate
+        simpleBlockItem("zinc_fence_gate");
+
+        // Walls need the inventory variant
+        wallItem("zinc_wall", "zinc_block");
+
+        // Trapdoors need the bottom variant
+        trapdoorItem("zinc_trapdoor");
+
+        // Doors are special - they use a generated item texture
+        withExistingParent("zinc_door", "item/generated")
+                .texture("layer0", modLoc("item/zinc_door"));
+
+        // Add other block items...
+        simpleBlockItem("zinc_casing");
+        simpleBlockItem("andesite_casing");
+        simpleBlockItem("silicon_block");
+        simpleBlockItem("tin_block");
+        simpleBlockItem("sawdust_block");
+        simpleBlockItem("tin_ore");
+        simpleBlockItem("deepslate_tin_ore");
+        simpleBlockItem("raw_tin_block");
+        simpleBlockItem("zinc_ore");
+        simpleBlockItem("zinc_deepslate_ore");
+        simpleBlockItem("zinc_end_ore");
+        simpleBlockItem("zinc_nether_ore");
+    }
+
+    // Helper methods
+    private ItemModelBuilder simpleBlockItem(String name) {
+        return withExistingParent(name, modLoc("block/" + name));
+    }
+
+    private ItemModelBuilder fenceItem(String name, String baseBlock) {
+        return withExistingParent(name, mcLoc("block/fence_inventory"))
+                .texture("texture", modLoc("block/" + baseBlock));
+    }
+
+    private ItemModelBuilder wallItem(String name, String baseBlock) {
+        return withExistingParent(name, mcLoc("block/wall_inventory"))
+                .texture("wall", modLoc("block/" + baseBlock));
+    }
+
+    private ItemModelBuilder trapdoorItem(String name) {
+        return withExistingParent(name, modLoc("block/" + name + "_bottom"));
     }
 
     private void registerSpecialModels() {

@@ -120,6 +120,7 @@ public class Enerjolt {
 
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == EnerjoltCreativeModeTab.ENERJOLT_TAB.get()) {
+            // === DOCUMENTATION & TOOLS ===
             event.accept(EnerjoltItems.ENERJOLT_BOOK);
             addEmptyAndFullyChargedItem(event, EnerjoltItems.ENERGY_ANALYZER, EnergyAnalyzerItem.ENERGY_CAPACITY);
             addEmptyAndFullyChargedItem(event, EnerjoltItems.FLUID_ANALYZER, FluidAnalyzerItem.ENERGY_CAPACITY);
@@ -132,10 +133,10 @@ public class Enerjolt {
             event.accept(EnerjoltItems.NETHERITE_HAMMER);
 
             event.accept(EnerjoltItems.CUTTER);
-
             event.accept(EnerjoltItems.WRENCH);
+            event.accept(EnerjoltItems.CHISEL);
 
-            // Conveyor Belt System
+            // === CONVEYOR BELT SYSTEM ===
             event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_ITEM);
             event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_ITEM);
             event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_ITEM);
@@ -155,7 +156,7 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_MERGER_ITEM);
             event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_MERGER_ITEM);
 
-            // Storage System
+            // === STORAGE SYSTEM ===
             event.accept(EnerjoltBlocks.ITEM_SILO_TINY_ITEM);
             event.accept(EnerjoltBlocks.ITEM_SILO_SMALL_ITEM);
             event.accept(EnerjoltBlocks.ITEM_SILO_MEDIUM_ITEM);
@@ -163,7 +164,7 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.ITEM_SILO_GIANT_ITEM);
             event.accept(EnerjoltBlocks.CREATIVE_ITEM_SILO_ITEM);
 
-            // Fluid System
+            // === FLUID SYSTEM ===
             event.accept(EnerjoltBlocks.IRON_FLUID_PIPE_ITEM);
             event.accept(EnerjoltBlocks.GOLDEN_FLUID_PIPE_ITEM);
 
@@ -172,7 +173,7 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.FLUID_TANK_LARGE_ITEM);
             event.accept(EnerjoltBlocks.CREATIVE_FLUID_TANK_ITEM);
 
-            // Energy System - Cables
+            // === ENERGY SYSTEM - CABLES ===
             event.accept(EnerjoltBlocks.TIN_CABLE_ITEM);
             event.accept(EnerjoltBlocks.COPPER_CABLE_ITEM);
             event.accept(EnerjoltBlocks.GOLD_CABLE_ITEM);
@@ -180,7 +181,7 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.ENERGIZED_GOLD_CABLE_ITEM);
             event.accept(EnerjoltBlocks.ENERGIZED_CRYSTAL_MATRIX_CABLE_ITEM);
 
-            // Energy System - Transformers
+            // === ENERGY SYSTEM - TRANSFORMERS ===
             event.accept(EnerjoltBlocks.LV_TRANSFORMER_1_TO_N_ITEM);
             event.accept(EnerjoltBlocks.LV_TRANSFORMER_3_TO_3_ITEM);
             event.accept(EnerjoltBlocks.LV_TRANSFORMER_N_TO_1_ITEM);
@@ -198,11 +199,11 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.EHV_TRANSFORMER_N_TO_1_ITEM);
             event.accept(EnerjoltBlocks.CONFIGURABLE_EHV_TRANSFORMER_ITEM);
 
-            // Processing Machines
+            // === PROCESSING MACHINES ===
             event.accept(EnerjoltBlocks.PRESS_MOLD_MAKER_ITEM);
             event.accept(EnerjoltBlocks.ALLOY_FURNACE_ITEM);
 
-            // Energy Generation
+            // === ENERGY GENERATION ===
             event.accept(EnerjoltBlocks.COAL_ENGINE_ITEM);
             event.accept(EnerjoltBlocks.HEAT_GENERATOR_ITEM);
             event.accept(EnerjoltBlocks.THERMAL_GENERATOR_ITEM);
@@ -214,12 +215,12 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_5);
             event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_6);
 
-            // Energy Storage
+            // === ENERGY STORAGE ===
             event.accept(EnerjoltBlocks.BATTERY_BOX_ITEM);
             event.accept(EnerjoltBlocks.ADVANCED_BATTERY_BOX_ITEM);
             event.accept(EnerjoltBlocks.CREATIVE_BATTERY_BOX_ITEM);
 
-            // Utility Blocks
+            // === UTILITY BLOCKS ===
             event.accept(EnerjoltBlocks.POWERED_LAMP_ITEM);
             event.accept(EnerjoltBlocks.POWERED_FURNACE_ITEM);
             event.accept(EnerjoltBlocks.ADVANCED_POWERED_FURNACE_ITEM);
@@ -264,13 +265,12 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.TIME_CONTROLLER_ITEM);
             event.accept(EnerjoltBlocks.TELEPORTER_ITEM);
 
-            // Inventory Items
+            // === INVENTORY ITEMS ===
             addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_COAL_ENGINE, InventoryCoalEngineItem.CAPACITY);
             event.accept(EnerjoltItems.INVENTORY_CHARGER);
-
             addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_TELEPORTER, InventoryTeleporterItem.CAPACITY);
 
-            // Batteries
+            // === BATTERIES ===
             addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_1, BatteryTier.BATTERY_1.getCapacity());
             addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_2, BatteryTier.BATTERY_2.getCapacity());
             addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_3, BatteryTier.BATTERY_3.getCapacity());
@@ -281,21 +281,22 @@ public class Enerjolt {
             addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_8, BatteryTier.BATTERY_8.getCapacity());
             event.accept(EnerjoltItems.CREATIVE_BATTERY);
 
-            // Minecarts
+            // === MINECARTS ===
             event.accept(EnerjoltItems.BATTERY_BOX_MINECART);
             event.accept(EnerjoltItems.ADVANCED_BATTERY_BOX_MINECART);
 
-            // Machine Frames
+            // === MACHINE FRAMES ===
             event.accept(EnerjoltBlocks.BASIC_MACHINE_FRAME_ITEM);
             event.accept(EnerjoltBlocks.HARDENED_MACHINE_FRAME_ITEM);
             event.accept(EnerjoltBlocks.ADVANCED_MACHINE_FRAME_ITEM);
             event.accept(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME_ITEM);
 
-            // Components
+            // === COMPONENTS - SOLAR CELLS ===
             event.accept(EnerjoltItems.BASIC_SOLAR_CELL);
             event.accept(EnerjoltItems.ADVANCED_SOLAR_CELL);
             event.accept(EnerjoltItems.REINFORCED_ADVANCED_SOLAR_CELL);
 
+            // === COMPONENTS - CIRCUITS ===
             event.accept(EnerjoltItems.BASIC_CIRCUIT);
             event.accept(EnerjoltItems.ADVANCED_CIRCUIT);
             event.accept(EnerjoltItems.PROCESSING_UNIT);
@@ -303,29 +304,33 @@ public class Enerjolt {
             event.accept(EnerjoltItems.TELEPORTER_PROCESSING_UNIT);
             event.accept(EnerjoltItems.TELEPORTER_MATRIX);
 
-            // Upgrade Modules
+            // === UPGRADE MODULES - BASIC ===
             event.accept(EnerjoltItems.BASIC_UPGRADE_MODULE);
             event.accept(EnerjoltItems.ADVANCED_UPGRADE_MODULE);
             event.accept(EnerjoltItems.REINFORCED_ADVANCED_UPGRADE_MODULE);
 
+            // === UPGRADE MODULES - SPEED ===
             event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_3);
             event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_4);
             event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_5);
 
+            // === UPGRADE MODULES - ENERGY EFFICIENCY ===
             event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_3);
             event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_4);
             event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_5);
 
+            // === UPGRADE MODULES - ENERGY CAPACITY ===
             event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_3);
             event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_4);
             event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_5);
 
+            // === UPGRADE MODULES - DURATION ===
             event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_3);
@@ -333,39 +338,42 @@ public class Enerjolt {
             event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_5);
             event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_6);
 
+            // === UPGRADE MODULES - RANGE ===
             event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_3);
 
+            // === UPGRADE MODULES - EXTRACTION DEPTH ===
             event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_3);
             event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_4);
             event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_5);
 
+            // === UPGRADE MODULES - EXTRACTION RANGE ===
             event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_3);
             event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_4);
             event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_5);
 
+            // === UPGRADE MODULES - FURNACE MODES ===
             event.accept(EnerjoltItems.BLAST_FURNACE_UPGRADE_MODULE);
             event.accept(EnerjoltItems.SMOKER_UPGRADE_MODULE);
 
+            // === UPGRADE MODULES - MOON LIGHT ===
             event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_1);
             event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_2);
             event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_3);
 
-            // Building Blocks & Materials
+            // === BUILDING BLOCKS ===
             event.accept(EnerjoltBlocks.SILICON_BLOCK_ITEM);
             event.accept(EnerjoltBlocks.TIN_BLOCK_ITEM);
             event.accept(EnerjoltBlocks.SAWDUST_BLOCK_ITEM);
-
-            // NEW ZINC BLOCKS - These were missing!
             event.accept(EnerjoltBlocks.ZINC_BLOCK);
             event.accept(EnerjoltBlocks.WHEAT_INGOT_BLOCK);
 
-            // Zinc Decorative Blocks
+            // === ZINC DECORATIVE BLOCKS ===
             event.accept(EnerjoltBlocks.ZINC_STAIRS);
             event.accept(EnerjoltBlocks.ZINC_SLAB);
             event.accept(EnerjoltBlocks.ZINC_PRESSURE_PLATE);
@@ -376,11 +384,11 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.ZINC_DOOR);
             event.accept(EnerjoltBlocks.ZINC_TRAPDOOR);
 
-            // Casing Blocks
+            // === CASING BLOCKS ===
             event.accept(EnerjoltBlocks.ZINC_CASING);
             event.accept(EnerjoltBlocks.ANDESITE_CASING);
 
-            // Materials & Components
+            // === MATERIALS & COMPONENTS ===
             event.accept(EnerjoltItems.CABLE_INSULATOR);
             event.accept(EnerjoltItems.CHARCOAL_FILTER);
             event.accept(EnerjoltItems.SAW_BLADE);
@@ -398,28 +406,50 @@ public class Enerjolt {
             event.accept(EnerjoltItems.WIRE_PRESS_MOLD);
             event.accept(EnerjoltItems.SILICON);
 
-            // Metal Dusts
+            // === MACHINE PARTS ===
+            event.accept(EnerjoltItems.BASIC_BLADE);
+            event.accept(EnerjoltItems.ADVANCED_BLADE);
+            event.accept(EnerjoltItems.GRATE);
+            event.accept(EnerjoltItems.WISK);
+            event.accept(EnerjoltItems.RAM);
+            event.accept(EnerjoltItems.EMPTY_COIL);
+            event.accept(EnerjoltItems.COPPER_COIL);
+            event.accept(EnerjoltItems.GOLD_COIL);
+            event.accept(EnerjoltItems.DIAMOND_COIL);
+
+            // === METAL DUSTS ===
             event.accept(EnerjoltItems.TIN_DUST);
             event.accept(EnerjoltItems.COPPER_DUST);
             event.accept(EnerjoltItems.IRON_DUST);
             event.accept(EnerjoltItems.GOLD_DUST);
 
-            // Metal Ingots & Components
+            // === TIN INGOTS & COMPONENTS ===
             event.accept(EnerjoltItems.TIN_NUGGET);
             event.accept(EnerjoltItems.TIN_INGOT);
             event.accept(EnerjoltItems.TIN_PLATE);
+
+            // === METAL PLATES ===
             event.accept(EnerjoltItems.COPPER_PLATE);
             event.accept(EnerjoltItems.IRON_PLATE);
             event.accept(EnerjoltItems.GOLD_PLATE);
+            event.accept(EnerjoltItems.BRASS_PLATE);
+            event.accept(EnerjoltItems.DIAMOND_PLATE);
+            event.accept(EnerjoltItems.NETHERITE_PLATE);
+
+            // === METAL INGOTS ===
             event.accept(EnerjoltItems.STEEL_INGOT);
             event.accept(EnerjoltItems.REDSTONE_ALLOY_INGOT);
             event.accept(EnerjoltItems.ADVANCED_ALLOY_INGOT);
             event.accept(EnerjoltItems.ADVANCED_ALLOY_PLATE);
+
+            // === GEARS, RODS & WIRES ===
             event.accept(EnerjoltItems.IRON_GEAR);
             event.accept(EnerjoltItems.IRON_ROD);
             event.accept(EnerjoltItems.TIN_WIRE);
             event.accept(EnerjoltItems.COPPER_WIRE);
             event.accept(EnerjoltItems.GOLD_WIRE);
+
+            // === ENERGIZED MATERIALS ===
             event.accept(EnerjoltItems.ENERGIZED_COPPER_INGOT);
             event.accept(EnerjoltItems.ENERGIZED_GOLD_INGOT);
             event.accept(EnerjoltItems.ENERGIZED_COPPER_PLATE);
@@ -428,26 +458,78 @@ public class Enerjolt {
             event.accept(EnerjoltItems.ENERGIZED_GOLD_WIRE);
             event.accept(EnerjoltItems.ENERGIZED_CRYSTAL_MATRIX);
 
-            // Fluids
+            // === ALLOYS ===
+            event.accept(EnerjoltItems.ZINC_ALLOY);
+            event.accept(EnerjoltItems.ANDESITE_ALLOY);
+
+            // === RAW MATERIALS & RARE MATERIALS ===
+            event.accept(EnerjoltItems.WHEAT_INGOT);
+            event.accept(EnerjoltItems.ZINC_INGOT);
+            event.accept(EnerjoltItems.COBALT);
+            event.accept(EnerjoltItems.RAW_COBALT);
+            event.accept(EnerjoltItems.BRASS);
+            event.accept(EnerjoltItems.SULFUR);
+            event.accept(EnerjoltItems.GRAPHITE);
+            event.accept(EnerjoltItems.BAUXITE);
+            event.accept(EnerjoltItems.SALTPETER);
+            event.accept(EnerjoltItems.LITHIUM);
+            event.accept(EnerjoltItems.NICKEL);
+            event.accept(EnerjoltItems.COPPER_SULFIDE);
+            event.accept(EnerjoltItems.MANGANESE);
+            event.accept(EnerjoltItems.URANINITE);
+            event.accept(EnerjoltItems.THORIUM);
+            event.accept(EnerjoltItems.TUNGSTEN);
+            event.accept(EnerjoltItems.PLATINUM);
+            event.accept(EnerjoltItems.NEODYMIUM);
+            event.accept(EnerjoltItems.YTTRIUM);
+
+            // === ENDGAME MATERIALS ===
+            event.accept(EnerjoltItems.ENERJOLT);
+            event.accept(EnerjoltItems.CRYONITE);
+            event.accept(EnerjoltItems.VOIDSTONE);
+
+            // === FLUIDS ===
             event.accept(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
 
-            // Misc Items
+            // === MISC ITEMS ===
             event.accept(EnerjoltItems.STONE_PEBBLE);
+            event.accept(EnerjoltItems.COPPER_BIT);
+            event.accept(EnerjoltItems.GOLD_BIT);
+            event.accept(EnerjoltItems.IRON_BIT);
+            event.accept(EnerjoltItems.DIAMOND_BIT);
+            event.accept(EnerjoltItems.NETHERITE_BIT);
 
-            // Ores & Raw Materials
+            // === ORES & RAW MATERIALS - TIN ===
             event.accept(EnerjoltItems.RAW_TIN);
             event.accept(EnerjoltBlocks.TIN_ORE_ITEM);
             event.accept(EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM);
             event.accept(EnerjoltBlocks.RAW_TIN_BLOCK_ITEM);
 
-            // NEW ZINC ORES & MATERIALS - These were missing!
-            // First check if RAW_ZINC exists in EnerjoltItems, if not we'll just add the blocks
-            // event.accept(EnerjoltItems.RAW_ZINC); // Uncomment if this exists
+            // === ORES & RAW MATERIALS - ZINC ===
+            event.accept(EnerjoltItems.RAW_ZINC);
             event.accept(EnerjoltBlocks.ZINC_ORE);
             event.accept(EnerjoltBlocks.ZINC_DEEPSLATE_ORE);
             event.accept(EnerjoltBlocks.ZINC_END_ORE);
             event.accept(EnerjoltBlocks.ZINC_NETHER_ORE);
-            // event.accept(EnerjoltBlocks.RAW_ZINC_BLOCK); // Uncomment if this exists
+
+            // === ZINC ARMOR ===
+            event.accept(EnerjoltItems.ZINC_HELMET);
+            event.accept(EnerjoltItems.ZINC_CHESTPLATE);
+            event.accept(EnerjoltItems.ZINC_LEGGINGS);
+            event.accept(EnerjoltItems.ZINC_BOOTS);
+            event.accept(EnerjoltItems.ZINC_HORSE_ARMOR);
+            event.accept(EnerjoltItems.ZINC_SMITHING_TEMPLATE);
+
+            // === ZINC TOOLS & WEAPONS ===
+            event.accept(EnerjoltItems.ZINC_BOW);
+            event.accept(EnerjoltItems.ZINC_SWORD);
+            event.accept(EnerjoltItems.ZINC_PICKAXE);
+            event.accept(EnerjoltItems.ZINC_SHOVEL);
+            event.accept(EnerjoltItems.ZINC_AXE);
+            event.accept(EnerjoltItems.ZINC_HOE);
+
+            // === SPAWN EGGS ===
+            event.accept(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG);
         }
     }
 

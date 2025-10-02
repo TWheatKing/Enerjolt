@@ -2,6 +2,7 @@ package me.twheatking.enerjolt.datagen;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.block.*;
+import me.twheatking.enerjolt.block.custom.SapTreeLog;
 import me.twheatking.enerjolt.machine.tier.TransformerType;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -385,8 +386,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlockWithItem(EnerjoltBlocks.HARDENED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.ADVANCED_MACHINE_FRAME, false);
         horizontalBlockWithItem(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME, false);
+
+        //Greenhouse like machines
         activatableOrientableMachineBlockWithItem(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE, false);
         activatableOrientableMachineBlockWithItem(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER, false);
+
+        // Rubber tree blocks
+        logBlockWithSap(EnerjoltBlocks.RUBBER_TREE_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_TREE_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_TREE_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_TREE_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_TREE_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_TREE_LEAVES);
+
+        // Rubber tree saplings - all 5 variants
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_OAK);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_BIRCH);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_SPRUCE);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_FANCY_OAK);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_DARK_OAK);
     }
 
     // Helper method for ResourceLocation
@@ -937,6 +955,62 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     with(BlockStateProperties.LEVEL, i).modelForState().modelFile(modelOn).addModel();
 
         simpleBlockItem(block.value(), modelOff);
+    }
+
+    private void logBlockWithSap(DeferredBlock<SapTreeLog> block) {
+        ResourceLocation blockId = Objects.requireNonNull(block.getKey()).location();
+
+        ModelFile logModel = models().withExistingParent(blockId.getPath(), "minecraft:block/cube_column")
+                .texture("end", getBlockTexture(block, "_top"))
+                .texture("side", getBlockTexture(block));
+
+        ModelFile logModelSap = models().withExistingParent(blockId.getPath() + "_sap", "minecraft:block/cube_column")
+                .texture("end", getBlockTexture(block, "_top"))
+                .texture("side", getBlockTexture(block, "_sap"));
+
+        ModelFile logHorizontalModel = models().withExistingParent(blockId.getPath() + "_horizontal", "minecraft:block/cube_column_horizontal")
+                .texture("end", getBlockTexture(block, "_top"))
+                .texture("side", getBlockTexture(block));
+
+        ModelFile logHorizontalModelSap = models().withExistingParent(blockId.getPath() + "_horizontal_sap", "minecraft:block/cube_column_horizontal")
+                .texture("end", getBlockTexture(block, "_top"))
+                .texture("side", getBlockTexture(block, "_sap"));
+
+        getVariantBuilder(block.value())
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.Y).with(SapTreeLog.HAS_SAP, false)
+                .modelForState().modelFile(logModel).addModel()
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.Y).with(SapTreeLog.HAS_SAP, true)
+                .modelForState().modelFile(logModelSap).addModel()
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.Z).with(SapTreeLog.HAS_SAP, false)
+                .modelForState().modelFile(logHorizontalModel).rotationX(90).addModel()
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.Z).with(SapTreeLog.HAS_SAP, true)
+                .modelForState().modelFile(logHorizontalModelSap).rotationX(90).addModel()
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.X).with(SapTreeLog.HAS_SAP, false)
+                .modelForState().modelFile(logHorizontalModel).rotationX(90).rotationY(90).addModel()
+                .partialState().with(SapTreeLog.AXIS, Direction.Axis.X).with(SapTreeLog.HAS_SAP, true)
+                .modelForState().modelFile(logHorizontalModelSap).rotationX(90).rotationY(90).addModel();
+
+        simpleBlockItem(block.value(), logModel);
+    }
+
+    private void axisBlockWithItem(DeferredBlock<? extends Block> block) {
+        axisBlock(block.value());
+        simpleBlockItem(block.value(), models().getExistingFile(getBlockTexture(block)));
+    }
+
+    private void leavesBlockWithItem(DeferredBlock<? extends Block> block) {
+        simpleBlockWithItem(block.value(), models().withExistingParent(
+                        Objects.requireNonNull(block.getKey()).location().getPath(),
+                        "minecraft:block/leaves")
+                .texture("all", getBlockTexture(block))
+                .renderType("cutout"));
+    }
+
+    private void saplingBlockWithItem(DeferredBlock<? extends Block> block) {
+        ResourceLocation blockId = Objects.requireNonNull(block.getKey()).location();
+        ModelFile model = models().cross(blockId.getPath(), getBlockTexture(block)).renderType("cutout");
+        simpleBlock(block.value(), model);
+        simpleBlockItem(block.value(), model);
     }
 
     private ResourceLocation getBlockTexture(Holder<? extends Block> block) {

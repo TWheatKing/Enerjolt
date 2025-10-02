@@ -138,6 +138,8 @@ public class Enerjolt {
             event.accept(EnerjoltItems.WRENCH);
             event.accept(EnerjoltItems.CHISEL);
 
+            event.accept(EnerjoltItems.MANUAL_TAP);
+
             // === CONVEYOR BELT SYSTEM ===
             event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_ITEM);
             event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_ITEM);
@@ -394,9 +396,55 @@ public class Enerjolt {
             event.accept(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE);
             event.accept(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER);
 
+            // === RUBBER TREE - OAK STYLE ===
+            event.accept(EnerjoltBlocks.RUBBER_OAK_LOG);
+            event.accept(EnerjoltBlocks.RUBBER_OAK_WOOD);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD);
+            event.accept(EnerjoltBlocks.RUBBER_OAK_PLANKS);
+            event.accept(EnerjoltBlocks.RUBBER_OAK_LEAVES);
+            event.accept(EnerjoltBlocks.RUBBER_OAK_SAPLING);
+
+            // === RUBBER TREE - BIRCH STYLE ===
+            event.accept(EnerjoltBlocks.RUBBER_BIRCH_LOG);
+            event.accept(EnerjoltBlocks.RUBBER_BIRCH_WOOD);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD);
+            event.accept(EnerjoltBlocks.RUBBER_BIRCH_PLANKS);
+            event.accept(EnerjoltBlocks.RUBBER_BIRCH_LEAVES);
+            event.accept(EnerjoltBlocks.RUBBER_BIRCH_SAPLING);
+
+            // === RUBBER TREE - SPRUCE STYLE ===
+            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LOG);
+            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_WOOD);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD);
+            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS);
+            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES);
+            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING);
+
+            // === RUBBER TREE - FANCY OAK STYLE ===
+            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG);
+            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD);
+            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
+            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES);
+            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING);
+
+            // === RUBBER TREE - DARK OAK STYLE ===
+            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LOG);
+            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG);
+            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD);
+            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS);
+            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES);
+            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING);
 
             // === MATERIALS & COMPONENTS ===
             event.accept(EnerjoltItems.CABLE_INSULATOR);
+            event.accept(EnerjoltItems.SAP);
+            event.accept(EnerjoltItems.RUBBER);
             event.accept(EnerjoltItems.CHARCOAL_FILTER);
             event.accept(EnerjoltItems.SAW_BLADE);
             event.accept(EnerjoltItems.CRYSTAL_MATRIX);

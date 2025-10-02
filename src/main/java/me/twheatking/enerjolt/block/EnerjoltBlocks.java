@@ -15,12 +15,16 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.SoundType;
+import me.twheatking.enerjolt.block.custom.SapTreeLog;
+import me.twheatking.enerjolt.worldgen.tree.SapTreeGrower;
+import net.minecraft.world.level.block.SaplingBlock;
 
 import java.util.function.Supplier;
 
@@ -780,6 +784,362 @@ public final class EnerjoltBlocks {
                     requiresCorrectToolForDrops().strength(5.0f, 6.0f).sound(SoundType.METAL).
                     lightLevel(PhotosyntheticChamberBlock.LIGHT_EMISSION)));
     public static final DeferredItem<Item> PHOTOSYNTHETIC_CHAMBER_ITEM = createBlockItem("photosynthetic_chamber", PHOTOSYNTHETIC_CHAMBER);
+
+
+    // === RUBBER TREE - OAK STYLE ===
+    public static final DeferredBlock<SapTreeLog> RUBBER_OAK_LOG = BLOCKS.register("rubber_oak_log",
+            () -> new SapTreeLog(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_OAK_LOG_ITEM = createBlockItem("rubber_oak_log", RUBBER_OAK_LOG);
+
+    public static final DeferredBlock<Block> RUBBER_OAK_WOOD = BLOCKS.register("rubber_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_OAK_WOOD_ITEM = createBlockItem("rubber_oak_wood", RUBBER_OAK_WOOD);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_OAK_LOG = BLOCKS.register("stripped_rubber_oak_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_OAK_LOG_ITEM = createBlockItem("stripped_rubber_oak_log", STRIPPED_RUBBER_OAK_LOG);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_OAK_WOOD = BLOCKS.register("stripped_rubber_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_OAK_WOOD_ITEM = createBlockItem("stripped_rubber_oak_wood", STRIPPED_RUBBER_OAK_WOOD);
+
+    public static final DeferredBlock<Block> RUBBER_OAK_PLANKS = BLOCKS.register("rubber_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_OAK_PLANKS_ITEM = createBlockItem("rubber_oak_planks", RUBBER_OAK_PLANKS);
+
+    public static final DeferredBlock<Block> RUBBER_OAK_LEAVES = BLOCKS.register("rubber_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor((state, level, pos) -> false)));
+    public static final DeferredItem<Item> RUBBER_OAK_LEAVES_ITEM = createBlockItem("rubber_oak_leaves", RUBBER_OAK_LEAVES);
+
+    public static final DeferredBlock<Block> RUBBER_OAK_SAPLING = BLOCKS.register("rubber_oak_sapling",
+            () -> new SaplingBlock(SapTreeGrower.RUBBER_TREE_OAK, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredItem<Item> RUBBER_OAK_SAPLING_ITEM = createBlockItem("rubber_oak_sapling", RUBBER_OAK_SAPLING);
+
+    // === RUBBER TREE - BIRCH STYLE ===
+    public static final DeferredBlock<SapTreeLog> RUBBER_BIRCH_LOG = BLOCKS.register("rubber_birch_log",
+            () -> new SapTreeLog(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_BIRCH_LOG_ITEM = createBlockItem("rubber_birch_log", RUBBER_BIRCH_LOG);
+
+    public static final DeferredBlock<Block> RUBBER_BIRCH_WOOD = BLOCKS.register("rubber_birch_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_BIRCH_WOOD_ITEM = createBlockItem("rubber_birch_wood", RUBBER_BIRCH_WOOD);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_BIRCH_LOG = BLOCKS.register("stripped_rubber_birch_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_BIRCH_LOG_ITEM = createBlockItem("stripped_rubber_birch_log", STRIPPED_RUBBER_BIRCH_LOG);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_BIRCH_WOOD = BLOCKS.register("stripped_rubber_birch_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_BIRCH_WOOD_ITEM = createBlockItem("stripped_rubber_birch_wood", STRIPPED_RUBBER_BIRCH_WOOD);
+
+    public static final DeferredBlock<Block> RUBBER_BIRCH_PLANKS = BLOCKS.register("rubber_birch_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_BIRCH_PLANKS_ITEM = createBlockItem("rubber_birch_planks", RUBBER_BIRCH_PLANKS);
+
+    public static final DeferredBlock<Block> RUBBER_BIRCH_LEAVES = BLOCKS.register("rubber_birch_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor((state, level, pos) -> false)));
+    public static final DeferredItem<Item> RUBBER_BIRCH_LEAVES_ITEM = createBlockItem("rubber_birch_leaves", RUBBER_BIRCH_LEAVES);
+
+    public static final DeferredBlock<Block> RUBBER_BIRCH_SAPLING = BLOCKS.register("rubber_birch_sapling",
+            () -> new SaplingBlock(SapTreeGrower.RUBBER_TREE_BIRCH, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredItem<Item> RUBBER_BIRCH_SAPLING_ITEM = createBlockItem("rubber_birch_sapling", RUBBER_BIRCH_SAPLING);
+
+    // === RUBBER TREE - SPRUCE STYLE ===
+    public static final DeferredBlock<SapTreeLog> RUBBER_SPRUCE_LOG = BLOCKS.register("rubber_spruce_log",
+            () -> new SapTreeLog(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_SPRUCE_LOG_ITEM = createBlockItem("rubber_spruce_log", RUBBER_SPRUCE_LOG);
+
+    public static final DeferredBlock<Block> RUBBER_SPRUCE_WOOD = BLOCKS.register("rubber_spruce_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_SPRUCE_WOOD_ITEM = createBlockItem("rubber_spruce_wood", RUBBER_SPRUCE_WOOD);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_SPRUCE_LOG = BLOCKS.register("stripped_rubber_spruce_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_SPRUCE_LOG_ITEM = createBlockItem("stripped_rubber_spruce_log", STRIPPED_RUBBER_SPRUCE_LOG);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_SPRUCE_WOOD = BLOCKS.register("stripped_rubber_spruce_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_SPRUCE_WOOD_ITEM = createBlockItem("stripped_rubber_spruce_wood", STRIPPED_RUBBER_SPRUCE_WOOD);
+
+    public static final DeferredBlock<Block> RUBBER_SPRUCE_PLANKS = BLOCKS.register("rubber_spruce_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_SPRUCE_PLANKS_ITEM = createBlockItem("rubber_spruce_planks", RUBBER_SPRUCE_PLANKS);
+
+    public static final DeferredBlock<Block> RUBBER_SPRUCE_LEAVES = BLOCKS.register("rubber_spruce_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor((state, level, pos) -> false)));
+    public static final DeferredItem<Item> RUBBER_SPRUCE_LEAVES_ITEM = createBlockItem("rubber_spruce_leaves", RUBBER_SPRUCE_LEAVES);
+
+    public static final DeferredBlock<Block> RUBBER_SPRUCE_SAPLING = BLOCKS.register("rubber_spruce_sapling",
+            () -> new SaplingBlock(SapTreeGrower.RUBBER_TREE_SPRUCE, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredItem<Item> RUBBER_SPRUCE_SAPLING_ITEM = createBlockItem("rubber_spruce_sapling", RUBBER_SPRUCE_SAPLING);
+
+    // === RUBBER TREE - FANCY OAK STYLE ===
+    public static final DeferredBlock<SapTreeLog> RUBBER_FANCY_OAK_LOG = BLOCKS.register("rubber_fancy_oak_log",
+            () -> new SapTreeLog(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_FANCY_OAK_LOG_ITEM = createBlockItem("rubber_fancy_oak_log", RUBBER_FANCY_OAK_LOG);
+
+    public static final DeferredBlock<Block> RUBBER_FANCY_OAK_WOOD = BLOCKS.register("rubber_fancy_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_FANCY_OAK_WOOD_ITEM = createBlockItem("rubber_fancy_oak_wood", RUBBER_FANCY_OAK_WOOD);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_FANCY_OAK_LOG = BLOCKS.register("stripped_rubber_fancy_oak_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_FANCY_OAK_LOG_ITEM = createBlockItem("stripped_rubber_fancy_oak_log", STRIPPED_RUBBER_FANCY_OAK_LOG);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_FANCY_OAK_WOOD = BLOCKS.register("stripped_rubber_fancy_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_FANCY_OAK_WOOD_ITEM = createBlockItem("stripped_rubber_fancy_oak_wood", STRIPPED_RUBBER_FANCY_OAK_WOOD);
+
+    public static final DeferredBlock<Block> RUBBER_FANCY_OAK_PLANKS = BLOCKS.register("rubber_fancy_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_FANCY_OAK_PLANKS_ITEM = createBlockItem("rubber_fancy_oak_planks", RUBBER_FANCY_OAK_PLANKS);
+
+    public static final DeferredBlock<Block> RUBBER_FANCY_OAK_LEAVES = BLOCKS.register("rubber_fancy_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor((state, level, pos) -> false)));
+    public static final DeferredItem<Item> RUBBER_FANCY_OAK_LEAVES_ITEM = createBlockItem("rubber_fancy_oak_leaves", RUBBER_FANCY_OAK_LEAVES);
+
+    public static final DeferredBlock<Block> RUBBER_FANCY_OAK_SAPLING = BLOCKS.register("rubber_fancy_oak_sapling",
+            () -> new SaplingBlock(SapTreeGrower.RUBBER_TREE_FANCY_OAK, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredItem<Item> RUBBER_FANCY_OAK_SAPLING_ITEM = createBlockItem("rubber_fancy_oak_sapling", RUBBER_FANCY_OAK_SAPLING);
+
+    // === RUBBER TREE - DARK OAK STYLE ===
+    public static final DeferredBlock<SapTreeLog> RUBBER_DARK_OAK_LOG = BLOCKS.register("rubber_dark_oak_log",
+            () -> new SapTreeLog(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_DARK_OAK_LOG_ITEM = createBlockItem("rubber_dark_oak_log", RUBBER_DARK_OAK_LOG);
+
+    public static final DeferredBlock<Block> RUBBER_DARK_OAK_WOOD = BLOCKS.register("rubber_dark_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_DARK_OAK_WOOD_ITEM = createBlockItem("rubber_dark_oak_wood", RUBBER_DARK_OAK_WOOD);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_DARK_OAK_LOG = BLOCKS.register("stripped_rubber_dark_oak_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_DARK_OAK_LOG_ITEM = createBlockItem("stripped_rubber_dark_oak_log", STRIPPED_RUBBER_DARK_OAK_LOG);
+
+    public static final DeferredBlock<Block> STRIPPED_RUBBER_DARK_OAK_WOOD = BLOCKS.register("stripped_rubber_dark_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> STRIPPED_RUBBER_DARK_OAK_WOOD_ITEM = createBlockItem("stripped_rubber_dark_oak_wood", STRIPPED_RUBBER_DARK_OAK_WOOD);
+
+    public static final DeferredBlock<Block> RUBBER_DARK_OAK_PLANKS = BLOCKS.register("rubber_dark_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0f, 3.0f)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_DARK_OAK_PLANKS_ITEM = createBlockItem("rubber_dark_oak_planks", RUBBER_DARK_OAK_PLANKS);
+
+    public static final DeferredBlock<Block> RUBBER_DARK_OAK_LEAVES = BLOCKS.register("rubber_dark_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .strength(0.2f)
+                    .randomTicks()
+                    .sound(SoundType.GRASS)
+                    .noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor((state, level, pos) -> false)));
+    public static final DeferredItem<Item> RUBBER_DARK_OAK_LEAVES_ITEM = createBlockItem("rubber_dark_oak_leaves", RUBBER_DARK_OAK_LEAVES);
+
+    public static final DeferredBlock<Block> RUBBER_DARK_OAK_SAPLING = BLOCKS.register("rubber_dark_oak_sapling",
+            () -> new SaplingBlock(SapTreeGrower.RUBBER_TREE_DARK_OAK, BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredItem<Item> RUBBER_DARK_OAK_SAPLING_ITEM = createBlockItem("rubber_dark_oak_sapling", RUBBER_DARK_OAK_SAPLING);
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

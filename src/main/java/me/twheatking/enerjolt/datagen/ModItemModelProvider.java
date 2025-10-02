@@ -276,6 +276,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
 
         withExistingParent(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        // Sap and rubber items
+        basicItem(EnerjoltItems.SAP);
+        basicItem(EnerjoltItems.RUBBER);
+        basicItem(EnerjoltItems.MANUAL_TAP);
     }
 
     private void registerBlockItems() {
@@ -321,6 +326,21 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem("industrial_greenhouse");
         simpleBlockItem("photosynthetic_chamber");
+
+        // Rubber tree blocks
+        simpleBlockItem("rubber_tree_log");
+        simpleBlockItem("rubber_tree_wood");
+        simpleBlockItem("stripped_rubber_tree_log");
+        simpleBlockItem("stripped_rubber_tree_wood");
+        simpleBlockItem("rubber_tree_planks");
+        simpleBlockItem("rubber_tree_leaves");
+
+        // Rubber tree saplings - all 5 variants
+        simpleBlockItem("rubber_tree_sapling_oak");
+        simpleBlockItem("rubber_tree_sapling_birch");
+        simpleBlockItem("rubber_tree_sapling_spruce");
+        simpleBlockItem("rubber_tree_sapling_fancy_oak");
+        simpleBlockItem("rubber_tree_sapling_dark_oak");
     }
 
     // Helper methods

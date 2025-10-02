@@ -3,10 +3,7 @@ package me.twheatking.enerjolt.item;
 import me.twheatking.enerjolt.Enerjolt;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
-import me.twheatking.enerjolt.item.custom.AndesiteAlloyItem;
-import me.twheatking.enerjolt.item.custom.ChiselItem;
-import me.twheatking.enerjolt.item.custom.ModArmorItem;
-import me.twheatking.enerjolt.item.custom.ZincAlloyItem;
+import me.twheatking.enerjolt.item.custom.*;
 import me.twheatking.enerjolt.machine.tier.BatteryTier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -448,6 +445,17 @@ public final class EnerjoltItems {
     public static final DeferredItem<Item> EVIL_IRON_ZOMBIE_SPAWN_EGG = ITEMS.register("evil_iron_zombie_spawn_egg",
             () -> new DeferredSpawnEggItem(EnerjoltEntityTypes.EVILIRONZOMBIE, 0x31afaf, 0xffac00,
                     new Item.Properties()));
+
+    // === SAP & RUBBER SYSTEM ===
+    public static final DeferredItem<Item> SAP = ITEMS.register("sap",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> RUBBER = ITEMS.register("rubber",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MANUAL_TAP = ITEMS.register("manual_tap",
+            () -> new ManualTapItem(new Item.Properties().durability(64)));
+
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

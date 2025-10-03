@@ -208,6 +208,47 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         dropSelf(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get());
         dropSelf(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER.get());
+
+        // Wood/Tree Blocks
+        dropSelf(EnerjoltBlocks.RUBBER_OAK_LOG);
+        dropSelf(EnerjoltBlocks.RUBBER_OAK_WOOD);
+        dropSelf(EnerjoltBlocks.RUBBER_OAK_LEAVES);
+        dropSelf(EnerjoltBlocks.RUBBER_OAK_SAPLING);
+        dropSelf(EnerjoltBlocks.RUBBER_OAK_PLANKS);
+        dropSelf(EnerjoltBlocks.RUBBER_DARK_OAK_LOG);
+        dropSelf(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD);
+        dropSelf(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES);
+        dropSelf(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING);
+        dropSelf(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS);
+        dropSelf(EnerjoltBlocks.RUBBER_BIRCH_LOG);
+        dropSelf(EnerjoltBlocks.RUBBER_BIRCH_WOOD);
+        dropSelf(EnerjoltBlocks.RUBBER_BIRCH_LEAVES);
+        dropSelf(EnerjoltBlocks.RUBBER_BIRCH_SAPLING);
+        dropSelf(EnerjoltBlocks.RUBBER_BIRCH_PLANKS);
+        dropSelf(EnerjoltBlocks.RUBBER_SPRUCE_LOG);
+        dropSelf(EnerjoltBlocks.RUBBER_SPRUCE_WOOD);
+        dropSelf(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES);
+        dropSelf(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING);
+        dropSelf(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS);
+
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG);
+        dropSelf(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD);
+
+        dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG);
+        dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD);
+        dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES);
+        dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING);
+        dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
+
+
     }
 
     private void dropSelf(DeferredHolder<Block, ? extends Block> block) {

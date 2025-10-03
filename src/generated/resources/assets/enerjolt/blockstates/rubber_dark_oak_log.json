@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,has_sap=false": {
+      "model": "enerjolt:block/rubber_dark_oak_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,has_sap=true": {
+      "model": "enerjolt:block/rubber_dark_oak_log_horizontal_sap",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,has_sap=false": {
+      "model": "enerjolt:block/rubber_dark_oak_log"
+    },
+    "axis=y,has_sap=true": {
+      "model": "enerjolt:block/rubber_dark_oak_log_sap"
+    },
+    "axis=z,has_sap=false": {
+      "model": "enerjolt:block/rubber_dark_oak_log_horizontal",
+      "x": 90
+    },
+    "axis=z,has_sap=true": {
+      "model": "enerjolt:block/rubber_dark_oak_log_horizontal_sap",
+      "x": 90
+    }
+  }
+}

@@ -5,7 +5,9 @@ import me.twheatking.enerjolt.item.EnerjoltItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -45,9 +47,12 @@ public class ManualTapItem extends Item {
                 // Play sound effect
                 level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
 
-                // Damage the tap tool
+                // Damage the tap tool using the new 1.21.1 method signature
                 ItemStack tapStack = context.getItemInHand();
-                tapStack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                EquipmentSlot slot = context.getHand() == InteractionHand.MAIN_HAND
+                        ? EquipmentSlot.MAINHAND
+                        : EquipmentSlot.OFFHAND;
+                tapStack.hurtAndBreak(1, player, slot);
             }
 
             return InteractionResult.sidedSuccess(level.isClientSide);

@@ -327,20 +327,50 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem("industrial_greenhouse");
         simpleBlockItem("photosynthetic_chamber");
 
-        // Rubber tree blocks
-        simpleBlockItem("rubber_tree_log");
-        simpleBlockItem("rubber_tree_wood");
-        simpleBlockItem("stripped_rubber_tree_log");
-        simpleBlockItem("stripped_rubber_tree_wood");
-        simpleBlockItem("rubber_tree_planks");
-        simpleBlockItem("rubber_tree_leaves");
+        // Rubber tree - Oak style
+        simpleBlockItem("rubber_oak_log");
+        simpleBlockItem("rubber_oak_wood");
+        simpleBlockItem("stripped_rubber_oak_log");
+        simpleBlockItem("stripped_rubber_oak_wood");
+        simpleBlockItem("rubber_oak_planks");
+        simpleBlockItem("rubber_oak_leaves");
+        simpleBlockItem("rubber_oak_sapling");
 
-        // Rubber tree saplings - all 5 variants
-        simpleBlockItem("rubber_tree_sapling_oak");
-        simpleBlockItem("rubber_tree_sapling_birch");
-        simpleBlockItem("rubber_tree_sapling_spruce");
-        simpleBlockItem("rubber_tree_sapling_fancy_oak");
-        simpleBlockItem("rubber_tree_sapling_dark_oak");
+        // Rubber tree - Birch style
+        simpleBlockItem("rubber_birch_log");
+        simpleBlockItem("rubber_birch_wood");
+        simpleBlockItem("stripped_rubber_birch_log");
+        simpleBlockItem("stripped_rubber_birch_wood");
+        simpleBlockItem("rubber_birch_planks");
+        simpleBlockItem("rubber_birch_leaves");
+        simpleBlockItem("rubber_birch_sapling");
+
+        // Rubber tree - Spruce style
+        simpleBlockItem("rubber_spruce_log");
+        simpleBlockItem("rubber_spruce_wood");
+        simpleBlockItem("stripped_rubber_spruce_log");
+        simpleBlockItem("stripped_rubber_spruce_wood");
+        simpleBlockItem("rubber_spruce_planks");
+        simpleBlockItem("rubber_spruce_leaves");
+        simpleBlockItem("rubber_spruce_sapling");
+
+        // Rubber tree - Fancy Oak style
+        simpleBlockItem("rubber_fancy_oak_log");
+        simpleBlockItem("rubber_fancy_oak_wood");
+        simpleBlockItem("stripped_rubber_fancy_oak_log");
+        simpleBlockItem("stripped_rubber_fancy_oak_wood");
+        simpleBlockItem("rubber_fancy_oak_planks");
+        simpleBlockItem("rubber_fancy_oak_leaves");
+        simpleBlockItem("rubber_fancy_oak_sapling");
+
+        // Rubber tree - Dark Oak style
+        simpleBlockItem("rubber_dark_oak_log");
+        simpleBlockItem("rubber_dark_oak_wood");
+        simpleBlockItem("stripped_rubber_dark_oak_log");
+        simpleBlockItem("stripped_rubber_dark_oak_wood");
+        simpleBlockItem("rubber_dark_oak_planks");
+        simpleBlockItem("rubber_dark_oak_leaves");
+        simpleBlockItem("rubber_dark_oak_sapling");
     }
 
     // Helper methods

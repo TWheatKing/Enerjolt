@@ -10,6 +10,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.neoforged.neoforge.client.model.generators.*;
@@ -391,20 +392,50 @@ public class ModBlockStateProvider extends BlockStateProvider {
         activatableOrientableMachineBlockWithItem(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE, false);
         activatableOrientableMachineBlockWithItem(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER, false);
 
-        // Rubber tree blocks
-        logBlockWithSap(EnerjoltBlocks.RUBBER_TREE_LOG);
-        axisBlockWithItem(EnerjoltBlocks.RUBBER_TREE_WOOD);
-        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_TREE_LOG);
-        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_TREE_WOOD);
-        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_TREE_PLANKS);
-        leavesBlockWithItem(EnerjoltBlocks.RUBBER_TREE_LEAVES);
+        // Rubber tree - Oak style
+        logBlockWithSap(EnerjoltBlocks.RUBBER_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_OAK_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_OAK_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_OAK_LEAVES);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_OAK_SAPLING);
 
-        // Rubber tree saplings - all 5 variants
-        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_OAK);
-        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_BIRCH);
-        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_SPRUCE);
-        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_FANCY_OAK);
-        saplingBlockWithItem(EnerjoltBlocks.RUBBER_TREE_SAPLING_DARK_OAK);
+        // Rubber tree - Birch style
+        logBlockWithSap(EnerjoltBlocks.RUBBER_BIRCH_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_BIRCH_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_BIRCH_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_BIRCH_LEAVES);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_BIRCH_SAPLING);
+
+        // Rubber tree - Spruce style
+        logBlockWithSap(EnerjoltBlocks.RUBBER_SPRUCE_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_SPRUCE_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING);
+
+        // Rubber tree - Fancy Oak style
+        logBlockWithSap(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING);
+
+        // Rubber tree - Dark Oak style
+        logBlockWithSap(EnerjoltBlocks.RUBBER_DARK_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG);
+        axisBlockWithItem(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD);
+        cubeAllBlockWithItem(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS);
+        leavesBlockWithItem(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES);
+        saplingBlockWithItem(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING);
     }
 
     // Helper method for ResourceLocation
@@ -994,7 +1025,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void axisBlockWithItem(DeferredBlock<? extends Block> block) {
-        axisBlock(block.value());
+        axisBlock((RotatedPillarBlock) block.value());
         simpleBlockItem(block.value(), models().getExistingFile(getBlockTexture(block)));
     }
 

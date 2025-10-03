@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enerjolt:block/stripped_rubber_dark_oak_wood_end",
+    "side": "enerjolt:block/stripped_rubber_dark_oak_wood_side"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enerjolt:block/rubber_birch_log_top",
+    "side": "enerjolt:block/rubber_birch_log"
+  }
+}

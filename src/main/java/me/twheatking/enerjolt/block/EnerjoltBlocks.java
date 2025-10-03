@@ -794,9 +794,8 @@ public final class EnerjoltBlocks {
                     .strength(2.0f)
                     .sound(SoundType.WOOD)
                     .ignitedByLava()));
-    public static final DeferredItem<Item> RUBBER_OAK_LOG_ITEM = createBlockItem("rubber_oak_log", RUBBER_OAK_LOG);
 
-    public static final DeferredBlock<Block> RUBBER_OAK_WOOD = BLOCKS.register("rubber_oak_wood",
+    public static final DeferredBlock<RotatedPillarBlock> RUBBER_OAK_WOOD = BLOCKS.register("rubber_oak_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
@@ -867,7 +866,7 @@ public final class EnerjoltBlocks {
                     .ignitedByLava()));
     public static final DeferredItem<Item> RUBBER_BIRCH_LOG_ITEM = createBlockItem("rubber_birch_log", RUBBER_BIRCH_LOG);
 
-    public static final DeferredBlock<Block> RUBBER_BIRCH_WOOD = BLOCKS.register("rubber_birch_wood",
+    public static final DeferredBlock<RotatedPillarBlock> RUBBER_BIRCH_WOOD = BLOCKS.register("rubber_birch_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
@@ -938,7 +937,7 @@ public final class EnerjoltBlocks {
                     .ignitedByLava()));
     public static final DeferredItem<Item> RUBBER_SPRUCE_LOG_ITEM = createBlockItem("rubber_spruce_log", RUBBER_SPRUCE_LOG);
 
-    public static final DeferredBlock<Block> RUBBER_SPRUCE_WOOD = BLOCKS.register("rubber_spruce_wood",
+    public static final DeferredBlock<RotatedPillarBlock> RUBBER_SPRUCE_WOOD = BLOCKS.register("rubber_spruce_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
@@ -1009,7 +1008,7 @@ public final class EnerjoltBlocks {
                     .ignitedByLava()));
     public static final DeferredItem<Item> RUBBER_FANCY_OAK_LOG_ITEM = createBlockItem("rubber_fancy_oak_log", RUBBER_FANCY_OAK_LOG);
 
-    public static final DeferredBlock<Block> RUBBER_FANCY_OAK_WOOD = BLOCKS.register("rubber_fancy_oak_wood",
+    public static final DeferredBlock<RotatedPillarBlock> RUBBER_FANCY_OAK_WOOD = BLOCKS.register("rubber_fancy_oak_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
@@ -1080,7 +1079,7 @@ public final class EnerjoltBlocks {
                     .ignitedByLava()));
     public static final DeferredItem<Item> RUBBER_DARK_OAK_LOG_ITEM = createBlockItem("rubber_dark_oak_log", RUBBER_DARK_OAK_LOG);
 
-    public static final DeferredBlock<Block> RUBBER_DARK_OAK_WOOD = BLOCKS.register("rubber_dark_oak_wood",
+    public static final DeferredBlock<RotatedPillarBlock> RUBBER_DARK_OAK_WOOD = BLOCKS.register("rubber_dark_oak_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)
@@ -1098,7 +1097,7 @@ public final class EnerjoltBlocks {
                     .ignitedByLava()));
     public static final DeferredItem<Item> STRIPPED_RUBBER_DARK_OAK_LOG_ITEM = createBlockItem("stripped_rubber_dark_oak_log", STRIPPED_RUBBER_DARK_OAK_LOG);
 
-    public static final DeferredBlock<Block> STRIPPED_RUBBER_DARK_OAK_WOOD = BLOCKS.register("stripped_rubber_dark_oak_wood",
+    public static final DeferredBlock<RotatedPillarBlock> STRIPPED_RUBBER_DARK_OAK_WOOD = BLOCKS.register("stripped_rubber_dark_oak_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.WOOD)
                     .instrument(NoteBlockInstrument.BASS)

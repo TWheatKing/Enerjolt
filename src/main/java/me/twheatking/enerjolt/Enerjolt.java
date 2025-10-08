@@ -122,469 +122,508 @@ public class Enerjolt {
 
     private void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if(event.getTab() == EnerjoltCreativeModeTab.ENERJOLT_TAB.get()) {
-            // === DOCUMENTATION & TOOLS ===
-            event.accept(EnerjoltItems.ENERJOLT_BOOK);
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.ENERGY_ANALYZER, EnergyAnalyzerItem.ENERGY_CAPACITY);
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.FLUID_ANALYZER, FluidAnalyzerItem.ENERGY_CAPACITY);
+            try {
+                LOGGER.info("Adding DOCUMENTATION items...");
+                // === DOCUMENTATION & TOOLS ===
+                event.accept(EnerjoltItems.ENERJOLT_BOOK);
 
-            event.accept(EnerjoltItems.WOODEN_HAMMER);
-            event.accept(EnerjoltItems.STONE_HAMMER);
-            event.accept(EnerjoltItems.IRON_HAMMER);
-            event.accept(EnerjoltItems.GOLDEN_HAMMER);
-            event.accept(EnerjoltItems.DIAMOND_HAMMER);
-            event.accept(EnerjoltItems.NETHERITE_HAMMER);
+                event.accept(EnerjoltItems.WOODEN_HAMMER);
+                event.accept(EnerjoltItems.STONE_HAMMER);
+                event.accept(EnerjoltItems.IRON_HAMMER);
+                event.accept(EnerjoltItems.GOLDEN_HAMMER);
+                event.accept(EnerjoltItems.DIAMOND_HAMMER);
+                event.accept(EnerjoltItems.NETHERITE_HAMMER);
 
-            event.accept(EnerjoltItems.CUTTER);
-            event.accept(EnerjoltItems.WRENCH);
-            event.accept(EnerjoltItems.CHISEL);
+                event.accept(EnerjoltItems.CUTTER);
+                event.accept(EnerjoltItems.WRENCH);
+                event.accept(EnerjoltItems.CHISEL);
 
-            event.accept(EnerjoltItems.MANUAL_TAP);
+                event.accept(EnerjoltItems.MANUAL_TAP);
 
-            // === CONVEYOR BELT SYSTEM ===
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_ITEM);
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_LOADER_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_LOADER_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_LOADER_ITEM);
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SORTER_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SORTER_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SORTER_ITEM);
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
-            event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_MERGER_ITEM);
-            event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_MERGER_ITEM);
-            event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_MERGER_ITEM);
+                LOGGER.info("Adding CONVEYOR BELT items...");
+                // === CONVEYOR BELT SYSTEM ===
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_ITEM);
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_LOADER_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_LOADER_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_LOADER_ITEM);
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SORTER_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SORTER_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SORTER_ITEM);
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SWITCH_ITEM);
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_SPLITTER_ITEM);
+                event.accept(EnerjoltBlocks.BASIC_ITEM_CONVEYOR_BELT_MERGER_ITEM);
+                event.accept(EnerjoltBlocks.FAST_ITEM_CONVEYOR_BELT_MERGER_ITEM);
+                event.accept(EnerjoltBlocks.EXPRESS_ITEM_CONVEYOR_BELT_MERGER_ITEM);
 
-            // === STORAGE SYSTEM ===
-            event.accept(EnerjoltBlocks.ITEM_SILO_TINY_ITEM);
-            event.accept(EnerjoltBlocks.ITEM_SILO_SMALL_ITEM);
-            event.accept(EnerjoltBlocks.ITEM_SILO_MEDIUM_ITEM);
-            event.accept(EnerjoltBlocks.ITEM_SILO_LARGE_ITEM);
-            event.accept(EnerjoltBlocks.ITEM_SILO_GIANT_ITEM);
-            event.accept(EnerjoltBlocks.CREATIVE_ITEM_SILO_ITEM);
+                LOGGER.info("Adding STORAGE items...");
+                // === STORAGE SYSTEM ===
+                event.accept(EnerjoltBlocks.ITEM_SILO_TINY_ITEM);
+                event.accept(EnerjoltBlocks.ITEM_SILO_SMALL_ITEM);
+                event.accept(EnerjoltBlocks.ITEM_SILO_MEDIUM_ITEM);
+                event.accept(EnerjoltBlocks.ITEM_SILO_LARGE_ITEM);
+                event.accept(EnerjoltBlocks.ITEM_SILO_GIANT_ITEM);
+                event.accept(EnerjoltBlocks.CREATIVE_ITEM_SILO_ITEM);
 
-            // === FLUID SYSTEM ===
-            event.accept(EnerjoltBlocks.IRON_FLUID_PIPE_ITEM);
-            event.accept(EnerjoltBlocks.GOLDEN_FLUID_PIPE_ITEM);
+                LOGGER.info("Adding FLUID SYSTEM items...");
+                // === FLUID SYSTEM ===
+                event.accept(EnerjoltBlocks.IRON_FLUID_PIPE_ITEM);
+                event.accept(EnerjoltBlocks.GOLDEN_FLUID_PIPE_ITEM);
 
-            event.accept(EnerjoltBlocks.FLUID_TANK_SMALL_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_TANK_MEDIUM_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_TANK_LARGE_ITEM);
-            event.accept(EnerjoltBlocks.CREATIVE_FLUID_TANK_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_TANK_SMALL_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_TANK_MEDIUM_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_TANK_LARGE_ITEM);
+                event.accept(EnerjoltBlocks.CREATIVE_FLUID_TANK_ITEM);
 
-            // === ENERGY SYSTEM - CABLES ===
-            event.accept(EnerjoltBlocks.TIN_CABLE_ITEM);
-            event.accept(EnerjoltBlocks.COPPER_CABLE_ITEM);
-            event.accept(EnerjoltBlocks.GOLD_CABLE_ITEM);
-            event.accept(EnerjoltBlocks.ENERGIZED_COPPER_CABLE_ITEM);
-            event.accept(EnerjoltBlocks.ENERGIZED_GOLD_CABLE_ITEM);
-            event.accept(EnerjoltBlocks.ENERGIZED_CRYSTAL_MATRIX_CABLE_ITEM);
+                LOGGER.info("Adding ENERGY SYSTEM Cables...");
+                // === ENERGY SYSTEM - CABLES ===
+                event.accept(EnerjoltBlocks.TIN_CABLE_ITEM);
+                event.accept(EnerjoltBlocks.COPPER_CABLE_ITEM);
+                event.accept(EnerjoltBlocks.GOLD_CABLE_ITEM);
+                event.accept(EnerjoltBlocks.ENERGIZED_COPPER_CABLE_ITEM);
+                event.accept(EnerjoltBlocks.ENERGIZED_GOLD_CABLE_ITEM);
+                event.accept(EnerjoltBlocks.ENERGIZED_CRYSTAL_MATRIX_CABLE_ITEM);
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.ENERGY_ANALYZER, EnergyAnalyzerItem.ENERGY_CAPACITY);
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.FLUID_ANALYZER, FluidAnalyzerItem.ENERGY_CAPACITY);
 
-            // === ENERGY SYSTEM - TRANSFORMERS ===
-            event.accept(EnerjoltBlocks.LV_TRANSFORMER_1_TO_N_ITEM);
-            event.accept(EnerjoltBlocks.LV_TRANSFORMER_3_TO_3_ITEM);
-            event.accept(EnerjoltBlocks.LV_TRANSFORMER_N_TO_1_ITEM);
-            event.accept(EnerjoltBlocks.CONFIGURABLE_LV_TRANSFORMER_ITEM);
-            event.accept(EnerjoltBlocks.MV_TRANSFORMER_1_TO_N_ITEM);
-            event.accept(EnerjoltBlocks.MV_TRANSFORMER_3_TO_3_ITEM);
-            event.accept(EnerjoltBlocks.MV_TRANSFORMER_N_TO_1_ITEM);
-            event.accept(EnerjoltBlocks.CONFIGURABLE_MV_TRANSFORMER_ITEM);
-            event.accept(EnerjoltBlocks.HV_TRANSFORMER_1_TO_N_ITEM);
-            event.accept(EnerjoltBlocks.HV_TRANSFORMER_3_TO_3_ITEM);
-            event.accept(EnerjoltBlocks.HV_TRANSFORMER_N_TO_1_ITEM);
-            event.accept(EnerjoltBlocks.CONFIGURABLE_HV_TRANSFORMER_ITEM);
-            event.accept(EnerjoltBlocks.EHV_TRANSFORMER_1_TO_N_ITEM);
-            event.accept(EnerjoltBlocks.EHV_TRANSFORMER_3_TO_3_ITEM);
-            event.accept(EnerjoltBlocks.EHV_TRANSFORMER_N_TO_1_ITEM);
-            event.accept(EnerjoltBlocks.CONFIGURABLE_EHV_TRANSFORMER_ITEM);
+                LOGGER.info("Adding ENERGY SYSTEM Transformers...");
+                // === ENERGY SYSTEM - TRANSFORMERS ===
+                event.accept(EnerjoltBlocks.LV_TRANSFORMER_1_TO_N_ITEM);
+                event.accept(EnerjoltBlocks.LV_TRANSFORMER_3_TO_3_ITEM);
+                event.accept(EnerjoltBlocks.LV_TRANSFORMER_N_TO_1_ITEM);
+                event.accept(EnerjoltBlocks.CONFIGURABLE_LV_TRANSFORMER_ITEM);
+                event.accept(EnerjoltBlocks.MV_TRANSFORMER_1_TO_N_ITEM);
+                event.accept(EnerjoltBlocks.MV_TRANSFORMER_3_TO_3_ITEM);
+                event.accept(EnerjoltBlocks.MV_TRANSFORMER_N_TO_1_ITEM);
+                event.accept(EnerjoltBlocks.CONFIGURABLE_MV_TRANSFORMER_ITEM);
+                event.accept(EnerjoltBlocks.HV_TRANSFORMER_1_TO_N_ITEM);
+                event.accept(EnerjoltBlocks.HV_TRANSFORMER_3_TO_3_ITEM);
+                event.accept(EnerjoltBlocks.HV_TRANSFORMER_N_TO_1_ITEM);
+                event.accept(EnerjoltBlocks.CONFIGURABLE_HV_TRANSFORMER_ITEM);
+                event.accept(EnerjoltBlocks.EHV_TRANSFORMER_1_TO_N_ITEM);
+                event.accept(EnerjoltBlocks.EHV_TRANSFORMER_3_TO_3_ITEM);
+                event.accept(EnerjoltBlocks.EHV_TRANSFORMER_N_TO_1_ITEM);
+                event.accept(EnerjoltBlocks.CONFIGURABLE_EHV_TRANSFORMER_ITEM);
 
-            // === PROCESSING MACHINES ===
-            event.accept(EnerjoltBlocks.PRESS_MOLD_MAKER_ITEM);
-            event.accept(EnerjoltBlocks.ALLOY_FURNACE_ITEM);
+                LOGGER.info("Adding ENERGY SYSTEM Machines...");
+                // === PROCESSING MACHINES ===
+                event.accept(EnerjoltBlocks.PRESS_MOLD_MAKER_ITEM);
+                event.accept(EnerjoltBlocks.ALLOY_FURNACE_ITEM);
 
-            // === ENERGY GENERATION ===
-            event.accept(EnerjoltBlocks.COAL_ENGINE_ITEM);
-            event.accept(EnerjoltBlocks.HEAT_GENERATOR_ITEM);
-            event.accept(EnerjoltBlocks.THERMAL_GENERATOR_ITEM);
-            event.accept(EnerjoltBlocks.LIGHTNING_GENERATOR_ITEM);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_1);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_2);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_3);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_4);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_5);
-            event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_6);
+                LOGGER.info("Adding ENERGY GENERATION items...");
+                // === ENERGY GENERATION ===
+                event.accept(EnerjoltBlocks.COAL_ENGINE_ITEM);
+                event.accept(EnerjoltBlocks.HEAT_GENERATOR_ITEM);
+                event.accept(EnerjoltBlocks.THERMAL_GENERATOR_ITEM);
+                event.accept(EnerjoltBlocks.LIGHTNING_GENERATOR_ITEM);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_1);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_2);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_3);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_4);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_5);
+                event.accept(EnerjoltBlocks.SOLAR_PANEL_ITEM_6);
 
-            // === ENERGY STORAGE ===
-            event.accept(EnerjoltBlocks.BATTERY_BOX_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_BATTERY_BOX_ITEM);
-            event.accept(EnerjoltBlocks.CREATIVE_BATTERY_BOX_ITEM);
+                LOGGER.info("Adding ENERGY STORAGE items...");
+                // === ENERGY STORAGE ===
+                event.accept(EnerjoltBlocks.BATTERY_BOX_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_BATTERY_BOX_ITEM);
+                event.accept(EnerjoltBlocks.CREATIVE_BATTERY_BOX_ITEM);
 
-            // === UTILITY BLOCKS ===
-            event.accept(EnerjoltBlocks.POWERED_LAMP_ITEM);
-            event.accept(EnerjoltBlocks.POWERED_FURNACE_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_POWERED_FURNACE_ITEM);
-            event.accept(EnerjoltBlocks.AUTO_CRAFTER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_AUTO_CRAFTER_ITEM);
-            event.accept(EnerjoltBlocks.CRUSHER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_CRUSHER_ITEM);
-            event.accept(EnerjoltBlocks.PULVERIZER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_PULVERIZER_ITEM);
-            event.accept(EnerjoltBlocks.SAWMILL_ITEM);
-            event.accept(EnerjoltBlocks.COMPRESSOR_ITEM);
-            event.accept(EnerjoltBlocks.METAL_PRESS_ITEM);
-            event.accept(EnerjoltBlocks.AUTO_PRESS_MOLD_MAKER_ITEM);
-            event.accept(EnerjoltBlocks.AUTO_STONECUTTER_ITEM);
-            event.accept(EnerjoltBlocks.ASSEMBLING_MACHINE_ITEM);
-            event.accept(EnerjoltBlocks.INDUCTION_SMELTER_ITEM);
-            event.accept(EnerjoltBlocks.PLANT_GROWTH_CHAMBER_ITEM);
-            event.accept(EnerjoltBlocks.STONE_LIQUEFIER_ITEM);
-            event.accept(EnerjoltBlocks.STONE_SOLIDIFIER_ITEM);
-            event.accept(EnerjoltBlocks.FILTRATION_PLANT_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_TRANSPOSER_ITEM);
-            event.accept(EnerjoltBlocks.BLOCK_PLACER_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_FILLER_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_DRAINER_ITEM);
-            event.accept(EnerjoltBlocks.FLUID_PUMP_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_FLUID_PUMP_ITEM);
-            event.accept(EnerjoltBlocks.DRAIN_ITEM);
-            event.accept(EnerjoltBlocks.CHARGER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_CHARGER_ITEM);
-            event.accept(EnerjoltBlocks.UNCHARGER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_UNCHARGER_ITEM);
-            event.accept(EnerjoltBlocks.MINECART_CHARGER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_MINECART_CHARGER_ITEM);
-            event.accept(EnerjoltBlocks.MINECART_UNCHARGER_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_MINECART_UNCHARGER_ITEM);
+                LOGGER.info("Adding UTILITY SYSTEM ITEMS...");
+                // === UTILITY BLOCKS ===
+                event.accept(EnerjoltBlocks.POWERED_LAMP_ITEM);
+                event.accept(EnerjoltBlocks.POWERED_FURNACE_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_POWERED_FURNACE_ITEM);
+                event.accept(EnerjoltBlocks.AUTO_CRAFTER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_AUTO_CRAFTER_ITEM);
+                event.accept(EnerjoltBlocks.CRUSHER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_CRUSHER_ITEM);
+                event.accept(EnerjoltBlocks.PULVERIZER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_PULVERIZER_ITEM);
+                event.accept(EnerjoltBlocks.SAWMILL_ITEM);
+                event.accept(EnerjoltBlocks.COMPRESSOR_ITEM);
+                event.accept(EnerjoltBlocks.METAL_PRESS_ITEM);
+                event.accept(EnerjoltBlocks.AUTO_PRESS_MOLD_MAKER_ITEM);
+                event.accept(EnerjoltBlocks.AUTO_STONECUTTER_ITEM);
+                event.accept(EnerjoltBlocks.ASSEMBLING_MACHINE_ITEM);
+                event.accept(EnerjoltBlocks.INDUCTION_SMELTER_ITEM);
+                event.accept(EnerjoltBlocks.PLANT_GROWTH_CHAMBER_ITEM);
+                event.accept(EnerjoltBlocks.STONE_LIQUEFIER_ITEM);
+                event.accept(EnerjoltBlocks.STONE_SOLIDIFIER_ITEM);
+                event.accept(EnerjoltBlocks.FILTRATION_PLANT_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_TRANSPOSER_ITEM);
+                event.accept(EnerjoltBlocks.BLOCK_PLACER_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_FILLER_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_DRAINER_ITEM);
+                event.accept(EnerjoltBlocks.FLUID_PUMP_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_FLUID_PUMP_ITEM);
+                event.accept(EnerjoltBlocks.DRAIN_ITEM);
+                event.accept(EnerjoltBlocks.CHARGER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_CHARGER_ITEM);
+                event.accept(EnerjoltBlocks.UNCHARGER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_UNCHARGER_ITEM);
+                event.accept(EnerjoltBlocks.MINECART_CHARGER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_MINECART_CHARGER_ITEM);
+                event.accept(EnerjoltBlocks.MINECART_UNCHARGER_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_MINECART_UNCHARGER_ITEM);
 
-            event.accept(EnerjoltBlocks.ENERGIZER_ITEM);
-            event.accept(EnerjoltBlocks.CHARGING_STATION_ITEM);
-            event.accept(EnerjoltBlocks.CRYSTAL_GROWTH_CHAMBER);
+                event.accept(EnerjoltBlocks.ENERGIZER_ITEM);
+                event.accept(EnerjoltBlocks.CHARGING_STATION_ITEM);
+                event.accept(EnerjoltBlocks.CRYSTAL_GROWTH_CHAMBER);
 
-            event.accept(EnerjoltBlocks.WEATHER_CONTROLLER_ITEM);
-            event.accept(EnerjoltBlocks.TIME_CONTROLLER_ITEM);
-            event.accept(EnerjoltBlocks.TELEPORTER_ITEM);
+                event.accept(EnerjoltBlocks.WEATHER_CONTROLLER_ITEM);
+                event.accept(EnerjoltBlocks.TIME_CONTROLLER_ITEM);
+                event.accept(EnerjoltBlocks.TELEPORTER_ITEM);
 
-            // === INVENTORY ITEMS ===
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_COAL_ENGINE, InventoryCoalEngineItem.CAPACITY);
-            event.accept(EnerjoltItems.INVENTORY_CHARGER);
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_TELEPORTER, InventoryTeleporterItem.CAPACITY);
+                LOGGER.info("Adding INVENTORY ITEMS...");
+                // === INVENTORY ITEMS ===
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_COAL_ENGINE, InventoryCoalEngineItem.CAPACITY);
+                event.accept(EnerjoltItems.INVENTORY_CHARGER);
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.INVENTORY_TELEPORTER, InventoryTeleporterItem.CAPACITY);
 
-            // === BATTERIES ===
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_1, BatteryTier.BATTERY_1.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_2, BatteryTier.BATTERY_2.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_3, BatteryTier.BATTERY_3.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_4, BatteryTier.BATTERY_4.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_5, BatteryTier.BATTERY_5.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_6, BatteryTier.BATTERY_6.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_7, BatteryTier.BATTERY_7.getCapacity());
-            addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_8, BatteryTier.BATTERY_8.getCapacity());
-            event.accept(EnerjoltItems.CREATIVE_BATTERY);
+                LOGGER.info("Adding BATTERY ITEMS...");
+                // === BATTERIES ===
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_1, BatteryTier.BATTERY_1.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_2, BatteryTier.BATTERY_2.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_3, BatteryTier.BATTERY_3.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_4, BatteryTier.BATTERY_4.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_5, BatteryTier.BATTERY_5.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_6, BatteryTier.BATTERY_6.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_7, BatteryTier.BATTERY_7.getCapacity());
+                addEmptyAndFullyChargedItem(event, EnerjoltItems.BATTERY_8, BatteryTier.BATTERY_8.getCapacity());
+                event.accept(EnerjoltItems.CREATIVE_BATTERY);
 
-            // === MINECARTS ===
-            event.accept(EnerjoltItems.BATTERY_BOX_MINECART);
-            event.accept(EnerjoltItems.ADVANCED_BATTERY_BOX_MINECART);
+                LOGGER.info("Adding MINECART ITEMS...");
+                // === MINECARTS ===
+                event.accept(EnerjoltItems.BATTERY_BOX_MINECART);
+                event.accept(EnerjoltItems.ADVANCED_BATTERY_BOX_MINECART);
 
-            // === MACHINE FRAMES ===
-            event.accept(EnerjoltBlocks.BASIC_MACHINE_FRAME_ITEM);
-            event.accept(EnerjoltBlocks.HARDENED_MACHINE_FRAME_ITEM);
-            event.accept(EnerjoltBlocks.ADVANCED_MACHINE_FRAME_ITEM);
-            event.accept(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME_ITEM);
+                LOGGER.info("Adding MACHINE FRAME ITEMS...");
+                // === MACHINE FRAMES ===
+                event.accept(EnerjoltBlocks.BASIC_MACHINE_FRAME_ITEM);
+                event.accept(EnerjoltBlocks.HARDENED_MACHINE_FRAME_ITEM);
+                event.accept(EnerjoltBlocks.ADVANCED_MACHINE_FRAME_ITEM);
+                event.accept(EnerjoltBlocks.REINFORCED_ADVANCED_MACHINE_FRAME_ITEM);
 
-            // === COMPONENTS - SOLAR CELLS ===
-            event.accept(EnerjoltItems.BASIC_SOLAR_CELL);
-            event.accept(EnerjoltItems.ADVANCED_SOLAR_CELL);
-            event.accept(EnerjoltItems.REINFORCED_ADVANCED_SOLAR_CELL);
+                LOGGER.info("Adding COMPONENTS...");
+                // === COMPONENTS - SOLAR CELLS ===
+                event.accept(EnerjoltItems.BASIC_SOLAR_CELL);
+                event.accept(EnerjoltItems.ADVANCED_SOLAR_CELL);
+                event.accept(EnerjoltItems.REINFORCED_ADVANCED_SOLAR_CELL);
 
-            // === COMPONENTS - CIRCUITS ===
-            event.accept(EnerjoltItems.BASIC_CIRCUIT);
-            event.accept(EnerjoltItems.ADVANCED_CIRCUIT);
-            event.accept(EnerjoltItems.PROCESSING_UNIT);
+                // === COMPONENTS - CIRCUITS ===
+                event.accept(EnerjoltItems.BASIC_CIRCUIT);
+                event.accept(EnerjoltItems.ADVANCED_CIRCUIT);
+                event.accept(EnerjoltItems.PROCESSING_UNIT);
 
-            event.accept(EnerjoltItems.TELEPORTER_PROCESSING_UNIT);
-            event.accept(EnerjoltItems.TELEPORTER_MATRIX);
+                event.accept(EnerjoltItems.TELEPORTER_PROCESSING_UNIT);
+                event.accept(EnerjoltItems.TELEPORTER_MATRIX);
 
-            // === UPGRADE MODULES - BASIC ===
-            event.accept(EnerjoltItems.BASIC_UPGRADE_MODULE);
-            event.accept(EnerjoltItems.ADVANCED_UPGRADE_MODULE);
-            event.accept(EnerjoltItems.REINFORCED_ADVANCED_UPGRADE_MODULE);
+                LOGGER.info("Adding MODULES...");
+                // === UPGRADE MODULES - BASIC ===
+                event.accept(EnerjoltItems.BASIC_UPGRADE_MODULE);
+                event.accept(EnerjoltItems.ADVANCED_UPGRADE_MODULE);
+                event.accept(EnerjoltItems.REINFORCED_ADVANCED_UPGRADE_MODULE);
 
-            // === UPGRADE MODULES - SPEED ===
-            event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_5);
+                // === UPGRADE MODULES - SPEED ===
+                event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.SPEED_UPGRADE_MODULE_5);
 
-            // === UPGRADE MODULES - ENERGY EFFICIENCY ===
-            event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_5);
+                // === UPGRADE MODULES - ENERGY EFFICIENCY ===
+                event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.ENERGY_EFFICIENCY_UPGRADE_MODULE_5);
 
-            // === UPGRADE MODULES - ENERGY CAPACITY ===
-            event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_5);
+                // === UPGRADE MODULES - ENERGY CAPACITY ===
+                event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.ENERGY_CAPACITY_UPGRADE_MODULE_5);
 
-            // === UPGRADE MODULES - DURATION ===
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_5);
-            event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_6);
+                // === UPGRADE MODULES - DURATION ===
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_5);
+                event.accept(EnerjoltItems.DURATION_UPGRADE_MODULE_6);
 
-            // === UPGRADE MODULES - RANGE ===
-            event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_3);
+                // === UPGRADE MODULES - RANGE ===
+                event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.RANGE_UPGRADE_MODULE_3);
 
-            // === UPGRADE MODULES - EXTRACTION DEPTH ===
-            event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_5);
+                // === UPGRADE MODULES - EXTRACTION DEPTH ===
+                event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.EXTRACTION_DEPTH_UPGRADE_MODULE_5);
 
-            // === UPGRADE MODULES - EXTRACTION RANGE ===
-            event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_3);
-            event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_4);
-            event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_5);
+                // === UPGRADE MODULES - EXTRACTION RANGE ===
+                event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_3);
+                event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_4);
+                event.accept(EnerjoltItems.EXTRACTION_RANGE_UPGRADE_MODULE_5);
 
-            // === UPGRADE MODULES - FURNACE MODES ===
-            event.accept(EnerjoltItems.BLAST_FURNACE_UPGRADE_MODULE);
-            event.accept(EnerjoltItems.SMOKER_UPGRADE_MODULE);
+                // === UPGRADE MODULES - FURNACE MODES ===
+                event.accept(EnerjoltItems.BLAST_FURNACE_UPGRADE_MODULE);
+                event.accept(EnerjoltItems.SMOKER_UPGRADE_MODULE);
 
-            // === UPGRADE MODULES - MOON LIGHT ===
-            event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_1);
-            event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_2);
-            event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_3);
+                // === UPGRADE MODULES - MOON LIGHT ===
+                event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_1);
+                event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_2);
+                event.accept(EnerjoltItems.MOON_LIGHT_UPGRADE_MODULE_3);
 
-            // === BUILDING BLOCKS ===
-            event.accept(EnerjoltBlocks.SILICON_BLOCK_ITEM);
-            event.accept(EnerjoltBlocks.TIN_BLOCK_ITEM);
-            event.accept(EnerjoltBlocks.SAWDUST_BLOCK_ITEM);
-            event.accept(EnerjoltBlocks.ZINC_BLOCK);
-            event.accept(EnerjoltBlocks.WHEAT_INGOT_BLOCK);
+                // === BUILDING BLOCKS ===
+                event.accept(EnerjoltBlocks.SILICON_BLOCK_ITEM);
+                event.accept(EnerjoltBlocks.TIN_BLOCK_ITEM);
+                event.accept(EnerjoltBlocks.SAWDUST_BLOCK_ITEM);
+                event.accept(EnerjoltBlocks.ZINC_BLOCK);
+                event.accept(EnerjoltBlocks.WHEAT_INGOT_BLOCK);
 
-            // === ZINC DECORATIVE BLOCKS ===
-            event.accept(EnerjoltBlocks.ZINC_STAIRS);
-            event.accept(EnerjoltBlocks.ZINC_SLAB);
-            event.accept(EnerjoltBlocks.ZINC_PRESSURE_PLATE);
-            event.accept(EnerjoltBlocks.ZINC_BUTTON);
-            event.accept(EnerjoltBlocks.ZINC_FENCE);
-            event.accept(EnerjoltBlocks.ZINC_FENCE_GATE);
-            event.accept(EnerjoltBlocks.ZINC_WALL);
-            event.accept(EnerjoltBlocks.ZINC_DOOR);
-            event.accept(EnerjoltBlocks.ZINC_TRAPDOOR);
+                // === ZINC DECORATIVE BLOCKS ===
+                event.accept(EnerjoltBlocks.ZINC_STAIRS);
+                event.accept(EnerjoltBlocks.ZINC_SLAB);
+                event.accept(EnerjoltBlocks.ZINC_PRESSURE_PLATE);
+                event.accept(EnerjoltBlocks.ZINC_BUTTON);
+                event.accept(EnerjoltBlocks.ZINC_FENCE);
+                event.accept(EnerjoltBlocks.ZINC_FENCE_GATE);
+                event.accept(EnerjoltBlocks.ZINC_WALL);
+                event.accept(EnerjoltBlocks.ZINC_DOOR);
+                event.accept(EnerjoltBlocks.ZINC_TRAPDOOR);
 
-            // === CASING BLOCKS ===
-            event.accept(EnerjoltBlocks.ZINC_CASING);
-            event.accept(EnerjoltBlocks.ANDESITE_CASING);
+                LOGGER.info("Adding CASING BLOCKS...");
+                // === CASING BLOCKS ===
+                event.accept(EnerjoltBlocks.ZINC_CASING);
+                event.accept(EnerjoltBlocks.ANDESITE_CASING);
 
-            // === GREENHOUSE BLOCKS ===
-            event.accept(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE);
-            event.accept(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER);
+                LOGGER.info("Adding GREENHOUSE BLOCKS...");
+                // === GREENHOUSE BLOCKS ===
+                event.accept(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE);
+                event.accept(EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER);
 
-            // === RUBBER TREE - OAK STYLE ===
-            event.accept(EnerjoltBlocks.RUBBER_OAK_LOG);
-            event.accept(EnerjoltBlocks.RUBBER_OAK_WOOD);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD);
-            event.accept(EnerjoltBlocks.RUBBER_OAK_PLANKS);
-            event.accept(EnerjoltBlocks.RUBBER_OAK_LEAVES);
-            event.accept(EnerjoltBlocks.RUBBER_OAK_SAPLING);
+                LOGGER.info("Adding RUBBER TREE BLOCKS...");
+                // === RUBBER TREE - OAK STYLE ===
+                event.accept(EnerjoltBlocks.RUBBER_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_OAK_PLANKS_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_OAK_LEAVES_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_OAK_SAPLING_ITEM);
 
-            // === RUBBER TREE - BIRCH STYLE ===
-            event.accept(EnerjoltBlocks.RUBBER_BIRCH_LOG);
-            event.accept(EnerjoltBlocks.RUBBER_BIRCH_WOOD);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD);
-            event.accept(EnerjoltBlocks.RUBBER_BIRCH_PLANKS);
-            event.accept(EnerjoltBlocks.RUBBER_BIRCH_LEAVES);
-            event.accept(EnerjoltBlocks.RUBBER_BIRCH_SAPLING);
+                // === RUBBER TREE - BIRCH STYLE ===
+                event.accept(EnerjoltBlocks.RUBBER_BIRCH_LOG_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_BIRCH_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_BIRCH_PLANKS_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_BIRCH_LEAVES_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_BIRCH_SAPLING_ITEM);
 
-            // === RUBBER TREE - SPRUCE STYLE ===
-            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LOG);
-            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_WOOD);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD);
-            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS);
-            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES);
-            event.accept(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING);
+                // === RUBBER TREE - SPRUCE STYLE ===
+                event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LOG_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_SPRUCE_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING_ITEM);
 
-            // === RUBBER TREE - FANCY OAK STYLE ===
-            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG);
-            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD);
-            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
-            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES);
-            event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING);
+                // === RUBBER TREE - FANCY OAK STYLE ===
+                event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING_ITEM);
 
-            // === RUBBER TREE - DARK OAK STYLE ===
-            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LOG);
-            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG);
-            event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD);
-            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS);
-            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES);
-            event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING);
+                // === RUBBER TREE - DARK OAK STYLE ===
+                event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG_ITEM);
+                event.accept(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES_ITEM);
+                event.accept(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING_ITEM);
 
-            // === MATERIALS & COMPONENTS ===
-            event.accept(EnerjoltItems.CABLE_INSULATOR);
-            event.accept(EnerjoltItems.SAP);
-            event.accept(EnerjoltItems.RUBBER);
-            event.accept(EnerjoltItems.CHARCOAL_FILTER);
-            event.accept(EnerjoltItems.SAW_BLADE);
-            event.accept(EnerjoltItems.CRYSTAL_MATRIX);
-            event.accept(EnerjoltItems.SAWDUST);
-            event.accept(EnerjoltItems.CHARCOAL_DUST);
-            event.accept(EnerjoltItems.BASIC_FERTILIZER);
-            event.accept(EnerjoltItems.GOOD_FERTILIZER);
-            event.accept(EnerjoltItems.ADVANCED_FERTILIZER);
-            event.accept(EnerjoltItems.RAW_GEAR_PRESS_MOLD);
-            event.accept(EnerjoltItems.RAW_ROD_PRESS_MOLD);
-            event.accept(EnerjoltItems.RAW_WIRE_PRESS_MOLD);
-            event.accept(EnerjoltItems.GEAR_PRESS_MOLD);
-            event.accept(EnerjoltItems.ROD_PRESS_MOLD);
-            event.accept(EnerjoltItems.WIRE_PRESS_MOLD);
-            event.accept(EnerjoltItems.SILICON);
+                LOGGER.info("Adding MATERIALS & COMPONENTS...");
+                // === MATERIALS & COMPONENTS ===
+                event.accept(EnerjoltItems.CABLE_INSULATOR);
+                event.accept(EnerjoltItems.SAP);
+                event.accept(EnerjoltItems.RUBBER);
+                event.accept(EnerjoltItems.CHARCOAL_FILTER);
+                event.accept(EnerjoltItems.SAW_BLADE);
+                event.accept(EnerjoltItems.CRYSTAL_MATRIX);
+                event.accept(EnerjoltItems.SAWDUST);
+                event.accept(EnerjoltItems.CHARCOAL_DUST);
+                event.accept(EnerjoltItems.BASIC_FERTILIZER);
+                event.accept(EnerjoltItems.GOOD_FERTILIZER);
+                event.accept(EnerjoltItems.ADVANCED_FERTILIZER);
+                event.accept(EnerjoltItems.RAW_GEAR_PRESS_MOLD);
+                event.accept(EnerjoltItems.RAW_ROD_PRESS_MOLD);
+                event.accept(EnerjoltItems.RAW_WIRE_PRESS_MOLD);
+                event.accept(EnerjoltItems.GEAR_PRESS_MOLD);
+                event.accept(EnerjoltItems.ROD_PRESS_MOLD);
+                event.accept(EnerjoltItems.WIRE_PRESS_MOLD);
+                event.accept(EnerjoltItems.SILICON);
 
-            // === MACHINE PARTS ===
-            event.accept(EnerjoltItems.BASIC_BLADE);
-            event.accept(EnerjoltItems.ADVANCED_BLADE);
-            event.accept(EnerjoltItems.GRATE);
-            event.accept(EnerjoltItems.WISK);
-            event.accept(EnerjoltItems.RAM);
-            event.accept(EnerjoltItems.EMPTY_COIL);
-            event.accept(EnerjoltItems.COPPER_COIL);
-            event.accept(EnerjoltItems.GOLD_COIL);
-            event.accept(EnerjoltItems.DIAMOND_COIL);
+                LOGGER.info("Adding MACHINE PARTS...");
+                // === MACHINE PARTS ===
+                event.accept(EnerjoltItems.BASIC_BLADE);
+                event.accept(EnerjoltItems.ADVANCED_BLADE);
+                event.accept(EnerjoltItems.GRATE);
+                event.accept(EnerjoltItems.WISK);
+                event.accept(EnerjoltItems.RAM);
+                event.accept(EnerjoltItems.EMPTY_COIL);
+                event.accept(EnerjoltItems.COPPER_COIL);
+                event.accept(EnerjoltItems.GOLD_COIL);
+                event.accept(EnerjoltItems.DIAMOND_COIL);
 
-            // === METAL DUSTS ===
-            event.accept(EnerjoltItems.TIN_DUST);
-            event.accept(EnerjoltItems.COPPER_DUST);
-            event.accept(EnerjoltItems.IRON_DUST);
-            event.accept(EnerjoltItems.GOLD_DUST);
+                LOGGER.info("Adding METAL MATERIALS...");
+                // === METAL DUSTS ===
+                event.accept(EnerjoltItems.TIN_DUST);
+                event.accept(EnerjoltItems.COPPER_DUST);
+                event.accept(EnerjoltItems.IRON_DUST);
+                event.accept(EnerjoltItems.GOLD_DUST);
 
-            // === TIN INGOTS & COMPONENTS ===
-            event.accept(EnerjoltItems.TIN_NUGGET);
-            event.accept(EnerjoltItems.TIN_INGOT);
-            event.accept(EnerjoltItems.TIN_PLATE);
+                LOGGER.info("Adding TIN INGOTS & COMPONENTS...");
+                // === TIN INGOTS & COMPONENTS ===
+                event.accept(EnerjoltItems.TIN_NUGGET);
+                event.accept(EnerjoltItems.TIN_INGOT);
+                event.accept(EnerjoltItems.TIN_PLATE);
 
-            // === METAL PLATES ===
-            event.accept(EnerjoltItems.COPPER_PLATE);
-            event.accept(EnerjoltItems.IRON_PLATE);
-            event.accept(EnerjoltItems.GOLD_PLATE);
-            event.accept(EnerjoltItems.BRASS_PLATE);
-            event.accept(EnerjoltItems.DIAMOND_PLATE);
-            event.accept(EnerjoltItems.NETHERITE_PLATE);
+                LOGGER.info("Adding METAL PLATES...");
+                // === METAL PLATES ===
+                event.accept(EnerjoltItems.COPPER_PLATE);
+                event.accept(EnerjoltItems.IRON_PLATE);
+                event.accept(EnerjoltItems.GOLD_PLATE);
+                event.accept(EnerjoltItems.BRASS_PLATE);
+                event.accept(EnerjoltItems.DIAMOND_PLATE);
+                event.accept(EnerjoltItems.NETHERITE_PLATE);
 
-            // === METAL INGOTS ===
-            event.accept(EnerjoltItems.STEEL_INGOT);
-            event.accept(EnerjoltItems.REDSTONE_ALLOY_INGOT);
-            event.accept(EnerjoltItems.ADVANCED_ALLOY_INGOT);
-            event.accept(EnerjoltItems.ADVANCED_ALLOY_PLATE);
+                LOGGER.info("Adding METAL INGOTS...");
+                // === METAL INGOTS ===
+                event.accept(EnerjoltItems.STEEL_INGOT);
+                event.accept(EnerjoltItems.REDSTONE_ALLOY_INGOT);
+                event.accept(EnerjoltItems.ADVANCED_ALLOY_INGOT);
+                event.accept(EnerjoltItems.ADVANCED_ALLOY_PLATE);
 
-            // === GEARS, RODS & WIRES ===
-            event.accept(EnerjoltItems.IRON_GEAR);
-            event.accept(EnerjoltItems.IRON_ROD);
-            event.accept(EnerjoltItems.TIN_WIRE);
-            event.accept(EnerjoltItems.COPPER_WIRE);
-            event.accept(EnerjoltItems.GOLD_WIRE);
+                LOGGER.info("Adding GEARS, RODS & WIRES...");
+                // === GEARS, RODS & WIRES ===
+                event.accept(EnerjoltItems.IRON_GEAR);
+                event.accept(EnerjoltItems.IRON_ROD);
+                event.accept(EnerjoltItems.TIN_WIRE);
+                event.accept(EnerjoltItems.COPPER_WIRE);
+                event.accept(EnerjoltItems.GOLD_WIRE);
 
-            // === ENERGIZED MATERIALS ===
-            event.accept(EnerjoltItems.ENERGIZED_COPPER_INGOT);
-            event.accept(EnerjoltItems.ENERGIZED_GOLD_INGOT);
-            event.accept(EnerjoltItems.ENERGIZED_COPPER_PLATE);
-            event.accept(EnerjoltItems.ENERGIZED_GOLD_PLATE);
-            event.accept(EnerjoltItems.ENERGIZED_COPPER_WIRE);
-            event.accept(EnerjoltItems.ENERGIZED_GOLD_WIRE);
-            event.accept(EnerjoltItems.ENERGIZED_CRYSTAL_MATRIX);
+                LOGGER.info("Adding JOLTED MATERIALS...");
+                // === ENERGIZED MATERIALS ===
+                event.accept(EnerjoltItems.ENERGIZED_COPPER_INGOT);
+                event.accept(EnerjoltItems.ENERGIZED_GOLD_INGOT);
+                event.accept(EnerjoltItems.ENERGIZED_COPPER_PLATE);
+                event.accept(EnerjoltItems.ENERGIZED_GOLD_PLATE);
+                event.accept(EnerjoltItems.ENERGIZED_COPPER_WIRE);
+                event.accept(EnerjoltItems.ENERGIZED_GOLD_WIRE);
+                event.accept(EnerjoltItems.ENERGIZED_CRYSTAL_MATRIX);
 
-            // === ALLOYS ===
-            event.accept(EnerjoltItems.ZINC_ALLOY);
-            event.accept(EnerjoltItems.ANDESITE_ALLOY);
+                LOGGER.info("Adding ALLOYS & RAW MATERIALS...");
+                // === ALLOYS ===
+                event.accept(EnerjoltItems.ZINC_ALLOY);
+                event.accept(EnerjoltItems.ANDESITE_ALLOY);
 
-            // === RAW MATERIALS & RARE MATERIALS ===
-            event.accept(EnerjoltItems.WHEAT_INGOT);
-            event.accept(EnerjoltItems.ZINC_INGOT);
-            event.accept(EnerjoltItems.COBALT);
-            event.accept(EnerjoltItems.RAW_COBALT);
-            event.accept(EnerjoltItems.BRASS);
-            event.accept(EnerjoltItems.SULFUR);
-            event.accept(EnerjoltItems.GRAPHITE);
-            event.accept(EnerjoltItems.BAUXITE);
-            event.accept(EnerjoltItems.SALTPETER);
-            event.accept(EnerjoltItems.LITHIUM);
-            event.accept(EnerjoltItems.NICKEL);
-            event.accept(EnerjoltItems.COPPER_SULFIDE);
-            event.accept(EnerjoltItems.MANGANESE);
-            event.accept(EnerjoltItems.URANINITE);
-            event.accept(EnerjoltItems.THORIUM);
-            event.accept(EnerjoltItems.TUNGSTEN);
-            event.accept(EnerjoltItems.PLATINUM);
-            event.accept(EnerjoltItems.NEODYMIUM);
-            event.accept(EnerjoltItems.YTTRIUM);
+                // === RAW MATERIALS & RARE MATERIALS ===
+                event.accept(EnerjoltItems.WHEAT_INGOT);
+                event.accept(EnerjoltItems.ZINC_INGOT);
+                event.accept(EnerjoltItems.COBALT);
+                event.accept(EnerjoltItems.RAW_COBALT);
+                event.accept(EnerjoltItems.BRASS);
+                event.accept(EnerjoltItems.SULFUR);
+                event.accept(EnerjoltItems.GRAPHITE);
+                event.accept(EnerjoltItems.BAUXITE);
+                event.accept(EnerjoltItems.SALTPETER);
+                event.accept(EnerjoltItems.LITHIUM);
+                event.accept(EnerjoltItems.NICKEL);
+                event.accept(EnerjoltItems.COPPER_SULFIDE);
+                event.accept(EnerjoltItems.MANGANESE);
+                event.accept(EnerjoltItems.URANINITE);
+                event.accept(EnerjoltItems.THORIUM);
+                event.accept(EnerjoltItems.TUNGSTEN);
+                event.accept(EnerjoltItems.PLATINUM);
+                event.accept(EnerjoltItems.NEODYMIUM);
+                event.accept(EnerjoltItems.YTTRIUM);
 
-            // === ENDGAME MATERIALS ===
-            event.accept(EnerjoltItems.ENERJOLT);
-            event.accept(EnerjoltItems.CRYONITE);
-            event.accept(EnerjoltItems.VOIDSTONE);
+                // === ENDGAME MATERIALS ===
+                event.accept(EnerjoltItems.ENERJOLT);
+                event.accept(EnerjoltItems.CRYONITE);
+                event.accept(EnerjoltItems.VOIDSTONE);
 
-            // === FLUIDS ===
-            event.accept(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
+                LOGGER.info("Adding FLUIDS...");
+                // === FLUIDS ===
+                event.accept(EnerjoltFluids.DIRTY_WATER_BUCKET_ITEM);
 
-            // === MISC ITEMS ===
-            event.accept(EnerjoltItems.STONE_PEBBLE);
-            event.accept(EnerjoltItems.COPPER_BIT);
-            event.accept(EnerjoltItems.GOLD_BIT);
-            event.accept(EnerjoltItems.IRON_BIT);
-            event.accept(EnerjoltItems.DIAMOND_BIT);
-            event.accept(EnerjoltItems.NETHERITE_BIT);
+                LOGGER.info("Adding MISC ITEMS...");
+                // === MISC ITEMS ===
+                event.accept(EnerjoltItems.STONE_PEBBLE);
+                event.accept(EnerjoltItems.COPPER_BIT);
+                event.accept(EnerjoltItems.GOLD_BIT);
+                event.accept(EnerjoltItems.IRON_BIT);
+                event.accept(EnerjoltItems.DIAMOND_BIT);
+                event.accept(EnerjoltItems.NETHERITE_BIT);
 
-            // === ORES & RAW MATERIALS - TIN ===
-            event.accept(EnerjoltItems.RAW_TIN);
-            event.accept(EnerjoltBlocks.TIN_ORE_ITEM);
-            event.accept(EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM);
-            event.accept(EnerjoltBlocks.RAW_TIN_BLOCK_ITEM);
+                LOGGER.info("Adding ORES & RAW MATERIALS...");
+                // === ORES & RAW MATERIALS - TIN ===
+                event.accept(EnerjoltItems.RAW_TIN);
+                event.accept(EnerjoltBlocks.TIN_ORE_ITEM);
+                event.accept(EnerjoltBlocks.DEEPSLATE_TIN_ORE_ITEM);
+                event.accept(EnerjoltBlocks.RAW_TIN_BLOCK_ITEM);
 
-            // === ORES & RAW MATERIALS - ZINC ===
-            event.accept(EnerjoltItems.RAW_ZINC);
-            event.accept(EnerjoltBlocks.ZINC_ORE);
-            event.accept(EnerjoltBlocks.ZINC_DEEPSLATE_ORE);
-            event.accept(EnerjoltBlocks.ZINC_END_ORE);
-            event.accept(EnerjoltBlocks.ZINC_NETHER_ORE);
+                // === ORES & RAW MATERIALS - ZINC ===
+                event.accept(EnerjoltItems.RAW_ZINC);
+                event.accept(EnerjoltBlocks.ZINC_ORE);
+                event.accept(EnerjoltBlocks.ZINC_DEEPSLATE_ORE);
+                event.accept(EnerjoltBlocks.ZINC_END_ORE);
+                event.accept(EnerjoltBlocks.ZINC_NETHER_ORE);
 
-            // === ZINC ARMOR ===
-            event.accept(EnerjoltItems.ZINC_HELMET);
-            event.accept(EnerjoltItems.ZINC_CHESTPLATE);
-            event.accept(EnerjoltItems.ZINC_LEGGINGS);
-            event.accept(EnerjoltItems.ZINC_BOOTS);
-            event.accept(EnerjoltItems.ZINC_HORSE_ARMOR);
-            event.accept(EnerjoltItems.ZINC_SMITHING_TEMPLATE);
+                LOGGER.info("Adding ARMOR & TOOLS...");
+                // === ZINC ARMOR ===
+                event.accept(EnerjoltItems.ZINC_HELMET);
+                event.accept(EnerjoltItems.ZINC_CHESTPLATE);
+                event.accept(EnerjoltItems.ZINC_LEGGINGS);
+                event.accept(EnerjoltItems.ZINC_BOOTS);
+                event.accept(EnerjoltItems.ZINC_HORSE_ARMOR);
+                event.accept(EnerjoltItems.ZINC_SMITHING_TEMPLATE);
 
-            // === ZINC TOOLS & WEAPONS ===
-            event.accept(EnerjoltItems.ZINC_BOW);
-            event.accept(EnerjoltItems.ZINC_SWORD);
-            event.accept(EnerjoltItems.ZINC_PICKAXE);
-            event.accept(EnerjoltItems.ZINC_SHOVEL);
-            event.accept(EnerjoltItems.ZINC_AXE);
-            event.accept(EnerjoltItems.ZINC_HOE);
+                // === ZINC TOOLS & WEAPONS ===
+                event.accept(EnerjoltItems.ZINC_BOW);
+                event.accept(EnerjoltItems.ZINC_SWORD);
+                event.accept(EnerjoltItems.ZINC_PICKAXE);
+                event.accept(EnerjoltItems.ZINC_SHOVEL);
+                event.accept(EnerjoltItems.ZINC_AXE);
+                event.accept(EnerjoltItems.ZINC_HOE);
 
-            // === SPAWN EGGS ===
-            event.accept(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG);
+                LOGGER.info("Adding EGGS...");
+                // === SPAWN EGGS ===
+                event.accept(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG);
+                LOGGER.info("Creative tab completed successfully!");
+            } catch (Exception e) {
+                LOGGER.error("CRASH IN CREATIVE TAB!", e);
+                throw e;
+            }
         }
     }
 

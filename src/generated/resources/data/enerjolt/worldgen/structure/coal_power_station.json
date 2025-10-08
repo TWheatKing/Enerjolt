@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#enerjolt:has_structure/coal_power_station",
+  "max_distance_from_center": 32,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "size": 1,
+  "spawn_overrides": {},
+  "start_height": {
+    "absolute": 0
+  },
+  "start_pool": "enerjolt:coal_power_station/start_pool",
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "use_expansion_hack": false
+}

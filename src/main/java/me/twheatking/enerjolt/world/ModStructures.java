@@ -24,6 +24,8 @@ public final class ModStructures {
 
     public static final ResourceKey<Structure> FACTORY_1 = registerKey("factory_1");
     public static final ResourceKey<Structure> SMALL_SOLAR_FARM = registerKey("small_solar_farm");
+    // NEW: Power Station structure
+    public static final ResourceKey<Structure> COAL_POWER_STATION = registerKey("coal_power_station");
 
     public static void bootstrap(BootstrapContext<Structure> context) {
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
@@ -48,6 +50,17 @@ public final class ModStructures {
                 templatePools.getOrThrow(ModTemplatePools.SMALL_SOLAR_FARM_START), Optional.empty(), 1,
                 ConstantHeight.of(VerticalAnchor.absolute(0)), false,
                 Optional.of(Heightmap.Types.WORLD_SURFACE_WG), 16,
+                List.of(), JigsawStructure.DEFAULT_DIMENSION_PADDING, JigsawStructure.DEFAULT_LIQUID_SETTINGS)
+        );
+        // NEW: Power Station registration
+        context.register(COAL_POWER_STATION, new JigsawStructure(
+                new Structure.StructureSettings.Builder(biomes.getOrThrow(EnerjoltBiomeTags.HAS_STRUCTURE_COAL_POWER_STATION)).
+                        terrainAdapation(TerrainAdjustment.BEARD_THIN).
+                        generationStep(GenerationStep.Decoration.SURFACE_STRUCTURES).
+                        build(),
+                templatePools.getOrThrow(ModTemplatePools.COAL_POWER_STATION_START), Optional.empty(), 1,
+                ConstantHeight.of(VerticalAnchor.absolute(0)), false,
+                Optional.of(Heightmap.Types.WORLD_SURFACE_WG), 32,
                 List.of(), JigsawStructure.DEFAULT_DIMENSION_PADDING, JigsawStructure.DEFAULT_LIQUID_SETTINGS)
         );
     }

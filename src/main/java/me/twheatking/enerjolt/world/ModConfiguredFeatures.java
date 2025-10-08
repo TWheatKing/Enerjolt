@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -51,58 +52,59 @@ public final class ModConfiguredFeatures {
         ), 8));
 
         // Oak-style rubber tree - uses rubber_oak blocks
+        // Added forceDirt() to ensure proper ground placement and prevent leaf decay
         register(context, RUBBER_TREE_OAK_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_OAK_LOG.get().defaultBlockState()),
                 new StraightTrunkPlacer(4, 2, 0),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_OAK_LEAVES.get()),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_OAK_LEAVES.get().defaultBlockState()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
         // Birch-style rubber tree - uses rubber_birch blocks
         register(context, RUBBER_TREE_BIRCH_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_BIRCH_LOG.get().defaultBlockState()),
                 new StraightTrunkPlacer(5, 2, 0),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_BIRCH_LEAVES.get()),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_BIRCH_LEAVES.get().defaultBlockState()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
         // Spruce-style rubber tree - uses rubber_spruce blocks
         register(context, RUBBER_TREE_SPRUCE_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LOG.get().defaultBlockState()),
                 new StraightTrunkPlacer(6, 3, 0),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES.get()),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES.get().defaultBlockState()),
                 new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2), UniformInt.of(1, 2)),
                 new TwoLayersFeatureSize(2, 0, 2)
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
-        // Spruce-style rubber tree - uses rubber_spruce blocks
+        // Mega Spruce-style rubber tree - uses rubber_spruce blocks
         register(context, RUBBER_TREE_MEGA_SPRUCE_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LOG.get().defaultBlockState()),
-                new StraightTrunkPlacer(6, 3, 0),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES.get()),
-                new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2), UniformInt.of(1, 2)),
+                new StraightTrunkPlacer(13, 5, 3),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES.get().defaultBlockState()),
+                new SpruceFoliagePlacer(UniformInt.of(2, 3), UniformInt.of(0, 2), UniformInt.of(3, 4)),
                 new TwoLayersFeatureSize(2, 0, 2)
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
         // Fancy oak-style rubber tree - uses rubber_fancy_oak blocks
         register(context, RUBBER_TREE_FANCY_OAK_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG.get().defaultBlockState()),
                 new FancyTrunkPlacer(3, 11, 0),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES.get()),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES.get().defaultBlockState()),
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
         // Dark oak-style rubber tree - uses rubber_dark_oak blocks
         register(context, RUBBER_TREE_DARK_OAK_STYLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(EnerjoltBlocks.RUBBER_DARK_OAK_LOG.get().defaultBlockState()),
                 new DarkOakTrunkPlacer(6, 2, 1),
-                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES.get()),
+                BlockStateProvider.simple(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES.get().defaultBlockState()),
                 new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
-        ).ignoreVines().build());
+        ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

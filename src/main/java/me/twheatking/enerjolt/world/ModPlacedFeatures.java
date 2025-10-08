@@ -6,13 +6,11 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
-import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -36,26 +34,45 @@ public final class ModPlacedFeatures {
                 ModOrePlacement.orePlacement(16, HeightRangePlacement.triangle(
                         VerticalAnchor.absolute(25), VerticalAnchor.absolute(80))));
 
-        // Tree placements - rare spawns to blend naturally
-        // Oak-style: 4% chance per chunk
+        // Tree placements - RARE spawns with proper ground placement
+        // Oak-style: 1 in 200 chunks (0.5% chance)
         register(context, RUBBER_TREE_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_OAK_STYLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.04f, 1)));
+                rubberTreePlacement(100));
 
-        // Birch-style: 4% chance per chunk
+        // Birch-style: 1 in 200 chunks (0.5% chance)
         register(context, RUBBER_TREE_BIRCH_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_BIRCH_STYLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.04f, 1)));
+                rubberTreePlacement(100));
 
-        // Spruce-style: 2% chance per chunk
+        // Spruce-style: 1 in 300 chunks (0.33% chance)
         register(context, RUBBER_TREE_SPRUCE_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_SPRUCE_STYLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.02f, 1)));
+                rubberTreePlacement(100));
 
-        // Fancy oak-style: 2% chance per chunk (rarer since it's larger)
+        // Fancy oak-style: 1 in 300 chunks (0.33% chance)
         register(context, RUBBER_TREE_FANCY_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_FANCY_OAK_STYLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.02f, 1)));
+                rubberTreePlacement(100));
 
-        // Dark oak-style: 2% chance per chunk (rarer since it's 2x2)
+        // Dark oak-style: 1 in 300 chunks (0.33% chance)
         register(context, RUBBER_TREE_DARK_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.02f, 1)));
+                rubberTreePlacement(100));
+    }
+
+    /**
+     * Custom tree placement that ensures trees spawn on the actual ground surface,
+     * not on top of other trees. Uses RarityFilter for proper rare spawning.
+     *
+     * @param rarity 1 in N chunks will have this tree (e.g., 200 = 0.5% chance per chunk)
+     */
+    private static List<PlacementModifier> rubberTreePlacement(int rarity) {
+        return List.of(
+                RarityFilter.onAverageOnceEvery(rarity),  // Makes trees very rare
+                InSquarePlacement.spread(),
+                SurfaceWaterDepthFilter.forMaxDepth(0),
+                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,  // This ensures placement on actual ground, not vegetation
+                BiomeFilter.biome(),
+                BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(
+                        net.minecraft.world.level.block.Blocks.OAK_SAPLING.defaultBlockState(),
+                        net.minecraft.core.BlockPos.ZERO))
+        );
     }
 
     public static ResourceKey<PlacedFeature> registerKey(String name) {

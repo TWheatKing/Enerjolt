@@ -21,9 +21,100 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider lookupProvider) {
+        // ========================================
+        // RUBBER TREE TAGS (NEW - CRITICAL FOR LEAF DECAY FIX)
+        // ========================================
+
+        // Register all rubber tree leaves to minecraft:leaves tag
+        // This prevents decay and allows proper leaf behavior
+        tag(BlockTags.LEAVES)
+                .add(EnerjoltBlocks.RUBBER_OAK_LEAVES.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_LEAVES.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_LEAVES.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_LEAVES.get());
+
+        // Register all rubber tree logs to minecraft:logs tag
+        // This allows proper tree detection and tool interactions
+        tag(BlockTags.LOGS)
+                .add(EnerjoltBlocks.RUBBER_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_LOG.get());
+
+        // Register logs that can be burned (for furnace fuel)
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(EnerjoltBlocks.RUBBER_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_OAK_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD.get());
+
+        // Register planks to minecraft:planks tag
+        tag(BlockTags.PLANKS)
+                .add(EnerjoltBlocks.RUBBER_OAK_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS.get());
+
+        // Register saplings to minecraft:saplings tag
+        tag(BlockTags.SAPLINGS)
+                .add(EnerjoltBlocks.RUBBER_OAK_SAPLING.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_SAPLING.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_SAPLING.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_SAPLING.get());
+
+        // ========================================
+        // EXISTING TAGS BELOW
+        // ========================================
+
         // Tool requirements
         tag(BlockTags.MINEABLE_WITH_AXE).
-                add(EnerjoltBlocks.SAWDUST_BLOCK.get());
+                add(EnerjoltBlocks.SAWDUST_BLOCK.get())
+                // Add rubber tree logs and wood
+                .add(EnerjoltBlocks.RUBBER_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_LOG.get())
+                .add(EnerjoltBlocks.RUBBER_OAK_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_LOG.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_BIRCH_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_SPRUCE_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_FANCY_OAK_WOOD.get())
+                .add(EnerjoltBlocks.STRIPPED_RUBBER_DARK_OAK_WOOD.get())
+                .add(EnerjoltBlocks.RUBBER_OAK_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_BIRCH_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_SPRUCE_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS.get())
+                .add(EnerjoltBlocks.RUBBER_DARK_OAK_PLANKS.get());
 
         tag(BlockTags.PREVENT_MOB_SPAWNING_INSIDE).
                 add(

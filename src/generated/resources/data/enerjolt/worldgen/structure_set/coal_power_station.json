@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 892745123,
+    "separation": 30,
+    "spacing": 60
+  },
+  "structures": [
+    {
+      "structure": "enerjolt:coal_power_station",
+      "weight": 1
+    }
+  ]
+}

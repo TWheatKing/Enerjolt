@@ -27,5 +27,13 @@ public class ModBiomeTagProvider extends BiomeTagsProvider {
                 add(Biomes.DESERT,
                         Biomes.BADLANDS,
                         Biomes.SAVANNA);
+        // NEW: Power Station biome tag - spawns in open/flat areas
+        tag(EnerjoltBiomeTags.HAS_STRUCTURE_COAL_POWER_STATION).
+                add(Biomes.PLAINS,
+                        Biomes.SUNFLOWER_PLAINS,
+                        Biomes.MEADOW,
+                        Biomes.SNOWY_PLAINS,
+                        Biomes.SAVANNA,
+                        Biomes.SAVANNA_PLATEAU);
     }
 }

@@ -2,20 +2,8 @@
   "feature": "enerjolt:rubber_tree_fancy_oak_style",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:weighted_list",
-        "distribution": [
-          {
-            "data": 0,
-            "weight": 49
-          },
-          {
-            "data": 1,
-            "weight": 1
-          }
-        ]
-      }
+      "type": "minecraft:rarity_filter",
+      "chance": 100
     },
     {
       "type": "minecraft:in_square"
@@ -30,6 +18,18 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "minecraft:oak_sapling",
+          "Properties": {
+            "stage": "0"
+          }
+        }
+      }
     }
   ]
 }

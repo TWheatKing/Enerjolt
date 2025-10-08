@@ -18,6 +18,8 @@ public final class ModTemplatePools {
 
     public static final ResourceKey<StructureTemplatePool> FACTORY_1_START = registerKey("factory_1/start_pool");
     public static final ResourceKey<StructureTemplatePool> SMALL_SOLAR_FARM_START = registerKey("small_solar_farm/start_pool");
+    // NEW: Power Station start pool
+    public static final ResourceKey<StructureTemplatePool> COAL_POWER_STATION_START = registerKey("coal_power_station/start_pool");
 
     public static void bootstrap(BootstrapContext<StructureTemplatePool> context) {
         HolderGetter<StructureTemplatePool> templatePools = context.lookup(Registries.TEMPLATE_POOL);
@@ -30,6 +32,10 @@ public final class ModTemplatePools {
 
         context.register(SMALL_SOLAR_FARM_START, new StructureTemplatePool(emptyTemplatePool, List.of(
                 Pair.of(StructurePoolElement.single(EJOLTAPI.MOD_ID + ":misc/small_solar_farm"), 1)
+        ), StructureTemplatePool.Projection.RIGID));
+        // NEW: Power Station template pool registration
+        context.register(COAL_POWER_STATION_START, new StructureTemplatePool(emptyTemplatePool, List.of(
+                Pair.of(StructurePoolElement.single(EJOLTAPI.MOD_ID + ":power_station/coal_power_station"), 1)
         ), StructureTemplatePool.Projection.RIGID));
     }
 

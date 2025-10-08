@@ -17,6 +17,8 @@ public final class ModStructureSets {
 
     public static final ResourceKey<StructureSet> FACTORY_1 = registerKey("factory_1");
     public static final ResourceKey<StructureSet> SMALL_SOLAR_FARM = registerKey("small_solar_farm");
+    // NEW: Power Station structure set
+    public static final ResourceKey<StructureSet> COAL_POWER_STATION = registerKey("coal_power_station");
 
     public static void bootstrap(BootstrapContext<StructureSet> context) {
         HolderGetter<Structure> structures = context.lookup(Registries.STRUCTURE);
@@ -33,6 +35,13 @@ public final class ModStructureSets {
                         StructureSet.entry(structures.getOrThrow(ModStructures.SMALL_SOLAR_FARM))
                 ),
                 new RandomSpreadStructurePlacement(40, 20, RandomSpreadType.LINEAR, 1516723498)
+        ));
+        // NEW: Power Station structure set registration
+        context.register(COAL_POWER_STATION, new StructureSet(
+                List.of(
+                        StructureSet.entry(structures.getOrThrow(ModStructures.COAL_POWER_STATION))
+                ),
+                new RandomSpreadStructurePlacement(60, 30, RandomSpreadType.LINEAR, 892745123)
         ));
     }
 

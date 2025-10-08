@@ -794,6 +794,7 @@ public final class EnerjoltBlocks {
                     .strength(2.0f)
                     .sound(SoundType.WOOD)
                     .ignitedByLava()));
+    public static final DeferredItem<Item> RUBBER_OAK_LOG_ITEM = createBlockItem("rubber_oak_log", RUBBER_OAK_LOG);
 
     public static final DeferredBlock<RotatedPillarBlock> RUBBER_OAK_WOOD = BLOCKS.register("rubber_oak_wood",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()

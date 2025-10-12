@@ -33,10 +33,14 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public PlantGrowthChamberCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/plant_growth_chamber.png");
-        background = helper.createDrawable(texture, 61, 25, 108, 48);
+        this.width = 108;
+        this.height = 48;
+        background = helper.createDrawable(texture, 61, 25, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.PLANT_GROWTH_CHAMBER_ITEM.get()));
     }
@@ -52,13 +56,18 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -107,6 +116,10 @@ public class PlantGrowthChamberCategory implements IRecipeCategory<RecipeHolder<
 
     @Override
     public void draw(RecipeHolder<PlantGrowthChamberRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw recipe duration text
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * PlantGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
         Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);

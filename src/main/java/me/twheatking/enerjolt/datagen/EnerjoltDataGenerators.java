@@ -11,7 +11,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = EJOLTAPI.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = EJOLTAPI.MOD_ID)
 public class EnerjoltDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -20,8 +20,8 @@ public class EnerjoltDataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         CompletableFuture<HolderLookup.Provider> lookupProvider =
-                generator.addProvider(event.includeServer(), new ModRegistriesProvider(output, event.getLookupProvider())).
-                        getRegistryProvider();
+                generator.addProvider(event.includeServer(), new ModRegistriesProvider(output, event.getLookupProvider()))
+                        .getRegistryProvider();
 
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(output, existingFileHelper));

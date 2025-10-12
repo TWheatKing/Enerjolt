@@ -6,14 +6,44 @@ import net.minecraft.nbt.Tag;
 public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
     protected int energy;
     protected int capacity;
-    protected int maxTransfer;
+    protected int maxReceive;
+    protected int maxExtract;
 
-    public ReceiveAndExtractEnergyStorage() {}
+    public ReceiveAndExtractEnergyStorage() {
+        this(0, 0, 0);
+    }
 
-    public ReceiveAndExtractEnergyStorage(int energy, int capacity, int maxTransfer) {
-        this.energy = energy;
+    /**
+     * Constructor with capacity and unified max transfer rate
+     * @param capacity Maximum energy capacity
+     * @param maxTransfer Maximum energy transfer rate (both receive and extract)
+     */
+    public ReceiveAndExtractEnergyStorage(int capacity, int maxTransfer) {
+        this(capacity, maxTransfer, maxTransfer, 0);
+    }
+
+    /**
+     * Constructor with separate receive and extract rates
+     * @param capacity Maximum energy capacity
+     * @param maxReceive Maximum energy receive rate
+     * @param maxExtract Maximum energy extract rate
+     */
+    public ReceiveAndExtractEnergyStorage(int capacity, int maxReceive, int maxExtract) {
+        this(capacity, maxReceive, maxExtract, 0);
+    }
+
+    /**
+     * Full constructor with initial energy
+     * @param capacity Maximum energy capacity
+     * @param maxReceive Maximum energy receive rate
+     * @param maxExtract Maximum energy extract rate
+     * @param energy Initial energy stored
+     */
+    public ReceiveAndExtractEnergyStorage(int capacity, int maxReceive, int maxExtract, int energy) {
         this.capacity = capacity;
-        this.maxTransfer = maxTransfer;
+        this.maxReceive = maxReceive;
+        this.maxExtract = maxExtract;
+        this.energy = Math.max(0, Math.min(capacity, energy));
     }
 
     @Override
@@ -23,13 +53,13 @@ public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
 
     @Override
     public void setEnergy(int energy) {
-        this.energy = energy;
+        this.energy = Math.max(0, Math.min(capacity, energy));
         onChange();
     }
 
     @Override
     public void setEnergyWithoutUpdate(int energy) {
-        this.energy = energy;
+        this.energy = Math.max(0, Math.min(capacity, energy));
     }
 
     @Override
@@ -40,37 +70,85 @@ public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
     @Override
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+        // Clamp current energy to new capacity
+        if (this.energy > capacity) {
+            this.energy = capacity;
+        }
         onChange();
     }
 
     @Override
     public void setCapacityWithoutUpdate(int capacity) {
         this.capacity = capacity;
+        // Clamp current energy to new capacity
+        if (this.energy > capacity) {
+            this.energy = capacity;
+        }
     }
 
-    public int getMaxTransfer() {
-        return maxTransfer;
+    public int getMaxReceive() {
+        return maxReceive;
     }
 
-    public void setMaxTransfer(int maxTransfer) {
-        this.maxTransfer = maxTransfer;
+    public void setMaxReceive(int maxReceive) {
+        this.maxReceive = maxReceive;
         onChange();
     }
 
+    public void setMaxReceiveWithoutUpdate(int maxReceive) {
+        this.maxReceive = maxReceive;
+    }
+
+    public int getMaxExtract() {
+        return maxExtract;
+    }
+
+    public void setMaxExtract(int maxExtract) {
+        this.maxExtract = maxExtract;
+        onChange();
+    }
+
+    public void setMaxExtractWithoutUpdate(int maxExtract) {
+        this.maxExtract = maxExtract;
+    }
+
+    /**
+     * Legacy method for backward compatibility
+     * Sets both maxReceive and maxExtract to the same value
+     */
+    public int getMaxTransfer() {
+        return Math.min(maxReceive, maxExtract);
+    }
+
+    /**
+     * Legacy method for backward compatibility
+     * Sets both maxReceive and maxExtract to the same value
+     */
+    public void setMaxTransfer(int maxTransfer) {
+        this.maxReceive = maxTransfer;
+        this.maxExtract = maxTransfer;
+        onChange();
+    }
+
+    /**
+     * Legacy method for backward compatibility
+     * Sets both maxReceive and maxExtract to the same value
+     */
     public void setMaxTransferWithoutUpdate(int maxTransfer) {
-        this.maxTransfer = maxTransfer;
+        this.maxReceive = maxTransfer;
+        this.maxExtract = maxTransfer;
     }
 
     protected void onChange() {}
 
     @Override
     public int receiveEnergy(int maxReceive, boolean simulate) {
-        if(!canReceive())
+        if (!canReceive())
             return 0;
 
-        int received = Math.max(0, Math.min(getMaxEnergyStored() - energy, Math.min(getMaxTransfer(), maxReceive)));
+        int received = Math.max(0, Math.min(getMaxEnergyStored() - energy, Math.min(this.maxReceive, maxReceive)));
 
-        if(!simulate) {
+        if (!simulate) {
             energy += received;
             onChange();
         }
@@ -80,12 +158,12 @@ public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
 
     @Override
     public int extractEnergy(int maxExtract, boolean simulate) {
-        if(!canExtract())
+        if (!canExtract())
             return 0;
 
-        int extracted = Math.min(energy, Math.min(getMaxTransfer(), maxExtract));
+        int extracted = Math.min(energy, Math.min(this.maxExtract, maxExtract));
 
-        if(!simulate) {
+        if (!simulate) {
             energy -= extracted;
             onChange();
         }
@@ -105,12 +183,12 @@ public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
 
     @Override
     public boolean canExtract() {
-        return true;
+        return maxExtract > 0;
     }
 
     @Override
     public boolean canReceive() {
-        return true;
+        return maxReceive > 0;
     }
 
     @Override
@@ -120,12 +198,11 @@ public class ReceiveAndExtractEnergyStorage implements IEnerjoltEnergyStorage {
 
     @Override
     public void loadNBT(Tag tag) {
-        if(!(tag instanceof IntTag)) {
+        if (!(tag instanceof IntTag)) {
             energy = 0;
-
             return;
         }
 
-        energy = ((IntTag)tag).getAsInt();
+        energy = Math.max(0, Math.min(capacity, ((IntTag)tag).getAsInt()));
     }
 }

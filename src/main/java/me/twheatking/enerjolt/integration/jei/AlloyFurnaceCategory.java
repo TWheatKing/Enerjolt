@@ -32,10 +32,14 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public AlloyFurnaceCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/recipe/misc_gui.png");
-        background = helper.createDrawable(texture, 1, 189, 147, 37);
+        this.width = 147;
+        this.height = 37;
+        background = helper.createDrawable(texture, 1, 189, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.ALLOY_FURNACE_ITEM.get()));
     }
@@ -51,13 +55,18 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -91,6 +100,10 @@ public class AlloyFurnaceCategory implements IRecipeCategory<RecipeHolder<AlloyF
 
     @Override
     public void draw(RecipeHolder<AlloyFurnaceRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw recipe duration text
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * AlloyFurnaceBlockEntity.RECIPE_DURATION_MULTIPLIER);
         Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);

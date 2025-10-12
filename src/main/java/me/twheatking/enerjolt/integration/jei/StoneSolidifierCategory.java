@@ -6,11 +6,13 @@ import me.twheatking.enerjolt.recipe.StoneSolidifierRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -22,10 +24,14 @@ public class StoneSolidifierCategory implements IRecipeCategory<RecipeHolder<Sto
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public StoneSolidifierCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/recipe/misc_gui.png");
-        background = helper.createDrawable(texture, 1, 1, 103, 26);
+        this.width = 103;
+        this.height = 26;
+        background = helper.createDrawable(texture, 1, 1, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.STONE_SOLIDIFIER_ITEM.get()));
     }
@@ -41,13 +47,23 @@ public class StoneSolidifierCategory implements IRecipeCategory<RecipeHolder<Sto
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
+    }
+
+    @Override
+    public void draw(RecipeHolder<StoneSolidifierRecipe> recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        background.draw(guiGraphics, 0, 0);
     }
 
     @Override

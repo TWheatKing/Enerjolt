@@ -29,10 +29,14 @@ public class EnergizerCategory implements IRecipeCategory<RecipeHolder<Energizer
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public EnergizerCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/energizer.png");
-        background = helper.createDrawable(texture, 31, 18, 114, 50);
+        this.width = 114;
+        this.height = 50;
+        background = helper.createDrawable(texture, 31, 18, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.ENERGIZER_ITEM.get()));
     }
@@ -48,13 +52,18 @@ public class EnergizerCategory implements IRecipeCategory<RecipeHolder<Energizer
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -66,6 +75,10 @@ public class EnergizerCategory implements IRecipeCategory<RecipeHolder<Energizer
 
     @Override
     public void draw(RecipeHolder<EnergizerRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw energy consumption text
         Font font = Minecraft.getInstance().font;
         int energyConsumption = (int)(recipe.value().getEnergyConsumption() * EnergizerBlockEntity.ENERGY_CONSUMPTION_MULTIPLIER);
         Component component = Component.literal(EnergyUtils.getEnergyWithPrefix(energyConsumption)).withStyle(ChatFormatting.YELLOW);

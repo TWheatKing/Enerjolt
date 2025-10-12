@@ -28,10 +28,14 @@ public class ChargerCategory implements IRecipeCategory<RecipeHolder<ChargerReci
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public ChargerCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/recipe/misc_gui.png");
-        background = helper.createDrawable(texture, 1, 29, 113, 46);
+        this.width = 113;
+        this.height = 46;
+        background = helper.createDrawable(texture, 1, 29, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.CHARGER_ITEM.get()));
     }
@@ -47,13 +51,18 @@ public class ChargerCategory implements IRecipeCategory<RecipeHolder<ChargerReci
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -65,8 +74,12 @@ public class ChargerCategory implements IRecipeCategory<RecipeHolder<ChargerReci
 
     @Override
     public void draw(RecipeHolder<ChargerRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw energy consumption text
         Font font = Minecraft.getInstance().font;
-        int energyConsumption = (int)(recipe.value().getEnergyConsumption() *ChargerBlockEntity.CHARGER_RECIPE_ENERGY_CONSUMPTION_MULTIPLIER);
+        int energyConsumption = (int)(recipe.value().getEnergyConsumption() * ChargerBlockEntity.CHARGER_RECIPE_ENERGY_CONSUMPTION_MULTIPLIER);
         Component component = Component.literal(EnergyUtils.getEnergyWithPrefix(energyConsumption)).withStyle(ChatFormatting.YELLOW);
         int textWidth = font.width(component);
 

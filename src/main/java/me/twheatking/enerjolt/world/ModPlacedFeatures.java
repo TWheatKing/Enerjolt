@@ -18,6 +18,7 @@ public final class ModPlacedFeatures {
     private ModPlacedFeatures() {}
 
     public static final ResourceKey<PlacedFeature> TIN_ORE_KEY = registerKey("tin_ore");
+    //public static final ResourceKey<PlacedFeature> ZINC_ORE_KEY = registerKey("zinc_ore");
 
     // Rubber tree placed features - one for each style
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_OAK_STYLE_KEY = registerKey("rubber_tree_oak_style_placed");
@@ -34,26 +35,26 @@ public final class ModPlacedFeatures {
                 ModOrePlacement.orePlacement(16, HeightRangePlacement.triangle(
                         VerticalAnchor.absolute(25), VerticalAnchor.absolute(80))));
 
-        // Tree placements - RARE spawns with proper ground placement
-        // Oak-style: 1 in 200 chunks (0.5% chance)
+        // Tree placements - More common spawns
+        // Oak-style: 1 in 20 chunks (5% chance)
         register(context, RUBBER_TREE_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_OAK_STYLE_KEY),
-                rubberTreePlacement(100));
+                rubberTreePlacement(20));
 
-        // Birch-style: 1 in 200 chunks (0.5% chance)
+        // Birch-style: 1 in 20 chunks (5% chance)
         register(context, RUBBER_TREE_BIRCH_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_BIRCH_STYLE_KEY),
-                rubberTreePlacement(100));
+                rubberTreePlacement(20));
 
-        // Spruce-style: 1 in 300 chunks (0.33% chance)
+        // Spruce-style: 1 in 40 chunks (2.5% chance)
         register(context, RUBBER_TREE_SPRUCE_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_SPRUCE_STYLE_KEY),
-                rubberTreePlacement(100));
+                rubberTreePlacement(40));
 
-        // Fancy oak-style: 1 in 300 chunks (0.33% chance)
+        // Fancy oak-style: 1 in 40 chunks (2.5% chance)
         register(context, RUBBER_TREE_FANCY_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_FANCY_OAK_STYLE_KEY),
-                rubberTreePlacement(100));
+                rubberTreePlacement(40));
 
-        // Dark oak-style: 1 in 300 chunks (0.33% chance)
+        // Dark oak-style: 1 in 40 chunks (2.5% chance)
         register(context, RUBBER_TREE_DARK_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY),
-                rubberTreePlacement(100));
+                rubberTreePlacement(40));
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ModPlacedFeatures {
      */
     private static List<PlacementModifier> rubberTreePlacement(int rarity) {
         return List.of(
-                RarityFilter.onAverageOnceEvery(rarity),  // Makes trees very rare
+                RarityFilter.onAverageOnceEvery(rarity),
                 InSquarePlacement.spread(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,  // This ensures placement on actual ground, not vegetation

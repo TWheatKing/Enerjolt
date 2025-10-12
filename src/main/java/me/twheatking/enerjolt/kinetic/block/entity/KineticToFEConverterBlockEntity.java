@@ -169,14 +169,19 @@ public class KineticToFEConverterBlockEntity extends BaseConverterBlockEntity {
         this.tier = tier;
         this.conversionEfficiency = tier.efficiency;
 
-        // Recreate energy storage with new tier parameters while preserving current energy
-        int currentEnergy = energyStorage.getEnergyStored();
-        energyStorage = new ReceiveAndExtractEnergyStorage(
-                tier.storageCapacity,
-                tier.maxOutput,
-                tier.maxOutput,
-                Math.min(currentEnergy, tier.storageCapacity) // Preserve energy, capped to new capacity
-        );
+        // Update energy storage parameters for the new tier
+        if (energyStorage instanceof ReceiveAndExtractEnergyStorage storage) {
+            // Preserve current energy, capped to new capacity
+            int currentEnergy = storage.getEnergyStored();
+            
+            // Update capacity and transfer rates
+            storage.setCapacity(tier.storageCapacity);
+            storage.setMaxReceive(tier.maxOutput);
+            storage.setMaxExtract(tier.maxOutput);
+            
+            // Restore energy (will be capped to new capacity automatically)
+            storage.setEnergy(currentEnergy);
+        }
 
         setChanged();
     }

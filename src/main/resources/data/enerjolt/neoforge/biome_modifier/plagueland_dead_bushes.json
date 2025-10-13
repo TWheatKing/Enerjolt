@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "enerjolt:plagueland",
+  "features": [
+    "minecraft:patch_dead_bush_2"
+  ],
+  "step": "vegetal_decoration"
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-08T15:27:32.9515771	Loot Tables
+// 1.21.1	2025-10-13T15:33:20.3678521	Loot Tables
 6057c5aa66956358a343a25ac1d09d47e729f7e4 data/enerjolt/loot_table/blocks/advanced_auto_crafter.json
 a5d9df26904f5037ac297af8ec29140879b7a398 data/enerjolt/loot_table/blocks/advanced_battery_box.json
 460b9b2f416c31c2323ff25d4f17ebba19b85555 data/enerjolt/loot_table/blocks/advanced_charger.json
@@ -80,6 +80,7 @@ d6cb37b1cc8a3f510306bda095bc4c776072b000 data/enerjolt/loot_table/blocks/item_si
 d072a6bcd9aeb9ff045d1bc301d914d8da0a8ae4 data/enerjolt/loot_table/blocks/item_silo_medium.json
 bf9b6f0602060dc1b72188fcaa87268b43b59731 data/enerjolt/loot_table/blocks/item_silo_small.json
 fb1589e91df60a8a0026d27718e6fea7b85f05ca data/enerjolt/loot_table/blocks/item_silo_tiny.json
+1a55f7d7a33c31abd89f60a3ff7947b8ac117ddf data/enerjolt/loot_table/blocks/kinetic_adapter.json
 34671d6884dd9cfef76979ed2c912701cd349b26 data/enerjolt/loot_table/blocks/lightning_generator.json
 65a2a3a590c6d3ad6469bb2115f36675560983d4 data/enerjolt/loot_table/blocks/lv_transformer_1_to_n.json
 7f2ea621a18cd9043398fbe54ce8f4ba5bf20d56 data/enerjolt/loot_table/blocks/lv_transformer_3_to_3.json

@@ -93,6 +93,10 @@ dependencies {
     // NeoForge dependency
     implementation "net.neoforged:neoforge:${neo_version}"
 
+    // TerraBlender for biome generation (1.21.1) - Using local JAR
+    // Place TerraBlender-neoforge-1.21.1-4.1.0.8.jar in the libs/ folder
+    implementation files('libs/TerraBlender-neoforge-1.21.1-4.1.0.8.jar')
+
     // Create integration - Using Create 6.0.6 for 1.21.1
     // Place create-1.21.1-6.0.6.jar in the libs/ folder
     compileOnly files('libs/create-1.21.1-6.0.6.jar')
@@ -190,7 +194,11 @@ unifiedPublishing {
         mainPublication.set(project.rootDir.toPath().resolve("build/libs").resolve(project.mod_id + "-" + project.version + ".jar").toFile())
 
         relations {
-            //No dependencies
+            // TerraBlender is required
+            depends {
+                curseforge = "terrablender-neoforge"
+                modrinth = "terrablender"
+            }
         }
 
         if(project.hasProperty('MODRINTH_TOKEN')) {

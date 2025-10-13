@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "enerjolt:plagueland",
+  "features": "enerjolt:dead_trees_plagueland",
+  "step": "vegetal_decoration"
+}

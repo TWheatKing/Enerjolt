@@ -2,6 +2,7 @@ package me.twheatking.enerjolt.datagen;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.world.ModPlacedFeatures;
+import me.twheatking.enerjolt.worldgen.biome.EnerjoltBiomes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -81,6 +82,17 @@ public class ModBiomeModifierProvider {
                                 biomes.getOrThrow(Biomes.DARK_FOREST)
                         ),
                         HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY)),
+                        GenerationStep.Decoration.VEGETAL_DECORATION
+                )
+        );
+        //my attempt to make it work
+        context.register(
+                createKey("add_dead_fancy_tree"),
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(
+                                biomes.getOrThrow(EnerjoltBiomes.PLAGUELAND)
+                        ),
+                        HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEAD_TREES_PLAGUELAND)),
                         GenerationStep.Decoration.VEGETAL_DECORATION
                 )
         );

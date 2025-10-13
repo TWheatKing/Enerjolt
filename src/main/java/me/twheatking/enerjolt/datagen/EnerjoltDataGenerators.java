@@ -40,5 +40,6 @@ public class EnerjoltDataGenerators {
         generator.addProvider(event.includeServer(), new ModBiomeTagProvider(output, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModPaintingVariantTagProvider(output, lookupProvider,
                 existingFileHelper));
+
     }
 }

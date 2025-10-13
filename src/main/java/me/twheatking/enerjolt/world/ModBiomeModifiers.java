@@ -26,6 +26,7 @@ public final class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_SPRUCE_STYLE_KEY = registerKey("add_rubber_tree_spruce_style");
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("add_rubber_tree_fancy_oak_style");
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("add_rubber_tree_dark_oak_style");
+    public static final ResourceKey<BiomeModifier> ADD_DEAD_TREES_PLAGUELAND_KEY = registerKey("add_dead_trees_plagueland");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -81,6 +82,14 @@ public final class ModBiomeModifiers {
                         biomes.getOrThrow(Biomes.DARK_FOREST)
                 ),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+        // Dead trees for Plagueland biome
+        context.register(ADD_DEAD_TREES_PLAGUELAND_KEY, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(me.twheatking.enerjolt.worldgen.biome.EnerjoltBiomes.PLAGUELAND)
+                ),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEAD_TREES_PLAGUELAND)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
     }

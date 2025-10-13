@@ -7,6 +7,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -26,6 +28,7 @@ public final class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_SPRUCE_STYLE_KEY = registerKey("rubber_tree_spruce_style_placed");
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("rubber_tree_fancy_oak_style_placed");
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("rubber_tree_dark_oak_style_placed");
+    public static final ResourceKey<PlacedFeature> DEAD_TREES_PLAGUELAND = registerKey("dead_trees_plagueland");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -55,6 +58,14 @@ public final class ModPlacedFeatures {
         // Dark oak-style: 1 in 40 chunks (2.5% chance)
         register(context, RUBBER_TREE_DARK_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY),
                 rubberTreePlacement(40));
+
+        register(context, DEAD_TREES_PLAGUELAND, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEAD_FANCY_TREE),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(5),
+                        InSquarePlacement.spread(),
+                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        BiomeFilter.biome()
+                ));
     }
 
     /**

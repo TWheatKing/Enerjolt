@@ -40,6 +40,7 @@ public final class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_TREE_MEGA_SPRUCE_STYLE_KEY = registerKey("rubber_tree_mega_spruce_style");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("rubber_tree_fancy_oak_style");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("rubber_tree_dark_oak_style");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DEAD_FANCY_TREE = registerKey("dead_fancy_tree");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         // Existing ore configuration
@@ -105,6 +106,15 @@ public final class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)
         ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
+
+        register(context, DEAD_FANCY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.OAK_LOG),
+                new FancyTrunkPlacer(4, 11, 0),
+                BlockStateProvider.simple(Blocks.AIR),
+                new FancyFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 0),
+                new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
+        ).ignoreVines().build());
+
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

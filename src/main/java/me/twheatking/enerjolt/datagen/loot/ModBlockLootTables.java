@@ -1,6 +1,7 @@
 package me.twheatking.enerjolt.datagen.loot;
 
 import me.twheatking.enerjolt.block.*;
+import me.twheatking.enerjolt.compat.create.CreateCompat;
 import me.twheatking.enerjolt.item.EnerjoltItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -247,6 +248,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_LEAVES);
         dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_SAPLING);
         dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
+
+        dropSelf(CreateCompat.KINETIC_ADAPTER_BLOCK.get());
 
 
     }

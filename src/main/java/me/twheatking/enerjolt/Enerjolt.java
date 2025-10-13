@@ -7,7 +7,6 @@ import me.twheatking.enerjolt.block.behavior.ModBlockBehaviors;
 import me.twheatking.enerjolt.block.entity.EnerjoltBlockEntities;
 import me.twheatking.enerjolt.block.entity.renderer.FluidTankBlockEntityRenderer;
 import me.twheatking.enerjolt.block.entity.renderer.ItemConveyorBeltBlockEntityRenderer;
-import me.twheatking.enerjolt.client.renderer.HologramRenderer;
 import me.twheatking.enerjolt.compat.create.CreateCompat;
 import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
 import me.twheatking.enerjolt.config.ModConfigs;
@@ -27,6 +26,7 @@ import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.recipe.EnerjoltRecipes;
 import me.twheatking.enerjolt.screen.*;
 import me.twheatking.enerjolt.villager.EnerjoltVillager;
+import me.twheatking.enerjolt.worldgen.biome.EnerjoltRegion;
 import net.minecraft.client.Camera;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -50,17 +50,16 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
+import terrablender.api.Regions;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -109,6 +108,12 @@ public class Enerjolt {
         ModBlockBehaviors.register();
 
         EnerjoltCreativeModeTab.register(modEventBus);
+
+        // ===== NEW: Register TerraBlender regions for custom biomes =====
+        // Weight of 2 = rare spawning (vanilla biomes typically use 10)
+        //Regions.register(new EnerjoltRegion(2));
+        //LOGGER.info("TerraBlender region registered - Plagueland biome enabled");
+        // ================================================================
 
         modEventBus.addListener(this::onLoadComplete);
         modEventBus.addListener(this::addCreativeTab);

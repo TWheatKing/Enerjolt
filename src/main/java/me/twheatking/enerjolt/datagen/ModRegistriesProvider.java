@@ -21,6 +21,7 @@ public class ModRegistriesProvider extends DatapackBuiltinEntriesProvider {
             add(Registries.STRUCTURE, ModStructures::bootstrap).
             add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap).
             add(Registries.PAINTING_VARIANT, EnerjoltPaintingVariants::bootstrap).
+            add(Registries.BIOME, ModBiomeProvider::bootstrap).
             add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
 
     public ModRegistriesProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {

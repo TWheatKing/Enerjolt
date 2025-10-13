@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "enerjolt:plagueland",
+  "features": [
+    "minecraft:ore_coal_upper",
+    "minecraft:ore_coal_lower",
+    "minecraft:ore_iron_upper",
+    "minecraft:ore_iron_middle",
+    "minecraft:ore_copper",
+    "minecraft:ore_dirt",
+    "minecraft:ore_gravel",
+    "minecraft:ore_granite_upper",
+    "minecraft:ore_diorite_upper",
+    "minecraft:ore_andesite_upper"
+  ],
+  "step": "underground_ores"
+}

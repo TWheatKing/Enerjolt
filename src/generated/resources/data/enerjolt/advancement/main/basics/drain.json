@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/iron_plate",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:drain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.drain.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:drain"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.drain.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

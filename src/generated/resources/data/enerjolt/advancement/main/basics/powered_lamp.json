@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/silicon",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:powered_lamp"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.powered_lamp.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:powered_lamp"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.powered_lamp.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

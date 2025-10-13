@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/basic_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:compressor"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.compressor.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:compressor"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.compressor.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

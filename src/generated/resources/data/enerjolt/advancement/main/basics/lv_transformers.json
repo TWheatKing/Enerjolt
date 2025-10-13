@@ -1,0 +1,38 @@
+{
+  "parent": "enerjolt:main/basics/tin_cable",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enerjolt:lv_transformer_1_to_n",
+              "enerjolt:lv_transformer_3_to_3",
+              "enerjolt:lv_transformer_n_to_1",
+              "enerjolt:configurable_lv_transformer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.lv_transformers.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:lv_transformer_1_to_n"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.lv_transformers.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

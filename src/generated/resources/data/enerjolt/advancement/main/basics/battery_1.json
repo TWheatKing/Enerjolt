@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/charger",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:battery_1"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.battery_1.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:battery_1"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.battery_1.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

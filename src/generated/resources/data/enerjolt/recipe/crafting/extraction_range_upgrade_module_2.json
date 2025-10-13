@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enerjolt:basic_upgrade_module"
+    },
+    "E": {
+      "item": "enerjolt:extraction_range_upgrade_module_1"
+    },
+    "F": {
+      "item": "enerjolt:fluid_pipe"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "R": {
+      "tag": "c:dusts/redstone"
+    }
+  },
+  "pattern": [
+    "IRI",
+    "FBF",
+    "IEI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:extraction_range_upgrade_module_2"
+  }
+}

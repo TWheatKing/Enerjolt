@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "enerjolt:advanced_machine_frame"
+    },
+    "G": {
+      "tag": "c:plates/energized_gold"
+    },
+    "P": {
+      "tag": "c:plates/advanced_alloy"
+    },
+    "a": {
+      "item": "enerjolt:auto_crafter"
+    },
+    "c": {
+      "item": "enerjolt:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "GaG",
+    "cAc",
+    "PaP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:advanced_auto_crafter"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:ingots/energized_copper"
+  },
+  "output": {
+    "item": "enerjolt:energized_copper_plate"
+  }
+}

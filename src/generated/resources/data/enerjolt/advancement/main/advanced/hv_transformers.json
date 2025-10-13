@@ -1,0 +1,38 @@
+{
+  "parent": "enerjolt:main/advanced/advanced_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enerjolt:hv_transformer_1_to_n",
+              "enerjolt:hv_transformer_3_to_3",
+              "enerjolt:hv_transformer_n_to_1",
+              "enerjolt:configurable_hv_transformer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.hv_transformers.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:hv_transformer_1_to_n"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.hv_transformers.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

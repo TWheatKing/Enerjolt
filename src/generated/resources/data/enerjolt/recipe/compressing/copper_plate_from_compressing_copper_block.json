@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:storage_blocks/copper"
+  },
+  "output": {
+    "count": 9,
+    "item": "enerjolt:copper_plate"
+  }
+}

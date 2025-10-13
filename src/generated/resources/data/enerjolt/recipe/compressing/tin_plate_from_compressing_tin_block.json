@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:storage_blocks/tin"
+  },
+  "output": {
+    "count": 9,
+    "item": "enerjolt:tin_plate"
+  }
+}

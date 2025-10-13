@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/advanced/advanced_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:energizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.energizer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:energizer"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.energizer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enerjolt:battery_3"
+    },
+    "C": {
+      "tag": "c:plates/copper"
+    },
+    "L": {
+      "tag": "c:gems/lapis"
+    },
+    "S": {
+      "tag": "c:silicon"
+    },
+    "b": {
+      "item": "enerjolt:basic_circuit"
+    }
+  },
+  "pattern": [
+    "S S",
+    "bLb",
+    "CBC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:fluid_analyzer"
+  }
+}

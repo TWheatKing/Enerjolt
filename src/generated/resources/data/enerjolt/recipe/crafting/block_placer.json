@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enerjolt:basic_machine_frame"
+    },
+    "C": {
+      "tag": "c:storage_blocks/copper"
+    },
+    "D": {
+      "item": "minecraft:dispenser"
+    },
+    "I": {
+      "tag": "c:storage_blocks/iron"
+    },
+    "S": {
+      "tag": "c:storage_blocks/silicon"
+    }
+  },
+  "pattern": [
+    "IDS",
+    "DBD",
+    "SDC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:block_placer"
+  }
+}

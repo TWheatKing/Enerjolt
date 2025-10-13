@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:energizer",
+  "energy": 32768,
+  "ingredient": {
+    "tag": "c:ingots/copper"
+  },
+  "output": {
+    "item": "enerjolt:energized_copper_ingot"
+  }
+}

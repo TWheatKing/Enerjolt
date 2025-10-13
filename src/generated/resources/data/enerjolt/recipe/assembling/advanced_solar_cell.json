@@ -1,0 +1,31 @@
+{
+  "type": "enerjolt:assembling_machine",
+  "inputs": [
+    {
+      "count": 2,
+      "input": {
+        "item": "enerjolt:basic_solar_cell"
+      }
+    },
+    {
+      "count": 4,
+      "input": {
+        "tag": "c:ingots/energized_copper"
+      }
+    },
+    {
+      "count": 2,
+      "input": {
+        "tag": "c:ingots/tin"
+      }
+    },
+    {
+      "input": {
+        "tag": "c:ingots/redstone_alloy"
+      }
+    }
+  ],
+  "output": {
+    "item": "enerjolt:advanced_solar_cell"
+  }
+}

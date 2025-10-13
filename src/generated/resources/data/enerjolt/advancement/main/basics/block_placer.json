@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/basic_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:block_placer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.block_placer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:block_placer"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.block_placer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

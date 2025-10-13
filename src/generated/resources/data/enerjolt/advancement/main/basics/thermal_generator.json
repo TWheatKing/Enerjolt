@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/hardened_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:thermal_generator"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.thermal_generator.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:thermal_generator"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.thermal_generator.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

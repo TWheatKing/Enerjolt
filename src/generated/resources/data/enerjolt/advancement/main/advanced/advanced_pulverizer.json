@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/advanced/advanced_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:advanced_pulverizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.advanced_pulverizer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:advanced_pulverizer"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.advanced_pulverizer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

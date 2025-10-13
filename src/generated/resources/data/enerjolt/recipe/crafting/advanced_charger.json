@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "enerjolt:advanced_machine_frame"
+    },
+    "C": {
+      "item": "enerjolt:charger"
+    },
+    "G": {
+      "tag": "c:plates/energized_gold"
+    },
+    "S": {
+      "tag": "c:silicon"
+    },
+    "a": {
+      "tag": "c:plates/advanced_alloy"
+    }
+  },
+  "pattern": [
+    "SGS",
+    "aAa",
+    "GCG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:advanced_charger"
+  }
+}

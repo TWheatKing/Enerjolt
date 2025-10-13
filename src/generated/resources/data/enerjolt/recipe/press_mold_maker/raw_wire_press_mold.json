@@ -1,0 +1,7 @@
+{
+  "type": "enerjolt:press_mold_maker",
+  "clayCount": 6,
+  "output": {
+    "item": "enerjolt:raw_wire_press_mold"
+  }
+}

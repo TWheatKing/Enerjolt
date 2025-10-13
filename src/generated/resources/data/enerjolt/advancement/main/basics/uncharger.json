@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/charger",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:uncharger"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.uncharger.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:uncharger"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.uncharger.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

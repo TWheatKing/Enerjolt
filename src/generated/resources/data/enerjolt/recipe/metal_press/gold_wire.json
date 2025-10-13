@@ -1,0 +1,13 @@
+{
+  "type": "enerjolt:metal_press",
+  "ingredient": {
+    "tag": "c:plates/gold"
+  },
+  "output": {
+    "count": 3,
+    "item": "enerjolt:gold_wire"
+  },
+  "pressMold": {
+    "item": "enerjolt:wire_press_mold"
+  }
+}

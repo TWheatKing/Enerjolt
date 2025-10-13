@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/copper_wire",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:basic_circuit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.basic_circuit.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:basic_circuit"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.basic_circuit.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

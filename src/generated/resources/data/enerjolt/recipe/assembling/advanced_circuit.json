@@ -1,0 +1,32 @@
+{
+  "type": "enerjolt:assembling_machine",
+  "inputs": [
+    {
+      "count": 4,
+      "input": {
+        "item": "enerjolt:basic_circuit"
+      }
+    },
+    {
+      "count": 4,
+      "input": {
+        "tag": "c:wires/energized_copper"
+      }
+    },
+    {
+      "count": 4,
+      "input": {
+        "tag": "c:silicon"
+      }
+    },
+    {
+      "count": 2,
+      "input": {
+        "tag": "c:dusts/redstone"
+      }
+    }
+  ],
+  "output": {
+    "item": "enerjolt:advanced_circuit"
+  }
+}

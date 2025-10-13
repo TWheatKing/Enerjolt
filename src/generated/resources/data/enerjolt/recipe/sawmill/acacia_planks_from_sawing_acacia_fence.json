@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "minecraft:acacia_fence"
+  },
+  "output": {
+    "item": "minecraft:acacia_planks"
+  },
+  "sawdustAmount": 2
+}

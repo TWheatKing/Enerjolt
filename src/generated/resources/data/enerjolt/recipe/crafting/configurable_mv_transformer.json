@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "enerjolt:basic_circuit"
+    },
+    "C": {
+      "tag": "c:storage_blocks/copper"
+    },
+    "I": {
+      "tag": "c:storage_blocks/iron"
+    },
+    "M": {
+      "item": "enerjolt:hardened_machine_frame"
+    },
+    "T": {
+      "item": "enerjolt:configurable_lv_transformer"
+    }
+  },
+  "pattern": [
+    "CTI",
+    "BMB",
+    "CTI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "enerjolt:configurable_mv_transformer"
+  }
+}

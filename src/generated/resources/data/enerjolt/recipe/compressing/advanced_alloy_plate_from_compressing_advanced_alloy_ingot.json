@@ -1,0 +1,9 @@
+{
+  "type": "enerjolt:compressor",
+  "ingredient": {
+    "tag": "c:ingots/advanced_alloy"
+  },
+  "output": {
+    "item": "enerjolt:advanced_alloy_plate"
+  }
+}

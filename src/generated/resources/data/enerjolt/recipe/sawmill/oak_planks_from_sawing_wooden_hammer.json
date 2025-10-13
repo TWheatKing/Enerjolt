@@ -1,0 +1,11 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "enerjolt:wooden_hammer"
+  },
+  "output": {
+    "count": 2,
+    "item": "minecraft:oak_planks"
+  },
+  "sawdustAmount": 2
+}

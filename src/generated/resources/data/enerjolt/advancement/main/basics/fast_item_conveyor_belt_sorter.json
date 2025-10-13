@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/fast_item_conveyor_belt",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:fast_item_conveyor_belt_sorter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_sorter.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:fast_item_conveyor_belt_sorter"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.fast_item_conveyor_belt_sorter.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

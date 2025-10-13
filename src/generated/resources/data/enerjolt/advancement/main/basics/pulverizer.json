@@ -1,0 +1,33 @@
+{
+  "parent": "enerjolt:main/basics/basic_machine_frame",
+  "criteria": {
+    "has_the_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enerjolt:pulverizer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.enerjolt.pulverizer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "enerjolt:pulverizer"
+    },
+    "title": {
+      "translate": "advancements.enerjolt.pulverizer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

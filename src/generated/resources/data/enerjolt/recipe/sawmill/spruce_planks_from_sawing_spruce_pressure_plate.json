@@ -1,0 +1,10 @@
+{
+  "type": "enerjolt:sawmill",
+  "ingredient": {
+    "item": "minecraft:spruce_pressure_plate"
+  },
+  "output": {
+    "item": "minecraft:spruce_planks"
+  },
+  "sawdustAmount": 2
+}

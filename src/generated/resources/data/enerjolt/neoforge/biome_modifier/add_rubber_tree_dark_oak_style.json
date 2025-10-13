@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "minecraft:dark_forest",
-  "features": "enerjolt:rubber_tree_dark_oak_style_placed",
-  "step": "vegetal_decoration"
-}

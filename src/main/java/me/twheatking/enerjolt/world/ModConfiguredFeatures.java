@@ -41,6 +41,7 @@ public final class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("rubber_tree_fancy_oak_style");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("rubber_tree_dark_oak_style");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEAD_FANCY_TREE = registerKey("dead_fancy_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DEAD_MANGROVE_TREE = registerKey("dead_mangrove_tree");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         // Existing ore configuration
@@ -107,6 +108,8 @@ public final class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 1)
         ).dirt(BlockStateProvider.simple(Blocks.DIRT)).ignoreVines().build());
 
+        // Dead fancy oak tree - no leaves
+        // Dead fancy oak tree - no leaves
         register(context, DEAD_FANCY_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.OAK_LOG),
                 new FancyTrunkPlacer(4, 11, 0),
@@ -115,6 +118,17 @@ public final class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))
         ).ignoreVines().build());
 
+        // Dead mangrove tree - uses mangrove trunk but no leaves
+        // Simplified version using straight trunk placer for compatibility
+        register(context, DEAD_MANGROVE_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.MANGROVE_LOG),
+                new StraightTrunkPlacer(5, 2, 1), // Tall and thin like mangroves
+                BlockStateProvider.simple(Blocks.AIR), // No leaves
+                new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 0), // No foliage
+                new TwoLayersFeatureSize(1, 0, 1)
+        ).dirt(BlockStateProvider.simple(Blocks.MUD)) // Mangroves prefer mud
+                .ignoreVines()
+                .build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

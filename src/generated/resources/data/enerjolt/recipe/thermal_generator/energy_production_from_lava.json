@@ -1,5 +1,0 @@
-{
-  "type": "enerjolt:thermal_generator",
-  "energy": 20000,
-  "input": "minecraft:lava"
-}

@@ -1,9 +1,0 @@
-{
-  "type": "enerjolt:crusher",
-  "ingredient": {
-    "item": "minecraft:polished_andesite"
-  },
-  "output": {
-    "item": "minecraft:andesite"
-  }
-}

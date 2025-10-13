@@ -1,9 +1,0 @@
-{
-  "type": "enerjolt:crusher",
-  "ingredient": {
-    "tag": "c:cobblestones/normal"
-  },
-  "output": {
-    "item": "minecraft:gravel"
-  }
-}

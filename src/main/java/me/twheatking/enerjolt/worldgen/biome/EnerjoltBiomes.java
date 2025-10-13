@@ -4,21 +4,20 @@ import me.twheatking.enerjolt.api.EJOLTAPI;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
-import net.minecraft.data.worldgen.placement.AquaticPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.Musics;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 /**
  * Biome registration for Enerjolt mod.
  * Currently includes the Plagueland biome.
+ *
+ * NOTE: Biomes are registered via datagen in ModBiomeProvider.bootstrap(),
+ * NOT via DeferredRegister. This is the correct approach for custom biomes.
  */
 public class EnerjoltBiomes {
 
@@ -34,7 +33,8 @@ public class EnerjoltBiomes {
      * - Dark, ominous atmosphere
      * - Toxic water (will be customized later)
      * - Hostile environment
-     * - Rare spawning
+     * - Rare spawning next to Dark Forests and Swamps
+     * - Dead vegetation (dead oak and mangrove trees)
      */
     public static Biome plagueland(HolderGetter<PlacedFeature> placedFeatures, HolderGetter<ConfiguredWorldCarver<?>> worldCarvers) {
         // Mob spawns - hostile and dangerous
@@ -50,11 +50,44 @@ public class EnerjoltBiomes {
         spawnBuilder.addSpawn(MobCategory.MONSTER,
                 new MobSpawnSettings.SpawnerData(EntityType.CREEPER, 40, 2, 4));
 
-        // Generation settings - START SIMPLE to avoid feature cycles
-        // We'll add custom features later via biome modifiers
+        // Generation settings - Add features directly to avoid cycles
         BiomeGenerationSettings.Builder generationBuilder = new BiomeGenerationSettings.Builder(
                 placedFeatures, worldCarvers
         );
+
+        // Add vanilla default features
+        BiomeDefaultFeatures.addDefaultCarversAndLakes(generationBuilder);
+        BiomeDefaultFeatures.addDefaultCrystalFormations(generationBuilder);
+        BiomeDefaultFeatures.addDefaultMonsterRoom(generationBuilder);
+        BiomeDefaultFeatures.addDefaultUndergroundVariety(generationBuilder);
+        BiomeDefaultFeatures.addDefaultSprings(generationBuilder);
+        BiomeDefaultFeatures.addDefaultOres(generationBuilder);
+        BiomeDefaultFeatures.addDefaultSoftDisks(generationBuilder);
+
+        // Add sparse dead vegetation - DON'T use addBadlandGrass (causes cycle with eroded_badlands)
+        BiomeDefaultFeatures.addDefaultMushrooms(generationBuilder); // Brown and red mushrooms
+
+        // Add custom dead oak trees DIRECTLY to the biome (NOT via biome modifier to avoid cycles)
+        generationBuilder.addFeature(
+                net.minecraft.world.level.levelgen.GenerationStep.Decoration.VEGETAL_DECORATION,
+                placedFeatures.getOrThrow(
+                        net.minecraft.resources.ResourceKey.create(
+                                net.minecraft.core.registries.Registries.PLACED_FEATURE,
+                                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(EJOLTAPI.MOD_ID, "dead_trees_plagueland")
+                        )
+                )
+        );
+        // Add custom dead mangrove trees DIRECTLY to the biome (NOT via biome modifier to avoid cycles)
+        generationBuilder.addFeature(
+                net.minecraft.world.level.levelgen.GenerationStep.Decoration.VEGETAL_DECORATION,
+                placedFeatures.getOrThrow(
+                        net.minecraft.resources.ResourceKey.create(
+                                net.minecraft.core.registries.Registries.PLACED_FEATURE,
+                                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(EJOLTAPI.MOD_ID, "dead_mangrove_trees_plagueland")
+                        )
+                )
+        );
+
 
         // Special effects - dark, toxic atmosphere
         BiomeSpecialEffects.Builder effectsBuilder = new BiomeSpecialEffects.Builder()

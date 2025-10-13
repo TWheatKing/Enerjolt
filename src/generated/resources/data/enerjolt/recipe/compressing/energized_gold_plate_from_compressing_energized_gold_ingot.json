@@ -1,9 +1,0 @@
-{
-  "type": "enerjolt:compressor",
-  "ingredient": {
-    "tag": "c:ingots/energized_gold"
-  },
-  "output": {
-    "item": "enerjolt:energized_gold_plate"
-  }
-}

@@ -26,6 +26,9 @@ import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.recipe.EnerjoltRecipes;
 import me.twheatking.enerjolt.screen.*;
 import me.twheatking.enerjolt.villager.EnerjoltVillager;
+import me.twheatking.enerjolt.world.ModConfiguredFeatures;
+import me.twheatking.enerjolt.world.ModPlacedFeatures;
+import me.twheatking.enerjolt.worldgen.biome.EnerjoltBiomes;
 import me.twheatking.enerjolt.worldgen.biome.EnerjoltRegion;
 import net.minecraft.client.Camera;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -111,8 +114,8 @@ public class Enerjolt {
 
         // ===== NEW: Register TerraBlender regions for custom biomes =====
         // Weight of 2 = rare spawning (vanilla biomes typically use 10)
-        //Regions.register(new EnerjoltRegion(2));
-        //LOGGER.info("TerraBlender region registered - Plagueland biome enabled");
+        Regions.register(new EnerjoltRegion(1));
+        LOGGER.info("TerraBlender region registered - Plagueland biome enabled");
         // ================================================================
 
         modEventBus.addListener(this::onLoadComplete);

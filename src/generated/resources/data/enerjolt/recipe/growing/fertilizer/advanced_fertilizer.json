@@ -1,8 +1,0 @@
-{
-  "type": "enerjolt:plant_growth_chamber_fertilizer",
-  "energyConsumptionMultiplier": 6.5,
-  "ingredient": {
-    "item": "enerjolt:advanced_fertilizer"
-  },
-  "speedMultiplier": 5.0
-}

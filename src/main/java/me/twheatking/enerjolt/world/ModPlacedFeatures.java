@@ -20,7 +20,6 @@ public final class ModPlacedFeatures {
     private ModPlacedFeatures() {}
 
     public static final ResourceKey<PlacedFeature> TIN_ORE_KEY = registerKey("tin_ore");
-    //public static final ResourceKey<PlacedFeature> ZINC_ORE_KEY = registerKey("zinc_ore");
 
     // Rubber tree placed features - one for each style
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_OAK_STYLE_KEY = registerKey("rubber_tree_oak_style_placed");
@@ -29,6 +28,7 @@ public final class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("rubber_tree_fancy_oak_style_placed");
     public static final ResourceKey<PlacedFeature> RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("rubber_tree_dark_oak_style_placed");
     public static final ResourceKey<PlacedFeature> DEAD_TREES_PLAGUELAND = registerKey("dead_trees_plagueland");
+    public static final ResourceKey<PlacedFeature> DEAD_MANGROVE_TREES_PLAGUELAND = registerKey("dead_mangrove_trees_plagueland");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -59,11 +59,26 @@ public final class ModPlacedFeatures {
         register(context, RUBBER_TREE_DARK_OAK_STYLE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY),
                 rubberTreePlacement(40));
 
+        // FIXED: Dead trees now only spawn on solid ground, not water
+        // Changed from RarityFilter 5 to 2 for MORE trees (every 2 attempts instead of every 5)
         register(context, DEAD_TREES_PLAGUELAND, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEAD_FANCY_TREE),
                 List.of(
-                        RarityFilter.onAverageOnceEvery(5),
+                        CountPlacement.of(3), // 3 attempts per chunk for more trees
                         InSquarePlacement.spread(),
-                        HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+                        SurfaceWaterDepthFilter.forMaxDepth(0), // ADDED: Prevents spawning on water
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, // Uses ocean floor heightmap for proper placement
+                        BiomeFilter.biome(),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(
+                                Blocks.OAK_SAPLING.defaultBlockState(),
+                                net.minecraft.core.BlockPos.ZERO)) // ADDED: Ensures valid ground block
+                ));
+
+        // Dead mangrove trees - can spawn on water and land
+        register(context, DEAD_MANGROVE_TREES_PLAGUELAND, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEAD_MANGROVE_TREE),
+                List.of(
+                        CountPlacement.of(2), // 2 attempts per chunk
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                         BiomeFilter.biome()
                 ));
     }
@@ -79,10 +94,10 @@ public final class ModPlacedFeatures {
                 RarityFilter.onAverageOnceEvery(rarity),
                 InSquarePlacement.spread(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
-                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,  // This ensures placement on actual ground, not vegetation
+                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                 BiomeFilter.biome(),
                 BlockPredicateFilter.forPredicate(BlockPredicate.wouldSurvive(
-                        net.minecraft.world.level.block.Blocks.OAK_SAPLING.defaultBlockState(),
+                        Blocks.OAK_SAPLING.defaultBlockState(),
                         net.minecraft.core.BlockPos.ZERO))
         );
     }

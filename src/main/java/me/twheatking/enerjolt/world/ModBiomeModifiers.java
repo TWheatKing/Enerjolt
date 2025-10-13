@@ -1,6 +1,7 @@
 package me.twheatking.enerjolt.world;
 
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.worldgen.biome.EnerjoltBiomes;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
@@ -26,7 +28,8 @@ public final class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_SPRUCE_STYLE_KEY = registerKey("add_rubber_tree_spruce_style");
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_FANCY_OAK_STYLE_KEY = registerKey("add_rubber_tree_fancy_oak_style");
     public static final ResourceKey<BiomeModifier> ADD_RUBBER_TREE_DARK_OAK_STYLE_KEY = registerKey("add_rubber_tree_dark_oak_style");
-    public static final ResourceKey<BiomeModifier> ADD_DEAD_TREES_PLAGUELAND_KEY = registerKey("add_dead_trees_plagueland");
+
+    // Plagueland biome spawning - handled by TerraBlender in EnerjoltOverworldRegion
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -84,14 +87,10 @@ public final class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RUBBER_TREE_DARK_OAK_STYLE_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
-        // Dead trees for Plagueland biome
-        context.register(ADD_DEAD_TREES_PLAGUELAND_KEY, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(
-                        biomes.getOrThrow(me.twheatking.enerjolt.worldgen.biome.EnerjoltBiomes.PLAGUELAND)
-                ),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DEAD_TREES_PLAGUELAND)),
-                GenerationStep.Decoration.VEGETAL_DECORATION
-        ));
+
+        // ===== PLAGUELAND BIOME SPAWNING =====
+        // Plagueland biome placement is now handled by TerraBlender
+        // See EnerjoltOverworldRegion class for bi
     }
 
     public static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -1,8 +1,0 @@
-{
-  "type": "enerjolt:stone_solidifier",
-  "lavaAmount": 250,
-  "output": {
-    "item": "minecraft:blackstone"
-  },
-  "waterAmount": 1000
-}

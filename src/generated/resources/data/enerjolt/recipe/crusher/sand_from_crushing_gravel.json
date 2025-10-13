@@ -1,9 +1,0 @@
-{
-  "type": "enerjolt:crusher",
-  "ingredient": {
-    "tag": "c:gravels"
-  },
-  "output": {
-    "item": "minecraft:sand"
-  }
-}

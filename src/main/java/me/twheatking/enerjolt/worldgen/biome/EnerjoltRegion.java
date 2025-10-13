@@ -17,9 +17,10 @@ import java.util.function.Consumer;
  * This controls WHERE in the world our custom biomes spawn.
  *
  * Plagueland spawns:
- * - Rarely (weight 2)
- * - In cold, inland areas
- * - With high humidity
+ * - Rarely on LAND (continentalness > 0 = not ocean)
+ * - In cold areas (matching temperature 0.3F)
+ * - With high humidity (matching downfall 0.8F)
+ * - On surface, not underground
  */
 public class EnerjoltRegion extends Region {
 
@@ -33,42 +34,34 @@ public class EnerjoltRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
-        // Add the Plagueland biome with specific climate parameters
-        // These parameters control where the biome spawns
+        // Plagueland spawns ONLY next to Dark Forests and Swamps
+        // We match their climate parameters closely so it appears adjacent to them
 
-        // Climate parameters explanation:
-        // - Temperature: COLD (0.0 to -0.5) - cold areas
-        // - Humidity: WET (0.3 to 1.0) - high rainfall
-        // - Continentalness: MID_INLAND (0.0 to 0.2) - away from coast but not far inland
-        // - Erosion: EROSION_4 (-0.2 to 0.2) - medium erosion
-        // - Depth: SURFACE (0) - surface level
-        // - Weirdness: MID_SLICE_NORMAL_ASCENDING (0) - normal terrain
-        // - Offset: 0.0 - no offset
-
-        this.addBiome(mapper,
+        // Dark Forest parameters: Cool temp, normal-high humidity, inland
+        // Variant 1: Right next to Dark Forests (matching their climate)
+        addBiome(mapper,
                 Climate.parameters(
-                        Climate.Parameter.span(-0.5F, 0.0F),    // Temperature: COLD
-                        Climate.Parameter.span(0.3F, 1.0F),      // Humidity: WET
-                        Climate.Parameter.span(0.0F, 0.2F),      // Continentalness: MID_INLAND
-                        Climate.Parameter.span(-0.2F, 0.2F),     // Erosion: MEDIUM
+                        Climate.Parameter.span(0.0F, 0.3F),      // Temperature: COOL (Dark Forest range)
+                        Climate.Parameter.span(0.4F, 0.8F),      // Humidity: MODERATE to WET (Dark Forest)
+                        Climate.Parameter.span(0.2F, 0.5F),      // Continentalness: INLAND (Dark Forest)
+                        Climate.Parameter.span(-0.3F, 0.1F),     // Erosion: Similar to Dark Forest
                         Climate.Parameter.point(0.0F),           // Depth: SURFACE
-                        Climate.Parameter.point(0.0F),           // Weirdness: NORMAL
+                        Climate.Parameter.span(-0.2F, 0.2F),     // Weirdness: NORMAL (Dark Forest)
                         0.0F                                      // Offset
                 ),
                 EnerjoltBiomes.PLAGUELAND
         );
 
-        // TODO: Add more spawn variants for different conditions
-        // You can add multiple parameter sets to make the biome spawn in different places
-        // Example: also spawn in very cold + very wet areas
-        this.addBiome(mapper,
+        // Variant 2: Right next to Swamps (matching their climate)
+        // Swamp parameters: Warm-ish temp, very high humidity, inland/coastal
+        addBiome(mapper,
                 Climate.parameters(
-                        Climate.Parameter.span(-1.0F, -0.5F),    // Temperature: VERY COLD
-                        Climate.Parameter.span(0.5F, 1.0F),      // Humidity: VERY WET
-                        Climate.Parameter.span(0.1F, 0.3F),      // Continentalness: INLAND
-                        Climate.Parameter.span(-0.3F, 0.3F),     // Erosion: VARIED
+                        Climate.Parameter.span(0.3F, 0.6F),      // Temperature: WARM (Swamp range)
+                        Climate.Parameter.span(0.8F, 1.0F),      // Humidity: VERY WET (Swamp)
+                        Climate.Parameter.span(0.1F, 0.4F),      // Continentalness: COASTAL to INLAND (Swamp)
+                        Climate.Parameter.span(-0.2F, 0.3F),     // Erosion: Similar to Swamp
                         Climate.Parameter.point(0.0F),           // Depth: SURFACE
-                        Climate.Parameter.point(0.0F),           // Weirdness: NORMAL
+                        Climate.Parameter.span(-0.3F, 0.3F),     // Weirdness: VARIED (Swamp)
                         0.0F                                      // Offset
                 ),
                 EnerjoltBiomes.PLAGUELAND

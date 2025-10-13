@@ -1,9 +1,0 @@
-{
-  "type": "enerjolt:compressor",
-  "ingredient": {
-    "tag": "c:ingots/iron"
-  },
-  "output": {
-    "item": "enerjolt:iron_plate"
-  }
-}

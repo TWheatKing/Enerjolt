@@ -6,11 +6,13 @@ import me.twheatking.enerjolt.recipe.CompressorRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -24,10 +26,14 @@ public class CompressorCategory implements IRecipeCategory<RecipeHolder<Compress
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public CompressorCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/compressor.png");
-        background = helper.createDrawable(texture, 47, 30, 98, 26);
+        this.width = 98;
+        this.height = 26;
+        background = helper.createDrawable(texture, 47, 30, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.COMPRESSOR_ITEM.get()));
     }
@@ -43,13 +49,23 @@ public class CompressorCategory implements IRecipeCategory<RecipeHolder<Compress
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
+    }
+
+    @Override
+    public void draw(RecipeHolder<CompressorRecipe> recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        background.draw(guiGraphics, 0, 0);
     }
 
     @Override

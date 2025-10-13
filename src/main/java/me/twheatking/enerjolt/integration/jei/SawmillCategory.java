@@ -6,11 +6,13 @@ import me.twheatking.enerjolt.recipe.SawmillRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -24,10 +26,14 @@ public class SawmillCategory implements IRecipeCategory<RecipeHolder<SawmillReci
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public SawmillCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/sawmill.png");
-        background = helper.createDrawable(texture, 42, 30, 109, 26);
+        this.width = 109;
+        this.height = 26;
+        background = helper.createDrawable(texture, 42, 30, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.SAWMILL_ITEM.get()));
     }
@@ -43,13 +49,23 @@ public class SawmillCategory implements IRecipeCategory<RecipeHolder<SawmillReci
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
+    }
+
+    @Override
+    public void draw(RecipeHolder<SawmillRecipe> recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        background.draw(guiGraphics, 0, 0);
     }
 
     @Override

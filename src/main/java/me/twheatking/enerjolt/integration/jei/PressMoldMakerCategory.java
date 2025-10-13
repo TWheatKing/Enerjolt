@@ -6,11 +6,13 @@ import me.twheatking.enerjolt.recipe.PressMoldMakerRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -23,10 +25,14 @@ public class PressMoldMakerCategory implements IRecipeCategory<RecipeHolder<Pres
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public PressMoldMakerCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/recipe/misc_gui.png");
-        background = helper.createDrawable(texture, 1, 77, 85, 26);
+        this.width = 85;
+        this.height = 26;
+        background = helper.createDrawable(texture, 1, 77, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.PRESS_MOLD_MAKER_ITEM.get()));
     }
@@ -42,13 +48,23 @@ public class PressMoldMakerCategory implements IRecipeCategory<RecipeHolder<Pres
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
+    }
+
+    @Override
+    public void draw(RecipeHolder<PressMoldMakerRecipe> recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        background.draw(guiGraphics, 0, 0);
     }
 
     @Override

@@ -28,11 +28,15 @@ public class FluidTransposerCategory implements IRecipeCategory<RecipeHolder<Flu
     private final IDrawable backgroundEmptying;
     private final IDrawable backgroundFilling;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public FluidTransposerCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/recipe/misc_gui.png");
-        backgroundEmptying = helper.createDrawable(texture, 1, 133, 143, 26);
-        backgroundFilling = helper.createDrawable(texture, 1, 161, 143, 26);
+        this.width = 143;
+        this.height = 26;
+        backgroundEmptying = helper.createDrawable(texture, 1, 133, width, height);
+        backgroundFilling = helper.createDrawable(texture, 1, 161, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.FLUID_TRANSPOSER_ITEM.get()));
     }
@@ -48,13 +52,18 @@ public class FluidTransposerCategory implements IRecipeCategory<RecipeHolder<Flu
     }
 
     @Override
-    public IDrawable getBackground() {
-        return backgroundEmptying;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -78,10 +87,14 @@ public class FluidTransposerCategory implements IRecipeCategory<RecipeHolder<Flu
 
     @Override
     public void draw(RecipeHolder<FluidTransposerRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the appropriate background based on mode
         if(recipe.value().getMode() == FluidTransposerBlockEntity.Mode.FILLING) {
             backgroundFilling.draw(guiGraphics, 0, 0);
+        } else {
+            backgroundEmptying.draw(guiGraphics, 0, 0);
         }
 
+        // Draw mode indicator icon
         ItemStack output = new ItemStack(recipe.value().getMode() == FluidTransposerBlockEntity.Mode.EMPTYING?Items.BUCKET:Items.WATER_BUCKET);
         guiGraphics.pose().pushPose();
         guiGraphics.pose().translate(0.f, 0.f, 100.f);

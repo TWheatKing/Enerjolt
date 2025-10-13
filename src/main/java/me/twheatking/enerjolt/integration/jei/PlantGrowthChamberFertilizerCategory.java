@@ -26,11 +26,15 @@ public class PlantGrowthChamberFertilizerCategory implements IRecipeCategory<Rec
     private final IDrawable background;
     private final IDrawable fertlizerSlot;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public PlantGrowthChamberFertilizerCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/plant_growth_chamber.png");
         fertlizerSlot = helper.createDrawable(texture, 34, 34, 18, 18);
-        background = helper.createBlankDrawable(144, 30);
+        this.width = 144;
+        this.height = 30;
+        background = helper.createBlankDrawable(width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.PLANT_GROWTH_CHAMBER_ITEM.get()));
     }
@@ -46,13 +50,18 @@ public class PlantGrowthChamberFertilizerCategory implements IRecipeCategory<Rec
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -62,14 +71,20 @@ public class PlantGrowthChamberFertilizerCategory implements IRecipeCategory<Rec
 
     @Override
     public void draw(RecipeHolder<PlantGrowthChamberFertilizerRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background (blank) first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw the fertilizer slot texture
         fertlizerSlot.draw(guiGraphics, 0, 0);
 
+        // Draw speed multiplier text
         Font font = Minecraft.getInstance().font;
         Component component = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.speed_multiplier", recipe.value().getSpeedMultiplier());
         int textWidth = font.width(component);
 
         guiGraphics.drawString(Minecraft.getInstance().font, component, 144 - textWidth, 5, 0xFFFFFFFF, false);
 
+        // Draw energy consumption multiplier text
         component = Component.translatable("recipes.enerjolt.plant_growth_chamber_fertilizer.energy_consumption_multiplier", recipe.value().getEnergyConsumptionMultiplier());
         textWidth = font.width(component);
 

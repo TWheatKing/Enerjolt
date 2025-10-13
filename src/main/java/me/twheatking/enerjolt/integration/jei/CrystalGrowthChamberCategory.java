@@ -30,10 +30,14 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final int width;
+    private final int height;
 
     public CrystalGrowthChamberCategory(IGuiHelper helper) {
         ResourceLocation texture = EJOLTAPI.id("textures/gui/container/crystal_growth_chamber.png");
-        background = helper.createDrawable(texture, 47, 30, 98, 38);
+        this.width = 98;
+        this.height = 38;
+        background = helper.createDrawable(texture, 47, 30, width, height);
 
         icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(EnerjoltBlocks.CRYSTAL_GROWTH_CHAMBER_ITEM.get()));
     }
@@ -49,13 +53,18 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public IDrawable getIcon() {
+        return icon;
     }
 
     @Override
-    public IDrawable getIcon() {
-        return icon;
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
     }
 
     @Override
@@ -77,6 +86,10 @@ public class CrystalGrowthChamberCategory implements IRecipeCategory<RecipeHolde
 
     @Override
     public void draw(RecipeHolder<CrystalGrowthChamberRecipe> recipe, IRecipeSlotsView iRecipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        // Draw the background first
+        background.draw(guiGraphics, 0, 0);
+        
+        // Draw recipe info text
         Font font = Minecraft.getInstance().font;
         int ticks = (int)(recipe.value().getTicks() * CrystalGrowthChamberBlockEntity.RECIPE_DURATION_MULTIPLIER);
         Component component = Component.translatable("recipes.enerjolt.info.ticks", ticks);

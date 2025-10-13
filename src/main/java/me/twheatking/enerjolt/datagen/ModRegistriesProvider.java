@@ -3,6 +3,7 @@ package me.twheatking.enerjolt.datagen;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.paintings.EnerjoltPaintingVariants;
 import me.twheatking.enerjolt.world.*;
+import me.twheatking.enerjolt.worldgen.dimension.ModDimensions;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -22,7 +23,9 @@ public class ModRegistriesProvider extends DatapackBuiltinEntriesProvider {
             add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap).
             add(Registries.PAINTING_VARIANT, EnerjoltPaintingVariants::bootstrap).
             add(Registries.BIOME, ModBiomeProvider::bootstrap).
-            add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap).
+            add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType).
+            add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
     public ModRegistriesProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider, BUILDER, Set.of(EJOLTAPI.MOD_ID));

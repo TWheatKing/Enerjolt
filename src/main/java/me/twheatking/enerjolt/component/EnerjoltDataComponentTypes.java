@@ -75,6 +75,12 @@ public final class EnerjoltDataComponentTypes {
             registerDataComponentType("dimensional_position", () -> builder ->
                     builder.persistent(DimensionalPositionComponent.CODEC).networkSynchronized(DimensionalPositionComponent.STREAM_CODEC));
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<ContaminatedComponent>> CONTAMINATED =
+            DATA_COMPONENT_TYPES.register("contaminated", () -> DataComponentType.<ContaminatedComponent>builder()
+                    .persistent(ContaminatedComponent.CODEC)
+                    .networkSynchronized(ContaminatedComponent.STREAM_CODEC)
+                    .build());
+
     public static void register(IEventBus modEventBus) {
         DATA_COMPONENT_TYPES.register(modEventBus);
     }

@@ -477,6 +477,11 @@ public final class EnerjoltBlockEntities {
             BLOCK_ENTITIES.register("photosynthetic_chamber", () -> BlockEntityType.Builder.of(PhotosyntheticChamberBlockEntity::new,
                     EnerjoltBlocks.PHOTOSYNTHETIC_CHAMBER.get()).build(null));
 
+    public static final Supplier<BlockEntityType<ExtractionBeaconBlockEntity>> EXTRACTION_BEACON_ENTITY =
+            BLOCK_ENTITIES.register("extraction_beacon", () -> BlockEntityType.Builder.of(
+                    ExtractionBeaconBlockEntity::new,
+                    EnerjoltBlocks.EXTRACTION_BEACON.get()).build(null));
+
     public static void register(IEventBus modEventBus) {
         BLOCK_ENTITIES.register(modEventBus);
     }

@@ -1141,6 +1141,24 @@ public final class EnerjoltBlocks {
                     .pushReaction(PushReaction.DESTROY)));
     public static final DeferredItem<Item> RUBBER_DARK_OAK_SAPLING_ITEM = createBlockItem("rubber_dark_oak_sapling", RUBBER_DARK_OAK_SAPLING);
 
+    public static final DeferredBlock<Block> CONTAMINATION_PORTAL = BLOCKS.register("contamination_portal",
+            () -> new ContaminationPortalBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(-1.0F, 3600000.0F)
+                    .noCollission()
+                    .lightLevel((state) -> 10)
+                    .sound(SoundType.GLASS)));
+    public static final DeferredItem<Item> CONTAMINATION_PORTAL_ITEM = createBlockItem("contamination_portal", CONTAMINATION_PORTAL);
+
+    public static final DeferredBlock<Block> EXTRACTION_BEACON = BLOCKS.register("extraction_beacon",
+            () -> new ExtractionBeaconBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_RED)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)
+                    .lightLevel((state) -> 15))); // Always glows
+
+    public static final DeferredItem<Item> EXTRACTION_BEACON_ITEM = createBlockItem("extraction_beacon", EXTRACTION_BEACON);
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn =BLOCKS.register(name, block);

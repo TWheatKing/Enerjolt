@@ -49,7 +49,7 @@ public class EnerjoltBookScreen extends Screen {
 
     public static final ResourceLocation ENERGIZED_COPPER_INGOT = EJOLTAPI.id("textures/item/energized_copper_ingot.png");
 
-    public static final int IMAGE_CYCLE_DELAY = ModConfigs.CLIENT_ENERGIZED_POWER_BOOK_IMAGE_CYCLE_DELAY.getValue();
+    public static final int IMAGE_CYCLE_DELAY = ModConfigs.CLIENT_ENERJOLT_BOOK_IMAGE_CYCLE_DELAY.getValue();
 
     private static final int MAX_CHARS_PER_LINE = 148;
     private static final int MAX_LINES = 19;

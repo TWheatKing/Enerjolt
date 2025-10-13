@@ -1408,16 +1408,16 @@ public final class ModConfigs {
     ));
 
 
-    public static final Config SERVER_CONFIG = new Config(getRelativeConfigFile("server.conf"), "Energized Power Server Config");
+    public static final Config SERVER_CONFIG = new Config(getRelativeConfigFile("server.conf"), "Enerjolt Server Config");
     //TODO server config values
 
 
-    public static final Config CLIENT_CONFIG = new Config(getRelativeConfigFile("client.conf"), "Energized Power Client Config");
+    public static final Config CLIENT_CONFIG = new Config(getRelativeConfigFile("client.conf"), "Enerjolt Client Config");
 
-    public static final ConfigValue<Integer> CLIENT_ENERGIZED_POWER_BOOK_IMAGE_CYCLE_DELAY = CLIENT_CONFIG.register(
+    public static final ConfigValue<Integer> CLIENT_ENERJOLT_BOOK_IMAGE_CYCLE_DELAY = CLIENT_CONFIG.register(
             new IntegerConfigValue(
-                    "energized_power_book.image_cycle_delay",
-                    "The tick amount to wait between two images in the Energized Power Book",
+                    "enerjolt_book.image_cycle_delay",
+                    "The tick amount to wait between two images in the Enerjolt Book",
                     50,
 
                     5 /* 250 ms */, 1200 /* 1 minute */
@@ -1431,7 +1431,7 @@ public final class ModConfigs {
     ));
 
     private static File getRelativeConfigFile(String fileName) {
-        return FMLPaths.CONFIGDIR.get().resolve("energizedpower/" + fileName).toFile();
+        return FMLPaths.CONFIGDIR.get().resolve("enerjolt/" + fileName).toFile();
     }
 
     private static ConfigValue<Integer> registerEnergyCapacityConfigValue(String baseConfigKey, String itemName, int defaultValue) {
@@ -1643,9 +1643,9 @@ public final class ModConfigs {
             try {
                 COMMON_CONFIG.read();
 
-                LOGGER.info("Energized Power common config was successfully loaded");
+                LOGGER.info("Enerjolt common config was successfully loaded");
             }catch(IOException|ConfigValidationException e) {
-                LOGGER.error("Energized Power common config could not be read", e);
+                LOGGER.error("Enerjolt common config could not be read", e);
             }
         }
 
@@ -1654,9 +1654,9 @@ public final class ModConfigs {
                 try {
                     SERVER_CONFIG.read();
 
-                    LOGGER.info("Energized Power server config was successfully loaded");
+                    LOGGER.info("Enerjolt server config was successfully loaded");
                 }catch(IOException|ConfigValidationException e) {
-                    LOGGER.error("Energized Power server config could not be read", e);
+                    LOGGER.error("Enerjolt server config could not be read", e);
                 }
             }
         }else {
@@ -1664,9 +1664,9 @@ public final class ModConfigs {
                 try {
                     CLIENT_CONFIG.read();
 
-                    LOGGER.info("Energized Power client config was successfully loaded");
+                    LOGGER.info("Enerjolt client config was successfully loaded");
                 }catch(IOException|ConfigValidationException e) {
-                    LOGGER.error("Energized Power client config could not be read", e);
+                    LOGGER.error("Enerjolt client config could not be read", e);
                 }
             }
         }

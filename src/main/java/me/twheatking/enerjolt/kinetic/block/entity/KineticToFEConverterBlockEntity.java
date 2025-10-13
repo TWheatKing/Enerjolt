@@ -172,8 +172,8 @@ public class KineticToFEConverterBlockEntity extends BaseConverterBlockEntity {
         // Update energy storage capacity
         if (energyStorage instanceof ReceiveAndExtractEnergyStorage storage) {
             storage.setCapacity(tier.storageCapacity);
-            storage.setMaxReceive(tier.maxOutput);
-            storage.setMaxExtract(tier.maxOutput);
+            // FIXED: Use setMaxTransfer instead of separate setMaxReceive/setMaxExtract
+            storage.setMaxTransfer(tier.maxOutput);
         }
 
         setChanged();

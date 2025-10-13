@@ -8,6 +8,7 @@ import me.twheatking.enerjolt.block.entity.EnerjoltBlockEntities;
 import me.twheatking.enerjolt.block.entity.renderer.FluidTankBlockEntityRenderer;
 import me.twheatking.enerjolt.block.entity.renderer.ItemConveyorBeltBlockEntityRenderer;
 import me.twheatking.enerjolt.client.renderer.HologramRenderer;
+import me.twheatking.enerjolt.compat.create.CreateCompat;
 import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
 import me.twheatking.enerjolt.config.ModConfigs;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
@@ -43,6 +44,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -81,6 +83,20 @@ public class Enerjolt {
 
         EnerjoltItems.register(modEventBus);
         EnerjoltBlocks.register(modEventBus);
+
+        // ADD THIS: Load Create compat BEFORE registering block entities
+        // This ensures Create blocks are registered before their block entities
+        if(ModList.get().isLoaded("create")) {
+            try {
+                // Force CreateCompat to load, which initializes its static fields
+                // and registers the Create compat blocks/items
+                Class.forName("me.twheatking.enerjolt.compat.create.CreateCompat");
+                LOGGER.info("Create compatibility initialized - blocks registered");
+            } catch (ClassNotFoundException e) {
+                LOGGER.warn("Create mod detected but compatibility failed to load", e);
+            }
+        }
+
         EnerjoltBlockEntities.register(modEventBus);
         EnerjoltRecipes.register(modEventBus);
         EnerjoltMenuTypes.register(modEventBus);
@@ -106,6 +122,10 @@ public class Enerjolt {
     public void onLoadComplete(final FMLLoadCompleteEvent event) {
         if(EnerjoltCCTweakedUtils.isCCTweakedAvailable())
             EnerjoltCCTweakedIntegration.register();
+
+        if(ModList.get().isLoaded("create")) {
+            CreateCompat.init(); // This just sets BlockStressDefaults now
+        }
     }
 
     private ItemStack getChargedItemStack(Item item, int energy) {

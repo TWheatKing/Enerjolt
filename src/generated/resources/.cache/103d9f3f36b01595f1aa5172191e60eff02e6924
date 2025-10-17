@@ -1,4 +1,6 @@
-// 1.21.1	2025-10-13T20:48:06.9191491	Registries
+// 1.21.1	2025-10-17T20:13:41.6131165	Registries
+2ecab335766245e2250ea11c5e350f9db50c6acf data/enerjolt/dimension/contamination_zone.json
+5072e5d1793133a43a5beb730c42d96cc5f9e92f data/enerjolt/dimension_type/contamination_zone.json
 dfe7b58752bba2383cf5be66b30230915822aabf data/enerjolt/neoforge/biome_modifier/add_rubber_tree_birch_style.json
 97fe005275541ef9b70db5866ec32adea599e3aa data/enerjolt/neoforge/biome_modifier/add_rubber_tree_dark_oak_style.json
 c5d7eda5b2fea117f5943075b89a1329bfbfb82c data/enerjolt/neoforge/biome_modifier/add_rubber_tree_fancy_oak_style.json

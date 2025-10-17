@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-13T15:33:20.3678521	Loot Tables
+// 1.21.1	2025-10-17T20:13:41.610012	Loot Tables
 6057c5aa66956358a343a25ac1d09d47e729f7e4 data/enerjolt/loot_table/blocks/advanced_auto_crafter.json
 a5d9df26904f5037ac297af8ec29140879b7a398 data/enerjolt/loot_table/blocks/advanced_battery_box.json
 460b9b2f416c31c2323ff25d4f17ebba19b85555 data/enerjolt/loot_table/blocks/advanced_charger.json
@@ -27,6 +27,7 @@ a4f2a4a7448d7605af828ba2e05e212bead73d31 data/enerjolt/loot_table/blocks/chargin
 117416788adc0051290d9b27a1dd0d43969fca35 data/enerjolt/loot_table/blocks/configurable_hv_transformer.json
 558f981f44839c24b754703e65fdc7c37f4f7422 data/enerjolt/loot_table/blocks/configurable_lv_transformer.json
 1ab3aaf9ba0bde80ccbb86876942e782c1796d1c data/enerjolt/loot_table/blocks/configurable_mv_transformer.json
+e3ff35039e01dce891caa9fc2aa18b669c54cbdb data/enerjolt/loot_table/blocks/contamination_portal.json
 9390fd43c0f36ba5978d9aee6996afb341f8a676 data/enerjolt/loot_table/blocks/copper_cable.json
 bbcc1b5fe73a005b7ce6dd787ca6bfaeeada0383 data/enerjolt/loot_table/blocks/crusher.json
 655a9255dfb934e797c06eb52ad07fc493f95818 data/enerjolt/loot_table/blocks/crystal_growth_chamber.json
@@ -45,6 +46,7 @@ f7a7986aa010d41bed87c6bf07cef1cb5cec124e data/enerjolt/loot_table/blocks/express
 5efdd9ab6e928e419a2cb22a17766d1b567a5470 data/enerjolt/loot_table/blocks/express_item_conveyor_belt_sorter.json
 8a3994ba17db977f5fa1d3943b11dd679116ab8c data/enerjolt/loot_table/blocks/express_item_conveyor_belt_splitter.json
 1f3fb04355e2f22d1b110241639478155f468bef data/enerjolt/loot_table/blocks/express_item_conveyor_belt_switch.json
+97eec44ee1b7713836c28c659e17beedcd26c0e7 data/enerjolt/loot_table/blocks/extraction_beacon.json
 609ba6dbee29f4c358e11ea7d90f19e6ae018fe8 data/enerjolt/loot_table/blocks/fast_item_conveyor_belt.json
 70c86d9c7f4a769afe41f7c14815fcf2e165973e data/enerjolt/loot_table/blocks/fast_item_conveyor_belt_loader.json
 362250b24b7ad44417b40202e65ae496fc405c42 data/enerjolt/loot_table/blocks/fast_item_conveyor_belt_merger.json

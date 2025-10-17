@@ -250,6 +250,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(EnerjoltBlocks.RUBBER_FANCY_OAK_PLANKS);
 
         dropSelf(CreateCompat.KINETIC_ADAPTER_BLOCK.get());
+        add(EnerjoltBlocks.CONTAMINATION_PORTAL.get(), noDrop());
+        add(EnerjoltBlocks.EXTRACTION_BEACON.get(), noDrop());
 
 
     }

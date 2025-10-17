@@ -18,9 +18,11 @@ import me.twheatking.enerjolt.input.ModKeyBindings;
 import me.twheatking.enerjolt.integration.cctweaked.EnerjoltCCTweakedIntegration;
 import me.twheatking.enerjolt.integration.cctweaked.EnerjoltCCTweakedUtils;
 import me.twheatking.enerjolt.item.*;
+import me.twheatking.enerjolt.item.armor.EnerjoltArmorMaterials;
 import me.twheatking.enerjolt.item.energy.EnerjoltEnergyItem;
 import me.twheatking.enerjolt.item.energy.ItemCapabilityEnergy;
 import me.twheatking.enerjolt.loading.EnerjoltBookReloadListener;
+import me.twheatking.enerjolt.loot.EnerjoltLootModifiers;
 import me.twheatking.enerjolt.machine.tier.BatteryTier;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.recipe.EnerjoltRecipes;
@@ -82,6 +84,7 @@ public class Enerjolt {
         ModConfigs.registerConfigs(true);
 
         EnerjoltDataComponentTypes.register(modEventBus);
+        EnerjoltArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
 
         EnerjoltItems.register(modEventBus);
         EnerjoltBlocks.register(modEventBus);
@@ -99,6 +102,7 @@ public class Enerjolt {
             }
         }
 
+        EnerjoltLootModifiers.register(modEventBus);
         EnerjoltBlockEntities.register(modEventBus);
         EnerjoltRecipes.register(modEventBus);
         EnerjoltMenuTypes.register(modEventBus);
@@ -121,7 +125,6 @@ public class Enerjolt {
         modEventBus.addListener(this::onLoadComplete);
         modEventBus.addListener(this::addCreativeTab);
         modEventBus.addListener(this::registerCapabilities);
-
         modEventBus.addListener(ModMessages::register);
 
         LOGGER.info("Enerjolt mod initialized");

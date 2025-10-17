@@ -1,0 +1,6 @@
+// 1.21.1	2025-10-17T20:13:41.6082553	Global Loot Modifiers : enerjolt
+edbd11f69e55c62f0fe6e3015010c0d986785127 data/enerjolt/loot_modifiers/armor_in_bastions.json
+e75a5b48aa680e0449d32edf10ae6bdaf01cc939 data/enerjolt/loot_modifiers/armor_in_end_cities.json
+1ffa3f741b63a24bdca35d67c8e4663d139fa045 data/enerjolt/loot_modifiers/armor_in_fortresses.json
+a4d7b036a6d1d5a7b1e8634499a477b15f62545f data/enerjolt/loot_modifiers/armor_in_strongholds.json
+f9d4f7d9e23937e0ebc417cb80835a16b2fcc151 data/neoforge/loot_modifiers/global_loot_modifiers.json

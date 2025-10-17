@@ -5,6 +5,10 @@ import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.block.EnerjoltBlocks;
 import me.twheatking.enerjolt.item.EnerjoltItems;
 import me.twheatking.enerjolt.item.EnerjoltBookItem;
+import me.twheatking.enerjolt.item.armor.ArmorSetBonus;
+import me.twheatking.enerjolt.item.armor.CryoniteArmorItem;
+import me.twheatking.enerjolt.item.armor.EnerjoltArmorItem;
+import me.twheatking.enerjolt.item.armor.VoidstoneArmorItem;
 import me.twheatking.enerjolt.networking.ModMessages;
 import me.twheatking.enerjolt.networking.packet.OpenEnergizedPowerBookS2CPacket;
 import me.twheatking.enerjolt.villager.EnerjoltVillager;
@@ -32,8 +36,17 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import me.twheatking.enerjolt.item.armor.*;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.damagesource.DamageSource;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.List;
 import java.util.Optional;
@@ -256,5 +269,84 @@ public class ModEvents {
 
         event.setCanceled(true);
         event.setCancellationResult(InteractionResult.SUCCESS);
+    }
+
+    /**
+     * Tick set bonuses every tick
+     */
+    @SubscribeEvent
+    public static void onPlayerTick(PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        if (player.level().isClientSide()) return;
+
+        // Apply all set bonuses
+        ArmorSetBonus.tickSetBonuses(player);
+    }
+
+    /**
+     * Prevent ender pearl and fire damage for armor sets
+     */
+    @SubscribeEvent
+    public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {
+        if (!(event.getEntity() instanceof Player player)) return;
+
+        DamageSource source = event.getSource();
+
+        // Check for fall damage (ender pearl) with Voidstone set
+        if (source.is(DamageTypeTags.IS_FALL)) {
+            if (VoidstoneArmorItem.shouldCancelEnderPearlDamage(player)) {
+                event.setCanceled(true);
+                return;
+            }
+        }
+
+        // Check for fire damage with Cryonite set
+        if (source.is(DamageTypeTags.IS_FIRE)) {
+            if (CryoniteArmorItem.shouldCancelFireDamage(player)) {
+                event.setCanceled(true);
+                return;
+            }
+        }
+
+        // Handle armor energy consumption on damage
+        handleArmorDamage(player, (int)event.getAmount());
+    }
+
+    /**
+     * Handle energy consumption when armor takes damage
+     */
+    private static void handleArmorDamage(Player player, int damageAmount) {
+        for (ItemStack stack : player.getArmorSlots()) {
+            if (stack.getItem() instanceof EnergyArmorItem && EnergyArmorItem.hasEnergy(stack)) {
+                int energyCost = damageAmount * EnergyArmorItem.ENERGY_PER_DAMAGE;
+                int currentEnergy = EnergyArmorItem.getEnergy(stack);
+
+                // Calculate with efficiency
+                List<ArmorAttributeRoll> attributes = EnergyArmorItem.getAttributes(stack);
+                double efficiency = 0.0;
+                for (ArmorAttributeRoll roll : attributes) {
+                    if (roll.getAttribute() == ArmorAttribute.ENERGY_EFFICIENCY) {
+                        efficiency += roll.getValue() / 100.0;
+                    }
+                }
+                efficiency = Math.min(efficiency, 0.5);
+
+                int actualCost = (int)(energyCost * (1.0 - efficiency));
+                int newEnergy = Math.max(0, currentEnergy - actualCost);
+                EnergyArmorItem.setEnergy(stack, newEnergy);
+            }
+        }
+    }
+
+    /**
+     * Prevent harmful potion effects for Enerjolt full set
+     */
+    @SubscribeEvent
+    public static void onPotionApplicable(MobEffectEvent.Applicable event) {
+        if (!(event.getEntity() instanceof Player player)) return;
+
+        if (EnerjoltArmorItem.isImmuneToEffect(player, event.getEffectInstance())) {
+            event.setResult(MobEffectEvent.Applicable.Result.DO_NOT_APPLY);
+        }
     }
 }

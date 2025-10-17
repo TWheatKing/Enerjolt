@@ -1893,5 +1893,53 @@
   "tooltip.enerjolt.multiblock.not_formed": "Multiblock Not Formed",
 
   "container.enerjolt.industrial_greenhouse": "Industrial Greenhouse",
-  "container.enerjolt.photosynthetic_chamber": "Photosynthetic Chamber"
+  "container.enerjolt.photosynthetic_chamber": "Photosynthetic Chamber",
+
+  "item.enerjolt.enerjolt_helmet": "Enerjolt Helmet",
+  "item.enerjolt.enerjolt_chestplate": "Enerjolt Chestplate",
+  "item.enerjolt.enerjolt_leggings": "Enerjolt Leggings",
+  "item.enerjolt.enerjolt_boots": "Enerjolt Boots",
+
+  "item.enerjolt.cryonite_helmet": "Cryonite Helmet",
+  "item.enerjolt.cryonite_chestplate": "Cryonite Chestplate",
+  "item.enerjolt.cryonite_leggings": "Cryonite Leggings",
+  "item.enerjolt.cryonite_boots": "Cryonite Boots",
+
+  "item.enerjolt.voidstone_helmet": "Voidstone Helmet",
+  "item.enerjolt.voidstone_chestplate": "Voidstone Chestplate",
+  "item.enerjolt.voidstone_leggings": "Voidstone Leggings",
+  "item.enerjolt.voidstone_boots": "Voidstone Boots",
+
+  "armor.enerjolt.rarity.common": "Common",
+  "armor.enerjolt.rarity.rare": "Rare",
+  "armor.enerjolt.rarity.legendary": "Legendary",
+
+  "armor.enerjolt.set.enerjolt": "Enerjolt Hazmat Suit",
+  "armor.enerjolt.set.cryonite": "Cryonite Coolant Armor",
+  "armor.enerjolt.set.voidstone": "Voidstone Battlegear",
+
+  "armor.enerjolt.bonus.2piece": "2-Piece:",
+  "armor.enerjolt.bonus.4piece": "4-Piece:",
+
+  "armor.enerjolt.enerjolt.2piece": "Poison Resistance",
+  "armor.enerjolt.enerjolt.4piece": "Complete Hazmat Protection",
+  "armor.enerjolt.cryonite.2piece": "Fire & Lava Protection",
+  "armor.enerjolt.cryonite.4piece": "Lava Solidification",
+  "armor.enerjolt.voidstone.2piece": "No Ender Pearl Damage",
+  "armor.enerjolt.voidstone.4piece": "Titanic Defense (+4 Armor, +2 Toughness, +4 Hearts)",
+
+  "armor.enerjolt.depleted": "DEPLETED - Recharge Required!",
+
+  "attribute.enerjolt.armor.energy_capacity": "Energy Capacity",
+  "attribute.enerjolt.armor.energy_efficiency": "Energy Efficiency",
+  "attribute.enerjolt.armor.movement_speed": "Movement Speed",
+  "attribute.enerjolt.armor.swim_speed": "Swim Speed",
+  "attribute.enerjolt.armor.mining_speed": "Mining Speed",
+  "attribute.enerjolt.armor.attack_damage": "Attack Damage",
+  "attribute.enerjolt.armor.max_health": "Max Health",
+  "attribute.enerjolt.armor.armor": "Armor",
+  "attribute.enerjolt.armor.armor_toughness": "Armor Toughness",
+  "attribute.enerjolt.armor.jump_boost": "Jump Boost",
+  "attribute.enerjolt.armor.step_height": "Step Assist",
+  "attribute.enerjolt.armor.knockback_resistance": "Knockback Resistance"
 }

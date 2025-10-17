@@ -3,6 +3,9 @@ package me.twheatking.enerjolt.item;
 import me.twheatking.enerjolt.Enerjolt;
 import me.twheatking.enerjolt.api.EJOLTAPI;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
+import me.twheatking.enerjolt.item.armor.CryoniteArmorItem;
+import me.twheatking.enerjolt.item.armor.EnerjoltArmorItem;
+import me.twheatking.enerjolt.item.armor.VoidstoneArmorItem;
 import me.twheatking.enerjolt.item.custom.*;
 import me.twheatking.enerjolt.machine.tier.BatteryTier;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +14,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import me.twheatking.enerjolt.item.armor.*;
 
 public final class EnerjoltItems {
     private EnerjoltItems() {}
@@ -413,6 +417,38 @@ public final class EnerjoltItems {
     public static final DeferredItem<ArmorItem> ZINC_BOOTS = ITEMS.register("zinc_boots",
             () -> new ArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    // ===== ENDGAME ARMOR SETS =====
+
+    // ENERJOLT ARMOR SET (Hazmat Protection)
+    public static final DeferredItem<ArmorItem> ENERJOLT_HELMET = ITEMS.register("enerjolt_helmet",
+            () -> new EnerjoltArmorItem(ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> ENERJOLT_CHESTPLATE = ITEMS.register("enerjolt_chestplate",
+            () -> new EnerjoltArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> ENERJOLT_LEGGINGS = ITEMS.register("enerjolt_leggings",
+            () -> new EnerjoltArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> ENERJOLT_BOOTS = ITEMS.register("enerjolt_boots",
+            () -> new EnerjoltArmorItem(ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+
+    // CRYONITE ARMOR SET (Ice/Coolant Protection)
+    public static final DeferredItem<ArmorItem> CRYONITE_HELMET = ITEMS.register("cryonite_helmet",
+            () -> new CryoniteArmorItem(ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> CRYONITE_CHESTPLATE = ITEMS.register("cryonite_chestplate",
+            () -> new CryoniteArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> CRYONITE_LEGGINGS = ITEMS.register("cryonite_leggings",
+            () -> new CryoniteArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> CRYONITE_BOOTS = ITEMS.register("cryonite_boots",
+            () -> new CryoniteArmorItem(ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+
+    // VOIDSTONE ARMOR SET (Tank/Endurance)
+    public static final DeferredItem<ArmorItem> VOIDSTONE_HELMET = ITEMS.register("voidstone_helmet",
+            () -> new VoidstoneArmorItem(ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> VOIDSTONE_CHESTPLATE = ITEMS.register("voidstone_chestplate",
+            () -> new VoidstoneArmorItem(ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> VOIDSTONE_LEGGINGS = ITEMS.register("voidstone_leggings",
+            () -> new VoidstoneArmorItem(ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ArmorItem> VOIDSTONE_BOOTS = ITEMS.register("voidstone_boots",
+            () -> new VoidstoneArmorItem(ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> ZINC_HORSE_ARMOR = ITEMS.register("zinc_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.ZINC_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,

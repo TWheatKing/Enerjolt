@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "enerjolt:armor_in_end_cities",
+    "enerjolt:armor_in_bastions",
+    "enerjolt:armor_in_fortresses",
+    "enerjolt:armor_in_strongholds"
+  ],
+  "replace": false
+}

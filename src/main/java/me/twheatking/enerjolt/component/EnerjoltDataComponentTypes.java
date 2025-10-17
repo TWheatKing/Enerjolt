@@ -2,6 +2,7 @@ package me.twheatking.enerjolt.component;
 
 import com.mojang.serialization.Codec;
 import me.twheatking.enerjolt.api.EJOLTAPI;
+import me.twheatking.enerjolt.item.armor.ArmorAttributeRoll;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponentType;
@@ -12,6 +13,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
@@ -80,6 +82,57 @@ public final class EnerjoltDataComponentTypes {
                     .persistent(ContaminatedComponent.CODEC)
                     .networkSynchronized(ContaminatedComponent.STREAM_CODEC)
                     .build());
+
+    /**
+     * Stores the armor rarity (Common, Rare, Legendary)
+     */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> ARMOR_RARITY =
+            registerDataComponentType("armor_rarity", () -> builder ->
+                    builder.persistent(Codec.INT).networkSynchronized(ByteBufCodecs.VAR_INT));
+
+    /**
+     * Stores the list of random attribute rolls on the armor
+     */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<ArmorAttributeRoll>>> ARMOR_ATTRIBUTES =
+            registerDataComponentType("armor_attributes", () -> builder ->
+                    builder.persistent(Codec.list(createArmorAttributeRollCodec()))
+                            .networkSynchronized(ByteBufCodecs.fromCodec(Codec.list(createArmorAttributeRollCodec()))));
+
+    /**
+     * Stores the current energy in armor pieces (separate from regular ENERGY component)
+     */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> ARMOR_ENERGY =
+            registerDataComponentType("armor_energy", () -> builder ->
+                    builder.persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT));
+
+// Add this helper method at the end of the class:
+
+    /**
+     * Creates a codec for ArmorAttributeRoll serialization
+     */
+    private static Codec<ArmorAttributeRoll> createArmorAttributeRollCodec() {
+        return Codec.STRING.comapFlatMap(
+                // Deserialize: "ATTRIBUTE_NAME:value"
+                str -> {
+                    try {
+                        String[] parts = str.split(":");
+                        if (parts.length != 2) {
+                            return com.mojang.serialization.DataResult.error(() -> "Invalid format");
+                        }
+                        me.twheatking.enerjolt.item.armor.ArmorAttribute attribute =
+                                me.twheatking.enerjolt.item.armor.ArmorAttribute.valueOf(parts[0]);
+                        double value = Double.parseDouble(parts[1]);
+                        return com.mojang.serialization.DataResult.success(
+                                new ArmorAttributeRoll(attribute, value)
+                        );
+                    } catch (Exception e) {
+                        return com.mojang.serialization.DataResult.error(() -> "Parse error: " + e.getMessage());
+                    }
+                },
+                // Serialize: ArmorAttributeRoll to "ATTRIBUTE_NAME:value"
+                roll -> roll.getAttribute().name() + ":" + roll.getValue()
+        );
+    }
 
     public static void register(IEventBus modEventBus) {
         DATA_COMPONENT_TYPES.register(modEventBus);

@@ -64,35 +64,38 @@ public class CryoniteArmorItem extends EnergyArmorItem {
     }
 
     /**
-     * Convert nearby lava source blocks to basalt or obsidian
+     * Convert lava beneath player's feet to basalt or obsidian
+     * Only freezes lava the player is about to step on
      */
     private static void solidifyNearbyLava(Player player) {
         Level level = player.level();
         BlockPos playerPos = player.blockPosition();
-        int range = 3; // 3 block radius
 
-        for (BlockPos pos : BlockPos.betweenClosed(
-                playerPos.offset(-range, -1, -range),
-                playerPos.offset(range, 1, range))) {
+        // Check positions below and around the player's feet
+        // This creates a small platform under them as they walk
+        for (int x = -1; x <= 1; x++) {
+            for (int z = -1; z <= 1; z++) {
+                // Check 1 block below player's feet
+                BlockPos checkPos = playerPos.offset(x, -1, z);
+                BlockState state = level.getBlockState(checkPos);
 
-            BlockState state = level.getBlockState(pos);
+                // Only convert lava source blocks directly under feet
+                if (state.is(Blocks.LAVA) && state.getFluidState().isSource()) {
+                    BlockState newBlock;
 
-            // Only convert lava source blocks
-            if (state.is(Blocks.LAVA) && state.getFluidState().isSource()) {
-                BlockState newBlock;
+                    // Nether: Convert to basalt
+                    // Overworld/End: Convert to obsidian
+                    if (level.dimension() == Level.NETHER) {
+                        newBlock = Blocks.BASALT.defaultBlockState();
+                    } else {
+                        newBlock = Blocks.OBSIDIAN.defaultBlockState();
+                    }
 
-                // Nether: Convert to basalt
-                // Overworld/End: Convert to obsidian
-                if (level.dimension() == Level.NETHER) {
-                    newBlock = Blocks.BASALT.defaultBlockState();
-                } else {
-                    newBlock = Blocks.OBSIDIAN.defaultBlockState();
+                    level.setBlockAndUpdate(checkPos, newBlock);
+
+                    // Play sound effect
+                    level.levelEvent(1501, checkPos, 0); // Extinguish sound
                 }
-
-                level.setBlockAndUpdate(pos, newBlock);
-
-                // Play sound effect
-                level.levelEvent(1501, pos, 0); // Extinguish sound
             }
         }
     }

@@ -18,6 +18,7 @@ import me.twheatking.enerjolt.input.ModKeyBindings;
 import me.twheatking.enerjolt.integration.cctweaked.EnerjoltCCTweakedIntegration;
 import me.twheatking.enerjolt.integration.cctweaked.EnerjoltCCTweakedUtils;
 import me.twheatking.enerjolt.item.*;
+import me.twheatking.enerjolt.item.armor.EnerjoltArmorCapabilities;
 import me.twheatking.enerjolt.item.armor.EnerjoltArmorMaterials;
 import me.twheatking.enerjolt.item.energy.EnerjoltEnergyItem;
 import me.twheatking.enerjolt.item.energy.ItemCapabilityEnergy;
@@ -650,6 +651,25 @@ public class Enerjolt {
                 LOGGER.info("Adding EGGS...");
                 // === SPAWN EGGS ===
                 event.accept(EnerjoltItems.EVIL_IRON_ZOMBIE_SPAWN_EGG);
+
+                LOGGER.info("Adding Endgame...");
+                // === ENDGAME ===
+                event.accept(EnerjoltItems.ENERJOLT_HELMET.get());
+                event.accept(EnerjoltItems.ENERJOLT_CHESTPLATE.get());
+                event.accept(EnerjoltItems.ENERJOLT_LEGGINGS.get());
+                event.accept(EnerjoltItems.ENERJOLT_BOOTS.get());
+
+                event.accept(EnerjoltItems.CRYONITE_HELMET.get());
+                event.accept(EnerjoltItems.CRYONITE_CHESTPLATE.get());
+                event.accept(EnerjoltItems.CRYONITE_LEGGINGS.get());
+                event.accept(EnerjoltItems.CRYONITE_BOOTS.get());
+
+                event.accept(EnerjoltItems.VOIDSTONE_HELMET.get());
+                event.accept(EnerjoltItems.VOIDSTONE_CHESTPLATE.get());
+                event.accept(EnerjoltItems.VOIDSTONE_LEGGINGS.get());
+                event.accept(EnerjoltItems.VOIDSTONE_BOOTS.get());
+
+
                 LOGGER.info("Creative tab completed successfully!");
             } catch (Exception e) {
                 LOGGER.error("CRASH IN CREATIVE TAB!", e);
@@ -670,6 +690,8 @@ public class Enerjolt {
 
         //Block Entities
         EnerjoltBlockEntities.registerCapabilities(event);
+        //Armor
+        EnerjoltArmorCapabilities.registerCapabilities(event);
     }
 
     @EventBusSubscriber(modid = EJOLTAPI.MOD_ID, value = Dist.CLIENT)

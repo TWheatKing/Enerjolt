@@ -10,6 +10,9 @@ import me.twheatking.enerjolt.block.entity.renderer.ItemConveyorBeltBlockEntityR
 import me.twheatking.enerjolt.compat.create.CreateCompat;
 import me.twheatking.enerjolt.component.EnerjoltDataComponentTypes;
 import me.twheatking.enerjolt.config.ModConfigs;
+import me.twheatking.enerjolt.contamination.EBCDataAttachment;
+import me.twheatking.enerjolt.datagen.ModRecipeProvider;
+import me.twheatking.enerjolt.effect.EnerjoltMobEffects;
 import me.twheatking.enerjolt.entity.EnerjoltEntityTypes;
 import me.twheatking.enerjolt.entity.client.EvilIronZombieRenderer;
 import me.twheatking.enerjolt.fluid.EnerjoltFluidTypes;
@@ -62,6 +65,7 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
@@ -109,7 +113,8 @@ public class Enerjolt {
         EnerjoltMenuTypes.register(modEventBus);
         EnerjoltVillager.register(modEventBus);
         EnerjoltEntityTypes.register(modEventBus);
-
+        EnerjoltMobEffects.register(modEventBus);
+        EBCDataAttachment.register(modEventBus);
         EnerjoltFluids.register(modEventBus);
         EnerjoltFluidTypes.register(modEventBus);
 
@@ -138,6 +143,10 @@ public class Enerjolt {
         if(ModList.get().isLoaded("create")) {
             CreateCompat.init(); // This just sets BlockStressDefaults now
         }
+    }
+
+    public static void onRegisterBrewingRecipes(RegisterBrewingRecipesEvent event) {
+        ModRecipeProvider.registerBrewingRecipes(event);
     }
 
     private ItemStack getChargedItemStack(Item item, int energy) {
@@ -668,6 +677,11 @@ public class Enerjolt {
                 event.accept(EnerjoltItems.VOIDSTONE_CHESTPLATE.get());
                 event.accept(EnerjoltItems.VOIDSTONE_LEGGINGS.get());
                 event.accept(EnerjoltItems.VOIDSTONE_BOOTS.get());
+
+                event.accept(EnerjoltItems.BCR_POTION.get());
+                event.accept(EnerjoltItems.BCR_POTION_STRONG.get());
+                event.accept(EnerjoltItems.BCR_POTION_EXTENDED.get());
+                event.accept(EnerjoltItems.EBC_DETECTOR.get());
 
 
                 LOGGER.info("Creative tab completed successfully!");

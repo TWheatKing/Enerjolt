@@ -1941,5 +1941,13 @@
   "attribute.enerjolt.armor.armor_toughness": "Armor Toughness",
   "attribute.enerjolt.armor.jump_boost": "Jump Boost",
   "attribute.enerjolt.armor.step_height": "Step Assist",
-  "attribute.enerjolt.armor.knockback_resistance": "Knockback Resistance"
+  "attribute.enerjolt.armor.knockback_resistance": "Knockback Resistance",
+
+  "effect.enerjolt.ebc_contamination": "E.B.C Contamination",
+  "effect.enerjolt.plagued_by_ebc": "Plagued by E.B.C",
+
+  "item.enerjolt.bcr_potion": "B.C.R Potion",
+  "item.enerjolt.bcr_potion_strong": "B.C.R Potion II",
+
+  "death.attack.magic": "%1$s succumbed to bio-contamination"
 }

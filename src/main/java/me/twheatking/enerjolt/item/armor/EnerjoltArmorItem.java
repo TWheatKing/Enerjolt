@@ -56,7 +56,8 @@ public class EnerjoltArmorItem extends EnergyArmorItem {
             }
         }
 
-        // 4-Piece Bonus: Complete Hazmat Protection
+        // 4-Piece Bonus: Complete Hazmat Protection + E.B.C Immunity
+        // E.B.C immunity is handled in EBCContaminationManager
         if (pieceCount >= 4) {
             // Remove harmful effects
             if (player.hasEffect(MobEffects.POISON)) {

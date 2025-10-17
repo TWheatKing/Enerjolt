@@ -12,6 +12,7 @@ import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.RecipeUnlockedTrigger;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -26,12 +27,14 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.fluids.FluidStack;
 
 import java.util.List;
@@ -3483,5 +3486,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('M', EnerjoltBlocks.ADVANCED_MACHINE_FRAME.get())
                 .unlockedBy("has_greenhouse", has(EnerjoltBlocks.INDUSTRIAL_GREENHOUSE.get()))
                 .save(recipeOutput);
+    }
+
+    public static void registerBrewingRecipes(RegisterBrewingRecipesEvent event) {
+        // Base B.C.R Potion - Awkward Potion + Enerjolt Item = BCR Potion
+        event.getBuilder().addRecipe(
+                Ingredient.of(Items.POTION),  // Input: Potion (ideally Awkward Potion)
+                Ingredient.of(EnerjoltItems.ENERJOLT.get()),  // Catalyst ingredient
+                new ItemStack(EnerjoltItems.BCR_POTION.get())  // Output
+        );
+
+        // B.C.R II (Stronger) - B.C.R Potion + Glowstone Dust
+        event.getBuilder().addRecipe(
+                Ingredient.of(EnerjoltItems.BCR_POTION.get()),  // Input
+                Ingredient.of(Items.GLOWSTONE_DUST),  // Catalyst
+                new ItemStack(EnerjoltItems.BCR_POTION_STRONG.get())  // Output
+        );
+
+        // B.C.R Extended - B.C.R Potion + Redstone
+        event.getBuilder().addRecipe(
+                Ingredient.of(EnerjoltItems.BCR_POTION.get()),  // Input
+                Ingredient.of(Items.REDSTONE),  // Catalyst
+                new ItemStack(EnerjoltItems.BCR_POTION_EXTENDED.get())  // Make sure this item exists!
+        );
     }
 }

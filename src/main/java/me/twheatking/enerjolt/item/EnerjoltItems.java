@@ -492,6 +492,24 @@ public final class EnerjoltItems {
     public static final DeferredItem<Item> MANUAL_TAP = ITEMS.register("manual_tap",
             () -> new ManualTapItem(new Item.Properties().durability(64)));
 
+    // === ENDGAME ITEMS ===
+    // B.C.R POTION (Bio Contamination Resistance)
+    public static final DeferredItem<Item> BCR_POTION = ITEMS.register("bcr_potion",
+            () -> new me.twheatking.enerjolt.item.potion.BCRPotionItem(
+                    new Item.Properties().stacksTo(1),50));
+
+    // Stronger version
+    public static final DeferredItem<Item> BCR_POTION_STRONG = ITEMS.register("bcr_potion_strong",
+            () -> new me.twheatking.enerjolt.item.potion.BCRPotionItem(
+                    new Item.Properties().stacksTo(1), 100)); // Removes 100 counts
+
+    // Stronger version that stacks up to 16
+    public static final DeferredItem<Item> BCR_POTION_EXTENDED = ITEMS.register("bcr_potion_extended",
+            () -> new me.twheatking.enerjolt.item.potion.BCRPotionItem(
+                    new Item.Properties().stacksTo(16), 100)); // Removes 100 counts
+
+    public static final DeferredItem<Item> EBC_DETECTOR = ITEMS.register("ebc_detector",
+            () -> new EBCDetectorItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
